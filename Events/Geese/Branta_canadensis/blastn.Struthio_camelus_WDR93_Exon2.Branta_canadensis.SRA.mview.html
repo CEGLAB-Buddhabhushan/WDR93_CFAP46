@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<STYLE TYPE="text/css">
+<!--
+TD {font-family:Fixed,Courier,monospace; background-color:white; color:black}
+SPAN.S0 {background-color:#000000;color:#FFFFFF} SPAN.T0 {color:#000000} /* black */
+SPAN.S1 {background-color:#ffffff;color:#000000} SPAN.T1 {color:#ffffff} /* white */
+SPAN.S2 {background-color:#ff0000;color:#FFFFFF} SPAN.T2 {color:#ff0000} /* red */
+SPAN.S3 {background-color:#00ff00;color:#000000} SPAN.T3 {color:#00ff00} /* green */
+SPAN.S4 {background-color:#0000ff;color:#FFFFFF} SPAN.T4 {color:#0000ff} /* blue */
+SPAN.S5 {background-color:#00ffff;color:#000000} SPAN.T5 {color:#00ffff} /* cyan */
+SPAN.S6 {background-color:#ff00ff;color:#FFFFFF} SPAN.T6 {color:#ff00ff} /* magenta */
+SPAN.S7 {background-color:#ffff00;color:#000000} SPAN.T7 {color:#ffff00} /* yellow */
+SPAN.S8 {background-color:#6600cc;color:#FFFFFF} SPAN.T8 {color:#6600cc} /* purple */
+SPAN.S9 {background-color:#0099ff;color:#FFFFFF} SPAN.T9 {color:#0099ff} /* dull-blue */
+SPAN.S10 {background-color:#33cccc;color:#000000} SPAN.T10 {color:#33cccc} /* dark-green-blue */
+SPAN.S11 {background-color:#00ffcc;color:#000000} SPAN.T11 {color:#00ffcc} /* medium-green-blue */
+SPAN.S12 {background-color:#0033ff;color:#FFFFFF} SPAN.T12 {color:#0033ff} /* bright-blue */
+SPAN.S13 {background-color:#009900;color:#FFFFFF} SPAN.T13 {color:#009900} /* dark-green */
+SPAN.S14 {background-color:#33cc00;color:#000000} SPAN.T14 {color:#33cc00} /* bright-green */
+SPAN.S15 {background-color:#ff3333;color:#FFFFFF} SPAN.T15 {color:#ff3333} /* orange */
+SPAN.S16 {background-color:#cc6600;color:#FFFFFF} SPAN.T16 {color:#cc6600} /* orange-brown */
+SPAN.S17 {background-color:#8b4513;color:#FFFFFF} SPAN.T17 {color:#8b4513} /* brown */
+SPAN.S18 {background-color:#cc0000;color:#FFFFFF} SPAN.T18 {color:#cc0000} /* bright-red */
+SPAN.S19 {background-color:#999999;color:#FFFFFF} SPAN.T19 {color:#999999} /* light-gray */
+SPAN.S20 {background-color:#666666;color:#FFFFFF} SPAN.T20 {color:#666666} /* dark-gray */
+SPAN.S21 {background-color:#ffffff;color:#000000} SPAN.T21 {color:#ffffff} /* gray0 */
+SPAN.S22 {background-color:#eeeeee;color:#000000} SPAN.T22 {color:#eeeeee} /* gray1 */
+SPAN.S23 {background-color:#dddddd;color:#000000} SPAN.T23 {color:#dddddd} /* gray2 */
+SPAN.S24 {background-color:#cccccc;color:#000000} SPAN.T24 {color:#cccccc} /* gray3 */
+SPAN.S25 {background-color:#bbbbbb;color:#FFFFFF} SPAN.T25 {color:#bbbbbb} /* gray4 */
+SPAN.S26 {background-color:#aaaaaa;color:#FFFFFF} SPAN.T26 {color:#aaaaaa} /* gray5 */
+SPAN.S27 {background-color:#999999;color:#FFFFFF} SPAN.T27 {color:#999999} /* gray6 */
+SPAN.S28 {background-color:#888888;color:#FFFFFF} SPAN.T28 {color:#888888} /* gray7 */
+SPAN.S29 {background-color:#777777;color:#FFFFFF} SPAN.T29 {color:#777777} /* gray8 */
+SPAN.S30 {background-color:#666666;color:#FFFFFF} SPAN.T30 {color:#666666} /* gray9 */
+SPAN.S31 {background-color:#555555;color:#FFFFFF} SPAN.T31 {color:#555555} /* gray10 */
+SPAN.S32 {background-color:#444444;color:#FFFFFF} SPAN.T32 {color:#444444} /* gray11 */
+SPAN.S33 {background-color:#333333;color:#FFFFFF} SPAN.T33 {color:#333333} /* gray12 */
+SPAN.S34 {background-color:#222222;color:#FFFFFF} SPAN.T34 {color:#222222} /* gray13 */
+SPAN.S35 {background-color:#111111;color:#FFFFFF} SPAN.T35 {color:#111111} /* gray14 */
+SPAN.S36 {background-color:#000000;color:#FFFFFF} SPAN.T36 {color:#000000} /* gray15 */
+SPAN.S37 {background-color:#e53319;color:#FFFFFF} SPAN.T37 {color:#e53319} /* clustal-red */
+SPAN.S38 {background-color:#197fe5;color:#FFFFFF} SPAN.T38 {color:#197fe5} /* clustal-blue */
+SPAN.S39 {background-color:#19cc19;color:#000000} SPAN.T39 {color:#19cc19} /* clustal-green */
+SPAN.S40 {background-color:#19b2b2;color:#FFFFFF} SPAN.T40 {color:#19b2b2} /* clustal-cyan */
+SPAN.S41 {background-color:#e57f7f;color:#FFFFFF} SPAN.T41 {color:#e57f7f} /* clustal-pink */
+SPAN.S42 {background-color:#cc4ccc;color:#FFFFFF} SPAN.T42 {color:#cc4ccc} /* clustal-magenta */
+SPAN.S43 {background-color:#cccc00;color:#000000} SPAN.T43 {color:#cccc00} /* clustal-yellow */
+SPAN.S44 {background-color:#e5994c;color:#FFFFFF} SPAN.T44 {color:#e5994c} /* clustal-orange */
+SPAN.S45 {background-color:#ffffff;color:#000000} SPAN.T45 {color:#ffffff} /* clustal-white */
+SPAN.S46 {background-color:#999999;color:#FFFFFF} SPAN.T46 {color:#999999} /* clustal-light-gray */
+SPAN.S47 {background-color:#666666;color:#FFFFFF} SPAN.T47 {color:#666666} /* clustal-dark-gray */
+SPAN.S48 {background-color:#000000;color:#FFFFFF} SPAN.T48 {color:#000000} /* clustal-black */
+SPAN.S49 {background-color:#ffffff;color:#000000} SPAN.T49 {color:#ffffff} /* clustal-white-print */
+SPAN.S50 {background-color:#ffff00;color:#000000} SPAN.T50 {color:#ffff00} /* clustal-yellow-print */
+SPAN.S51 {background-color:#6619e5;color:#FFFFFF} SPAN.T51 {color:#6619e5} /* clustal-violet-print */
+SPAN.S52 {background-color:#e57f66;color:#FFFFFF} SPAN.T52 {color:#e57f66} /* clustal-red-print */
+SPAN.S53 {background-color:#66e5e5;color:#000000} SPAN.T53 {color:#66e5e5} /* clustal-blue-print */
+SPAN.S54 {background-color:#b299e5;color:#FFFFFF} SPAN.T54 {color:#b299e5} /* clustal-purple-print */
+SPAN.S55 {background-color:#000000;color:#FFFFFF} SPAN.T55 {color:#000000} /* clustal-black-print */
+SPAN.S56 {background-color:#e57f7f;color:#FFFFFF} SPAN.T56 {color:#e57f7f} /* clustal-pink-print */
+SPAN.S57 {background-color:#19b2b2;color:#FFFFFF} SPAN.T57 {color:#19b2b2} /* clustal-cyan-print */
+SPAN.S58 {background-color:#cc4ccc;color:#FFFFFF} SPAN.T58 {color:#cc4ccc} /* clustal-magenta-print */
+SPAN.S59 {background-color:#e5994c;color:#FFFFFF} SPAN.T59 {color:#e5994c} /* clustal-orange-print */
+SPAN.S60 {background-color:#19cc19;color:#000000} SPAN.T60 {color:#19cc19} /* clustal-green-print */
+SPAN.S61 {background-color:#999999;color:#FFFFFF} SPAN.T61 {color:#999999} /* clustal-light-gray-print */
+SPAN.S62 {background-color:#99b2b2;color:#FFFFFF} SPAN.T62 {color:#99b2b2} /* clustal-dark-gray-print */
+SPAN.S63 {background-color:#ff1111;color:#FFFFFF} SPAN.T63 {color:#ff1111} /* nardi-red */
+SPAN.S64 {background-color:#1155ff;color:#FFFFFF} SPAN.T64 {color:#1155ff} /* nardi-blue */
+SPAN.S65 {background-color:#11dd11;color:#000000} SPAN.T65 {color:#11dd11} /* nardi-green */
+SPAN.S66 {background-color:#11ffff;color:#000000} SPAN.T66 {color:#11ffff} /* nardi-cyan */
+SPAN.S67 {background-color:#ffff11;color:#000000} SPAN.T67 {color:#ffff11} /* nardi-yellow */
+SPAN.S68 {background-color:#ff7f11;color:#FFFFFF} SPAN.T68 {color:#ff7f11} /* nardi-orange */
+SPAN.S69 {background-color:#ff11ff;color:#FFFFFF} SPAN.T69 {color:#ff11ff} /* nardi-pink */
+SPAN.S70 {background-color:#6611cc;color:#FFFFFF} SPAN.T70 {color:#6611cc} /* nardi-purple */
+SPAN.S71 {background-color:#197fe5;color:#FFFFFF} SPAN.T71 {color:#197fe5} /* nardi-dull-blue */
+SPAN.S72 {background-color:#999999;color:#FFFFFF} SPAN.T72 {color:#999999} /* nardi-light-gray */
+SPAN.S73 {background-color:#666666;color:#FFFFFF} SPAN.T73 {color:#666666} /* nardi-dark-gray */
+SPAN.S74 {background-color:#90fe23;color:#000000} SPAN.T74 {color:#90fe23} /* lin-a */
+SPAN.S75 {background-color:#fe5e2d;color:#FFFFFF} SPAN.T75 {color:#fe5e2d} /* lin-r */
+SPAN.S76 {background-color:#2e3d2d;color:#FFFFFF} SPAN.T76 {color:#2e3d2d} /* lin-n */
+SPAN.S77 {background-color:#00903b;color:#FFFFFF} SPAN.T77 {color:#00903b} /* lin-d */
+SPAN.S78 {background-color:#004baa;color:#FFFFFF} SPAN.T78 {color:#004baa} /* lin-c */
+SPAN.S79 {background-color:#864b00;color:#FFFFFF} SPAN.T79 {color:#864b00} /* lin-q */
+SPAN.S80 {background-color:#3fa201;color:#FFFFFF} SPAN.T80 {color:#3fa201} /* lin-e */
+SPAN.S81 {background-color:#10fe68;color:#000000} SPAN.T81 {color:#10fe68} /* lin-g */
+SPAN.S82 {background-color:#b2063b;color:#FFFFFF} SPAN.T82 {color:#b2063b} /* lin-h */
+SPAN.S83 {background-color:#04ced9;color:#000000} SPAN.T83 {color:#04ced9} /* lin-i */
+SPAN.S84 {background-color:#4972fe;color:#FFFFFF} SPAN.T84 {color:#4972fe} /* lin-l */
+SPAN.S85 {background-color:#c4a100;color:#FFFFFF} SPAN.T85 {color:#c4a100} /* lin-k */
+SPAN.S86 {background-color:#2a84dd;color:#FFFFFF} SPAN.T86 {color:#2a84dd} /* lin-m */
+SPAN.S87 {background-color:#a60ade;color:#FFFFFF} SPAN.T87 {color:#a60ade} /* lin-f */
+SPAN.S88 {background-color:#fe61fe;color:#FFFFFF} SPAN.T88 {color:#fe61fe} /* lin-p */
+SPAN.S89 {background-color:#f7e847;color:#000000} SPAN.T89 {color:#f7e847} /* lin-s */
+SPAN.S90 {background-color:#fefeb3;color:#000000} SPAN.T90 {color:#fefeb3} /* lin-t */
+SPAN.S91 {background-color:#4a007f;color:#FFFFFF} SPAN.T91 {color:#4a007f} /* lin-w */
+SPAN.S92 {background-color:#e903a8;color:#FFFFFF} SPAN.T92 {color:#e903a8} /* lin-y */
+SPAN.S93 {background-color:#5bfdfd;color:#000000} SPAN.T93 {color:#5bfdfd} /* lin-v */
+SPAN.S94 {background-color:#90fe23;color:#000000} SPAN.T94 {color:#90fe23} /* find-a */
+SPAN.S95 {background-color:#fe5e2d;color:#FFFFFF} SPAN.T95 {color:#fe5e2d} /* find-b */
+SPAN.S96 {background-color:#2e3d2d;color:#FFFFFF} SPAN.T96 {color:#2e3d2d} /* find-c */
+SPAN.S97 {background-color:#00903b;color:#FFFFFF} SPAN.T97 {color:#00903b} /* find-d */
+SPAN.S98 {background-color:#004baa;color:#FFFFFF} SPAN.T98 {color:#004baa} /* find-e */
+SPAN.S99 {background-color:#864b00;color:#FFFFFF} SPAN.T99 {color:#864b00} /* find-f */
+SPAN.S100 {background-color:#3fa201;color:#FFFFFF} SPAN.T100 {color:#3fa201} /* find-g */
+SPAN.S101 {background-color:#10fe68;color:#000000} SPAN.T101 {color:#10fe68} /* find-h */
+SPAN.S102 {background-color:#b2063b;color:#FFFFFF} SPAN.T102 {color:#b2063b} /* find-i */
+SPAN.S103 {background-color:#04ced9;color:#000000} SPAN.T103 {color:#04ced9} /* find-j */
+SPAN.S104 {background-color:#4972fe;color:#FFFFFF} SPAN.T104 {color:#4972fe} /* find-k */
+SPAN.S105 {background-color:#c4a100;color:#FFFFFF} SPAN.T105 {color:#c4a100} /* find-l */
+SPAN.S106 {background-color:#2a84dd;color:#FFFFFF} SPAN.T106 {color:#2a84dd} /* find-m */
+SPAN.S107 {background-color:#a60ade;color:#FFFFFF} SPAN.T107 {color:#a60ade} /* find-n */
+SPAN.S108 {background-color:#fe61fe;color:#FFFFFF} SPAN.T108 {color:#fe61fe} /* find-o */
+SPAN.S109 {background-color:#f7e847;color:#000000} SPAN.T109 {color:#f7e847} /* find-p */
+SPAN.S110 {background-color:#fefeb3;color:#000000} SPAN.T110 {color:#fefeb3} /* find-q */
+SPAN.S111 {background-color:#4a007f;color:#FFFFFF} SPAN.T111 {color:#4a007f} /* find-r */
+SPAN.S112 {background-color:#e903a8;color:#FFFFFF} SPAN.T112 {color:#e903a8} /* find-s */
+SPAN.S113 {background-color:#5bfdfd;color:#000000} SPAN.T113 {color:#5bfdfd} /* find-t */
+SPAN.S114 {background-color:#c0c0c0;color:#FFFFFF} SPAN.T114 {color:#c0c0c0} /* silver */
+SPAN.S115 {background-color:#808080;color:#FFFFFF} SPAN.T115 {color:#808080} /* gray */
+SPAN.S116 {background-color:#800000;color:#FFFFFF} SPAN.T116 {color:#800000} /* maroon */
+SPAN.S117 {background-color:#808000;color:#FFFFFF} SPAN.T117 {color:#808000} /* olive */
+SPAN.S118 {background-color:#00ff00;color:#000000} SPAN.T118 {color:#00ff00} /* lime */
+SPAN.S119 {background-color:#00ffff;color:#000000} SPAN.T119 {color:#00ffff} /* aqua */
+SPAN.S120 {background-color:#008080;color:#FFFFFF} SPAN.T120 {color:#008080} /* teal */
+SPAN.S121 {background-color:#000080;color:#FFFFFF} SPAN.T121 {color:#000080} /* navy */
+SPAN.S122 {background-color:#ff00ff;color:#FFFFFF} SPAN.T122 {color:#ff00ff} /* fuchsia */
+SPAN.S123 {background-color:#ffc0cb;color:#FFFFFF} SPAN.T123 {color:#ffc0cb} /* pink */
+SPAN.S124 {background-color:#ffb6c1;color:#FFFFFF} SPAN.T124 {color:#ffb6c1} /* lightpink */
+SPAN.S125 {background-color:#ff69b4;color:#FFFFFF} SPAN.T125 {color:#ff69b4} /* hotpink */
+SPAN.S126 {background-color:#ff1493;color:#FFFFFF} SPAN.T126 {color:#ff1493} /* deeppink */
+SPAN.S127 {background-color:#db7093;color:#FFFFFF} SPAN.T127 {color:#db7093} /* palevioletred */
+SPAN.S128 {background-color:#c71585;color:#FFFFFF} SPAN.T128 {color:#c71585} /* mediumvioletred */
+SPAN.S129 {background-color:#ffa07a;color:#FFFFFF} SPAN.T129 {color:#ffa07a} /* lightsalmon */
+SPAN.S130 {background-color:#fa8072;color:#FFFFFF} SPAN.T130 {color:#fa8072} /* salmon */
+SPAN.S131 {background-color:#e9967a;color:#FFFFFF} SPAN.T131 {color:#e9967a} /* darksalmon */
+SPAN.S132 {background-color:#f08080;color:#FFFFFF} SPAN.T132 {color:#f08080} /* lightcoral */
+SPAN.S133 {background-color:#cd5c5c;color:#FFFFFF} SPAN.T133 {color:#cd5c5c} /* indianred */
+SPAN.S134 {background-color:#dc143c;color:#FFFFFF} SPAN.T134 {color:#dc143c} /* crimson */
+SPAN.S135 {background-color:#b22222;color:#FFFFFF} SPAN.T135 {color:#b22222} /* firebrick */
+SPAN.S136 {background-color:#8b0000;color:#FFFFFF} SPAN.T136 {color:#8b0000} /* darkred */
+SPAN.S137 {background-color:#ff4500;color:#FFFFFF} SPAN.T137 {color:#ff4500} /* orangered */
+SPAN.S138 {background-color:#ff6347;color:#FFFFFF} SPAN.T138 {color:#ff6347} /* tomato */
+SPAN.S139 {background-color:#ff7f50;color:#FFFFFF} SPAN.T139 {color:#ff7f50} /* coral */
+SPAN.S140 {background-color:#ff8c00;color:#FFFFFF} SPAN.T140 {color:#ff8c00} /* darkorange */
+SPAN.S141 {background-color:#ffffe0;color:#000000} SPAN.T141 {color:#ffffe0} /* lightyellow */
+SPAN.S142 {background-color:#fffacd;color:#000000} SPAN.T142 {color:#fffacd} /* lemonchiffon */
+SPAN.S143 {background-color:#fafad2;color:#000000} SPAN.T143 {color:#fafad2} /* lightgoldenrodyellow */
+SPAN.S144 {background-color:#ffefd5;color:#000000} SPAN.T144 {color:#ffefd5} /* papayawhip */
+SPAN.S145 {background-color:#ffe4b5;color:#000000} SPAN.T145 {color:#ffe4b5} /* moccasin */
+SPAN.S146 {background-color:#ffdab9;color:#000000} SPAN.T146 {color:#ffdab9} /* peachpuff */
+SPAN.S147 {background-color:#eee8aa;color:#000000} SPAN.T147 {color:#eee8aa} /* palegoldenrod */
+SPAN.S148 {background-color:#f0e68c;color:#000000} SPAN.T148 {color:#f0e68c} /* khaki */
+SPAN.S149 {background-color:#bdb76b;color:#FFFFFF} SPAN.T149 {color:#bdb76b} /* darkkhaki */
+SPAN.S150 {background-color:#ffd700;color:#000000} SPAN.T150 {color:#ffd700} /* gold */
+SPAN.S151 {background-color:#fff8dc;color:#000000} SPAN.T151 {color:#fff8dc} /* cornsilk */
+SPAN.S152 {background-color:#ffebcd;color:#000000} SPAN.T152 {color:#ffebcd} /* blanchedalmond */
+SPAN.S153 {background-color:#ffe4c4;color:#000000} SPAN.T153 {color:#ffe4c4} /* bisque */
+SPAN.S154 {background-color:#ffdead;color:#000000} SPAN.T154 {color:#ffdead} /* navajowhite */
+SPAN.S155 {background-color:#f5deb3;color:#000000} SPAN.T155 {color:#f5deb3} /* wheat */
+SPAN.S156 {background-color:#deb887;color:#FFFFFF} SPAN.T156 {color:#deb887} /* burlywood */
+SPAN.S157 {background-color:#d2b48c;color:#FFFFFF} SPAN.T157 {color:#d2b48c} /* tan */
+SPAN.S158 {background-color:#bc8f8f;color:#FFFFFF} SPAN.T158 {color:#bc8f8f} /* rosybrown */
+SPAN.S159 {background-color:#f4a460;color:#FFFFFF} SPAN.T159 {color:#f4a460} /* sandybrown */
+SPAN.S160 {background-color:#daa520;color:#FFFFFF} SPAN.T160 {color:#daa520} /* goldenrod */
+SPAN.S161 {background-color:#b8860b;color:#FFFFFF} SPAN.T161 {color:#b8860b} /* darkgoldenrod */
+SPAN.S162 {background-color:#cd853f;color:#FFFFFF} SPAN.T162 {color:#cd853f} /* peru */
+SPAN.S163 {background-color:#d2691e;color:#FFFFFF} SPAN.T163 {color:#d2691e} /* chocolate */
+SPAN.S164 {background-color:#8b4513;color:#FFFFFF} SPAN.T164 {color:#8b4513} /* saddlebrown */
+SPAN.S165 {background-color:#a0522d;color:#FFFFFF} SPAN.T165 {color:#a0522d} /* sienna */
+SPAN.S166 {background-color:#556b2f;color:#FFFFFF} SPAN.T166 {color:#556b2f} /* darkolivegreen */
+SPAN.S167 {background-color:#6b8e23;color:#FFFFFF} SPAN.T167 {color:#6b8e23} /* olivedrab */
+SPAN.S168 {background-color:#9acd32;color:#000000} SPAN.T168 {color:#9acd32} /* yellowgreen */
+SPAN.S169 {background-color:#32cd32;color:#000000} SPAN.T169 {color:#32cd32} /* limegreen */
+SPAN.S170 {background-color:#7cfc00;color:#000000} SPAN.T170 {color:#7cfc00} /* lawngreen */
+SPAN.S171 {background-color:#7fff00;color:#000000} SPAN.T171 {color:#7fff00} /* chartreuse */
+SPAN.S172 {background-color:#adff2f;color:#000000} SPAN.T172 {color:#adff2f} /* greenyellow */
+SPAN.S173 {background-color:#00ff7f;color:#000000} SPAN.T173 {color:#00ff7f} /* springgreen */
+SPAN.S174 {background-color:#00fa9a;color:#000000} SPAN.T174 {color:#00fa9a} /* mediumspringgreen */
+SPAN.S175 {background-color:#90ee90;color:#000000} SPAN.T175 {color:#90ee90} /* lightgreen */
+SPAN.S176 {background-color:#98fb98;color:#000000} SPAN.T176 {color:#98fb98} /* palegreen */
+SPAN.S177 {background-color:#8fbc8f;color:#FFFFFF} SPAN.T177 {color:#8fbc8f} /* darkseagreen */
+SPAN.S178 {background-color:#66cdaa;color:#000000} SPAN.T178 {color:#66cdaa} /* mediumaquamarine */
+SPAN.S179 {background-color:#3cb371;color:#FFFFFF} SPAN.T179 {color:#3cb371} /* mediumseagreen */
+SPAN.S180 {background-color:#2e8b57;color:#FFFFFF} SPAN.T180 {color:#2e8b57} /* seagreen */
+SPAN.S181 {background-color:#228b22;color:#FFFFFF} SPAN.T181 {color:#228b22} /* forestgreen */
+SPAN.S182 {background-color:#006400;color:#FFFFFF} SPAN.T182 {color:#006400} /* darkgreen */
+SPAN.S183 {background-color:#e0ffff;color:#000000} SPAN.T183 {color:#e0ffff} /* lightcyan */
+SPAN.S184 {background-color:#afeeee;color:#000000} SPAN.T184 {color:#afeeee} /* paleturquoise */
+SPAN.S185 {background-color:#7fffd4;color:#000000} SPAN.T185 {color:#7fffd4} /* aquamarine */
+SPAN.S186 {background-color:#40e0d0;color:#000000} SPAN.T186 {color:#40e0d0} /* turquoise */
+SPAN.S187 {background-color:#48d1cc;color:#000000} SPAN.T187 {color:#48d1cc} /* mediumturquoise */
+SPAN.S188 {background-color:#00ced1;color:#000000} SPAN.T188 {color:#00ced1} /* darkturquoise */
+SPAN.S189 {background-color:#20b2aa;color:#FFFFFF} SPAN.T189 {color:#20b2aa} /* lightseagreen */
+SPAN.S190 {background-color:#5f9ea0;color:#FFFFFF} SPAN.T190 {color:#5f9ea0} /* cadetblue */
+SPAN.S191 {background-color:#008b8b;color:#FFFFFF} SPAN.T191 {color:#008b8b} /* darkcyan */
+SPAN.S192 {background-color:#b0c4de;color:#FFFFFF} SPAN.T192 {color:#b0c4de} /* lightsteelblue */
+SPAN.S193 {background-color:#b0e0e6;color:#000000} SPAN.T193 {color:#b0e0e6} /* powderblue */
+SPAN.S194 {background-color:#add8e6;color:#000000} SPAN.T194 {color:#add8e6} /* lightblue */
+SPAN.S195 {background-color:#87ceeb;color:#000000} SPAN.T195 {color:#87ceeb} /* skyblue */
+SPAN.S196 {background-color:#87cefa;color:#000000} SPAN.T196 {color:#87cefa} /* lightskyblue */
+SPAN.S197 {background-color:#00bfff;color:#FFFFFF} SPAN.T197 {color:#00bfff} /* deepskyblue */
+SPAN.S198 {background-color:#1e90ff;color:#FFFFFF} SPAN.T198 {color:#1e90ff} /* dodgerblue */
+SPAN.S199 {background-color:#6495ed;color:#FFFFFF} SPAN.T199 {color:#6495ed} /* cornflowerblue */
+SPAN.S200 {background-color:#4682b4;color:#FFFFFF} SPAN.T200 {color:#4682b4} /* steelblue */
+SPAN.S201 {background-color:#4169e1;color:#FFFFFF} SPAN.T201 {color:#4169e1} /* royalblue */
+SPAN.S202 {background-color:#0000cd;color:#FFFFFF} SPAN.T202 {color:#0000cd} /* mediumblue */
+SPAN.S203 {background-color:#00008b;color:#FFFFFF} SPAN.T203 {color:#00008b} /* darkblue */
+SPAN.S204 {background-color:#191970;color:#FFFFFF} SPAN.T204 {color:#191970} /* midnightblue */
+SPAN.S205 {background-color:#e6e6fa;color:#000000} SPAN.T205 {color:#e6e6fa} /* lavender */
+SPAN.S206 {background-color:#d8bfd8;color:#FFFFFF} SPAN.T206 {color:#d8bfd8} /* thistle */
+SPAN.S207 {background-color:#dda0dd;color:#FFFFFF} SPAN.T207 {color:#dda0dd} /* plum */
+SPAN.S208 {background-color:#ee82ee;color:#FFFFFF} SPAN.T208 {color:#ee82ee} /* violet */
+SPAN.S209 {background-color:#da70d6;color:#FFFFFF} SPAN.T209 {color:#da70d6} /* orchid */
+SPAN.S210 {background-color:#ba55d3;color:#FFFFFF} SPAN.T210 {color:#ba55d3} /* mediumorchid */
+SPAN.S211 {background-color:#9370db;color:#FFFFFF} SPAN.T211 {color:#9370db} /* mediumpurple */
+SPAN.S212 {background-color:#8a2be2;color:#FFFFFF} SPAN.T212 {color:#8a2be2} /* blueviolet */
+SPAN.S213 {background-color:#9400d3;color:#FFFFFF} SPAN.T213 {color:#9400d3} /* darkviolet */
+SPAN.S214 {background-color:#9932cc;color:#FFFFFF} SPAN.T214 {color:#9932cc} /* darkorchid */
+SPAN.S215 {background-color:#8b008b;color:#FFFFFF} SPAN.T215 {color:#8b008b} /* darkmagenta */
+SPAN.S216 {background-color:#4b0082;color:#FFFFFF} SPAN.T216 {color:#4b0082} /* indigo */
+SPAN.S217 {background-color:#483d8b;color:#FFFFFF} SPAN.T217 {color:#483d8b} /* darkslateblue */
+SPAN.S218 {background-color:#6a5acd;color:#FFFFFF} SPAN.T218 {color:#6a5acd} /* slateblue */
+SPAN.S219 {background-color:#7b68ee;color:#FFFFFF} SPAN.T219 {color:#7b68ee} /* mediumslateblue */
+SPAN.S220 {background-color:#fffafa;color:#000000} SPAN.T220 {color:#fffafa} /* snow */
+SPAN.S221 {background-color:#f0fff0;color:#000000} SPAN.T221 {color:#f0fff0} /* honeydew */
+SPAN.S222 {background-color:#f5fffa;color:#000000} SPAN.T222 {color:#f5fffa} /* mintcream */
+SPAN.S223 {background-color:#f0ffff;color:#000000} SPAN.T223 {color:#f0ffff} /* azure */
+SPAN.S224 {background-color:#f0f8ff;color:#000000} SPAN.T224 {color:#f0f8ff} /* aliceblue */
+SPAN.S225 {background-color:#f8f8ff;color:#000000} SPAN.T225 {color:#f8f8ff} /* ghostwhite */
+SPAN.S226 {background-color:#f5f5f5;color:#000000} SPAN.T226 {color:#f5f5f5} /* whitesmoke */
+SPAN.S227 {background-color:#fff5ee;color:#000000} SPAN.T227 {color:#fff5ee} /* seashell */
+SPAN.S228 {background-color:#f5f5dc;color:#000000} SPAN.T228 {color:#f5f5dc} /* beige */
+SPAN.S229 {background-color:#fdf5e6;color:#000000} SPAN.T229 {color:#fdf5e6} /* oldlace */
+SPAN.S230 {background-color:#fffaf0;color:#000000} SPAN.T230 {color:#fffaf0} /* floralwhite */
+SPAN.S231 {background-color:#fffff0;color:#000000} SPAN.T231 {color:#fffff0} /* ivory */
+SPAN.S232 {background-color:#faebd7;color:#000000} SPAN.T232 {color:#faebd7} /* antiquewhite */
+SPAN.S233 {background-color:#faf0e6;color:#000000} SPAN.T233 {color:#faf0e6} /* linen */
+SPAN.S234 {background-color:#fff0f5;color:#000000} SPAN.T234 {color:#fff0f5} /* lavenderblush */
+SPAN.S235 {background-color:#ffe4e1;color:#000000} SPAN.T235 {color:#ffe4e1} /* mistyrose */
+SPAN.S236 {background-color:#dcdcdc;color:#000000} SPAN.T236 {color:#dcdcdc} /* gainsboro */
+SPAN.S237 {background-color:#d3d3d3;color:#000000} SPAN.T237 {color:#d3d3d3} /* lightgray */
+SPAN.S238 {background-color:#a9a9a9;color:#FFFFFF} SPAN.T238 {color:#a9a9a9} /* darkgray */
+SPAN.S239 {background-color:#696969;color:#FFFFFF} SPAN.T239 {color:#696969} /* dimgray */
+SPAN.S240 {background-color:#778899;color:#FFFFFF} SPAN.T240 {color:#778899} /* lightslategray */
+SPAN.S241 {background-color:#708090;color:#FFFFFF} SPAN.T241 {color:#708090} /* slategray */
+SPAN.S242 {background-color:#2f4f4f;color:#FFFFFF} SPAN.T242 {color:#2f4f4f} /* darkslategray */
+-->
+</STYLE>
+<TITLE>MView</TITLE>
+</HEAD>
+<BODY style="background-color:white;color:black">
+<TABLE style="border:0px;">
+<TR><TD><PRE>
+Reference sequence (1): Struthio_camelus_Exon2
+Identities normalised by aligned length.
+</PRE></TD></TR>
+<TR><TD><PRE>
+                              cov    pid  1 [        .         .         .         .         :         .         .         .         .         1         .         .         .         .         :         .         .         .         .     ] 196
+  1 Struthio_camelus_Exon2 100.0% 100.0%    <SPAN style="color:#666666">GTGACAGGAAGAGCCAACTGCCTTGCAGTCTCTGGAAAATACCTCTTTGTTGGGCTGTCTGTGGGTCTGGCTGTCTTCAAGGTGTCTGACTGTAAACAAGCCTGTGCTTGGGATGCAGCCAAGACAGAGGTTTGTGCCATCCATGCCTCGGACTTAGGGAATGAGCACCATGCCCTGCTTGCTGTGGATGAAATGG</SPAN>    
+  2 SRR8867566.192711190    76.0%  83.2%    <SPAN style="color:#666666">-------------------------------------------TCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAA----</SPAN>    
+  3 SRR8867566.190699042    74.5%  83.8%    <SPAN style="color:#666666">------------------------------------------------GTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+  4 SRR8867566.114763183    75.5%  83.3%    <SPAN style="color:#666666">----------------------------------------------TTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+  5 SRR8867566.40549898     77.0%  82.8%    <SPAN style="color:#666666">-------------------------CAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCT--------------------</SPAN>    
+  6 SRR8867566.306892560    75.0%  83.0%    <SPAN style="color:#666666">-------------------------------------------TCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATG------</SPAN>    
+  7 SRR8867566.97091013     73.5%  83.6%    <SPAN style="color:#666666">--------------------------------------------------TGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+  8 SRR8867566.289880847    77.0%  82.4%    <SPAN style="color:#666666">----------------------------------GAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGG---------</SPAN>    
+  9 SRR8867566.321493811    70.9%  83.7%    <SPAN style="color:#666666">-------------------------------------------------------TGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 10 SRR8867566.7502768      67.9%  84.4%    <SPAN style="color:#666666">-------------------------------------------------------------TGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 11 SRR8867566.402489482    74.0%  82.1%    <SPAN style="color:#666666">---------------------------------------------------GGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGATCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGAAGAAATGG</SPAN>    
+ 12 SRR8867566.102040110    68.4%  83.6%    <SPAN style="color:#666666">--------------------------------------------------------------GGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 13 SRR8867566.33130915     75.5%  81.1%    <SPAN style="color:#666666">---ACTGGAACAGCCAATTGCTTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGG---------------------------------------------</SPAN>    
+ 14 SRR8867566.64529065     68.9%  83.0%    <SPAN style="color:#666666">GTGACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT-------------------------------------------------------------</SPAN>    
+ 15 SRR8867566.264182940    68.4%  83.1%    <SPAN style="color:#666666">------------------------------------------------------------GTGGTTCTAGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 16 SRR8867566.83431037     67.3%  83.3%    <SPAN style="color:#666666">----------------------------------------------------------------GTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 17 SRR8867566.166717218    65.3%  83.8%    <SPAN style="color:#666666">-----------------------------------------------------------------TCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATG-</SPAN>    
+ 18 SRR8867566.166714040    65.3%  83.8%    <SPAN style="color:#666666">-----------------------------------------------------------------TCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATG-</SPAN>    
+ 19 SRR8867566.59367242     71.4%  81.7%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCC------------------------------------------------------</SPAN>    
+ 20 SRR8867566.59364804     71.4%  81.7%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCC------------------------------------------------------</SPAN>    
+ 21 SRR8867566.153296210    73.5%  80.6%    <SPAN style="color:#666666">-----------AGGCAATTGGCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTT-----------------------------------------</SPAN>    
+ 22 SRR8867566.229962816    65.8%  82.9%    <SPAN style="color:#666666">-------------------------------------------------------------------TGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 23 SRR8867566.336490369    66.8%  82.4%    <SPAN style="color:#666666">--------------CAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCTTG---------------------------------------------------</SPAN>    
+ 24 SRR8867566.300578398    65.3%  83.1%    <SPAN style="color:#666666">------------------------------------------------------------------CTGACTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 25 SRR8867566.376666268    65.3%  82.8%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGA--------------------------------------------------------------------</SPAN>    
+ 26 SRR8867566.98330032     71.4%  81.0%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGTGATGCAGTCAAGACAGAGATTTGT--CATCC------------------------------------------------------</SPAN>    
+ 27 SRR8867566.54329123     65.3%  82.8%    <SPAN style="color:#666666">--------------------------------------------------------------------GGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 28 SRR8867566.324873848    67.9%  82.4%    <SPAN style="color:#666666">------GGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTG-TTGGGATGCAGTCAAGACAGAGATTTGT--CATCC------------------------------------------------------</SPAN>    
+ 29 SRR8867566.209576496    67.9%  82.4%    <SPAN style="color:#666666">------GGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTG-TTGGGATGCAGTCAAGACAGAGATTTGT--CATCC------------------------------------------------------</SPAN>    
+ 30 SRR8867566.278669385    64.8%  82.7%    <SPAN style="color:#666666">-------------------------CAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGA--------------------------------------------</SPAN>    
+ 31 SRR8867566.122397588    65.8%  82.2%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAG-------------------------------------------------------------------</SPAN>    
+ 32 SRR8867566.82753741     65.8%  82.2%    <SPAN style="color:#666666">----------------------------------------------TTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCC---------------------</SPAN>    
+ 33 SRR8867566.14096652     64.3%  82.8%    <SPAN style="color:#666666">-------------------------------------------TCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCAT-------------------------</SPAN>    
+ 34 SRR8867566.331995329    64.3%  82.5%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACA----------------------------------------------------------------------</SPAN>    
+ 35 SRR8867566.261835424    64.3%  82.5%    <SPAN style="color:#666666">------GGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATT----------------------------------------------------------------</SPAN>    
+ 36 SRR8867566.169454226    62.8%  83.2%    <SPAN style="color:#666666">---------------------------------------------------------------GGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGA--------</SPAN>    
+ 37 SRR8867566.390453814    63.8%  82.4%    <SPAN style="color:#666666">-----------------------------------------------TGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATG------------------------</SPAN>    
+ 38 SRR8867566.203693076    64.8%  81.9%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAG---------------------------------------------------------------------</SPAN>    
+ 39 SRR8867566.206375518    59.7%  83.8%    <SPAN style="color:#666666">-------------------------CAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCC------------------------------------------------------</SPAN>    
+ 40 SRR8867566.196362124    64.8%  81.9%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAG---------------------------------------------------------------------</SPAN>    
+ 41 SRR8867566.41385652     58.7%  83.8%    <SPAN style="color:#666666">--------------------------------------------------------------GGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCT-----------------</SPAN>    
+ 42 SRR8867566.41385167     58.7%  83.8%    <SPAN style="color:#666666">--------------------------------------------------------------GGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCT-----------------</SPAN>    
+ 43 SRR8867566.377214934    54.1%  85.2%    <SPAN style="color:#666666">----------------------------------------------------------------------------------------ACTGTAAGCAAATCTGTGGTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 44 SRR8867566.350922327    55.6%  84.4%    <SPAN style="color:#666666">---------------------------------------------------------------------------------------GACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 45 SRR8867566.263473433    55.6%  84.4%    <SPAN style="color:#666666">---------------------------------------------------------------------------------------GACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 46 SRR8867566.50591101     55.6%  84.4%    <SPAN style="color:#666666">---------------------------------------------------------------------------------------GACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 47 SRR8867566.337277503    55.1%  84.3%    <SPAN style="color:#666666">----------------------------------------------------------------------------------------ACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 48 5ERR2193499.3437984     50.0%  86.7%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------CAAGTCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGTGTCATCCGCTCCTCGGACTTGGGGAATGAGCACCACGTCCTGCTCACTGTGGATGAAAT--</SPAN>    
+ 49 5ERR2193499.21430099    49.0%  86.5%    <SPAN style="color:#666666">--------------------------------------------------------------------------------------------------AGTCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGTGTCATCCGCTCCTCGGACTTGGGGAATGAGCACCACGTCCTGCTCACTGTGGATGAAAT--</SPAN>    
+ 50 SRR8867566.382870255    55.1%  83.3%    <SPAN style="color:#666666">----------------------------------------------------------------------------------------ACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTCGATGAAATGG</SPAN>    
+ 51 SRR8867566.11776647     60.2%  81.4%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAG------------------------------------------------------------------------------</SPAN>    
+ 52 5ERR2193500.441592      48.5%  86.3%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------CTGTGTTTGGGATGCAGTCAAGACAGAGATTTGTGTCATCCGCTCCTCGGACTTGGGGAACGAGCACCACGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 53 5ERR2193500.15298885    49.5%  85.6%    <SPAN style="color:#666666">----------------------------------------------------------------------------------------ACTGTAAGCAAGTCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGTGTCATCCGCTCCTCGGACTTGGGGAATGAGCACCACGTCCTGCTCACTGT-----------</SPAN>    
+ 54 5ERR2193499.36900915    46.4%  86.8%    <SPAN style="color:#666666">----------------------------------------------------------------------------------------ACTGTAAGCAAGTCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGTGTCATCCGCTCCTCGGACTTGGGGAATGAGCACCACGTCCTGCT-----------------</SPAN>    
+ 55 6ERR2193499.23368567    46.4%  86.8%    <SPAN style="color:#666666">----------------------------------------------------------------------------------------ACTGTAAGCAAGTCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGTGTCATCCGCTCCTCGGACTTGGGGAATGAGCACCACGTCCTGCT-----------------</SPAN>    
+ 56 SRR8867566.255961741    52.6%  83.5%    <SPAN style="color:#666666">---------------------------------------------------------------------------------------------AAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 57 SRR8867566.220149695    48.5%  85.3%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------CTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 58 6ERR2193499.34683313    50.5%  83.8%    <SPAN style="color:#666666">-------------------------------------------------------------TGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGTGTCATCCGCTCCTCGGACTTGGGGA------------------------------------</SPAN>    
+ 59 SRR8867566.325545622    47.4%  85.3%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------CTGTGTTTGGGATGCAGTCAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACCAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 60 6ERR2193499.22863684    49.0%  84.4%    <SPAN style="color:#666666">-------------------------------------------TCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACAACTGTAAGCAAGTCTGTGTTTGGGATGCAGTCAAGACAGAGATTTGTGTCA---------------------------------------------------------</SPAN>    
+ 61 SRR8867566.276011522    47.4%  84.9%    <SPAN style="color:#666666">-------------------------------------------------------------------------------------------------------GTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 62 SRR8867566.142977239    55.6%  80.7%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGGCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCCGGATGTACGACTGTAAGCAAATCTGTGTTT---------------------------------------------------------------------------------------</SPAN>    
+ 63 6ERR2193499.39688666    50.5%  82.8%    <SPAN style="color:#666666">------------------TGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGTGTTTGGGATGCA-------------------------------------------------------------------------------</SPAN>    
+ 64 SRR8867566.371731622    50.5%  81.8%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAA-------------------------------------------------------------------------------------------------</SPAN>    
+ 65 SRR8867566.323912757    50.5%  81.8%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAA-------------------------------------------------------------------------------------------------</SPAN>    
+ 66 7ERR2193500.17765902    49.0%  82.3%    <SPAN style="color:#666666">---ACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAA-------------------------------------------------------------------------------------------------</SPAN>    
+ 67 SRR8867566.165866350    53.6%  80.0%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAACTTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAAATCTGT-------------------------------------------------------------------------------------------</SPAN>    
+ 68 7ERR2193499.9838832     47.4%  81.7%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGT-------------------------------------------------------------------------------------------------------</SPAN>    
+ 69 7ERR2193500.29791901    48.5%  81.1%    <SPAN style="color:#666666">GTAACTGTAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTAA-----------------------------------------------------------------------------------------------------</SPAN>    
+ 70 SRR8867566.387803183    66.8%  75.2%    <SPAN style="color:#666666">---------------------------------------------------------------GGTCTGGCTGCCTTGAGGATTTAGGACTGTAAGTAAATCTTTGTTTGGGGTTCAGTAAAGACAGAGTATTGT--CATCCGCTCATCGGACTTGGGGAACGAGGACTATGTCCTGCTCTCTGGGGATGAAATGG</SPAN>    
+ 71 SRR8867566.38671187     48.0%  80.9%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACGACTGTA------------------------------------------------------------------------------------------------------</SPAN>    
+ 72 SRR8867566.100314813    38.3%  85.7%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------------------------CAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 73 SRR8867566.357588236    38.3%  85.7%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------------------------CAAGACAGAGATTTGT--CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 74 8ERR2193500.13811312    47.4%  80.6%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGTACAACTGT-------------------------------------------------------------------------------------------------------</SPAN>    
+ 75 8ERR2193499.21358812    43.4%  82.4%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGT---------------------------------------------------------------------------------------------------------------</SPAN>    
+ 76 8ERR2193499.20095275    43.4%  82.4%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGT---------------------------------------------------------------------------------------------------------------</SPAN>    
+ 77 SRR8867566.329865344    40.3%  83.5%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCA---------------------------------------------------------------------------------------------------------------------</SPAN>    
+ 78 SRR8867566.297713939    40.3%  83.5%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCA---------------------------------------------------------------------------------------------------------------------</SPAN>    
+ 79 SRR8867566.283584650    40.3%  83.5%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCA---------------------------------------------------------------------------------------------------------------------</SPAN>    
+ 80 8ERR2193499.36621354    40.3%  83.5%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTGCCTTCA---------------------------------------------------------------------------------------------------------------------</SPAN>    
+ 81 SRR8867566.356944402    43.4%  81.2%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCAGGATGT---------------------------------------------------------------------------------------------------------------</SPAN>    
+ 82 SRR8867566.223571878    40.3%  82.3%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTGCCTTCA---------------------------------------------------------------------------------------------------------------------</SPAN>    
+ 83 9ERR2193500.27500938    35.2%  85.5%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------------------------------AGAGATTTGTGTCATCCGCTCCTCGGACTTGGGGAATGAGCACCACGTCCTGCTCACTGTGGATGAAAT--</SPAN>    
+ 84 SRR8867566.126163383    37.2%  83.6%    <SPAN style="color:#666666">GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCCATGGGTCTGGCTG---------------------------------------------------------------------------------------------------------------------------</SPAN>    
+ 85 SRR8867566.290174963    37.2%  83.6%    <SPAN style="color:#666666">GTAACTGGAAGAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTG---------------------------------------------------------------------------------------------------------------------------</SPAN>    
+ 86 SRR8867566.290172661    37.2%  83.6%    <SPAN style="color:#666666">GTAACTGGAAGAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTATTGGTCTGTCCATGGGTCTGGCTG---------------------------------------------------------------------------------------------------------------------------</SPAN>    
+ 87 SRR8867566.152771610    33.7%  84.8%    <SPAN style="color:#666666">----------------------------------------------------------------------------------------------------------------------------------TTTGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 88 SRR8867566.34064856     47.4%  77.9%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------CTGTGTTTGGGATGCAGGCAAGACAGACAGCGGT--CACCCGCTCCTCCTACATGGGGAACGAGCACCCTGCCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 89 SRR8867566.353409101    30.6%  86.7%    <SPAN style="color:#666666">----------------------------------------------------------------------------------------------------------------------------------------CCATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 90 SRR8867566.38100779     32.7%  84.4%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------------------------------------------TGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 91 SRR8867566.58350304     30.1%  86.4%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------------------------------------------CATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 92 SRR8867566.20740925     32.7%  84.4%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------------------------------------------TGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 93 SRR8867566.20732425     32.7%  84.4%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------------------------------------------TGTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 94 SRR8867566.234401538    32.1%  84.1%    <SPAN style="color:#666666">-------------------------------------------------------------------------------------------------------------------------------------GTGTCATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 95 SRR8867566.83250708     31.6%  83.9%    <SPAN style="color:#666666">--------------------------------------------------------------------------------------------------------------------------------------TGTCATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTACTGCTCACTGTGGATGAAATGG</SPAN>    
+ 96 SRR8867566.69098416     30.1%  84.7%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------------------------------------------CATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 97 SRR8867566.5749046      30.1%  84.7%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------------------------------------------CATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 98 SRR8867566.5731012      30.1%  84.7%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------------------------------------------CATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+ 99 SRR8867566.126943580    30.1%  84.7%    <SPAN style="color:#666666">-----------------------------------------------------------------------------------------------------------------------------------------CATCCGCTCCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+100 10ERR2193500.8455290    25.0%  89.8%    <SPAN style="color:#666666">-------------------------------------------------------------------------------------------------------------------------------------------------CCTCGGACTTGGGGAATGAGCACCACGTCCTGCTCACTGTGGATGAAAT--</SPAN>    
+101 SRR8867566.326250751    26.0%  88.2%    <SPAN style="color:#666666">-------------------------------------------------------------------------------------------------------------------------------------------------CCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+102 SRR8867566.263242586    26.0%  88.2%    <SPAN style="color:#666666">-------------------------------------------------------------------------------------------------------------------------------------------------CCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+103 SRR8867566.66004561     26.0%  88.2%    <SPAN style="color:#666666">-------------------------------------------------------------------------------------------------------------------------------------------------CCTCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+104 11ERR2193499.156231     26.0%  88.2%    <SPAN style="color:#666666">-------------------------------------------------------------------------------------------------------------------------------------------------CCTCGGACTTGGGGAACGAGCACCACGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+105 SRR8867566.48620226     28.1%  85.5%    <SPAN style="color:#666666">---------------------------------------------------------------------------------------GACTGTAAGCAAATCTGTGTTTGGGATGCAGTCAAGACAGAAATTTGTGTCATCC------------------------------------------------------</SPAN>    
+106 11ERR2193499.13416111   25.5%  88.0%    <SPAN style="color:#666666">--------------------------------------------------------------------------------------------------------------------------------------------------CTCGGACTTGGGGAACGAGCACCACGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+107 SRR8867566.250690370    25.0%  87.8%    <SPAN style="color:#666666">---------------------------------------------------------------------------------------------------------------------------------------------------TCGGAGTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+108 SRR8867566.96848702     23.0%  88.9%    <SPAN style="color:#666666">-------------------------------------------------------------------------------------------------------------------------------------------------------ACTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+109 SRR8867566.91462788     22.4%  88.6%    <SPAN style="color:#666666">--------------------------------------------------------------------------------------------------------------------------------------------------------CTTGGGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+110 SRR8867566.384928958    20.4%  90.0%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------------------------------------------------------------------GGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+111 SRR8867566.238158668    20.4%  90.0%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------------------------------------------------------------------GGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+112 SRR8867566.5170748      20.4%  90.0%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------------------------------------------------------------------GGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+113 SRR8867566.317522156    20.4%  90.0%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------------------------------------------------------------------GGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+114 SRR8867566.175967404    20.4%  90.0%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------------------------------------------------------------------GGGAACGAGCACCATGTCCTGCTCACTGTGGATGAAATGG</SPAN>    
+115 SRR8867566.108660332    19.4%  89.5%    <SPAN style="color:#666666">--------------------------------------------------------------------------------------------------------------------------------------------------------------GAACGAGCACCATGTCCTGCTCCCTGTGGATGAAATGG</SPAN>    
+116 SRR8867566.367908896    31.6%  77.4%    <SPAN style="color:#666666">------------------------------------------------------------------------------------------------------------------------------------TGTGTCATCCGCTTCTCGGCCCTGGCGAACGAGCACAATGTCCTGCTCACTGTGGATGAAAT--</SPAN>    
+
+</PRE></TD></TR>
+</TABLE>
+<P><SMALL><A HREF="https://desmid.github.io/mview/">MView</A> 1.67, Copyright &copy; 1997-2020 <A HREF="mailto:biomview@gmail.com">Nigel P. Brown</A></SMALL></P>
+</BODY>
+</HTML>

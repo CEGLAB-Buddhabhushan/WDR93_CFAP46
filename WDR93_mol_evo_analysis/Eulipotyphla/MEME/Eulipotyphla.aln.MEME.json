@@ -1,0 +1,4143 @@
+{
+ "analysis":{
+   "info":"MEME (Mixed Effects Model of Evolution)\n    estimates a site-wise synonymous (&alpha;) and a two-category mixture of non-synonymous\n    (&beta;-, with proportion p-, and &beta;+ with proportion [1-p-]) rates, and\n    uses a likelihood ratio test to determine if &beta;+ > &alpha; at a site.\n    The estimates aggregate information over a proportion of branches at a site,\n    so the signal is derived from\n    episodic diversification, which is a combination of strength of selection [effect size] and\n    the proportion of the tree affected. A subset of branches can be selected\n    for testing as well, in which case an additional (nuisance) parameter will be\n    inferred -- the non-synonymous rate on branches NOT selected for testing. Multiple partitions within a NEXUS file are also supported\n    for recombination - aware analysis.\n    ",
+   "version":"2.0.1",
+   "citation":"Detecting Individual Sites Subject to Episodic Diversifying Selection. _PLoS Genet_ 8(7): e1002764.",
+   "authors":"Sergei L. Kosakovsky Pond, Steven Weaver",
+   "contact":"spond@temple.edu",
+   "requirements":"in-frame codon alignment and a phylogenetic tree"
+  },
+ "fits":{
+   "Nucleotide GTR":{
+     "Log Likelihood":-12797.4379133836,
+     "estimated parameters":19,
+     "AIC-c":25632.91860270012,
+     "Equilibrium frequencies":[
+      [0.2144262663743183],
+      [0.2965649069545174],
+      [0.286107831562377],
+      [0.2029009951087873]
+      ],
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0.4144425710159194,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0.2354314414396528,
+       "Substitution rate from nucleotide C to nucleotide G":0.4646992393069836,
+       "Substitution rate from nucleotide C to nucleotide T":0.9435081380300779,
+       "Substitution rate from nucleotide G to nucleotide T":0.2605315962882396
+      },
+     "display order":0
+    },
+   "Global MG94xREV":{
+     "Log Likelihood":-10911.21151920916,
+     "estimated parameters":27,
+     "AIC-c":21876.67926617632,
+     "Equilibrium frequencies":[
+      [0.009963388403752878],
+      [0.02490926721890606],
+      [0.02496241082537757],
+      [0.009796605990437558],
+      [0.007817955386160253],
+      [0.01954551322580175],
+      [0.01958721333098859],
+      [0.007687086507656612],
+      [0.006456957261014002],
+      [0.01614290915077356],
+      [0.01617734984321444],
+      [0.006348870847935881],
+      [0.008762058561881213],
+      [0.02190584661172026],
+      [0.02195258245832416],
+      [0.008615385842386481],
+      [0.01170057754370831],
+      [0.02925237889370862],
+      [0.02931478847399136],
+      [0.01150471540516239],
+      [0.009181072695566566],
+      [0.02295341543083159],
+      [0.02300238625225773],
+      [0.009027385877494392],
+      [0.007582774661323807],
+      [0.01895754261958906],
+      [0.01899798829692627],
+      [0.007455842597010678],
+      [0.01028978711772274],
+      [0.02572529008750368],
+      [0.0257801746684414],
+      [0.01011754094418721],
+      [0.01349149260595949],
+      [0.03372980966767856],
+      [0.03380177178987127],
+      [0.01326565139563388],
+      [0.01058634703494777],
+      [0.02646671357971566],
+      [0.02652317997829388],
+      [0.01040913658854812],
+      [0.008743410134563648],
+      [0.02185922405316472],
+      [0.02190586043112978],
+      [0.008597049580929217],
+      [0.01186476362359591],
+      [0.0296628572141166],
+      [0.02972614254470275],
+      [0.0116661530876648],
+      [0.02451133848786416],
+      [0.009640103956233458],
+      [0.007693062548534113],
+      [0.01923327115110905],
+      [0.01927430509177987],
+      [0.007564284317109657],
+      [0.01588502411155344],
+      [0.01591891460952578],
+      [0.006247446823781909],
+      [0.00862208355522193],
+      [0.02155589790917536],
+      [0.02160188714464976],
+      [0.008477753951188367]
+      ],
+     "Rate Distributions":{
+       "non-synonymous/synonymous rate ratio for *background*":[
+        [0.3200532889772155, 1]
+        ],
+       "non-synonymous/synonymous rate ratio for *test*":[
+        [9812.816308804171, 1]
+        ]
+      },
+     "display order":1
+    }
+  },
+ "timers":{
+   "Total time":{
+     "timer":729,
+     "order":0
+    },
+   "Model fitting":{
+     "timer":28,
+     "order":1
+    },
+   "MEME analysis":{
+     "timer":700,
+     "order":2
+    }
+  },
+ "tested":{
+   "0":{
+     "Solenodon_paradoxus":"background",
+     "Sorex_araneus":"background",
+     "Erinaceus_europaeus":"background",
+     "Node2":"background",
+     "Galemys_pyrenaicus":"background",
+     "Condylura_cristata":"background",
+     "Node7":"background",
+     "Talpa_occidentalis":"background",
+     "Node6":"background",
+     "Scalopus_aquaticus":"test",
+     "Node5":"background"
+    }
+  },
+ "input":{
+   "file name":"/media/morpheus/sagar/BUDDHA/WDR93_mol_evo_analysis/Eulipotyphla/MEME/Eulipotyphla.aln",
+   "number of sequences":7,
+   "number of sites":847,
+   "partition count":1,
+   "trees":{
+     "0":"(Solenodon_paradoxus:86.7911,(Sorex_araneus:66.2,Erinaceus_europaeus:66.2)Node2:6.8,(((Galemys_pyrenaicus:33.9826,Condylura_cristata:33.9826)Node7:0.35461,Talpa_occidentalis:34.3372)Node6:0.20067,Scalopus_aquaticus:34.5378)Node5:38.4622)"
+    }
+  },
+ "data partitions":{
+   "0":{
+     "name":"meme.filter.default",
+     "coverage":[
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846]
+      ]
+    }
+  },
+ "branch attributes":{
+   "0":{
+     "Sorex_araneus":{
+       "original name":"Sorex_araneus",
+       "Nucleotide GTR":0.245584699247422,
+       "Global MG94xREV":0.2951468250293193
+      },
+     "Erinaceus_europaeus":{
+       "original name":"Erinaceus_europaeus",
+       "Nucleotide GTR":0.188857236077028,
+       "Global MG94xREV":0.1953843230422321
+      },
+     "Solenodon_paradoxus":{
+       "original name":"Solenodon_paradoxus",
+       "Nucleotide GTR":359.4028943544948,
+       "Global MG94xREV":0.1514835916725555
+      },
+     "Talpa_occidentalis":{
+       "original name":"Talpa_occidentalis",
+       "Nucleotide GTR":0.06446235052642896,
+       "Global MG94xREV":0.07198231719482059
+      },
+     "Galemys_pyrenaicus":{
+       "original name":"Galemys_pyrenaicus",
+       "Nucleotide GTR":0.09864715910551808,
+       "Global MG94xREV":0.1119887846901562
+      },
+     "Condylura_cristata":{
+       "original name":"Condylura_cristata",
+       "Nucleotide GTR":0.195209623720464,
+       "Global MG94xREV":0.2210406642498077
+      },
+     "Scalopus_aquaticus":{
+       "original name":"Scalopus_aquaticus",
+       "Nucleotide GTR":0.07254867361365301,
+       "Global MG94xREV":0.05002018904807567,
+       "EBF site 3 (partition 1)":1,
+       "EBF site 6 (partition 1)":1,
+       "EBF site 7 (partition 1)":1,
+       "EBF site 8 (partition 1)":1,
+       "EBF site 98 (partition 1)":6.154162595695211,
+       "EBF site 99 (partition 1)":16.4978450485497,
+       "EBF site 100 (partition 1)":1,
+       "EBF site 101 (partition 1)":1,
+       "EBF site 102 (partition 1)":1e+26,
+       "EBF site 103 (partition 1)":1,
+       "EBF site 197 (partition 1)":1,
+       "EBF site 381 (partition 1)":1,
+       "EBF site 104 (partition 1)":1,
+       "EBF site 105 (partition 1)":1,
+       "EBF site 112 (partition 1)":1,
+       "EBF site 418 (partition 1)":1,
+       "EBF site 106 (partition 1)":1,
+       "EBF site 107 (partition 1)":1,
+       "EBF site 108 (partition 1)":1,
+       "EBF site 109 (partition 1)":1,
+       "EBF site 110 (partition 1)":1,
+       "EBF site 111 (partition 1)":1,
+       "EBF site 113 (partition 1)":1,
+       "EBF site 114 (partition 1)":1,
+       "EBF site 115 (partition 1)":1,
+       "EBF site 116 (partition 1)":1,
+       "EBF site 117 (partition 1)":1,
+       "EBF site 118 (partition 1)":1,
+       "EBF site 119 (partition 1)":1,
+       "EBF site 120 (partition 1)":1,
+       "EBF site 121 (partition 1)":1,
+       "EBF site 122 (partition 1)":1,
+       "EBF site 123 (partition 1)":1,
+       "EBF site 126 (partition 1)":1,
+       "EBF site 127 (partition 1)":1,
+       "EBF site 128 (partition 1)":1,
+       "EBF site 129 (partition 1)":1,
+       "EBF site 130 (partition 1)":1,
+       "EBF site 131 (partition 1)":1,
+       "EBF site 132 (partition 1)":1,
+       "EBF site 133 (partition 1)":16.72175553895458,
+       "EBF site 134 (partition 1)":1,
+       "EBF site 135 (partition 1)":1,
+       "EBF site 136 (partition 1)":1.139379419091762,
+       "EBF site 137 (partition 1)":1,
+       "EBF site 684 (partition 1)":1,
+       "EBF site 138 (partition 1)":1,
+       "EBF site 139 (partition 1)":88.56094468649178,
+       "EBF site 140 (partition 1)":215.8846376583132,
+       "EBF site 141 (partition 1)":1,
+       "EBF site 142 (partition 1)":1,
+       "EBF site 143 (partition 1)":1,
+       "EBF site 144 (partition 1)":1,
+       "EBF site 146 (partition 1)":1,
+       "EBF site 148 (partition 1)":1,
+       "EBF site 149 (partition 1)":1,
+       "EBF site 150 (partition 1)":1,
+       "EBF site 151 (partition 1)":47599.98112412002,
+       "EBF site 152 (partition 1)":1,
+       "EBF site 153 (partition 1)":1.805854122340927,
+       "EBF site 154 (partition 1)":1,
+       "EBF site 707 (partition 1)":1,
+       "EBF site 155 (partition 1)":1,
+       "EBF site 157 (partition 1)":1,
+       "EBF site 158 (partition 1)":1,
+       "EBF site 159 (partition 1)":1,
+       "EBF site 160 (partition 1)":1,
+       "EBF site 161 (partition 1)":1,
+       "EBF site 162 (partition 1)":1,
+       "EBF site 163 (partition 1)":1,
+       "EBF site 165 (partition 1)":1.129568154890317,
+       "EBF site 166 (partition 1)":1,
+       "EBF site 167 (partition 1)":1,
+       "EBF site 168 (partition 1)":1,
+       "EBF site 169 (partition 1)":1.000033509878554,
+       "EBF site 170 (partition 1)":1,
+       "EBF site 171 (partition 1)":27.30752264228341,
+       "EBF site 172 (partition 1)":1,
+       "EBF site 173 (partition 1)":1,
+       "EBF site 178 (partition 1)":22.01959556567029,
+       "EBF site 179 (partition 1)":3.661230893249156,
+       "EBF site 180 (partition 1)":1,
+       "EBF site 181 (partition 1)":1,
+       "EBF site 182 (partition 1)":1,
+       "EBF site 183 (partition 1)":1,
+       "EBF site 184 (partition 1)":1.581606242294258,
+       "EBF site 185 (partition 1)":4.613848131878897,
+       "EBF site 186 (partition 1)":1,
+       "EBF site 187 (partition 1)":1,
+       "EBF site 705 (partition 1)":1,
+       "EBF site 188 (partition 1)":1,
+       "EBF site 189 (partition 1)":1,
+       "EBF site 190 (partition 1)":1,
+       "EBF site 191 (partition 1)":1.156863541746043,
+       "EBF site 192 (partition 1)":1,
+       "EBF site 193 (partition 1)":1.584366858338561,
+       "EBF site 194 (partition 1)":1,
+       "EBF site 195 (partition 1)":1,
+       "EBF site 196 (partition 1)":1,
+       "EBF site 199 (partition 1)":8.538678419115946,
+       "EBF site 200 (partition 1)":1,
+       "EBF site 201 (partition 1)":1,
+       "EBF site 202 (partition 1)":1,
+       "EBF site 203 (partition 1)":1,
+       "EBF site 204 (partition 1)":1,
+       "EBF site 205 (partition 1)":1,
+       "EBF site 206 (partition 1)":1,
+       "EBF site 207 (partition 1)":1,
+       "EBF site 208 (partition 1)":1,
+       "EBF site 209 (partition 1)":1.022485852793209,
+       "EBF site 210 (partition 1)":1,
+       "EBF site 211 (partition 1)":1,
+       "EBF site 212 (partition 1)":1,
+       "EBF site 213 (partition 1)":1,
+       "EBF site 214 (partition 1)":1,
+       "EBF site 215 (partition 1)":1,
+       "EBF site 216 (partition 1)":1,
+       "EBF site 217 (partition 1)":1,
+       "EBF site 218 (partition 1)":1,
+       "EBF site 219 (partition 1)":1,
+       "EBF site 223 (partition 1)":1,
+       "EBF site 224 (partition 1)":1,
+       "EBF site 225 (partition 1)":1,
+       "EBF site 226 (partition 1)":1,
+       "EBF site 227 (partition 1)":1,
+       "EBF site 228 (partition 1)":1,
+       "EBF site 229 (partition 1)":1,
+       "EBF site 230 (partition 1)":1,
+       "EBF site 231 (partition 1)":1,
+       "EBF site 232 (partition 1)":1,
+       "EBF site 233 (partition 1)":1,
+       "EBF site 236 (partition 1)":1,
+       "EBF site 237 (partition 1)":1,
+       "EBF site 238 (partition 1)":1,
+       "EBF site 239 (partition 1)":1,
+       "EBF site 240 (partition 1)":1,
+       "EBF site 242 (partition 1)":1,
+       "EBF site 243 (partition 1)":1,
+       "EBF site 244 (partition 1)":1,
+       "EBF site 245 (partition 1)":1,
+       "EBF site 246 (partition 1)":1,
+       "EBF site 247 (partition 1)":1,
+       "EBF site 249 (partition 1)":1,
+       "EBF site 250 (partition 1)":1,
+       "EBF site 251 (partition 1)":1,
+       "EBF site 252 (partition 1)":1,
+       "EBF site 253 (partition 1)":1.105446782774112,
+       "EBF site 254 (partition 1)":1,
+       "EBF site 255 (partition 1)":1,
+       "EBF site 256 (partition 1)":1,
+       "EBF site 257 (partition 1)":1,
+       "EBF site 258 (partition 1)":1,
+       "EBF site 260 (partition 1)":1,
+       "EBF site 261 (partition 1)":1,
+       "EBF site 262 (partition 1)":1,
+       "EBF site 263 (partition 1)":1,
+       "EBF site 264 (partition 1)":1,
+       "EBF site 265 (partition 1)":1,
+       "EBF site 266 (partition 1)":1,
+       "EBF site 267 (partition 1)":1,
+       "EBF site 268 (partition 1)":1,
+       "EBF site 269 (partition 1)":1,
+       "EBF site 270 (partition 1)":1,
+       "EBF site 271 (partition 1)":1,
+       "EBF site 272 (partition 1)":1,
+       "EBF site 273 (partition 1)":1,
+       "EBF site 274 (partition 1)":1,
+       "EBF site 275 (partition 1)":1,
+       "EBF site 276 (partition 1)":1,
+       "EBF site 277 (partition 1)":2.835477616659691,
+       "EBF site 278 (partition 1)":1,
+       "EBF site 512 (partition 1)":1,
+       "EBF site 279 (partition 1)":1,
+       "EBF site 280 (partition 1)":1,
+       "EBF site 281 (partition 1)":1,
+       "EBF site 282 (partition 1)":1,
+       "EBF site 283 (partition 1)":1,
+       "EBF site 284 (partition 1)":1,
+       "EBF site 285 (partition 1)":1,
+       "EBF site 286 (partition 1)":476.5617621596797,
+       "EBF site 287 (partition 1)":1,
+       "EBF site 289 (partition 1)":1,
+       "EBF site 290 (partition 1)":1,
+       "EBF site 291 (partition 1)":1,
+       "EBF site 292 (partition 1)":1,
+       "EBF site 293 (partition 1)":10.32045843912468,
+       "EBF site 294 (partition 1)":84.6421516412455,
+       "EBF site 295 (partition 1)":1,
+       "EBF site 296 (partition 1)":27.79978019708652,
+       "EBF site 297 (partition 1)":1,
+       "EBF site 298 (partition 1)":1,
+       "EBF site 299 (partition 1)":1,
+       "EBF site 300 (partition 1)":1,
+       "EBF site 301 (partition 1)":1,
+       "EBF site 302 (partition 1)":1,
+       "EBF site 303 (partition 1)":3100.446438492988,
+       "EBF site 304 (partition 1)":1,
+       "EBF site 307 (partition 1)":1,
+       "EBF site 308 (partition 1)":1,
+       "EBF site 310 (partition 1)":1,
+       "EBF site 311 (partition 1)":1,
+       "EBF site 312 (partition 1)":1,
+       "EBF site 313 (partition 1)":1,
+       "EBF site 314 (partition 1)":1,
+       "EBF site 315 (partition 1)":4.503101499035255,
+       "EBF site 317 (partition 1)":1,
+       "EBF site 320 (partition 1)":1,
+       "EBF site 321 (partition 1)":1,
+       "EBF site 323 (partition 1)":1,
+       "EBF site 325 (partition 1)":1,
+       "EBF site 327 (partition 1)":1,
+       "EBF site 329 (partition 1)":1,
+       "EBF site 330 (partition 1)":1,
+       "EBF site 331 (partition 1)":1,
+       "EBF site 332 (partition 1)":1,
+       "EBF site 333 (partition 1)":1,
+       "EBF site 334 (partition 1)":1,
+       "EBF site 335 (partition 1)":1,
+       "EBF site 336 (partition 1)":1,
+       "EBF site 337 (partition 1)":1,
+       "EBF site 338 (partition 1)":1,
+       "EBF site 339 (partition 1)":1,
+       "EBF site 340 (partition 1)":1,
+       "EBF site 341 (partition 1)":365.3160699230438,
+       "EBF site 342 (partition 1)":1,
+       "EBF site 343 (partition 1)":1.031027227800956,
+       "EBF site 344 (partition 1)":1,
+       "EBF site 345 (partition 1)":1,
+       "EBF site 346 (partition 1)":1,
+       "EBF site 347 (partition 1)":1.002862460676528,
+       "EBF site 348 (partition 1)":2.541577729952745,
+       "EBF site 349 (partition 1)":1,
+       "EBF site 350 (partition 1)":19.38792629123871,
+       "EBF site 351 (partition 1)":1,
+       "EBF site 352 (partition 1)":1,
+       "EBF site 353 (partition 1)":1,
+       "EBF site 354 (partition 1)":1,
+       "EBF site 355 (partition 1)":1,
+       "EBF site 356 (partition 1)":1,
+       "EBF site 358 (partition 1)":1,
+       "EBF site 359 (partition 1)":1,
+       "EBF site 360 (partition 1)":1,
+       "EBF site 361 (partition 1)":1,
+       "EBF site 362 (partition 1)":1,
+       "EBF site 363 (partition 1)":1.070031926313096,
+       "EBF site 364 (partition 1)":9.362294202355413,
+       "EBF site 365 (partition 1)":1,
+       "EBF site 366 (partition 1)":1.121938038152281,
+       "EBF site 367 (partition 1)":1,
+       "EBF site 368 (partition 1)":1,
+       "EBF site 369 (partition 1)":1,
+       "EBF site 371 (partition 1)":2.605803118104363,
+       "EBF site 373 (partition 1)":1,
+       "EBF site 374 (partition 1)":1,
+       "EBF site 375 (partition 1)":1,
+       "EBF site 376 (partition 1)":1,
+       "EBF site 377 (partition 1)":1,
+       "EBF site 378 (partition 1)":1,
+       "EBF site 379 (partition 1)":1,
+       "EBF site 380 (partition 1)":1,
+       "EBF site 382 (partition 1)":1,
+       "EBF site 383 (partition 1)":1,
+       "EBF site 384 (partition 1)":1,
+       "EBF site 385 (partition 1)":1,
+       "EBF site 483 (partition 1)":1,
+       "EBF site 386 (partition 1)":1,
+       "EBF site 387 (partition 1)":1,
+       "EBF site 388 (partition 1)":1,
+       "EBF site 389 (partition 1)":1,
+       "EBF site 391 (partition 1)":1,
+       "EBF site 392 (partition 1)":7.08370347253039,
+       "EBF site 393 (partition 1)":1,
+       "EBF site 394 (partition 1)":1,
+       "EBF site 395 (partition 1)":1,
+       "EBF site 397 (partition 1)":1,
+       "EBF site 398 (partition 1)":1,
+       "EBF site 399 (partition 1)":1,
+       "EBF site 400 (partition 1)":1,
+       "EBF site 401 (partition 1)":1,
+       "EBF site 402 (partition 1)":1,
+       "EBF site 403 (partition 1)":1,
+       "EBF site 404 (partition 1)":1,
+       "EBF site 405 (partition 1)":1,
+       "EBF site 406 (partition 1)":1,
+       "EBF site 407 (partition 1)":1,
+       "EBF site 408 (partition 1)":1,
+       "EBF site 412 (partition 1)":1,
+       "EBF site 411 (partition 1)":1,
+       "EBF site 416 (partition 1)":1,
+       "EBF site 573 (partition 1)":1,
+       "EBF site 419 (partition 1)":1,
+       "EBF site 420 (partition 1)":1,
+       "EBF site 424 (partition 1)":1,
+       "EBF site 425 (partition 1)":1,
+       "EBF site 426 (partition 1)":1,
+       "EBF site 427 (partition 1)":1.074852907849406,
+       "EBF site 428 (partition 1)":1,
+       "EBF site 429 (partition 1)":1,
+       "EBF site 430 (partition 1)":1,
+       "EBF site 432 (partition 1)":1.747293529554697,
+       "EBF site 433 (partition 1)":1,
+       "EBF site 434 (partition 1)":1,
+       "EBF site 435 (partition 1)":1,
+       "EBF site 436 (partition 1)":1,
+       "EBF site 437 (partition 1)":1,
+       "EBF site 438 (partition 1)":1,
+       "EBF site 439 (partition 1)":1,
+       "EBF site 440 (partition 1)":1,
+       "EBF site 441 (partition 1)":1,
+       "EBF site 442 (partition 1)":1,
+       "EBF site 443 (partition 1)":1,
+       "EBF site 444 (partition 1)":1,
+       "EBF site 446 (partition 1)":1,
+       "EBF site 448 (partition 1)":1.207551339283851,
+       "EBF site 449 (partition 1)":1,
+       "EBF site 450 (partition 1)":1,
+       "EBF site 463 (partition 1)":1,
+       "EBF site 464 (partition 1)":1,
+       "EBF site 465 (partition 1)":1,
+       "EBF site 466 (partition 1)":1,
+       "EBF site 467 (partition 1)":1,
+       "EBF site 469 (partition 1)":1,
+       "EBF site 470 (partition 1)":1,
+       "EBF site 472 (partition 1)":1,
+       "EBF site 473 (partition 1)":1,
+       "EBF site 474 (partition 1)":1,
+       "EBF site 475 (partition 1)":1.132721398699952,
+       "EBF site 476 (partition 1)":6.649746048457826,
+       "EBF site 477 (partition 1)":1,
+       "EBF site 478 (partition 1)":1,
+       "EBF site 479 (partition 1)":1,
+       "EBF site 480 (partition 1)":1,
+       "EBF site 481 (partition 1)":1,
+       "EBF site 482 (partition 1)":1,
+       "EBF site 484 (partition 1)":1,
+       "EBF site 485 (partition 1)":1,
+       "EBF site 486 (partition 1)":1,
+       "EBF site 487 (partition 1)":1,
+       "EBF site 488 (partition 1)":1,
+       "EBF site 489 (partition 1)":1.173276108064143,
+       "EBF site 490 (partition 1)":1,
+       "EBF site 491 (partition 1)":1,
+       "EBF site 492 (partition 1)":1.031580467427811,
+       "EBF site 493 (partition 1)":1,
+       "EBF site 494 (partition 1)":1,
+       "EBF site 495 (partition 1)":1,
+       "EBF site 496 (partition 1)":1,
+       "EBF site 497 (partition 1)":1,
+       "EBF site 502 (partition 1)":1,
+       "EBF site 503 (partition 1)":1,
+       "EBF site 504 (partition 1)":8.711160396106161,
+       "EBF site 505 (partition 1)":1,
+       "EBF site 506 (partition 1)":1,
+       "EBF site 507 (partition 1)":1,
+       "EBF site 508 (partition 1)":1,
+       "EBF site 509 (partition 1)":1,
+       "EBF site 511 (partition 1)":1,
+       "EBF site 513 (partition 1)":1,
+       "EBF site 514 (partition 1)":1,
+       "EBF site 515 (partition 1)":1,
+       "EBF site 517 (partition 1)":1,
+       "EBF site 520 (partition 1)":1,
+       "EBF site 521 (partition 1)":1,
+       "EBF site 522 (partition 1)":1,
+       "EBF site 523 (partition 1)":1,
+       "EBF site 524 (partition 1)":1,
+       "EBF site 525 (partition 1)":1,
+       "EBF site 526 (partition 1)":30.26206254090997,
+       "EBF site 527 (partition 1)":1,
+       "EBF site 528 (partition 1)":1,
+       "EBF site 529 (partition 1)":1e+26,
+       "EBF site 532 (partition 1)":1,
+       "EBF site 533 (partition 1)":1,
+       "EBF site 534 (partition 1)":1,
+       "EBF site 535 (partition 1)":1.652770616961016,
+       "EBF site 536 (partition 1)":1.886362353696044,
+       "EBF site 538 (partition 1)":1,
+       "EBF site 539 (partition 1)":1,
+       "EBF site 541 (partition 1)":1,
+       "EBF site 542 (partition 1)":1,
+       "EBF site 544 (partition 1)":1,
+       "EBF site 546 (partition 1)":1,
+       "EBF site 547 (partition 1)":1,
+       "EBF site 551 (partition 1)":1,
+       "EBF site 552 (partition 1)":1,
+       "EBF site 553 (partition 1)":1,
+       "EBF site 554 (partition 1)":1,
+       "EBF site 555 (partition 1)":1,
+       "EBF site 556 (partition 1)":1,
+       "EBF site 557 (partition 1)":1,
+       "EBF site 558 (partition 1)":1,
+       "EBF site 559 (partition 1)":1,
+       "EBF site 560 (partition 1)":1,
+       "EBF site 561 (partition 1)":1,
+       "EBF site 562 (partition 1)":1,
+       "EBF site 563 (partition 1)":1,
+       "EBF site 565 (partition 1)":1,
+       "EBF site 566 (partition 1)":1,
+       "EBF site 567 (partition 1)":1,
+       "EBF site 569 (partition 1)":1,
+       "EBF site 571 (partition 1)":1.174007010706201,
+       "EBF site 574 (partition 1)":1,
+       "EBF site 575 (partition 1)":1,
+       "EBF site 576 (partition 1)":1,
+       "EBF site 577 (partition 1)":1,
+       "EBF site 578 (partition 1)":1,
+       "EBF site 579 (partition 1)":295.2276259492026,
+       "EBF site 580 (partition 1)":161.5253153900997,
+       "EBF site 585 (partition 1)":1,
+       "EBF site 586 (partition 1)":1,
+       "EBF site 587 (partition 1)":27.9614648486024,
+       "EBF site 588 (partition 1)":6.715107538210815,
+       "EBF site 589 (partition 1)":1,
+       "EBF site 590 (partition 1)":3.411495363548675,
+       "EBF site 591 (partition 1)":1,
+       "EBF site 592 (partition 1)":3.461982760824716,
+       "EBF site 593 (partition 1)":1,
+       "EBF site 594 (partition 1)":1,
+       "EBF site 595 (partition 1)":14.02733526670904,
+       "EBF site 596 (partition 1)":32.38815409509624,
+       "EBF site 597 (partition 1)":17.40045425078699,
+       "EBF site 598 (partition 1)":1,
+       "EBF site 599 (partition 1)":812.8441397904783,
+       "EBF site 600 (partition 1)":1.000040659807957,
+       "EBF site 601 (partition 1)":1,
+       "EBF site 604 (partition 1)":1,
+       "EBF site 605 (partition 1)":1,
+       "EBF site 606 (partition 1)":1.592383515494922,
+       "EBF site 607 (partition 1)":1,
+       "EBF site 608 (partition 1)":1,
+       "EBF site 610 (partition 1)":1,
+       "EBF site 613 (partition 1)":1,
+       "EBF site 614 (partition 1)":1,
+       "EBF site 615 (partition 1)":1,
+       "EBF site 616 (partition 1)":1,
+       "EBF site 617 (partition 1)":1,
+       "EBF site 618 (partition 1)":1,
+       "EBF site 619 (partition 1)":1,
+       "EBF site 620 (partition 1)":1,
+       "EBF site 621 (partition 1)":5.210529251141708,
+       "EBF site 622 (partition 1)":1,
+       "EBF site 623 (partition 1)":69.87074068062138,
+       "EBF site 624 (partition 1)":1.293983346452492,
+       "EBF site 625 (partition 1)":1.006331037968851,
+       "EBF site 626 (partition 1)":1,
+       "EBF site 627 (partition 1)":82.25054335217787,
+       "EBF site 628 (partition 1)":1,
+       "EBF site 630 (partition 1)":1,
+       "EBF site 632 (partition 1)":1.078824098517727,
+       "EBF site 633 (partition 1)":1,
+       "EBF site 634 (partition 1)":1,
+       "EBF site 635 (partition 1)":1,
+       "EBF site 636 (partition 1)":7.34485530396251,
+       "EBF site 649 (partition 1)":1,
+       "EBF site 651 (partition 1)":26.54713104151185,
+       "EBF site 652 (partition 1)":1,
+       "EBF site 653 (partition 1)":1,
+       "EBF site 654 (partition 1)":1,
+       "EBF site 655 (partition 1)":1,
+       "EBF site 656 (partition 1)":1,
+       "EBF site 657 (partition 1)":1,
+       "EBF site 660 (partition 1)":1,
+       "EBF site 661 (partition 1)":1,
+       "EBF site 662 (partition 1)":1,
+       "EBF site 663 (partition 1)":1,
+       "EBF site 664 (partition 1)":1,
+       "EBF site 665 (partition 1)":1,
+       "EBF site 671 (partition 1)":1,
+       "EBF site 672 (partition 1)":1,
+       "EBF site 673 (partition 1)":1,
+       "EBF site 674 (partition 1)":1,
+       "EBF site 675 (partition 1)":1,
+       "EBF site 676 (partition 1)":1,
+       "EBF site 677 (partition 1)":1,
+       "EBF site 678 (partition 1)":1,
+       "EBF site 679 (partition 1)":1,
+       "EBF site 680 (partition 1)":1,
+       "EBF site 681 (partition 1)":1,
+       "EBF site 682 (partition 1)":1,
+       "EBF site 683 (partition 1)":1,
+       "EBF site 685 (partition 1)":1,
+       "EBF site 686 (partition 1)":24015.5964448576,
+       "EBF site 687 (partition 1)":1,
+       "EBF site 688 (partition 1)":1,
+       "EBF site 689 (partition 1)":1,
+       "EBF site 690 (partition 1)":1,
+       "EBF site 691 (partition 1)":1,
+       "EBF site 692 (partition 1)":1,
+       "EBF site 693 (partition 1)":1,
+       "EBF site 694 (partition 1)":1,
+       "EBF site 695 (partition 1)":1,
+       "EBF site 696 (partition 1)":46.88605029567602,
+       "EBF site 697 (partition 1)":1,
+       "EBF site 698 (partition 1)":1,
+       "EBF site 699 (partition 1)":1,
+       "EBF site 700 (partition 1)":1,
+       "EBF site 701 (partition 1)":1,
+       "EBF site 702 (partition 1)":1,
+       "EBF site 703 (partition 1)":1,
+       "EBF site 704 (partition 1)":1.080902395189486,
+       "EBF site 706 (partition 1)":1,
+       "EBF site 708 (partition 1)":1,
+       "EBF site 709 (partition 1)":1,
+       "EBF site 710 (partition 1)":1,
+       "EBF site 711 (partition 1)":2.350075069149096,
+       "EBF site 712 (partition 1)":1,
+       "EBF site 713 (partition 1)":1,
+       "EBF site 714 (partition 1)":1,
+       "EBF site 715 (partition 1)":1,
+       "EBF site 716 (partition 1)":1,
+       "EBF site 717 (partition 1)":1,
+       "EBF site 718 (partition 1)":1,
+       "EBF site 720 (partition 1)":1,
+       "EBF site 721 (partition 1)":1,
+       "EBF site 722 (partition 1)":1,
+       "EBF site 723 (partition 1)":1,
+       "EBF site 724 (partition 1)":1,
+       "EBF site 725 (partition 1)":1,
+       "EBF site 726 (partition 1)":1,
+       "EBF site 727 (partition 1)":1,
+       "EBF site 728 (partition 1)":1,
+       "EBF site 729 (partition 1)":1,
+       "EBF site 730 (partition 1)":1,
+       "EBF site 731 (partition 1)":1,
+       "EBF site 732 (partition 1)":1,
+       "EBF site 733 (partition 1)":1,
+       "EBF site 734 (partition 1)":1,
+       "EBF site 735 (partition 1)":1,
+       "EBF site 736 (partition 1)":1,
+       "EBF site 737 (partition 1)":1,
+       "EBF site 738 (partition 1)":1,
+       "EBF site 739 (partition 1)":1,
+       "EBF site 740 (partition 1)":1,
+       "EBF site 741 (partition 1)":1,
+       "EBF site 742 (partition 1)":1,
+       "EBF site 743 (partition 1)":1,
+       "EBF site 744 (partition 1)":1,
+       "EBF site 745 (partition 1)":1,
+       "EBF site 746 (partition 1)":1,
+       "EBF site 747 (partition 1)":1,
+       "EBF site 748 (partition 1)":1,
+       "EBF site 749 (partition 1)":1,
+       "EBF site 750 (partition 1)":1,
+       "EBF site 751 (partition 1)":1,
+       "EBF site 752 (partition 1)":1,
+       "EBF site 753 (partition 1)":1,
+       "EBF site 754 (partition 1)":1,
+       "EBF site 755 (partition 1)":1,
+       "EBF site 756 (partition 1)":1,
+       "EBF site 757 (partition 1)":1.088237023557167,
+       "EBF site 758 (partition 1)":7.170459548548255,
+       "EBF site 759 (partition 1)":3.263719068605002,
+       "EBF site 760 (partition 1)":1,
+       "EBF site 761 (partition 1)":16.54887906159466,
+       "EBF site 762 (partition 1)":1.06012094150071,
+       "EBF site 763 (partition 1)":1,
+       "EBF site 764 (partition 1)":7.226130707655655,
+       "EBF site 765 (partition 1)":1,
+       "EBF site 766 (partition 1)":1,
+       "EBF site 770 (partition 1)":1.02978503744675,
+       "EBF site 771 (partition 1)":1,
+       "EBF site 776 (partition 1)":1,
+       "EBF site 777 (partition 1)":1,
+       "EBF site 778 (partition 1)":1,
+       "EBF site 779 (partition 1)":1,
+       "EBF site 780 (partition 1)":1e+26,
+       "EBF site 781 (partition 1)":1,
+       "EBF site 782 (partition 1)":1,
+       "EBF site 783 (partition 1)":6.593794274827558,
+       "EBF site 784 (partition 1)":1,
+       "EBF site 785 (partition 1)":1,
+       "EBF site 786 (partition 1)":1,
+       "EBF site 787 (partition 1)":1,
+       "EBF site 788 (partition 1)":1,
+       "EBF site 789 (partition 1)":1,
+       "EBF site 790 (partition 1)":1,
+       "EBF site 792 (partition 1)":1,
+       "EBF site 793 (partition 1)":1,
+       "EBF site 794 (partition 1)":1,
+       "EBF site 796 (partition 1)":1,
+       "EBF site 797 (partition 1)":1,
+       "EBF site 798 (partition 1)":1,
+       "EBF site 799 (partition 1)":1,
+       "EBF site 800 (partition 1)":1,
+       "EBF site 801 (partition 1)":1,
+       "EBF site 802 (partition 1)":1,
+       "EBF site 803 (partition 1)":1.013013735983911,
+       "EBF site 804 (partition 1)":1,
+       "EBF site 807 (partition 1)":1,
+       "EBF site 808 (partition 1)":1.411169166364304,
+       "EBF site 809 (partition 1)":1,
+       "EBF site 810 (partition 1)":1,
+       "EBF site 811 (partition 1)":1,
+       "EBF site 812 (partition 1)":1,
+       "EBF site 813 (partition 1)":1,
+       "EBF site 815 (partition 1)":1,
+       "EBF site 816 (partition 1)":1,
+       "EBF site 817 (partition 1)":1,
+       "EBF site 818 (partition 1)":1,
+       "EBF site 819 (partition 1)":1,
+       "EBF site 820 (partition 1)":1,
+       "EBF site 822 (partition 1)":1,
+       "EBF site 823 (partition 1)":1,
+       "EBF site 824 (partition 1)":1,
+       "EBF site 825 (partition 1)":1,
+       "EBF site 826 (partition 1)":1,
+       "EBF site 827 (partition 1)":1,
+       "EBF site 828 (partition 1)":1,
+       "EBF site 829 (partition 1)":1,
+       "EBF site 830 (partition 1)":1.009243213897146,
+       "EBF site 847 (partition 1)":1
+      },
+     "Node2":{
+       "Nucleotide GTR":0.1144834910342476,
+       "Global MG94xREV":0.03391870664711863
+      },
+     "Node5":{
+       "Nucleotide GTR":0,
+       "Global MG94xREV":0.1401209760358547
+      },
+     "Node6":{
+       "Nucleotide GTR":0.01868234837151412,
+       "Global MG94xREV":0.04031884750891194
+      },
+     "Node7":{
+       "Nucleotide GTR":0.02018914891484958,
+       "Global MG94xREV":0.01774953622139515
+      }
+    },
+   "attributes":{
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "Global MG94xREV":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "EBF site 3 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":5
+      },
+     "EBF site 6 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":8
+      },
+     "EBF site 7 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":9
+      },
+     "EBF site 8 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":10
+      },
+     "EBF site 98 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":100
+      },
+     "EBF site 99 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":101
+      },
+     "EBF site 100 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":102
+      },
+     "EBF site 101 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":103
+      },
+     "EBF site 102 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":104
+      },
+     "EBF site 103 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":105
+      },
+     "EBF site 197 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":199
+      },
+     "EBF site 381 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":383
+      },
+     "EBF site 104 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":106
+      },
+     "EBF site 105 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":107
+      },
+     "EBF site 112 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":114
+      },
+     "EBF site 418 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":420
+      },
+     "EBF site 106 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":108
+      },
+     "EBF site 107 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":109
+      },
+     "EBF site 108 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":110
+      },
+     "EBF site 109 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":111
+      },
+     "EBF site 110 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":112
+      },
+     "EBF site 111 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":113
+      },
+     "EBF site 113 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":115
+      },
+     "EBF site 114 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":116
+      },
+     "EBF site 115 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":117
+      },
+     "EBF site 116 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":118
+      },
+     "EBF site 117 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":119
+      },
+     "EBF site 118 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":120
+      },
+     "EBF site 119 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":121
+      },
+     "EBF site 120 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":122
+      },
+     "EBF site 121 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":123
+      },
+     "EBF site 122 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":124
+      },
+     "EBF site 123 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":125
+      },
+     "EBF site 126 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":128
+      },
+     "EBF site 127 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":129
+      },
+     "EBF site 128 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":130
+      },
+     "EBF site 129 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":131
+      },
+     "EBF site 130 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":132
+      },
+     "EBF site 131 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":133
+      },
+     "EBF site 132 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":134
+      },
+     "EBF site 133 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":135
+      },
+     "EBF site 134 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":136
+      },
+     "EBF site 135 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":137
+      },
+     "EBF site 136 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":138
+      },
+     "EBF site 137 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":139
+      },
+     "EBF site 684 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":686
+      },
+     "EBF site 138 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":140
+      },
+     "EBF site 139 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":141
+      },
+     "EBF site 140 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":142
+      },
+     "EBF site 141 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":143
+      },
+     "EBF site 142 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":144
+      },
+     "EBF site 143 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":145
+      },
+     "EBF site 144 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":146
+      },
+     "EBF site 146 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":148
+      },
+     "EBF site 148 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":150
+      },
+     "EBF site 149 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":151
+      },
+     "EBF site 150 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":152
+      },
+     "EBF site 151 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":153
+      },
+     "EBF site 152 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":154
+      },
+     "EBF site 153 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":155
+      },
+     "EBF site 154 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":156
+      },
+     "EBF site 707 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":709
+      },
+     "EBF site 155 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":157
+      },
+     "EBF site 157 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":159
+      },
+     "EBF site 158 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":160
+      },
+     "EBF site 159 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":161
+      },
+     "EBF site 160 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":162
+      },
+     "EBF site 161 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":163
+      },
+     "EBF site 162 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":164
+      },
+     "EBF site 163 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":165
+      },
+     "EBF site 165 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":167
+      },
+     "EBF site 166 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":168
+      },
+     "EBF site 167 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":169
+      },
+     "EBF site 168 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":170
+      },
+     "EBF site 169 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":171
+      },
+     "EBF site 170 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":172
+      },
+     "EBF site 171 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":173
+      },
+     "EBF site 172 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":174
+      },
+     "EBF site 173 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":175
+      },
+     "EBF site 178 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":180
+      },
+     "EBF site 179 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":181
+      },
+     "EBF site 180 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":182
+      },
+     "EBF site 181 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":183
+      },
+     "EBF site 182 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":184
+      },
+     "EBF site 183 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":185
+      },
+     "EBF site 184 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":186
+      },
+     "EBF site 185 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":187
+      },
+     "EBF site 186 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":188
+      },
+     "EBF site 187 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":189
+      },
+     "EBF site 705 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":707
+      },
+     "EBF site 188 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":190
+      },
+     "EBF site 189 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":191
+      },
+     "EBF site 190 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":192
+      },
+     "EBF site 191 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":193
+      },
+     "EBF site 192 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":194
+      },
+     "EBF site 193 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":195
+      },
+     "EBF site 194 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":196
+      },
+     "EBF site 195 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":197
+      },
+     "EBF site 196 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":198
+      },
+     "EBF site 199 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":201
+      },
+     "EBF site 200 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":202
+      },
+     "EBF site 201 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":203
+      },
+     "EBF site 202 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":204
+      },
+     "EBF site 203 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":205
+      },
+     "EBF site 204 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":206
+      },
+     "EBF site 205 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":207
+      },
+     "EBF site 206 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":208
+      },
+     "EBF site 207 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":209
+      },
+     "EBF site 208 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":210
+      },
+     "EBF site 209 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":211
+      },
+     "EBF site 210 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":212
+      },
+     "EBF site 211 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":213
+      },
+     "EBF site 212 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":214
+      },
+     "EBF site 213 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":215
+      },
+     "EBF site 214 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":216
+      },
+     "EBF site 215 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":217
+      },
+     "EBF site 216 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":218
+      },
+     "EBF site 217 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":219
+      },
+     "EBF site 218 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":220
+      },
+     "EBF site 219 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":221
+      },
+     "EBF site 223 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":225
+      },
+     "EBF site 224 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":226
+      },
+     "EBF site 225 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":227
+      },
+     "EBF site 226 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":228
+      },
+     "EBF site 227 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":229
+      },
+     "EBF site 228 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":230
+      },
+     "EBF site 229 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":231
+      },
+     "EBF site 230 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":232
+      },
+     "EBF site 231 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":233
+      },
+     "EBF site 232 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":234
+      },
+     "EBF site 233 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":235
+      },
+     "EBF site 236 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":238
+      },
+     "EBF site 237 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":239
+      },
+     "EBF site 238 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":240
+      },
+     "EBF site 239 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":241
+      },
+     "EBF site 240 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":242
+      },
+     "EBF site 242 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":244
+      },
+     "EBF site 243 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":245
+      },
+     "EBF site 244 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":246
+      },
+     "EBF site 245 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":247
+      },
+     "EBF site 246 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":248
+      },
+     "EBF site 247 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":249
+      },
+     "EBF site 249 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":251
+      },
+     "EBF site 250 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":252
+      },
+     "EBF site 251 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":253
+      },
+     "EBF site 252 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":254
+      },
+     "EBF site 253 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":255
+      },
+     "EBF site 254 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":256
+      },
+     "EBF site 255 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":257
+      },
+     "EBF site 256 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":258
+      },
+     "EBF site 257 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":259
+      },
+     "EBF site 258 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":260
+      },
+     "EBF site 260 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":262
+      },
+     "EBF site 261 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":263
+      },
+     "EBF site 262 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":264
+      },
+     "EBF site 263 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":265
+      },
+     "EBF site 264 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":266
+      },
+     "EBF site 265 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":267
+      },
+     "EBF site 266 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":268
+      },
+     "EBF site 267 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":269
+      },
+     "EBF site 268 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":270
+      },
+     "EBF site 269 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":271
+      },
+     "EBF site 270 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":272
+      },
+     "EBF site 271 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":273
+      },
+     "EBF site 272 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":274
+      },
+     "EBF site 273 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":275
+      },
+     "EBF site 274 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":276
+      },
+     "EBF site 275 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":277
+      },
+     "EBF site 276 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":278
+      },
+     "EBF site 277 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":279
+      },
+     "EBF site 278 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":280
+      },
+     "EBF site 512 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":514
+      },
+     "EBF site 279 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":281
+      },
+     "EBF site 280 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":282
+      },
+     "EBF site 281 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":283
+      },
+     "EBF site 282 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":284
+      },
+     "EBF site 283 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":285
+      },
+     "EBF site 284 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":286
+      },
+     "EBF site 285 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":287
+      },
+     "EBF site 286 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":288
+      },
+     "EBF site 287 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":289
+      },
+     "EBF site 289 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":291
+      },
+     "EBF site 290 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":292
+      },
+     "EBF site 291 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":293
+      },
+     "EBF site 292 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":294
+      },
+     "EBF site 293 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":295
+      },
+     "EBF site 294 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":296
+      },
+     "EBF site 295 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":297
+      },
+     "EBF site 296 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":298
+      },
+     "EBF site 297 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":299
+      },
+     "EBF site 298 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":300
+      },
+     "EBF site 299 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":301
+      },
+     "EBF site 300 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":302
+      },
+     "EBF site 301 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":303
+      },
+     "EBF site 302 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":304
+      },
+     "EBF site 303 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":305
+      },
+     "EBF site 304 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":306
+      },
+     "EBF site 307 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":309
+      },
+     "EBF site 308 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":310
+      },
+     "EBF site 310 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":312
+      },
+     "EBF site 311 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":313
+      },
+     "EBF site 312 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":314
+      },
+     "EBF site 313 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":315
+      },
+     "EBF site 314 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":316
+      },
+     "EBF site 315 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":317
+      },
+     "EBF site 317 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":319
+      },
+     "EBF site 320 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":322
+      },
+     "EBF site 321 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":323
+      },
+     "EBF site 323 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":325
+      },
+     "EBF site 325 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":327
+      },
+     "EBF site 327 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":329
+      },
+     "EBF site 329 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":331
+      },
+     "EBF site 330 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":332
+      },
+     "EBF site 331 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":333
+      },
+     "EBF site 332 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":334
+      },
+     "EBF site 333 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":335
+      },
+     "EBF site 334 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":336
+      },
+     "EBF site 335 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":337
+      },
+     "EBF site 336 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":338
+      },
+     "EBF site 337 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":339
+      },
+     "EBF site 338 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":340
+      },
+     "EBF site 339 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":341
+      },
+     "EBF site 340 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":342
+      },
+     "EBF site 341 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":343
+      },
+     "EBF site 342 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":344
+      },
+     "EBF site 343 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":345
+      },
+     "EBF site 344 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":346
+      },
+     "EBF site 345 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":347
+      },
+     "EBF site 346 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":348
+      },
+     "EBF site 347 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":349
+      },
+     "EBF site 348 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":350
+      },
+     "EBF site 349 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":351
+      },
+     "EBF site 350 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":352
+      },
+     "EBF site 351 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":353
+      },
+     "EBF site 352 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":354
+      },
+     "EBF site 353 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":355
+      },
+     "EBF site 354 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":356
+      },
+     "EBF site 355 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":357
+      },
+     "EBF site 356 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":358
+      },
+     "EBF site 358 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":360
+      },
+     "EBF site 359 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":361
+      },
+     "EBF site 360 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":362
+      },
+     "EBF site 361 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":363
+      },
+     "EBF site 362 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":364
+      },
+     "EBF site 363 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":365
+      },
+     "EBF site 364 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":366
+      },
+     "EBF site 365 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":367
+      },
+     "EBF site 366 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":368
+      },
+     "EBF site 367 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":369
+      },
+     "EBF site 368 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":370
+      },
+     "EBF site 369 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":371
+      },
+     "EBF site 371 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":373
+      },
+     "EBF site 373 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":375
+      },
+     "EBF site 374 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":376
+      },
+     "EBF site 375 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":377
+      },
+     "EBF site 376 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":378
+      },
+     "EBF site 377 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":379
+      },
+     "EBF site 378 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":380
+      },
+     "EBF site 379 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":381
+      },
+     "EBF site 380 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":382
+      },
+     "EBF site 382 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":384
+      },
+     "EBF site 383 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":385
+      },
+     "EBF site 384 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":386
+      },
+     "EBF site 385 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":387
+      },
+     "EBF site 483 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":485
+      },
+     "EBF site 386 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":388
+      },
+     "EBF site 387 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":389
+      },
+     "EBF site 388 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":390
+      },
+     "EBF site 389 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":391
+      },
+     "EBF site 391 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":393
+      },
+     "EBF site 392 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":394
+      },
+     "EBF site 393 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":395
+      },
+     "EBF site 394 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":396
+      },
+     "EBF site 395 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":397
+      },
+     "EBF site 397 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":399
+      },
+     "EBF site 398 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":400
+      },
+     "EBF site 399 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":401
+      },
+     "EBF site 400 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":402
+      },
+     "EBF site 401 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":403
+      },
+     "EBF site 402 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":404
+      },
+     "EBF site 403 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":405
+      },
+     "EBF site 404 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":406
+      },
+     "EBF site 405 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":407
+      },
+     "EBF site 406 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":408
+      },
+     "EBF site 407 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":409
+      },
+     "EBF site 408 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":410
+      },
+     "EBF site 412 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":414
+      },
+     "EBF site 411 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":413
+      },
+     "EBF site 416 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":418
+      },
+     "EBF site 573 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":575
+      },
+     "EBF site 419 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":421
+      },
+     "EBF site 420 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":422
+      },
+     "EBF site 424 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":426
+      },
+     "EBF site 425 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":427
+      },
+     "EBF site 426 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":428
+      },
+     "EBF site 427 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":429
+      },
+     "EBF site 428 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":430
+      },
+     "EBF site 429 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":431
+      },
+     "EBF site 430 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":432
+      },
+     "EBF site 432 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":434
+      },
+     "EBF site 433 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":435
+      },
+     "EBF site 434 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":436
+      },
+     "EBF site 435 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":437
+      },
+     "EBF site 436 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":438
+      },
+     "EBF site 437 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":439
+      },
+     "EBF site 438 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":440
+      },
+     "EBF site 439 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":441
+      },
+     "EBF site 440 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":442
+      },
+     "EBF site 441 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":443
+      },
+     "EBF site 442 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":444
+      },
+     "EBF site 443 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":445
+      },
+     "EBF site 444 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":446
+      },
+     "EBF site 446 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":448
+      },
+     "EBF site 448 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":450
+      },
+     "EBF site 449 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":451
+      },
+     "EBF site 450 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":452
+      },
+     "EBF site 463 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":465
+      },
+     "EBF site 464 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":466
+      },
+     "EBF site 465 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":467
+      },
+     "EBF site 466 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":468
+      },
+     "EBF site 467 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":469
+      },
+     "EBF site 469 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":471
+      },
+     "EBF site 470 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":472
+      },
+     "EBF site 472 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":474
+      },
+     "EBF site 473 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":475
+      },
+     "EBF site 474 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":476
+      },
+     "EBF site 475 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":477
+      },
+     "EBF site 476 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":478
+      },
+     "EBF site 477 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":479
+      },
+     "EBF site 478 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":480
+      },
+     "EBF site 479 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":481
+      },
+     "EBF site 480 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":482
+      },
+     "EBF site 481 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":483
+      },
+     "EBF site 482 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":484
+      },
+     "EBF site 484 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":486
+      },
+     "EBF site 485 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":487
+      },
+     "EBF site 486 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":488
+      },
+     "EBF site 487 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":489
+      },
+     "EBF site 488 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":490
+      },
+     "EBF site 489 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":491
+      },
+     "EBF site 490 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":492
+      },
+     "EBF site 491 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":493
+      },
+     "EBF site 492 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":494
+      },
+     "EBF site 493 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":495
+      },
+     "EBF site 494 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":496
+      },
+     "EBF site 495 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":497
+      },
+     "EBF site 496 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":498
+      },
+     "EBF site 497 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":499
+      },
+     "EBF site 502 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":504
+      },
+     "EBF site 503 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":505
+      },
+     "EBF site 504 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":506
+      },
+     "EBF site 505 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":507
+      },
+     "EBF site 506 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":508
+      },
+     "EBF site 507 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":509
+      },
+     "EBF site 508 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":510
+      },
+     "EBF site 509 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":511
+      },
+     "EBF site 511 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":513
+      },
+     "EBF site 513 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":515
+      },
+     "EBF site 514 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":516
+      },
+     "EBF site 515 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":517
+      },
+     "EBF site 517 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":519
+      },
+     "EBF site 520 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":522
+      },
+     "EBF site 521 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":523
+      },
+     "EBF site 522 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":524
+      },
+     "EBF site 523 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":525
+      },
+     "EBF site 524 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":526
+      },
+     "EBF site 525 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":527
+      },
+     "EBF site 526 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":528
+      },
+     "EBF site 527 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":529
+      },
+     "EBF site 528 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":530
+      },
+     "EBF site 529 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":531
+      },
+     "EBF site 532 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":534
+      },
+     "EBF site 533 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":535
+      },
+     "EBF site 534 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":536
+      },
+     "EBF site 535 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":537
+      },
+     "EBF site 536 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":538
+      },
+     "EBF site 538 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":540
+      },
+     "EBF site 539 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":541
+      },
+     "EBF site 541 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":543
+      },
+     "EBF site 542 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":544
+      },
+     "EBF site 544 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":546
+      },
+     "EBF site 546 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":548
+      },
+     "EBF site 547 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":549
+      },
+     "EBF site 551 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":553
+      },
+     "EBF site 552 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":554
+      },
+     "EBF site 553 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":555
+      },
+     "EBF site 554 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":556
+      },
+     "EBF site 555 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":557
+      },
+     "EBF site 556 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":558
+      },
+     "EBF site 557 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":559
+      },
+     "EBF site 558 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":560
+      },
+     "EBF site 559 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":561
+      },
+     "EBF site 560 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":562
+      },
+     "EBF site 561 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":563
+      },
+     "EBF site 562 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":564
+      },
+     "EBF site 563 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":565
+      },
+     "EBF site 565 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":567
+      },
+     "EBF site 566 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":568
+      },
+     "EBF site 567 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":569
+      },
+     "EBF site 569 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":571
+      },
+     "EBF site 571 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":573
+      },
+     "EBF site 574 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":576
+      },
+     "EBF site 575 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":577
+      },
+     "EBF site 576 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":578
+      },
+     "EBF site 577 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":579
+      },
+     "EBF site 578 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":580
+      },
+     "EBF site 579 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":581
+      },
+     "EBF site 580 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":582
+      },
+     "EBF site 585 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":587
+      },
+     "EBF site 586 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":588
+      },
+     "EBF site 587 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":589
+      },
+     "EBF site 588 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":590
+      },
+     "EBF site 589 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":591
+      },
+     "EBF site 590 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":592
+      },
+     "EBF site 591 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":593
+      },
+     "EBF site 592 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":594
+      },
+     "EBF site 593 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":595
+      },
+     "EBF site 594 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":596
+      },
+     "EBF site 595 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":597
+      },
+     "EBF site 596 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":598
+      },
+     "EBF site 597 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":599
+      },
+     "EBF site 598 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":600
+      },
+     "EBF site 599 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":601
+      },
+     "EBF site 600 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":602
+      },
+     "EBF site 601 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":603
+      },
+     "EBF site 604 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":606
+      },
+     "EBF site 605 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":607
+      },
+     "EBF site 606 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":608
+      },
+     "EBF site 607 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":609
+      },
+     "EBF site 608 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":610
+      },
+     "EBF site 610 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":612
+      },
+     "EBF site 613 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":615
+      },
+     "EBF site 614 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":616
+      },
+     "EBF site 615 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":617
+      },
+     "EBF site 616 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":618
+      },
+     "EBF site 617 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":619
+      },
+     "EBF site 618 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":620
+      },
+     "EBF site 619 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":621
+      },
+     "EBF site 620 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":622
+      },
+     "EBF site 621 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":623
+      },
+     "EBF site 622 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":624
+      },
+     "EBF site 623 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":625
+      },
+     "EBF site 624 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":626
+      },
+     "EBF site 625 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":627
+      },
+     "EBF site 626 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":628
+      },
+     "EBF site 627 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":629
+      },
+     "EBF site 628 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":630
+      },
+     "EBF site 630 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":632
+      },
+     "EBF site 632 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":634
+      },
+     "EBF site 633 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":635
+      },
+     "EBF site 634 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":636
+      },
+     "EBF site 635 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":637
+      },
+     "EBF site 636 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":638
+      },
+     "EBF site 649 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":651
+      },
+     "EBF site 651 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":653
+      },
+     "EBF site 652 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":654
+      },
+     "EBF site 653 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":655
+      },
+     "EBF site 654 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":656
+      },
+     "EBF site 655 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":657
+      },
+     "EBF site 656 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":658
+      },
+     "EBF site 657 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":659
+      },
+     "EBF site 660 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":662
+      },
+     "EBF site 661 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":663
+      },
+     "EBF site 662 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":664
+      },
+     "EBF site 663 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":665
+      },
+     "EBF site 664 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":666
+      },
+     "EBF site 665 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":667
+      },
+     "EBF site 671 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":673
+      },
+     "EBF site 672 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":674
+      },
+     "EBF site 673 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":675
+      },
+     "EBF site 674 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":676
+      },
+     "EBF site 675 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":677
+      },
+     "EBF site 676 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":678
+      },
+     "EBF site 677 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":679
+      },
+     "EBF site 678 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":680
+      },
+     "EBF site 679 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":681
+      },
+     "EBF site 680 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":682
+      },
+     "EBF site 681 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":683
+      },
+     "EBF site 682 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":684
+      },
+     "EBF site 683 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":685
+      },
+     "EBF site 685 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":687
+      },
+     "EBF site 686 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":688
+      },
+     "EBF site 687 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":689
+      },
+     "EBF site 688 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":690
+      },
+     "EBF site 689 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":691
+      },
+     "EBF site 690 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":692
+      },
+     "EBF site 691 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":693
+      },
+     "EBF site 692 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":694
+      },
+     "EBF site 693 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":695
+      },
+     "EBF site 694 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":696
+      },
+     "EBF site 695 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":697
+      },
+     "EBF site 696 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":698
+      },
+     "EBF site 697 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":699
+      },
+     "EBF site 698 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":700
+      },
+     "EBF site 699 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":701
+      },
+     "EBF site 700 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":702
+      },
+     "EBF site 701 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":703
+      },
+     "EBF site 702 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":704
+      },
+     "EBF site 703 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":705
+      },
+     "EBF site 704 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":706
+      },
+     "EBF site 706 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":708
+      },
+     "EBF site 708 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":710
+      },
+     "EBF site 709 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":711
+      },
+     "EBF site 710 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":712
+      },
+     "EBF site 711 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":713
+      },
+     "EBF site 712 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":714
+      },
+     "EBF site 713 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":715
+      },
+     "EBF site 714 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":716
+      },
+     "EBF site 715 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":717
+      },
+     "EBF site 716 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":718
+      },
+     "EBF site 717 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":719
+      },
+     "EBF site 718 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":720
+      },
+     "EBF site 720 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":722
+      },
+     "EBF site 721 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":723
+      },
+     "EBF site 722 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":724
+      },
+     "EBF site 723 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":725
+      },
+     "EBF site 724 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":726
+      },
+     "EBF site 725 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":727
+      },
+     "EBF site 726 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":728
+      },
+     "EBF site 727 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":729
+      },
+     "EBF site 728 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":730
+      },
+     "EBF site 729 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":731
+      },
+     "EBF site 730 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":732
+      },
+     "EBF site 731 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":733
+      },
+     "EBF site 732 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":734
+      },
+     "EBF site 733 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":735
+      },
+     "EBF site 734 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":736
+      },
+     "EBF site 735 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":737
+      },
+     "EBF site 736 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":738
+      },
+     "EBF site 737 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":739
+      },
+     "EBF site 738 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":740
+      },
+     "EBF site 739 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":741
+      },
+     "EBF site 740 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":742
+      },
+     "EBF site 741 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":743
+      },
+     "EBF site 742 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":744
+      },
+     "EBF site 743 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":745
+      },
+     "EBF site 744 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":746
+      },
+     "EBF site 745 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":747
+      },
+     "EBF site 746 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":748
+      },
+     "EBF site 747 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":749
+      },
+     "EBF site 748 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":750
+      },
+     "EBF site 749 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":751
+      },
+     "EBF site 750 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":752
+      },
+     "EBF site 751 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":753
+      },
+     "EBF site 752 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":754
+      },
+     "EBF site 753 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":755
+      },
+     "EBF site 754 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":756
+      },
+     "EBF site 755 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":757
+      },
+     "EBF site 756 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":758
+      },
+     "EBF site 757 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":759
+      },
+     "EBF site 758 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":760
+      },
+     "EBF site 759 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":761
+      },
+     "EBF site 760 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":762
+      },
+     "EBF site 761 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":763
+      },
+     "EBF site 762 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":764
+      },
+     "EBF site 763 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":765
+      },
+     "EBF site 764 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":766
+      },
+     "EBF site 765 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":767
+      },
+     "EBF site 766 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":768
+      },
+     "EBF site 770 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":772
+      },
+     "EBF site 771 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":773
+      },
+     "EBF site 776 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":778
+      },
+     "EBF site 777 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":779
+      },
+     "EBF site 778 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":780
+      },
+     "EBF site 779 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":781
+      },
+     "EBF site 780 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":782
+      },
+     "EBF site 781 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":783
+      },
+     "EBF site 782 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":784
+      },
+     "EBF site 783 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":785
+      },
+     "EBF site 784 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":786
+      },
+     "EBF site 785 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":787
+      },
+     "EBF site 786 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":788
+      },
+     "EBF site 787 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":789
+      },
+     "EBF site 788 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":790
+      },
+     "EBF site 789 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":791
+      },
+     "EBF site 790 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":792
+      },
+     "EBF site 792 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":794
+      },
+     "EBF site 793 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":795
+      },
+     "EBF site 794 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":796
+      },
+     "EBF site 796 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":798
+      },
+     "EBF site 797 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":799
+      },
+     "EBF site 798 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":800
+      },
+     "EBF site 799 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":801
+      },
+     "EBF site 800 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":802
+      },
+     "EBF site 801 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":803
+      },
+     "EBF site 802 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":804
+      },
+     "EBF site 803 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":805
+      },
+     "EBF site 804 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":806
+      },
+     "EBF site 807 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":809
+      },
+     "EBF site 808 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":810
+      },
+     "EBF site 809 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":811
+      },
+     "EBF site 810 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":812
+      },
+     "EBF site 811 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":813
+      },
+     "EBF site 812 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":814
+      },
+     "EBF site 813 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":815
+      },
+     "EBF site 815 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":817
+      },
+     "EBF site 816 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":818
+      },
+     "EBF site 817 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":819
+      },
+     "EBF site 818 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":820
+      },
+     "EBF site 819 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":821
+      },
+     "EBF site 820 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":822
+      },
+     "EBF site 822 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":824
+      },
+     "EBF site 823 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":825
+      },
+     "EBF site 824 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":826
+      },
+     "EBF site 825 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":827
+      },
+     "EBF site 826 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":828
+      },
+     "EBF site 827 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":829
+      },
+     "EBF site 828 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":830
+      },
+     "EBF site 829 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":831
+      },
+     "EBF site 830 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":832
+      },
+     "EBF site 847 (partition 1)":{
+       "attribute type":"branch label",
+       "display order":849
+      }
+    }
+  },
+ "MLE":{
+   "headers":[
+    ["alpha;", "Synonymous substitution rate at a site"],
+    ["&beta;<sup>-</sup>", "Non-synonymous substitution rate at a site for the negative/neutral evolution component"],
+    ["p<sup>-</sup>", "Mixture distribution weight allocated to &beta;<sup>-</sup>; loosely -- the proportion of the tree evolving neutrally or under negative selection"],
+    ["&beta;<sup>+</sup>", "Non-synonymous substitution rate at a site for the positive/neutral evolution component"],
+    ["p<sup>+</sup>", "Mixture distribution weight allocated to &beta;<sup>+</sup>; loosely -- the proportion of the tree evolving neutrally or under positive selection"],
+    ["LRT", "Likelihood ratio test statistic for episodic diversification, i.e., p<sup>+</sup> &gt; 0 <emph>and<emph> &beta;<sup>+</sup> &gt; &alpha;"],
+    ["p-value", "Asymptotic p-value for episodic diversification, i.e., p<sup>+</sup> &gt; 0 <emph>and<emph> &beta;<sup>+</sup> &gt; &alpha;"],
+    ["# branches under selection", "The (very approximate and rough) estimate of how many branches may have been under selection at this site, i.e., had an empirical Bayes factor of 100 or more for the &beta;<sup>+</sup> rate"],
+    ["Total branch length", "The total length of branches contributing to inference at this site, and used to scale dN-dS"]
+    ],
+   "content":{
+     "0":[
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [2.72906175605998, 0, 0.05013249125747323, 0, 0.9498675087425268, 0, 0.6666666666666666, 0, 4.884682253112637e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.3589613608643781, 0, 0.05013298924634463, 0, 0.9498670107536553, 0, 0.6666666666666666, 0, 6.424963396573472e-07],
+      [0.5524908554626841, 0, 0.05013285604637684, 0, 0.9498671439536231, 0, 0.6666666666666666, 0, 9.888901453742991e-07],
+      [2.612886603197119, 0, 0.05013253195692684, 0, 0.9498674680430732, 0, 0.6666666666666666, 0, 4.676743130378697e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.5290169066481122, 0.5290169066481122, 2.970155217663065e-08, 9999.999999998339, 0.9999999702984478, 1.174438764051359, 0.2873666143968497, 0, 0.05097346700797737],
+      [1.498318398358154, 1.498318398358154, 1.002017221392392e-08, 9999.999999998339, 0.9999999899798278, 3.562372983548748, 0.07949162243385122, 0, 0.05097520294070045],
+      [115.4112199544793, 0, 0.05013248101993849, 0, 0.9498675189800615, 0, 0.6666666666666666, 0, 0.00020657177752387],
+      [0.5639504794332869, 0, 0.05013295898604152, 0, 0.9498670410139585, 0, 0.6666666666666666, 0, 1.009401451764581e-06],
+      [5.551115123125783e-17, 5.11703678873765e-17, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 9.702999453572385, 0.00341800596823727, 1, 0.05097251807664233],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [4.064293333262663e-16, 3.746479409134563e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 2.159714397179613e-21],
+      [0.3520591603617297, 0, 0.05013298823830287, 0, 0.9498670117616971, 0, 0.6666666666666666, 0, 6.301422563436052e-07],
+      [0.5597253004858632, 0, 0.05013296767094308, 0, 0.9498670323290569, 0, 0.6666666666666666, 0, 1.001838905195279e-06],
+      [7.281207696177106, 0, 0.05013187839430538, 0, 0.9498681216056946, 0, 0.6666666666666666, 0, 1.303245920901827e-05],
+      [1.11275153651105, 0, 0.05013287913749617, 0, 0.9498671208625038, 0, 0.6666666666666666, 0, 1.991687315411518e-06],
+      [1.186324542624028, 0, 0.05013282256568093, 0, 0.949867177434319, 0, 0.6666666666666666, 0, 2.123373876358771e-06],
+      [1.273436862139778, 0, 0.05013271283881131, 0, 0.9498672871611887, 0, 0.6666666666666666, 0, 2.279294129984835e-06],
+      [4.064293333262663e-16, 3.746479409134563e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 2.159714397179613e-21],
+      [1.289094966912246, 0, 0.05013270708596552, 0, 0.9498672929140345, 0, 0.6666666666666666, 0, 2.30732019657333e-06],
+      [1.157304558699995, 0, 0.05013294321073205, 0, 0.949867056789268, 0, 0.6666666666666666, 0, 2.071431702406654e-06],
+      [0.7580958222694829, 0, 0.0501329557430612, 0, 0.9498670442569388, 0, 0.6666666666666666, 0, 1.356897549487769e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.093227297526839, 0, 0.05013294609439077, 0, 0.9498670539056092, 0, 0.6666666666666666, 0, 1.956741347823964e-06],
+      [0.5512026801650083, 0, 0.05013288462007377, 0, 0.9498671153799262, 0, 0.6666666666666666, 0, 9.865844712716578e-07],
+      [48.40580996308103, 0, 0.05091399219181258, 0, 0.9490860078081874, 0, 0.6666666666666666, 0, 8.664039952528214e-05],
+      [2.458696512168506, 0, 0.05013282779653243, 0, 0.9498671722034676, 0, 0.6666666666666666, 0, 4.400761980600442e-06],
+      [0, 0, 0.7499999999996531, 0, 0.2500000000003469, 0, 0.6666666666666666, 0, 0],
+      [5.551115123125783e-17, 5.11703678873765e-17, 0.75, 1.222222222222009, 0.25, 0, 0.6666666666666666, 0, 1.557493716996955e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [3.427652363114298, 0, 0.05013259359255621, 0, 0.9498674064074438, 0, 0.6666666666666666, 0, 6.135072843538841e-06],
+      [2.825956019704422, 0, 0.05013217949739827, 0, 0.9498678205026018, 0, 0.6666666666666666, 0, 5.058110974174536e-06],
+      [1.628650126565077, 0, 0.0501321420176469, 0, 0.9498678579823531, 0, 0.6666666666666666, 0, 2.915081841624413e-06],
+      [10.8485159708486, 0, 0.05013157377816829, 0, 0.9498684262218318, 0, 0.6666666666666666, 0, 1.941749882271572e-05],
+      [6064.158152854842, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085409139003278],
+      [1.480473486052906, 0, 0.05013271575695571, 0, 0.9498672842430443, 0, 0.6666666666666666, 0, 2.649864022852656e-06],
+      [29.86362197896521, 0, 0.05091289183416412, 0, 0.9490871081658359, 0, 0.6666666666666666, 0, 5.345218149438967e-05],
+      [4.04824960424019, 4.04824960424019, 1.00707444734955e-08, 9999.999999998339, 0.9999999899292555, 3.388274933622377, 0.08707629179478216, 0, 0.05097976699902698],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.9265239127069212, 0, 0.05013278590236815, 0, 0.9498672140976319, 0, 0.6666666666666666, 0, 1.65836295328764e-06],
+      [5.551115123125783e-17, 5.11703678873765e-17, 1.014687840638073e-07, 9999.999999998339, 0.999999898531216, 0.1842136770592049, 0.5347358669850392, 0, 0.05097251647505373],
+      [1.648595781178732, 0, 0.0501319575407989, 0, 0.9498680424592011, 0, 0.6666666666666666, 0, 2.95078209095065e-06],
+      [193.6709321845756, 0, 0.05091534588048427, 0, 0.9490846541195157, 0, 0.6666666666666666, 0, 0.000346646961463992],
+      [12.56101157924967, 12.56101157924967, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 6.318812218403266, 0.01914925517705079, 0, 0.05099500073481075],
+      [1.621348767610137e-16, 1.494564804947485e-16, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 7.656771934994417, 0.009669839170385441, 1, 0.05097251807664233],
+      [6062.295366421481, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085075723322516],
+      [0.3664543809189687, 0, 0.05013300519243184, 0, 0.9498669948075682, 0, 0.6666666666666666, 0, 6.559079167319963e-07],
+      [0.8059265319398016, 0, 0.05013261378245933, 0, 0.9498673862175406, 0, 0.6666666666666666, 0, 1.442508590777542e-06],
+      [6066.597072115013, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085845675318386],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.3925621013779922, 0, 0.05013297323677055, 0, 0.9498670267632294, 0, 0.6666666666666666, 0, 7.026375000813794e-07],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.6006621956651572, 0, 0.05013291901131724, 0, 0.9498670809886828, 0, 0.6666666666666666, 0, 1.075110873092598e-06],
+      [33.33305232357392, 0, 0.05012406046769874, 0, 0.9498759395323013, 0, 0.6666666666666666, 0, 5.966203174607017e-05],
+      [2.630840867204153, 0, 0.05013253269388807, 0, 0.9498674673061119, 0, 0.6666666666666666, 0, 4.70887903736875e-06],
+      [2.363050011424781e-15, 2.178267532538352e-15, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 10.89796913588957, 0.001865721406277721, 1, 0.05097251807664233],
+      [1.520203955938643, 0, 0.05013144418389479, 0, 0.9498685558161052, 0, 0.6666666666666666, 0, 2.720976639021104e-06],
+      [6.520590930183841e-16, 6.010702882932037e-16, 1.003337576991673e-08, 9999.999999998339, 0.9999999899666242, 0.9509166245867853, 0.3267658646541949, 0, 0.05097252113574705],
+      [1.287377257873041, 0, 0.0500436834531596, 0, 0.9499563165468404, 0, 0.6666666666666666, 0, 2.304245710317686e-06],
+      [0.3287299361907185, 0, 0.05013300812697866, 0, 0.9498669918730214, 0, 0.6666666666666666, 0, 5.883858369317024e-07],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.4990190274464019, 0, 0.05013295101813482, 0, 0.9498670489818651, 0, 0.6666666666666666, 0, 8.931822015094753e-07],
+      [0.7699441630272169, 0, 0.05013294909658694, 0, 0.9498670509034131, 0, 0.6666666666666666, 0, 1.37810461074229e-06],
+      [18.35992290792272, 0, 0.05016118766999212, 0, 0.9498388123300079, 0, 0.6666666666666666, 0, 3.286198613780113e-05],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.755626879396295, 0, 0.05013270316401019, 0, 0.9498672968359898, 0, 0.6666666666666666, 0, 3.142354489352246e-06],
+      [0.5243052884883734, 0, 0.05013297659393629, 0, 0.9498670234060637, 0, 0.6666666666666666, 0, 9.384414743291621e-07],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [10.65377666722915, 10.65377666722915, 6.363321326494568e-08, 9999.999999998339, 0.9999999363667867, 0.2430214052153374, 0.5113229531315306, 0, 0.05099158734669259],
+      [6056.748918537119, 0, 0.05150563136606119, 0, 0.9484943686339388, 0, 0.6666666666666666, 0, 0.01084082977904117],
+      [6062.519840312558, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085115901366476],
+      [1.272023216011936, 0, 0.05013247590378325, 0, 0.9498675240962168, 0, 0.6666666666666666, 0, 2.276763878649366e-06],
+      [4.422627945236035e-13, 4.076793472430963e-13, 1.014721347307035e-08, 9999.999999998339, 0.9999999898527865, 6.385316847712375e-05, 0.6647422557591475, 0, 0.05097252112994446],
+      [1.926944482192664, 0, 0.05013236104462262, 0, 0.9498676389553774, 0, 0.6666666666666666, 0, 3.448991762095162e-06],
+      [13.30892403491493, 13.30892403491493, 6.501867852507032e-08, 9999.999999998339, 0.9999999349813214, 4.474072410031837, 0.04947451086124965, 0, 0.05099633966168737],
+      [6.500909578420603, 0, 0.05013211899321888, 0, 0.9498678810067811, 0, 0.6666666666666666, 0, 1.163582230277062e-05],
+      [3.89019667798061, 0, 0.05013259897208109, 0, 0.9498674010279189, 0, 0.6666666666666666, 0, 6.962969830878384e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.801091946774647e-15, 1.660252678448397e-15, 1.006868767371967e-08, 9999.999999998339, 0.9999999899313123, 4.624255896540532, 0.04577530571876809, 0, 0.05097252113394712],
+      [1.30498227278989, 1.30498227278989, 1.03463595442429e-08, 9999.999999998339, 0.9999999896536405, 2.244625845096074, 0.1595833366932303, 0, 0.05097485687636703],
+      [6068.132976860606, 0, 0.05283312576994431, 0, 0.9471668742300556, 0, 0.6666666666666666, 0, 0.01086120583229012],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.570745905935017, 0, 0.05013282330340937, 0, 0.9498671766965906, 0, 0.6666666666666666, 0, 2.811440464413397e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.4894482038835475, 0.4894482038835475, 1.022800774331311e-08, 9999.999999998339, 0.9999999897719922, 0.7698969857873053, 0.3635860946417241, 0, 0.05097339717746541],
+      [1.723530556301043, 1.723530556301043, 1.094867287864961e-08, 9999.999999998339, 0.9999999890513271, 2.142958587216732, 0.1685515083472673, 0, 0.05097560599523786],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.378753367173951, 0, 0.05013261626382611, 0, 0.9498673837361739, 0, 0.6666666666666666, 0, 2.467797619126459e-06],
+      [0.2264656763017482, 0, 0.05013301189269769, 0, 0.9498669881073023, 0, 0.6666666666666666, 0, 4.053454882484485e-07],
+      [2.058250124796164, 0, 0.05013207283720598, 0, 0.949867927162794, 0, 0.6666666666666666, 0, 3.684012585912962e-06],
+      [7.060586337942142, 7.060586337942142, 1.00431734817506e-08, 9999.999999998339, 0.9999999899568265, 0.2564212496436795, 0.506321822795196, 0, 0.05098515870993473],
+      [340.7395328746916, 0, 0.05091599270753301, 0, 0.949084007292467, 0, 0.6666666666666666, 0, 0.0006098815263051583],
+      [0.927428131273523, 0.927428131273523, 1.023247141988105e-08, 9999.999999998339, 0.9999999897675286, 0.6793365389131054, 0.3840136253571742, 0, 0.05097418110703945],
+      [1.676093512617078, 0, 0.05013293432227811, 0, 0.9498670656777219, 0, 0.6666666666666666, 0, 2.999999621649428e-06],
+      [0.6390803728721323, 0, 0.05013277220169643, 0, 0.9498672277983036, 0, 0.6666666666666666, 0, 1.143874648035815e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [3.006499242053219, 3.006499242053219, 1.003189562178905e-08, 9999.999999998339, 0.9999999899681044, 2.876338649992832, 0.1139997539720777, 0, 0.05097790239693855],
+      [1.33462290446942, 0, 0.05013254093081485, 0, 0.9498674590691851, 0, 0.6666666666666666, 0, 2.388809561228609e-06],
+      [7.556846183183573, 0, 0.050130459762283, 0, 0.949869540237717, 0, 0.6666666666666666, 0, 1.352581793304332e-05],
+      [0.9722878883510492, 0, 0.05013290195744964, 0, 0.9498670980425503, 0, 0.6666666666666666, 0, 1.740274796859653e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [6063.173064380507, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085232820377375],
+      [11.68055323713336, 0, 0.05013009829653323, 0, 0.9498699017034667, 0, 0.6666666666666666, 0, 2.090674239132488e-05],
+      [0.4505816711858653, 0, 0.05013297484616448, 0, 0.9498670251538355, 0, 0.6666666666666666, 0, 8.064853380221775e-07],
+      [0.4729436654963387, 0, 0.05013291698500461, 0, 0.9498670830149953, 0, 0.6666666666666666, 0, 8.465105358800212e-07],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.10592071685248, 1.10592071685248, 1.179832505559668e-08, 9999.999999998339, 0.9999999882016749, 0.04413149367834279, 0.608747252178395, 0, 0.05097450050684461],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [13.22384393819696, 0, 0.05012995031212639, 0, 0.9498700496878736, 0, 0.6666666666666666, 0, 2.366904144232277e-05],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.9049790672332996, 0, 0.05013256357172721, 0, 0.9498674364282728, 0, 0.6666666666666666, 0, 1.619800350555266e-06],
+      [170.7430353646288, 0, 0.0509133010065278, 0, 0.9490866989934722, 0, 0.6666666666666666, 0, 0.0003056088682625822],
+      [4.560977783154058, 0, 0.05013233769328879, 0, 0.9498676623067112, 0, 0.6666666666666666, 0, 8.163584860160268e-06],
+      [0.8695399730005675, 0, 0.05013286230266722, 0, 0.9498671376973328, 0, 0.6666666666666666, 0, 1.55636876485347e-06],
+      [6067.096196136357, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085935012331143],
+      [0.6470761531871699, 0, 0.05013294775815057, 0, 0.9498670522418494, 0, 0.6666666666666666, 0, 1.158186103655287e-06],
+      [1.087711859501848, 0, 0.05013282252044345, 0, 0.9498671774795565, 0, 0.6666666666666666, 0, 1.946869397444318e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [5.46428078938504, 0, 0.05013234504661853, 0, 0.9498676549533814, 0, 0.6666666666666666, 0, 9.780385269283293e-06],
+      [3.003771574774629, 0, 0.05013293972463232, 0, 0.9498670602753677, 0, 0.6666666666666666, 0, 5.376378776011601e-06],
+      [0.4234057120138659, 0, 0.05013296383670272, 0, 0.9498670361632973, 0, 0.6666666666666666, 0, 7.578437397937712e-07],
+      [3.762001590072861, 0, 0.05013234240824069, 0, 0.9498676575917593, 0, 0.6666666666666666, 0, 6.733516514386477e-06],
+      [6.898563589280291, 0, 0.05013197827994198, 0, 0.949868021720058, 0, 0.6666666666666666, 0, 1.234757368963909e-05],
+      [2.84941591812396, 0, 0.05013261606314772, 0, 0.9498673839368523, 0, 0.6666666666666666, 0, 5.100101284293126e-06],
+      [0.9620921831218264, 0, 0.05013283643510665, 0, 0.9498671635648933, 0, 0.6666666666666666, 0, 1.722025748343048e-06],
+      [4.114072833499804, 0, 0.05013241382187902, 0, 0.9498675861781209, 0, 0.6666666666666666, 0, 7.363680397919014e-06],
+      [13.08098412888297, 0, 0.05013292553560036, 0, 0.9498670744643997, 0, 0.6666666666666666, 0, 2.341334009232966e-05],
+      [12.36753108394607, 0, 0.05013068326945942, 0, 0.9498693167305405, 0, 0.6666666666666666, 0, 2.213634758041823e-05],
+      [2.345804327976129, 0, 0.05013234937798521, 0, 0.9498676506220148, 0, 0.6666666666666666, 0, 4.198698964834995e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [8.991425071772696, 0, 0.05013227930768105, 0, 0.949867720692319, 0, 0.6666666666666666, 0, 1.609353631545846e-05],
+      [295.2192469227296, 0, 0.05091339270765446, 0, 0.9490866072923455, 0, 0.6666666666666666, 0, 0.0005284058570747275],
+      [10.07682938356582, 0, 0.05012788211540939, 0, 0.9498721178845906, 0, 0.6666666666666666, 0, 1.803627548854417e-05],
+      [2.520152537949174, 0, 0.05013272006643516, 0, 0.9498672799335648, 0, 0.6666666666666666, 0, 4.510760648754826e-06],
+      [1.868146967622031, 0, 0.05013265351428412, 0, 0.9498673464857159, 0, 0.6666666666666666, 0, 3.34375149946184e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.348510613799994, 0, 0.05013268329854005, 0, 0.94986731670146, 0, 0.6666666666666666, 0, 2.413666839431569e-06],
+      [0.7424045830924798, 0, 0.05013274995575211, 0, 0.9498672500442479, 0, 0.6666666666666666, 0, 1.328812176422446e-06],
+      [5.551115123125783e-17, 5.11703678873765e-17, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 2.949792809908249e-22],
+      [3.123456104869177e-15, 2.879212454095707e-15, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 1.659765318471555e-20],
+      [0.7543847864929688, 0, 0.05013282253043125, 0, 0.9498671774695687, 0, 0.6666666666666666, 0, 1.35025525546201e-06],
+      [1.381564516771057, 0, 0.05013292014146228, 0, 0.9498670798585377, 0, 0.6666666666666666, 0, 2.472829228439564e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.68827082364903, 0, 0.05013282785518104, 0, 0.949867172144819, 0, 0.6666666666666666, 0, 3.021795498916158e-06],
+      [0.4962543801963756, 0, 0.05013256345891848, 0, 0.9498674365410815, 0, 0.6666666666666666, 0, 8.882338256332854e-07],
+      [0.7597642283671934, 0, 0.05013290805279904, 0, 0.949867091947201, 0, 0.6666666666666666, 0, 1.359883789589656e-06],
+      [3.141844134459755, 0, 0.0501317775304093, 0, 0.9498682224695907, 0, 0.6666666666666666, 0, 5.623511542589037e-06],
+      [1.828517267660159, 1.828517267660159, 1.27084327388601e-08, 9999.999999998339, 0.9999999872915672, 0.1407984759956022, 0.5539878224249268, 0, 0.05097579381876006],
+      [0.9874474906521625, 0, 0.05013289413985577, 0, 0.9498671058601442, 0, 0.6666666666666666, 0, 1.767408605818013e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.232917912151533, 0, 0.0501328052710637, 0, 0.9498671947289363, 0, 0.6666666666666666, 0, 2.20677023217166e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.6786902891131732, 0, 0.05013290335152078, 0, 0.9498670966484792, 0, 0.6666666666666666, 0, 1.214771488123899e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.5417789470881217, 0, 0.05013287362424077, 0, 0.9498671263757592, 0, 0.6666666666666666, 0, 9.69717157215271e-07],
+      [3.105081167463717e-16, 2.862274374338942e-16, 0.7499999999993061, 0, 0.2500000000006939, 0, 0.6666666666666666, 0, 1.650001107669845e-21],
+      [2.37987545572291, 0, 0.05013231126813575, 0, 0.9498676887318642, 0, 0.6666666666666666, 0, 4.25968206009793e-06],
+      [0.9113245822081308, 0, 0.05013275310313779, 0, 0.9498672468968622, 0, 0.6666666666666666, 0, 1.631158035780084e-06],
+      [2.181589259853625, 0, 0.05013303786258888, 0, 0.9498669621374112, 0, 0.6666666666666666, 0, 3.90477434873919e-06],
+      [0.8473775074673897, 0, 0.0501328538174128, 0, 0.9498671461825872, 0, 0.6666666666666666, 0, 1.51670069877371e-06],
+      [0.4385797607862523, 0, 0.05013298586729048, 0, 0.9498670141327095, 0, 0.6666666666666666, 0, 7.850034061449459e-07],
+      [1.874709193613368, 0, 0.05013264555995479, 0, 0.9498673544400452, 0, 0.6666666666666666, 0, 3.355497070543047e-06],
+      [0.9049790515554501, 0, 0.05013265890289244, 0, 0.9498673410971076, 0, 0.6666666666666666, 0, 1.61980032249386e-06],
+      [1.781011792513005, 0, 0.05013263276510464, 0, 0.9498673672348954, 0, 0.6666666666666666, 0, 3.18779033715696e-06],
+      [3.173338753506527, 0, 0.05013213367750101, 0, 0.949867866322499, 0, 0.6666666666666666, 0, 5.67988300665895e-06],
+      [1.249452478377802, 0, 0.05013243340935929, 0, 0.9498675665906408, 0, 0.6666666666666666, 0, 2.236365056117665e-06],
+      [11.19468072126089, 0, 0.05013117310227039, 0, 0.9498688268977296, 0, 0.6666666666666666, 0, 2.003709081591168e-05],
+      [0.6452870619117114, 0, 0.05013299374337164, 0, 0.9498670062566283, 0, 0.6666666666666666, 0, 1.154983852045178e-06],
+      [4.064293333262663e-16, 3.746479409134563e-16, 0.7499999999996531, 0, 0.2500000000003469, 0, 0.6666666666666666, 0, 2.159714397178951e-21],
+      [7.617007012063169e-16, 7.021382953926663e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 4.047581795520895e-21],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.055485958276468, 1.055485958276468, 4.532425145610089e-08, 9999.999999998339, 0.9999999546757485, 1.625061126272506, 0.2234186324782762, 0, 0.05097440852615488],
+      [0.5662866918320967, 0, 0.05013283808455333, 0, 0.9498671619154466, 0, 0.6666666666666666, 0, 1.013582982365208e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [7.617007012063169e-16, 7.021382953926663e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 4.047581795520895e-21],
+      [174.4194776344481, 0, 0.05091328714746234, 0, 0.9490867128525377, 0, 0.6666666666666666, 0, 0.0003121892441995145],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.005977735463985202, 0, 0.05013303787819855, 0, 0.9498669621218014, 0, 0.6666666666666666, 0, 1.069940548977771e-08],
+      [2.211585484873402, 0, 0.05013058374355771, 0, 0.9498694162564423, 0, 0.6666666666666666, 0, 3.958463873239366e-06],
+      [2.318319119458739, 0, 0.0501316185056945, 0, 0.9498683814943055, 0, 0.6666666666666666, 0, 4.149503848612408e-06],
+      [0.5513265631201508, 0.5513265631201508, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 6.121154405933389, 0.02118944069333561, 1, 0.05097350488304556],
+      [1.37162667940082, 0, 0.05013212245159901, 0, 0.949867877548401, 0, 0.6666666666666666, 0, 2.455041731425644e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.6390803792758888, 0, 0.05013281691918488, 0, 0.9498671830808151, 0, 0.6666666666666666, 0, 1.143874659497745e-06],
+      [0.6042061046700289, 0, 0.05013279813527887, 0, 0.9498672018647212, 0, 0.6666666666666666, 0, 1.081454030913891e-06],
+      [0.5579807992651972, 0, 0.05013286205929635, 0, 0.9498671379407037, 0, 0.6666666666666666, 0, 9.98716464255934e-07],
+      [2.866547655532081, 0, 0.05013199600395304, 0, 0.949868003996047, 0, 0.6666666666666666, 0, 5.13076497063024e-06],
+      [0.5930766569937288, 0.5926128912066353, 1.001071823983025e-08, 9999.999999998339, 0.9999999899892817, 3.13740203599032, 0.09933706748483517, 0, 0.05097358267063137],
+      [3.474210354148688e-15, 3.202538913295254e-15, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 6.903567955978872, 0.01420003659620039, 0, 0.05097251807664233],
+      [1.278576898507362, 0, 0.05013279644464973, 0, 0.9498672035553503, 0, 0.6666666666666666, 0, 2.288494157931926e-06],
+      [5.581025283002847, 5.581025283002847, 1.012913052831814e-08, 9999.999999998339, 0.9999999898708695, 1.780239542151726, 0.2051917171527567, 0, 0.05098251047459574],
+      [1.490685222908797e-15, 1.374118705316402e-15, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 7.921313924934089e-21],
+      [1.563986104053979, 0, 0.05013282584582211, 0, 0.9498671741541779, 0, 0.6666666666666666, 0, 2.799341256980827e-06],
+      [2.063758738468143, 0, 0.05013254623648694, 0, 0.949867453763513, 0, 0.6666666666666666, 0, 3.693872321546653e-06],
+      [0.2913352252047489, 0, 0.0501329973556652, 0, 0.9498670026443348, 0, 0.6666666666666666, 0, 5.214539396568107e-07],
+      [1.686312003673692, 0, 0.05018264946530394, 0, 0.9498173505346961, 0, 0.6666666666666666, 0, 3.018289453972569e-06],
+      [8.491665639329336e-15, 7.82764624950529e-15, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 4.51236439732382e-20],
+      [2.826873054512922, 2.826873054512922, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 1.169759531609547, 0.2881319080519377, 1, 0.05097757783000446],
+      [1.235103657829681, 0, 0.05013282144711031, 0, 0.9498671785528897, 0, 0.6666666666666666, 0, 2.210682445993924e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.5335311438884779, 0, 0.05013291548884865, 0, 0.9498670845111513, 0, 0.6666666666666666, 0, 9.549546118727168e-07],
+      [0.7317956209688076, 0, 0.05013292945668151, 0, 0.9498670705433185, 0, 0.6666666666666666, 0, 1.309823449291454e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.6366385009372699, 0, 0.05013294821472807, 0, 0.949867051785272, 0, 0.6666666666666666, 0, 1.139503999963044e-06],
+      [1.729211724481122, 0, 0.05013279259893334, 0, 0.9498672074010667, 0, 0.6666666666666666, 0, 3.095074636435452e-06],
+      [0.7664259490963127, 0, 0.05013291496669447, 0, 0.9498670850333055, 0, 0.6666666666666666, 0, 1.371807443918278e-06],
+      [3.276240173809476, 0, 0.05013184537268055, 0, 0.9498681546273194, 0, 0.6666666666666666, 0, 5.864063793501816e-06],
+      [2.118984590114382, 0, 0.050132610498829, 0, 0.949867389501171, 0, 0.6666666666666666, 0, 3.792719750283068e-06],
+      [2.562501060267133e-14, 2.362122187295347e-14, 1.150209704723371e-08, 9999.999999998339, 0.9999999884979029, 2.371005838042826, 0.1491327817813123, 0, 0.05097252106088263],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [2.043382811979536, 0, 0.05013172712401048, 0, 0.9498682728759895, 0, 0.6666666666666666, 0, 3.657401938900083e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.5996770035654545, 0, 0.05013276060021308, 0, 0.9498672393997869, 0, 0.6666666666666666, 0, 1.073347501357004e-06],
+      [1.408777813408039, 0, 0.05013290735158772, 0, 0.9498670926484123, 0, 0.6666666666666666, 0, 2.521537656101995e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.4531372104983959, 0, 0.05013283696665927, 0, 0.9498671630333407, 0, 0.6666666666666666, 0, 8.110594366109441e-07],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [2.344852787770417, 0, 0.05013272182830586, 0, 0.9498672781716941, 0, 0.6666666666666666, 0, 4.196995825818211e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [2.383724784056441, 0, 0.05013158244137998, 0, 0.9498684175586201, 0, 0.6666666666666666, 0, 4.266571880658219e-06],
+      [1.544148055495653, 0, 0.05013281714144246, 0, 0.9498671828585575, 0, 0.6666666666666666, 0, 2.763833609154952e-06],
+      [136.8755014350047, 0, 0.05091755906926351, 0, 0.9490824409307365, 0, 0.6666666666666666, 0, 0.0002449901806951878],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [49.11330918368436, 0, 0.05091392710383633, 0, 0.9490860728961636, 0, 0.6666666666666666, 0, 8.79067354296633e-05],
+      [1.805708638821556, 0, 0.05013201821476906, 0, 0.9498679817852309, 0, 0.6666666666666666, 0, 3.231994630666752e-06],
+      [3.250517193639521, 0, 0.05013176603564657, 0, 0.9498682339643534, 0, 0.6666666666666666, 0, 5.818022847578058e-06],
+      [1.739381027643853, 0, 0.05013269006896778, 0, 0.9498673099310322, 0, 0.6666666666666666, 0, 3.113276428525796e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [6062.336020575618, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085082999912164],
+      [5.901485763751166, 0, 0.05013153096746345, 0, 0.9498684690325365, 0, 0.6666666666666666, 0, 1.056292797815259e-05],
+      [5.551115123125783e-17, 5.11703678873765e-17, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 2.949792809908249e-22],
+      [1.892717928096293, 1.892717928096293, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 7.303174837715297, 0.01157995069409823, 1, 0.05097590580779105],
+      [0.9019885715601703, 0, 0.05013289801500475, 0, 0.9498671019849952, 0, 0.6666666666666666, 0, 1.61444773399754e-06],
+      [0, 0, 2.214822488418607e-08, 9999.999999998339, 0.9999999778517751, 0.05656396248332385, 0.6000453443606265, 0, 0.05097252051822265],
+      [3.250782670428962, 0, 0.05013249361441209, 0, 0.9498675063855879, 0, 0.6666666666666666, 0, 5.818498018123069e-06],
+      [8.514960937720117e-16, 7.849119934742631e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 4.52474322611293e-21],
+      [0.49402643678902, 0, 0.05013293886670103, 0, 0.949867061133299, 0, 0.6666666666666666, 0, 8.842460831065054e-07],
+      [6061.890533797071, 6061.890533797071, 1.17925457697128e-08, 9999.999999998339, 0.9999999882074543, 0.005614857337036483, 0.6477192805576627, 0, 0.06182255404346529],
+      [0, 0, 8.288846066264763e-08, 9999.999999998339, 0.9999999171115393, 0.970259210660803, 0.3231110438911453, 0, 0.05097251742213967],
+      [5.393208095353841e-15, 4.971477553811487e-15, 0.7499999999999133, 0, 0.2500000000000867, 0, 0.6666666666666666, 0, 2.86588299992856e-20],
+      [2.800587157953802, 2.800587157953802, 1.002724067974984e-08, 9999.999999998339, 0.9999999899727593, 2.624892266196753, 0.1302522042027187, 0, 0.05097753384005923],
+      [0.5381401975130703, 0, 0.05013292722976682, 0, 0.9498670727702332, 0, 0.6666666666666666, 0, 9.632042465296456e-07],
+      [6061.910143719189, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085006773233966],
+      [0.8014179040122675, 0, 0.05013269582282456, 0, 0.9498673041771755, 0, 0.6666666666666666, 0, 1.434438705669735e-06],
+      [0.19826663771402, 0, 0.05013300984863037, 0, 0.9498669901513697, 0, 0.6666666666666666, 0, 3.548727046852146e-07],
+      [13.68509938707641, 0, 0.05013091012955776, 0, 0.9498690898704423, 0, 0.6666666666666666, 0, 2.449463151931163e-05],
+      [0.4055540516119916, 0, 0.05013296565520385, 0, 0.9498670343447961, 0, 0.6666666666666666, 0, 7.2589148053837e-07],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.445968023469022, 0, 0.05013263440715482, 0, 0.9498673655928451, 0, 0.6666666666666666, 0, 2.588103522070777e-06],
+      [1.31243172636087, 0, 0.05013288412221926, 0, 0.9498671158777807, 0, 0.6666666666666666, 0, 2.349090103198099e-06],
+      [0.4512890680023469, 0, 0.05013292440774986, 0, 0.9498670755922501, 0, 0.6666666666666666, 0, 8.077514906358742e-07],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [2.467285622008796, 0, 0.05013266100231948, 0, 0.9498673389976805, 0, 0.6666666666666666, 0, 4.416135422521916e-06],
+      [4.23113578154291, 4.23113578154291, 1.678085079241952e-07, 9999.999999998339, 0.999999832191492, 0.1218849508811815, 0.5630880757536041, 0, 0.05098008630573386],
+      [1.895493363012422, 1.894735165667218, 1.005870860393798e-08, 9999.999999998339, 0.9999999899412914, 1.594702772018664, 0.2271875586213662, 0, 0.05097591383271031],
+      [0.9976920245746878, 0, 0.05013289184768142, 0, 0.9498671081523186, 0, 0.6666666666666666, 0, 1.785745051642901e-06],
+      [0.4221343911733398, 0.4221343911733398, 2.141486352344318e-07, 9999.999999998339, 0.9999997858513647, 0.2288691613712359, 0.5167281830933323, 0, 0.05097326630017143],
+      [6067.933630774736, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01086084902750704],
+      [0.3036945483739708, 0, 0.0501330077029112, 0, 0.9498669922970888, 0, 0.6666666666666666, 0, 5.435755960873132e-07],
+      [0.7220862010038089, 0, 0.05013293818977333, 0, 0.9498670618102266, 0, 0.6666666666666666, 0, 1.292444791118648e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.127248393917682, 1.127248393917682, 1.041956901953259e-07, 9999.999999998339, 0.9999998958043098, 1.39718435126688, 0.2534964684710224, 0, 0.0509745339715483],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.7456917282908402, 0, 0.05013296196043864, 0, 0.9498670380395614, 0, 0.6666666666666666, 0, 1.334695758858124e-06],
+      [5.876743004373631, 0, 0.05013216092500922, 0, 0.9498678390749908, 0, 0.6666666666666666, 0, 1.051864150594063e-05],
+      [0.845507421408357, 0, 0.05013293340629239, 0, 0.9498670665937076, 0, 0.6666666666666666, 0, 1.51335347654099e-06],
+      [0.8646625104105923, 0, 0.05013284645949525, 0, 0.9498671535405048, 0, 0.6666666666666666, 0, 1.547638711420063e-06],
+      [0.3548884198641311, 0, 0.05013301637933141, 0, 0.9498669836206686, 0, 0.6666666666666666, 0, 6.352062801423129e-07],
+      [3.158325930385628, 0, 0.05013162901505471, 0, 0.9498683709849453, 0, 0.6666666666666666, 0, 5.653011914238656e-06],
+      [2.15590360157041, 0, 0.05018256390395601, 0, 0.949817436096044, 0, 0.6666666666666666, 0, 3.858800204366336e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.3622723130501674, 0, 0.05013298247443556, 0, 0.9498670175255645, 0, 0.6666666666666666, 0, 6.484225336494459e-07],
+      [0.5642832173877897, 0, 0.05013287438653341, 0, 0.9498671256134665, 0, 0.6666666666666666, 0, 1.009997011457464e-06],
+      [1.812706011841746, 0, 0.0501326738663341, 0, 0.9498673261336659, 0, 0.6666666666666666, 0, 3.244519060989455e-06],
+      [0.2913352254874736, 0, 0.05013299777973266, 0, 0.9498670022202673, 0, 0.6666666666666666, 0, 5.21453940162853e-07],
+      [0.5147366393039127, 0, 0.05013295857893676, 0, 0.9498670414210633, 0, 0.6666666666666666, 0, 9.213147784037917e-07],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.6349396503086877, 0, 0.05013276626894493, 0, 0.9498672337310551, 0, 0.6666666666666666, 0, 1.136463267924754e-06],
+      [1.919772227893193, 1.919772227893193, 1.000756510959496e-08, 9999.999999998339, 0.9999999899924349, 2.586968123503823, 0.1329054988724695, 0, 0.05097595729147657],
+      [2.391103689925219, 0, 0.05013261212673755, 0, 0.9498673878732624, 0, 0.6666666666666666, 0, 4.279779207485682e-06],
+      [0.8244394665990509, 0, 0.05013276302565342, 0, 0.9498672369743466, 0, 0.6666666666666666, 0, 1.475644448983119e-06],
+      [3.061664841491453, 0, 0.05013108564203102, 0, 0.9498689143579689, 0, 0.6666666666666666, 0, 5.480000547075757e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.3278825604032665, 0, 0.05013300836601733, 0, 0.9498669916339827, 0, 0.6666666666666666, 0, 5.868691393115429e-07],
+      [2.022533886985618, 0, 0.05013207935829536, 0, 0.9498679206417047, 0, 0.6666666666666666, 0, 3.620084947561163e-06],
+      [0.5743735094289681, 0, 0.05013291492817549, 0, 0.9498670850718245, 0, 0.6666666666666666, 0, 1.028057383434324e-06],
+      [2.866547603587632, 0, 0.05013210488208005, 0, 0.9498678951179199, 0, 0.6666666666666666, 0, 5.130764877656115e-06],
+      [1.349284347220427, 0, 0.05013281203790517, 0, 0.9498671879620948, 0, 0.6666666666666666, 0, 2.415051726343359e-06],
+      [0.9527798884526278, 0, 0.05013287814182115, 0, 0.9498671218581789, 0, 0.6666666666666666, 0, 1.705357895222692e-06],
+      [1.628228433810435, 0, 0.05013283477157449, 0, 0.9498671652284255, 0, 0.6666666666666666, 0, 2.914327063865981e-06],
+      [1.793440562630592, 0, 0.0501320953356466, 0, 0.9498679046643534, 0, 0.6666666666666666, 0, 3.2100362950165e-06],
+      [5.551115123125783e-17, 5.11703678873765e-17, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 2.949792809908249e-22],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [24.55239413066054, 22.63248036323053, 0.75, 1.000424054917081, 0.25, 0, 0.6666666666666666, 0, 0.0001317431900806414],
+      [0.5678228792950866, 0, 0.05013284753359977, 0, 0.9498671524664002, 0, 0.6666666666666666, 0, 1.016332567500561e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [29.35879577731031, 0, 0.0501296538634227, 0, 0.9498703461365773, 0, 0.6666666666666666, 0, 5.254860517089522e-05],
+      [0.5678228792950866, 0, 0.05013284753359977, 0, 0.9498671524664002, 0, 0.6666666666666666, 0, 1.016332567500561e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [4.064293333262663e-16, 3.746479409134563e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 2.159714397179613e-21],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.060722169115718, 0, 0.05013282550656815, 0, 0.9498671744934318, 0, 0.6666666666666666, 0, 1.898561197253029e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.738502378116744, 0, 0.0501327625142134, 0, 0.9498672374857866, 0, 0.6666666666666666, 0, 3.111703754788296e-06],
+      [1.92275442758295, 0, 0.05013262977856028, 0, 0.9498673702214397, 0, 0.6666666666666666, 0, 3.441492083736403e-06],
+      [0.780760760157888, 0.780760760157888, 4.726788518019132e-07, 9999.999999998339, 0.9999995273211482, 0.1374019131499864, 0.5555854304065831, 0, 0.05097389502040043],
+      [1.122597144131988e-15, 1.03481386316856e-15, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 5.965340135694102e-21],
+      [1.916061279288279, 0, 0.05013141894601528, 0, 0.9498685810539848, 0, 0.6666666666666666, 0, 3.429512177961154e-06],
+      [1.683247937487813e-15, 1.551623670136005e-15, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 8.944567988888263e-21],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.5775799721342676, 0.5775799721342676, 1.185519062264257e-07, 9999.999999998339, 0.9999998814480938, 1.027971662433544, 0.3124965144830417, 0, 0.05097354940118715],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 0.75, 1.000000000208484, 0.25, 0, 0.6666666666666666, 0, 1.274313041445223e-06],
+      [6055.542713926461, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01083867082230733],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.3260669227208174, 0, 0.05013300838990049, 0, 0.9498669916100995, 0, 0.6666666666666666, 0, 5.836193729235717e-07],
+      [6064.055747121796, 0, 0.05093995565449677, 0, 0.9490600443455033, 0, 0.6666666666666666, 0, 0.01085390809646468],
+      [3.170181500109765, 2.9222840822481, 0.75, 1, 0.25, 0, 0.6666666666666666, 0, 1.8120259103747e-05],
+      [1.52161432658397, 0, 0.05013272632027663, 0, 0.9498672736797233, 0, 0.6666666666666666, 0, 2.723501027648897e-06],
+      [1.43984774801354, 0, 0.05018255766138107, 0, 0.949817442338619, 0, 0.6666666666666666, 0, 2.577148987665254e-06],
+      [6.429254794080712, 0, 0.05013025442159362, 0, 0.9498697455784064, 0, 0.6666666666666666, 0, 1.150756912101743e-05],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.5271448061240952, 0, 0.05013296458373197, 0, 0.949867035416268, 0, 0.6666666666666666, 0, 9.43523858914931e-07],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1.035565216601929e-07, 9999.999999998339, 0.9999998964434783, 0.3602272104930648, 0.4707449754808463, 0, 0.05097251636863648],
+      [1.264029157434507, 0, 0.05013278345603892, 0, 0.9498672165439611, 0, 0.6666666666666666, 0, 2.262455504726788e-06],
+      [6067.841515143014, 0, 0.05094508057943774, 0, 0.9490549194205623, 0, 0.6666666666666666, 0, 0.01086068415194477],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.5642832148152711, 0, 0.05013287125786471, 0, 0.9498671287421353, 0, 0.6666666666666666, 0, 1.009997006852974e-06],
+      [1.513083115458494, 0, 0.05013243468532076, 0, 0.9498675653146792, 0, 0.6666666666666666, 0, 2.708231217249908e-06],
+      [1.163130676239069, 0, 0.05013253531197742, 0, 0.9498674646880225, 0, 0.6666666666666666, 0, 2.081859730605162e-06],
+      [273.2341781093958, 0, 0.05091559667808578, 0, 0.9490844033219142, 0, 0.6666666666666666, 0, 0.0004890553091336676],
+      [12.86033400025599, 0, 0.05012897621354652, 0, 0.9498710237864535, 0, 0.6666666666666666, 0, 2.301840371353284e-05],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.258831889701293, 0, 0.05013280913505087, 0, 0.9498671908649491, 0, 0.6666666666666666, 0, 2.253153039729529e-06],
+      [1.608010153711703, 0, 0.05013266623529437, 0, 0.9498673337647057, 0, 0.6666666666666666, 0, 2.878138848715688e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [2.136960146091884, 0, 0.05013267564112817, 0, 0.9498673243588718, 0, 0.6666666666666666, 0, 3.824893767260941e-06],
+      [10.57263286725648, 0, 0.05013253936280956, 0, 0.9498674606371904, 0, 0.6666666666666666, 0, 1.892370226532465e-05],
+      [1.316689951645554, 0, 0.05013298256890066, 0, 0.9498670174310994, 0, 0.6666666666666666, 0, 2.356711798614726e-06],
+      [1.052150587625318, 1.051327841628393, 1.011726659324488e-08, 9999.999999998339, 0.9999999898827334, 0.1753735436410508, 0.5384980801737949, 0, 0.05097440435065406],
+      [0, 0, 1.000328315026884e-08, 9999.999999998339, 0.9999999899967168, 2.320984214003701, 0.1531801545837564, 0, 0.05097252113728095],
+      [1.502877367052863, 0, 0.05013284489493237, 0, 0.9498671551050676, 0, 0.6666666666666666, 0, 2.689964192692465e-06],
+      [0.528503076846644, 0, 0.05013296092147922, 0, 0.9498670390785208, 0, 0.6666666666666666, 0, 9.45954995139175e-07],
+      [0.5630254442387972, 0, 0.05013294522921461, 0, 0.9498670547707854, 0, 0.6666666666666666, 0, 1.007745753432363e-06],
+      [0.5591502974032369, 0, 0.05013296037698278, 0, 0.9498670396230172, 0, 0.6666666666666666, 0, 1.000809720953862e-06],
+      [1.07736072882624, 0, 0.05013298303914779, 0, 0.9498670169608522, 0, 0.6666666666666666, 0, 1.928342156644978e-06],
+      [1.691235114438438, 0, 0.05013270471519315, 0, 0.9498672952848068, 0, 0.6666666666666666, 0, 3.027101211980339e-06],
+      [0.5642832173877897, 0, 0.05013287438653341, 0, 0.9498671256134665, 0, 0.6666666666666666, 0, 1.009997011457464e-06],
+      [0.5562035209228801, 0, 0.05013294880481538, 0, 0.9498670511951847, 0, 0.6666666666666666, 0, 9.955353563318351e-07],
+      [0.5737702902966698, 0, 0.05013279889624461, 0, 0.9498672011037554, 0, 0.6666666666666666, 0, 1.026977695961612e-06],
+      [68.10614751568791, 0, 0.05091591905921989, 0, 0.9490840809407801, 0, 0.6666666666666666, 0, 0.0001219015617213612],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.9049790812401817, 0, 0.05013250420989793, 0, 0.9498674957901021, 0, 0.6666666666666666, 0, 1.619800375625849e-06],
+      [0, 0, 1.052098598768601e-07, 9999.999999998339, 0.9999998947901402, 0.3145442442085056, 0.4857777043992256, 0, 0.05097251628436166],
+      [1.617623964828607, 0, 0.05008275497358586, 0, 0.9499172450264142, 0, 0.6666666666666666, 0, 2.895346378901929e-06],
+      [0.5519796708752959, 0, 0.05013286257873657, 0, 0.9498671374212634, 0, 0.6666666666666666, 0, 9.87975188328517e-07],
+      [6065.863071053698, 6065.863071053698, 1.179334401907905e-07, 9999.999999998339, 0.9999998820665598, 0.06110870199781004, 0.5970584577161734, 0, 0.06182966226448997],
+      [6045.241374516953, 0, 0.05091245065600214, 0, 0.9490875493439979, 0, 0.6666666666666666, 0, 0.01082023270170227],
+      [10.52690723812411, 0, 0.05011257424174226, 0, 0.9498874257582577, 0, 0.6666666666666666, 0, 1.884185905725532e-05],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [2.191943876820925, 0, 0.05013269434505124, 0, 0.9498673056549488, 0, 0.6666666666666666, 0, 3.9233078295685e-06],
+      [2.119583308904648, 0, 0.05013155951967153, 0, 0.9498684404803285, 0, 0.6666666666666666, 0, 3.793791382701398e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.9870370603222913, 0, 0.0501328891837195, 0, 0.9498671108162805, 0, 0.6666666666666666, 0, 1.766673986403846e-06],
+      [12.16390226124493, 0, 0.0501304943568189, 0, 0.9498695056431811, 0, 0.6666666666666666, 0, 2.177187722929416e-05],
+      [2.121263407121341, 2.121263407121341, 1.009348627833792e-08, 9999.999999998339, 0.9999999899065137, 3.574701249307353, 0.07898093543335993, 0, 0.05097631793134245],
+      [1.205508995292407, 0, 0.05013288405663222, 0, 0.9498671159433678, 0, 0.6666666666666666, 0, 2.157711668560368e-06],
+      [6.976742962341399e-16, 6.431185376635631e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 3.707353526349543e-21],
+      [1.367111937554915, 0, 0.050182678231965, 0, 0.949817321768035, 0, 0.6666666666666666, 0, 2.446960903161826e-06],
+      [187.2370702850972, 0, 0.05091308403056703, 0, 0.949086915969433, 0, 0.6666666666666666, 0, 0.0003351311461954022],
+      [0.4858186459117681, 0, 0.05013292291542883, 0, 0.9498670770845712, 0, 0.6666666666666666, 0, 8.695551548611677e-07],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.7134153836016081, 0, 0.05013276297659128, 0, 0.9498672370234087, 0, 0.6666666666666666, 0, 1.276925102789696e-06],
+      [0.5662866918320967, 0, 0.05013283808455333, 0, 0.9498671619154466, 0, 0.6666666666666666, 0, 1.013582982365208e-06],
+      [1.721060367954204, 0, 0.05013272034373669, 0, 0.9498672796562633, 0, 0.6666666666666666, 0, 3.080484718681697e-06],
+      [6060.518007226075, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01084757598058406],
+      [2.33991086633371, 0, 0.05013222491289956, 0, 0.9498677750871004, 0, 0.6666666666666666, 0, 4.188150399039371e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.719994570652001, 0, 0.05013264735245698, 0, 0.9498673526475431, 0, 0.6666666666666666, 0, 3.078577073625325e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.7412393141671153, 0, 0.05013273152608433, 0, 0.9498672684739157, 0, 0.6666666666666666, 0, 1.32672648949096e-06],
+      [33.20602885139884, 0, 0.05091316713741947, 0, 0.9490868328625806, 0, 0.6666666666666666, 0, 5.943467547650807e-05],
+      [2.73606412629063, 0, 0.05013264924716952, 0, 0.9498673507528305, 0, 0.6666666666666666, 0, 4.897215627822619e-06],
+      [2.062395246128434, 0, 0.05013274518819143, 0, 0.9498672548118086, 0, 0.6666666666666666, 0, 3.691431839274957e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.828310981858199, 0, 0.05013196005809167, 0, 0.9498680399419084, 0, 0.6666666666666666, 0, 3.272450022951186e-06],
+      [2.005967931437848, 2.005967931437848, 1.111166290253284e-08, 9999.999999998339, 0.9999999888883371, 5.022328804908646, 0.03727042548171011, 0, 0.05097611151483827],
+      [2.834486720817615, 0, 0.05013299728781441, 0, 0.9498670027121856, 0, 0.6666666666666666, 0, 5.073379871714759e-06],
+      [0.695919379371634, 0, 0.05013279081313234, 0, 0.9498672091868676, 0, 0.6666666666666666, 0, 1.245609423995413e-06],
+      [5.551115123125783e-17, 5.11703678873765e-17, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 8.559304273046926, 0.006108691004074629, 1, 0.05097251807664233],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.311707054718447, 0, 0.0501325184522982, 0, 0.9498674815477018, 0, 0.6666666666666666, 0, 2.347793030787327e-06],
+      [1.542433539274843, 0, 0.05013180811192246, 0, 0.9498681918880776, 0, 0.6666666666666666, 0, 2.760764837648455e-06],
+      [1.387778780781446e-17, 1.279259197184412e-17, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 7.374482024770623e-23],
+      [0.7736515234281892, 0.7736515234281892, 1.005684191107348e-08, 9999.999999998339, 0.9999999899431581, 0.8206772703715473, 0.3527507027484295, 0, 0.05097390587491688],
+      [5.551115123125783e-17, 5.11703678873765e-17, 3.108381742647393e-07, 9999.999999998339, 0.9999996891618257, 0.759501374862019, 0.3658570894503089, 0, 0.05097250580296795],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.7265424019278637, 0, 0.05013277245388952, 0, 0.9498672275461105, 0, 0.6666666666666666, 0, 1.300420838388996e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [309.0802899747709, 0, 0.05091418095814659, 0, 0.9490858190418534, 0, 0.6666666666666666, 0, 0.0005532154059446246],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [2.357938540959633, 0, 0.05013248056725267, 0, 0.9498675194327473, 0, 0.6666666666666666, 0, 4.22041770193737e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.6626129079149908, 0, 0.05013284541999361, 0, 0.9498671545800064, 0, 0.6666666666666666, 0, 1.185994968706226e-06],
+      [1.566769663119522, 0, 0.05013262835274973, 0, 0.9498673716472503, 0, 0.6666666666666666, 0, 2.804323482662513e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.817825765450128, 0, 0.05013277098718563, 0, 0.9498672290128144, 0, 0.6666666666666666, 0, 3.253682785311796e-06],
+      [0.3974863850815874, 0, 0.05013294000202562, 0, 0.9498670599979744, 0, 0.6666666666666666, 0, 7.114513575042944e-07],
+      [1.020458657005602, 0, 0.05013289361180205, 0, 0.9498671063881979, 0, 0.6666666666666666, 0, 1.826494501578024e-06],
+      [37.96545175131312, 37.96545175131312, 1, 11.77322370609677, 0, 0, 0.6666666666666666, 0, 0.0002614729336206075],
+      [2.130820151075738, 0, 0.05013270136567716, 0, 0.9498672986343228, 0, 0.6666666666666666, 0, 3.813903937286235e-06],
+      [4.26233485715889, 0, 0.05013250626858506, 0, 0.9498674937314149, 0, 0.6666666666666666, 0, 7.62905104193979e-06],
+      [1.214695355840158, 0, 0.05013274252501598, 0, 0.949867257474984, 0, 0.6666666666666666, 0, 2.17415411521393e-06],
+      [1.519842563289997, 0, 0.05013270240105601, 0, 0.9498672975989439, 0, 0.6666666666666666, 0, 2.720329790977697e-06],
+      [2.932174407795075, 0, 0.05013264167981683, 0, 0.9498673583201832, 0, 0.6666666666666666, 0, 5.248228722191244e-06],
+      [1.448382919454454, 0, 0.05013264358283576, 0, 0.9498673564171642, 0, 0.6666666666666666, 0, 2.592425886537963e-06],
+      [1.468044523824044, 0, 0.05013285539484266, 0, 0.9498671446051573, 0, 0.6666666666666666, 0, 2.627617721137748e-06],
+      [200.0901595667492, 0, 0.05091357415854761, 0, 0.9490864258414524, 0, 0.6666666666666666, 0, 0.0003581365827606779],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.240333891935228, 0, 0.0501327521506989, 0, 0.9498672478493011, 0, 0.6666666666666666, 0, 2.220043916711198e-06],
+      [2.406898018809229, 0, 0.05013253274918892, 0, 0.9498674672508111, 0, 0.6666666666666666, 0, 4.308049098347709e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [297.9478923176822, 0, 0.05091287667006752, 0, 0.9490871233299325, 0, 0.6666666666666666, 0, 0.0005332897940930697],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [4.135469207843255, 4.135469207843255, 1.932571397693559e-07, 9999.999999998339, 0.9999998067428603, 0.2978234917049676, 0.4915115942016369, 0, 0.05097991377769927],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [6039.926551086829, 5567.624824502186, 0.75, 0.9999999987419721, 0.25, 0, 0.6666666666666666, 0, 0.03209668490639354],
+      [2.476929109021976, 2.332780253958939, 0.7500000000055511, 1.000000000019994, 0.2499999999944489, 0, 0.6666666666666666, 0, 1.46257860096047e-05],
+      [0, 0, 0.75, 1.222222222222223, 0.25, 0, 0.6666666666666666, 0, 1.557493716997228e-06],
+      [4.501493575559809, 4.321433832537416, 0.75, 1.222222222221564, 0.25, 0, 0.6666666666666666, 0, 2.613518768732331e-05],
+      [63.16318290895323, 0, 0.05091249130079104, 0, 0.949087508699209, 0, 0.6666666666666666, 0, 0.000113054267797482],
+      [3.51963465112119, 3.51963465112119, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 8.337213095903074, 0.006838963290672795, 1, 0.0509788177876361],
+      [7.617007012063169e-16, 7.021382953926663e-16, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 7.167602652107213, 0.01240926675791332, 1, 0.05097251807664233],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [5.47322915138721, 0, 0.05013256837228246, 0, 0.9498674316277176, 0, 0.6666666666666666, 0, 9.796401728042194e-06],
+      [0.3239630156918067, 0, 0.05013299275877395, 0, 0.9498670072412261, 0, 0.6666666666666666, 0, 5.798536401386734e-07],
+      [1.692028829866927, 1.692028829866927, 1.170585923489231e-08, 9999.999999998339, 0.9999999882941407, 4.869550110198553, 0.04032678750307628, 0, 0.05097554957246153],
+      [1.668586172148792, 1.668586172148792, 1.286792788101779e-08, 9999.999999998339, 0.9999999871320722, 2.603244011641777, 0.1317599380905921, 0, 0.05097550755378502],
+      [1.071820311675409, 0, 0.05013303503901611, 0, 0.9498669649609839, 0, 0.6666666666666666, 0, 1.918425496726451e-06],
+      [1.696175380097253, 1.696175380097253, 1.003705363840109e-08, 9999.999999998339, 0.9999999899629464, 1.630662522821915, 0.2227307625738029, 0, 0.05097555707932148],
+      [2.916165215881061, 0, 0.0501326277554307, 0, 0.9498673722445693, 0, 0.6666666666666666, 0, 5.219574253139597e-06],
+      [2.930389362895724, 2.930389362895724, 1.199482640623856e-08, 9999.999999998339, 0.9999999880051736, 1.029200631494042, 0.312275080205903, 0, 0.05097776606965923],
+      [1.680637288947937, 0, 0.0501326531055059, 0, 0.9498673468944941, 0, 0.6666666666666666, 0, 3.008132418042247e-06],
+      [1.329427058691253, 0, 0.05013268350333079, 0, 0.9498673164966692, 0, 0.6666666666666666, 0, 2.379509641354623e-06],
+      [0.4790044011973189, 0.4790044011973189, 1.00292433268008e-08, 9999.999999998339, 0.9999999899707567, 3.425317677594322, 0.08540253095032391, 0, 0.05097337849448368],
+      [2.263009189058388, 2.263009189058388, 1.316766329160983e-08, 9999.999999998339, 0.9999999868323367, 3.272743217748371, 0.09251648066705931, 0, 0.05097657148206572],
+      [65.16956946187629, 65.16956946187629, 1.000124949921123e-08, 9999.999999998339, 0.9999999899987505, 0.8480944026600099, 0.3470716918834623, 0, 0.05108916659172555],
+      [0.7925343709514229, 0, 0.05013270892221586, 0, 0.9498672910777841, 0, 0.6666666666666666, 0, 1.418538282679712e-06],
+      [0, 0, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 5.625949108991691, 0.02731854191769101, 1, 0.05097251807664233],
+      [1.546558525251155e-12, 1.425622905328941e-12, 1.64571652837359e-08, 9999.999999998339, 0.9999999835428347, 8.073655300222526e-05, 0.6645011120822533, 0, 0.05097252080831031],
+      [149.5821864257748, 0, 0.05091368674737249, 0, 0.9490863132526275, 0, 0.6666666666666666, 0, 0.0002677335717278322],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.3200231135659162, 0, 0.05013300895815088, 0, 0.9498669910418491, 0, 0.6666666666666666, 0, 5.728017037174459e-07],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [6068.341516239671, 6068.341516239671, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 0.930453644968928, 0.3306874923136971, 0, 0.06183409933529099],
+      [3.061664893540097, 0, 0.05013142759506677, 0, 0.9498685724049333, 0, 0.6666666666666666, 0, 5.480000640236378e-06],
+      [0.5669297714733254, 0, 0.05013295812094391, 0, 0.9498670418790561, 0, 0.6666666666666666, 0, 1.01473401520786e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.5374657166158771, 0, 0.05013290944224352, 0, 0.9498670905577565, 0, 0.6666666666666666, 0, 9.619970093312692e-07],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.917361263131823, 0, 0.05013265678547901, 0, 0.949867343214521, 0, 0.6666666666666666, 0, 3.43183898789713e-06],
+      [43.735068098659, 0, 0.05091357128775326, 0, 0.9490864287122467, 0, 0.6666666666666666, 0, 7.828035056583637e-05],
+      [0.5591962120103372, 0, 0.05013287031122486, 0, 0.9498671296887752, 0, 0.6666666666666666, 0, 1.000891902409069e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.5876659430926564, 0, 0.05013294926641536, 0, 0.9498670507335847, 0, 0.6666666666666666, 0, 1.051849191983001e-06],
+      [4.974413198641435, 0, 0.05013296634785261, 0, 0.9498670336521474, 0, 0.6666666666666666, 0, 8.903583005074018e-06],
+      [6025.673813013798, 0, 0.05091239889729561, 0, 0.9490876011027044, 0, 0.6666666666666666, 0, 0.01078520919217599],
+      [0.9050711951407235, 0, 0.05013287360660151, 0, 0.9498671263933984, 0, 0.6666666666666666, 0, 1.619965248089524e-06],
+      [1.286825802729869, 1.286825802729869, 1.009060495834734e-08, 9999.999999998339, 0.9999999899093951, 2.634499128170404, 0.1295888954911075, 0, 0.0509748243915701],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [22.00576393872869, 22.00576393872869, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 1.222561621064301, 0.2796311966197261, 0, 0.05101190567414973],
+      [6033.328603939178, 6033.328603939178, 7.528429766384605e-08, 9999.999999998339, 0.9999999247157023, 0.4963802219491384, 0.4304060737208664, 0, 0.06177143044404741],
+      [0, 0, 1.179234375561227e-08, 9999.999999998339, 0.9999999882076562, 0.01244022747641083, 0.6377504879499749, 0, 0.05097252104608802],
+      [1.036559878065487, 0, 0.05013285900330958, 0, 0.9498671409966905, 0, 0.6666666666666666, 0, 1.855313691392993e-06],
+      [1.684581508303482, 1.684581508303482, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 5.776195650512584, 0.02529014345570257, 0, 0.05097553326932558],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.9378777634396886, 0, 0.05013290617724357, 0, 0.9498670938227565, 0, 0.6666666666666666, 0, 1.678684938693682e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [4.164368833517999, 4.164368833517999, 1.248896258867706e-08, 9999.999999998339, 0.9999999875110374, 0.1038158406540433, 0.5723086015441345, 0, 0.05097997471484802],
+      [6.537692250973903, 0, 0.05013195383746452, 0, 0.9498680461625355, 0, 0.6666666666666666, 0, 1.170165872711836e-05],
+      [3.144634634568299, 0, 0.05008239479197443, 0, 0.9499176052080256, 0, 0.6666666666666666, 0, 5.628506191877294e-06],
+      [6066.256996059261, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085784805919936],
+      [1.408006666372828, 1.408006666372828, 1.003406287278481e-08, 9999.999999998339, 0.9999999899659371, 2.377250286084781, 0.1486354883516872, 0, 0.05097504129318253],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.6756081102388872, 0, 0.05013271957312851, 0, 0.9498672804268715, 0, 0.6666666666666666, 0, 1.209254770001008e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.9232855386553513, 0.9232855386553513, 1.019008539818281e-08, 9999.999999998339, 0.9999999898099146, 4.432046537820874, 0.05056307983702713, 0, 0.05097417369447229],
+      [1.338674033019478, 0, 0.05013265988402722, 0, 0.9498673401159727, 0, 0.6666666666666666, 0, 2.396060579161644e-06],
+      [8.749293892568883, 0, 0.050132416128806, 0, 0.949867583871194, 0, 0.6666666666666666, 0, 1.566015151888659e-05],
+      [5.1890764989646, 0, 0.05013101235770968, 0, 0.9498689876422903, 0, 0.6666666666666666, 0, 9.2878037033249e-06],
+      [0.322346946986904, 0, 0.05013299308106522, 0, 0.9498670069189348, 0, 0.6666666666666666, 0, 5.769610774822514e-07],
+      [11.39805535166483, 0, 0.05013143370020525, 0, 0.9498685662997948, 0, 0.6666666666666666, 0, 2.040110619433306e-05],
+      [32.25915350824656, 0, 0.05012901946719889, 0, 0.9498709805328012, 0, 0.6666666666666666, 0, 5.773988598545478e-05],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.2760209201080301, 0, 0.05013302909287383, 0, 0.9498669709071261, 0, 0.6666666666666666, 0, 4.940432318710353e-07],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [2.989412973652951, 0, 0.05013271522248416, 0, 0.9498672847775158, 0, 0.6666666666666666, 0, 5.35067865987358e-06],
+      [0.9881089609435275, 0, 0.05013286794734546, 0, 0.9498671320526545, 0, 0.6666666666666666, 0, 1.768592555644731e-06],
+      [0.5199567311240055, 0, 0.05013295901996691, 0, 0.9498670409800331, 0, 0.6666666666666666, 0, 9.306580956873252e-07],
+      [6065.494781603193, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085648378980592],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.3477685868800011, 0, 0.05013300635437668, 0, 0.9498669936456233, 0, 0.6666666666666666, 0, 6.224626616641014e-07],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [6067.093490288372, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01085934528017895],
+      [0.6731077710797109, 0, 0.05013295047076694, 0, 0.9498670495292331, 0, 0.6666666666666666, 0, 1.204779472844221e-06],
+      [1.018623671136112, 0, 0.05013284322434609, 0, 0.9498671567756539, 0, 0.6666666666666666, 0, 1.823210104333621e-06],
+      [7.018624768529989, 0, 0.05013177437903905, 0, 0.949868225620961, 0, 0.6666666666666666, 0, 1.256246831789971e-05],
+      [0.5733534480398702, 0, 0.05013281826631905, 0, 0.9498671817336809, 0, 0.6666666666666666, 0, 1.026231599993057e-06],
+      [1.753420834787046, 0, 0.05013271184337258, 0, 0.9498672881566275, 0, 0.6666666666666666, 0, 3.138405942959535e-06],
+      [1.790556578830341e-16, 1.65054114046762e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 9.514792622411939e-22],
+      [1.910672495130496, 0, 0.05013223937927088, 0, 0.9498677606207291, 0, 0.6666666666666666, 0, 3.419866922303994e-06],
+      [1.185279523618031, 0, 0.05013279897555506, 0, 0.9498672010244449, 0, 0.6666666666666666, 0, 2.121503421876962e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.648595781178732, 0, 0.0501319575407989, 0, 0.9498680424592011, 0, 0.6666666666666666, 0, 2.95078209095065e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.551326231472142, 0.551326231472142, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 8.030517566021011, 0.007993909013221501, 1, 0.05097350488245195],
+      [6.233082733481217e-16, 5.745676849971197e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 3.312181827069188e-21],
+      [1.441236895014001, 0, 0.05013301742253736, 0, 0.9498669825774626, 0, 0.6666666666666666, 0, 2.579635388599584e-06],
+      [9.964857242643216, 0, 0.0501289311624458, 0, 0.9498710688375542, 0, 0.6666666666666666, 0, 1.783585923618449e-05],
+      [0.3236762837265227, 0, 0.0501330314506889, 0, 0.9498669685493111, 0, 0.6666666666666666, 0, 5.793404254636614e-07],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [6042.576397024976, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01081546272233808],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.439836256488038, 0, 0.05013266750087145, 0, 0.9498673324991286, 0, 0.6666666666666666, 0, 2.577128419259077e-06],
+      [0.6007514899752457, 0, 0.05013295332050027, 0, 0.9498670466794997, 0, 0.6666666666666666, 0, 1.075270698838873e-06],
+      [1.19710004687198, 1.19710004687198, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 5.698294711848675, 0.02632209746636283, 0, 0.05097466073776302],
+      [0.564014894374836, 0, 0.0501328743820466, 0, 0.9498671256179534, 0, 0.6666666666666666, 0, 1.009516746525178e-06],
+      [2.93977410310404, 0, 0.05013251754514395, 0, 0.9498674824548561, 0, 0.6666666666666666, 0, 5.261831234747924e-06],
+      [1.323943537857308, 0, 0.05013275889202839, 0, 0.9498672411079716, 0, 0.6666666666666666, 0, 2.369694818790542e-06],
+      [4.162951153793915e-15, 3.837422523438203e-15, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 2.212139923076551e-20],
+      [0.9849926974604185, 0, 0.05013280340619355, 0, 0.9498671965938065, 0, 0.6666666666666666, 0, 1.763014830297122e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.179125213125854, 0, 0.05013276693939244, 0, 0.9498672330606076, 0, 0.6666666666666666, 0, 2.110487968974687e-06],
+      [0.3746071010467009, 0.3746071010467009, 1.257515999615842e-08, 9999.999999998339, 0.99999998742484, 0.1480832381323438, 0.550610939506374, 0, 0.05097319150648507],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [2.409734208659591e-15, 2.221301184228986e-15, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 1.280502472896191e-20],
+      [1.287377257873041, 0, 0.0500436834531596, 0, 0.9499563165468404, 0, 0.6666666666666666, 0, 2.304245710317686e-06],
+      [1.240333923126906, 0, 0.05013278098972899, 0, 0.949867219010271, 0, 0.6666666666666666, 0, 2.220043972540435e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.6485958443261, 0, 0.05013204583184503, 0, 0.9498679541681549, 0, 0.6666666666666666, 0, 2.950782203976612e-06],
+      [0.5853901179483421, 0.5853901179483421, 1.49005553877529e-08, 9999.999999998339, 0.9999999850994447, 1.149127501919367, 0.2915347078938517, 0, 0.05097356866344618],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.885570185893112, 0, 0.05013278204813496, 0, 0.949867217951865, 0, 0.6666666666666666, 0, 3.374936900412141e-06],
+      [0.6511326512722402, 0, 0.05013300807609056, 0, 0.9498669919239094, 0, 0.6666666666666666, 0, 1.165446732390393e-06],
+      [1.649873351243053, 0, 0.05013276550950406, 0, 0.9498672344904959, 0, 0.6666666666666666, 0, 2.953068783000194e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [2.781929346315841, 0, 0.05013252763163485, 0, 0.9498674723683651, 0, 0.6666666666666666, 0, 4.979308686286675e-06],
+      [2.983858628310205, 0, 0.05013151900208315, 0, 0.9498684809979169, 0, 0.6666666666666666, 0, 5.34073707021804e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0.7201715275334154, 0, 0.05013285951791714, 0, 0.9498671404820829, 0, 0.6666666666666666, 0, 1.289017762946577e-06],
+      [1.240491635662526, 0, 0.05013279851614107, 0, 0.9498672014838589, 0, 0.6666666666666666, 0, 2.220326258429395e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.100791925411218, 0, 0.05013286964350927, 0, 0.9498671303564907, 0, 0.6666666666666666, 0, 1.970281094037539e-06],
+      [1.815462940520189, 0, 0.05013201237504176, 0, 0.9498679876249583, 0, 0.6666666666666666, 0, 3.249453621579297e-06],
+      [0.5449317733170086, 0, 0.05013295369367963, 0, 0.9498670463063204, 0, 0.6666666666666666, 0, 9.753603253455613e-07],
+      [1.678013469729545, 0, 0.05013249849346664, 0, 0.9498675015065333, 0, 0.6666666666666666, 0, 3.003436106885858e-06],
+      [33.19481985286483, 0, 0.05091317753643117, 0, 0.9490868224635688, 0, 0.6666666666666666, 0, 5.941461275858216e-05],
+      [0.5891567301612582, 0, 0.05013294219907086, 0, 0.9498670578009292, 0, 0.6666666666666666, 0, 1.054517516040161e-06],
+      [1.254944607296175, 0, 0.0501323415081676, 0, 0.9498676584918324, 0, 0.6666666666666666, 0, 2.246195286085825e-06],
+      [13.60943641857033, 0, 0.05013279258197063, 0, 0.9498672074180293, 0, 0.6666666666666666, 0, 2.435920418474921e-05],
+      [0.8311966647723124, 0, 0.0501328716142706, 0, 0.9498671283857294, 0, 0.6666666666666666, 0, 1.487738996101521e-06],
+      [0.7226180341892455, 0, 0.05013299876356916, 0, 0.9498670012364309, 0, 0.6666666666666666, 0, 1.293396706595368e-06],
+      [0.109440788005597, 0, 0.05013303499589285, 0, 0.9498669650041072, 0, 0.6666666666666666, 0, 1.958854444207942e-07],
+      [1.100356262213851, 0, 0.05013269664719863, 0, 0.9498673033528013, 0, 0.6666666666666666, 0, 1.969501310918383e-06],
+      [0.6509830729019127, 0, 0.0501329323885305, 0, 0.9498670676114696, 0, 0.6666666666666666, 0, 1.165179005649008e-06],
+      [1.573371029921852, 0, 0.05013246299084974, 0, 0.9498675370091503, 0, 0.6666666666666666, 0, 2.816139110943561e-06],
+      [1.251752399315975e-15, 1.153869616395871e-15, 0.75, 1.222222222222223, 0.25, 0, 0.6666666666666666, 0, 1.557493716997234e-06],
+      [1.811378070306684, 0, 0.0501328776668656, 0, 0.9498671223331344, 0, 0.6666666666666666, 0, 3.242142210251255e-06],
+      [6068.529031091736, 0, 0.05091234786663928, 0, 0.9490876521333607, 0, 0.6666666666666666, 0, 0.01086191472026958],
+      [0.5504387355565922, 0, 0.05013285147877932, 0, 0.9498671485212207, 0, 0.6666666666666666, 0, 9.852171051199742e-07],
+      [0.9337180254045602, 0, 0.05013289091378921, 0, 0.9498671090862107, 0, 0.6666666666666666, 0, 1.671239523245435e-06],
+      [1.236698305828893, 0, 0.05013278063725175, 0, 0.9498672193627482, 0, 0.6666666666666666, 0, 2.213536668242435e-06],
+      [12.72525738465694, 0, 0.05012887542304164, 0, 0.9498711245769583, 0, 0.6666666666666666, 0, 2.277663331549693e-05],
+      [2.78516156292412, 0, 0.05013268520809003, 0, 0.94986731479191, 0, 0.6666666666666666, 0, 4.985093953354972e-06],
+      [1.333431102438075, 0, 0.05013275795299257, 0, 0.9498672420470075, 0, 0.6666666666666666, 0, 2.386676383326421e-06],
+      [1.209368248932209, 0, 0.05013274354102284, 0, 0.9498672564589772, 0, 0.6666666666666666, 0, 2.164619254188557e-06],
+      [1.227267963280861, 0, 0.05013248197336088, 0, 0.9498675180266392, 0, 0.6666666666666666, 0, 2.196657524051998e-06],
+      [6068.661431200187, 0, 0.05174064906793435, 0, 0.9482593509320656, 0, 0.6666666666666666, 0, 0.01086215170005159],
+      [0.5636755362060253, 0, 0.0501329591726312, 0, 0.9498670408273688, 0, 0.6666666666666666, 0, 1.008909337469316e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.791221390713582, 0, 0.05013276442509555, 0, 0.9498672355749045, 0, 0.6666666666666666, 0, 3.206064252370136e-06],
+      [0.5510022876885184, 0, 0.05013296997787006, 0, 0.9498670300221299, 0, 0.6666666666666666, 0, 9.862257935790794e-07],
+      [0.3008910870759621, 0, 0.05013301073075286, 0, 0.9498669892692472, 0, 0.6666666666666666, 0, 5.385577478765633e-07],
+      [10.62371760984805, 0, 0.05013116853043075, 0, 0.9498688314695692, 0, 0.6666666666666666, 0, 1.901513762217862e-05],
+      [1.923723354374636e-16, 1.811769193885714e-16, 0.7500000000006939, 0, 0.2499999999993061, 0, 0.6666666666666666, 0, 1.036950967672105e-21],
+      [32.71387660124853, 0, 0.05012850684263336, 0, 0.9498714931573666, 0, 0.6666666666666666, 0, 5.85537839551636e-05],
+      [1.788341208305232, 1.788341208305232, 2.222945649203422e-06, 9999.999999998339, 0.9999977770543508, 0.1595276235178318, 0.5454334856876316, 0, 0.05097560926737472],
+      [2.90130940306947, 2.90130940306947, 1.001675268276526e-08, 9999.999999998339, 0.9999999899832474, 2.644112474678217, 0.1289286662806431, 0, 0.05097771412093222],
+      [26.22215601382402, 26.22215601382402, 1.003790334605208e-08, 9999.999999998339, 0.9999999899620966, 1.749916169191067, 0.2086219955270121, 0, 0.05101945554566516],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.218566466418135, 1.218566466418135, 1.016499978432528e-08, 9999.999999998339, 0.9999999898350003, 3.313391985450977, 0.09056360950679399, 0, 0.05097470221202428],
+      [1.76460082604143, 1.76460082604143, 1.157390393095133e-08, 9999.999999998339, 0.9999999884260961, 0.1079338578288613, 0.5701558960113545, 0, 0.050975679474068],
+      [1.689693096835674, 0, 0.05013281283543247, 0, 0.9498671871645675, 0, 0.6666666666666666, 0, 3.024341191617487e-06],
+      [1.208952475530641, 1.208952475530641, 1.365165584728413e-08, 9999.999999998339, 0.9999999863483442, 2.002849313508044, 0.1817982435152188, 0, 0.05097468482646964],
+      [3.720939603199375, 0, 0.05013278974920001, 0, 0.9498672102508, 0, 0.6666666666666666, 0, 6.660020647862726e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1.179446449303297e-08, 9999.999999998339, 0.9999999882055355, 0.05402270651102015, 0.6017567854103597, 0, 0.05097252104597993],
+      [5.372633027206708, 0, 0.05013218720533839, 0, 0.9498678127946616, 0, 0.6666666666666666, 0, 9.616347135497596e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [6060.231805480134, 5586.342277019494, 0.75, 1, 0.25, 0, 0.6666666666666666, 0, 0.03220458447627292],
+      [7.617007012063169e-16, 7.021382953926663e-16, 0.75, 0.9999999997084289, 0.25, 0, 0.6666666666666666, 0, 1.274313040808e-06],
+      [0.7391399663315156, 0, 0.05013294646757013, 0, 0.9498670535324298, 0, 0.6666666666666666, 0, 1.322968917097116e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 7.004815678669649e-08, 9999.999999998339, 0.9999999299518432, 12.65631962290489, 0.0007669053834442607, 1, 0.05097251807664233],
+      [5.551115123125783e-17, 5.11703678873765e-17, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 2.949792809908249e-22],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.6001025704433858, 0.6001025704433858, 1.025756970799763e-08, 9999.999999998339, 0.9999999897424303, 1.821908510836892, 0.2005773227962525, 0, 0.05097359523356401],
+      [0.3355186826050347, 0, 0.05013299016799326, 0, 0.9498670098320068, 0, 0.6666666666666666, 0, 6.005368514909213e-07],
+      [0, 0, 0.7499999999999946, 0, 0.2500000000000054, 0, 0.6666666666666666, 0, 0],
+      [1.067431163107903, 0, 0.0501329312859551, 0, 0.9498670687140449, 0, 0.6666666666666666, 0, 1.910569464862619e-06],
+      [7.617007012063169e-16, 7.021382953926663e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 4.047581795520895e-21],
+      [2.902463524850101, 0, 0.0501322206163233, 0, 0.9498677793836767, 0, 0.6666666666666666, 0, 5.195049924634408e-06],
+      [0.3235573449384467, 0, 0.05013298341232715, 0, 0.9498670165876728, 0, 0.6666666666666666, 0, 5.791275397764724e-07],
+      [6.166918182513075, 0, 0.05013201323079462, 0, 0.9498679867692054, 0, 0.6666666666666666, 0, 1.103801910514817e-05],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [5.910711098305939, 0, 0.05013247934878277, 0, 0.9498675206512173, 0, 0.6666666666666666, 0, 1.057944018344756e-05],
+      [1.796384603984248, 0, 0.05013276211696439, 0, 0.9498672378830356, 0, 0.6666666666666666, 0, 3.215305764100773e-06],
+      [0.8575586720172431, 0, 0.05013290655652603, 0, 0.949867093443474, 0, 0.6666666666666666, 0, 1.534923721276686e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [21.94908325735859, 0, 0.0501321848424139, 0, 0.9498678151575861, 0, 0.6666666666666666, 0, 3.928613825657776e-05],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.6817597999239001, 0, 0.05013293988604317, 0, 0.9498670601139568, 0, 0.6666666666666666, 0, 1.220265531983332e-06],
+      [1.478944856301025, 0, 0.05013282219884196, 0, 0.949867177801158, 0, 0.6666666666666666, 0, 2.647127965083347e-06],
+      [2.068198711230357, 0, 0.05013269450364874, 0, 0.9498673054963512, 0, 0.6666666666666666, 0, 3.701819322418926e-06],
+      [0.3152375772718835, 0, 0.05013300939069969, 0, 0.9498669906093004, 0, 0.6666666666666666, 0, 5.642361869587353e-07],
+      [3.230707064615052e-15, 2.978076753335467e-15, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 1.716757130548404e-20],
+      [2.585769301523169e-15, 2.383570931173913e-15, 1.000864559315751e-08, 9999.999999998339, 0.9999999899913544, 0.02030473312025549, 0.6289697497058738, 0, 0.05097252113700762],
+      [1.645572575611141, 0, 0.05013219763175897, 0, 0.949867802368241, 0, 0.6666666666666666, 0, 2.945370927736502e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1.267220980823249, 0, 0.05013260477224731, 0, 0.9498673952277527, 0, 0.6666666666666666, 0, 2.268168472939193e-06],
+      [0.4468380826585343, 0.4463179935058955, 1.000035374672923e-08, 9999.999999998339, 0.9999999899996462, 0.5603906183083822, 0.4132974560837213, 0, 0.05097332092223162],
+      [1.311448781889022, 0, 0.05013281972228801, 0, 0.949867180277712, 0, 0.6666666666666666, 0, 2.347330754437754e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [7.630258163167601e-16, 7.033597910055391e-16, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 4.054623290677072e-21],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [1.913307687793732, 0, 0.05013219794235989, 0, 0.9498678020576401, 0, 0.6666666666666666, 0, 3.424583590516818e-06],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [35.23007946984025, 0, 0.05012919774515862, 0, 0.9498708022548413, 0, 0.6666666666666666, 0, 6.305747518536342e-05],
+      [0.4228717568722495, 0, 0.05013295485503069, 0, 0.9498670451449693, 0, 0.6666666666666666, 0, 7.568880262785238e-07],
+      [1.399891287353001, 0, 0.05013283175330123, 0, 0.9498671682466988, 0, 0.6666666666666666, 0, 2.505631876023374e-06],
+      [0.793060188390534, 0, 0.05013280510093335, 0, 0.9498671948990667, 0, 0.6666666666666666, 0, 1.419479430716212e-06],
+      [5.765024949786528, 0, 0.05013258882603797, 0, 0.949867411173962, 0, 0.6666666666666666, 0, 1.031868003662535e-05],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [2.286737035626565, 0, 0.05013248972747872, 0, 0.9498675102725213, 0, 0.6666666666666666, 0, 4.092975833418622e-06],
+      [0.9071879354040987, 0, 0.05013276850904846, 0, 0.9498672314909515, 0, 0.6666666666666666, 0, 1.623753950773147e-06],
+      [0.8721873068458328, 0, 0.05013268816806835, 0, 0.9498673118319316, 0, 0.6666666666666666, 0, 1.561107164277125e-06],
+      [0.7121213680525995, 0, 0.05013290071537232, 0, 0.9498670992846276, 0, 0.6666666666666666, 0, 1.274608975361118e-06],
+      [1.196044092732081, 0, 0.05013274771841876, 0, 0.9498672522815812, 0, 0.6666666666666666, 0, 2.140770666231929e-06],
+      [2.281873470591607, 0, 0.05013166198998691, 0, 0.9498683380100131, 0, 0.6666666666666666, 0, 4.084270654885976e-06],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0],
+      [0.7961836401665348, 0.7961836401665348, 1.179208610581886e-08, 8192.339975679155, 0.9999999882079139, 0.01809371162152829, 0.6312635570270442, 0, 0.04175984725278914],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0.75, 0, 0.25, 0, 0.6666666666666666, 0, 0]
+      ]
+    }
+  }
+}

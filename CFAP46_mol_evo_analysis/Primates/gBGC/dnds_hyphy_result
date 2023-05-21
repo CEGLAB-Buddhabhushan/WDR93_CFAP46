@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Primates/gBGC/`) 
+
+A tree was found in the data file:
+(Nycticebus_coucang:59.3,((Propithecus_coquereli:35.94,Microcebus_murinus:35.94):0.06,Lemur_catta:36):23.3,((Callithrix_jacchus:17.88348,(Cebus_imitator:6.18,Sapajus_apella:6.18):11.70348):25.01652,((((Symphalangus_syndactylus:7.409,Hylobates_moloch:7.409):1.12418,Nomascus_leucogenys:8.53318):10.92396,((Gorilla_gorilla_gorilla:8.6,(Homo_sapiens:5.01052,(Pan_paniscus:2.3981,Pan_troglodytes:1.36757):4.0019):2.2):6.6,Pongo_abelii:15.2):4.25714):9.36286,(((Papio_anubis:7.5,(Mandrillus_leucophaeus:4.7337,Cercocebus_atys:4.7337):2.7663):2.954,((Macaca_thibetana_thibetana:4.20842,(Macaca_mulatta:1.99145,Macaca_fascicularis:2.32682):0.89101):0.2888,Macaca_nemestrina:4.49722):5.95678):7.301,((Trachypithecus_francoisi:10.10883,(Rhinopithecus_roxellana:2.19,Rhinopithecus_bieti:2.19):7.91883):2.67772,Colobus_angolensis_palliatus:12.78655):4.96845):11.065):14.08):45.30984)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :14358
+Synonymous  sites      :3484.927575962876
+Nonsynonymous  sites   :10350.11805037531
+
+Total tree lengths:
+	E[syn]        : 0.4630275258161927
+	E[non-syn]    : 0.3890754880584886
+	dS            : 1.907686478629912
+	dN            : 0.5397374049604402
+
+
+E[Syn subs/nucleotide site] tree: 
+	(Nycticebus_coucang:0.07045722843363574,((Propithecus_coquereli:0.0212411611928221,Microcebus_murinus:0.04852757996053251)Node3:0.008492283959601086,Lemur_catta:0.02843271332545898)Node2:0.03822058844226971,((Callithrix_jacchus:0.02073406092386913,(Cebus_imitator:0.004251840704661084,Sapajus_apella:0.004028226132279821)Node10:0.01209482534430789)Node8:0.01419400941835809,((((Symphalangus_syndactylus:0.005468061377906125,Hylobates_moloch:0.005214197694789628)Node16:2.915460334423387e-05,Nomascus_leucogenys:0.003632791309213334)Node15:0.006074578330655319,((Gorilla_gorilla_gorilla:0.005038396665458514,(Homo_sapiens:0.003180107948981253,(Pan_paniscus:0.001073716997417433,Pan_troglodytes:0.001864597230350806)Node25:0.002262195100443019)Node23:0.001101371770090162)Node21:0.005644493627457697,Pongo_abelii:0.007021658433637708)Node20:0.001669202718893096)Node14:0.005651629118217677,(((Papio_anubis:0.002901300276163631,(Mandrillus_leucophaeus:0.003014832137264281,Cercocebus_atys:0.004321662263255097)Node33:0.000478021081032865)Node31:0.001053947749717586,((Macaca_thibetana_thibetana:0.001450087609032088,(Macaca_mulatta:0.0009831727881925434,Macaca_fascicularis:0.001038063191322378)Node39:0.0003775268899207661)Node37:0,Macaca_nemestrina:0.00126936623427587)Node36:0.003365493372432905)Node30:0.003164760375515972,((Trachypithecus_francoisi:0.00526930221149383,(Rhinopithecus_roxellana:0.0015432149850118,Rhinopithecus_bieti:0.002171347067791778)Node46:0.002370355446018449)Node44:0.001782796564990025,Colobus_angolensis_palliatus:0.00658689975173436)Node43:0.002971225621363437)Node29:0.008762710488275469)Node13:0.0178392476670296)Node7:0.06471152127970563)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(Nycticebus_coucang:0.05958597909915312,((Propithecus_coquereli:0.02208143285866031,Microcebus_murinus:0.05225589792689469)Node3:0.006932840595688901,Lemur_catta:0.03216980467047622)Node2:0.02684933091908537,((Callithrix_jacchus:0.0170097628576197,(Cebus_imitator:0.003525564925701923,Sapajus_apella:0.002295524204310597)Node10:0.01065381089430651)Node8:0.01776245731864248,((((Symphalangus_syndactylus:0.002960794944977542,Hylobates_moloch:0.005243547875755528)Node16:9.454168962408007e-05,Nomascus_leucogenys:0.002781571108703562)Node15:0.006076552805804623,((Gorilla_gorilla_gorilla:0.003988654608885977,(Homo_sapiens:0.00391054283445564,(Pan_paniscus:0.0004976005327548305,Pan_troglodytes:0.0007473446549782882)Node25:0.002631547016345409)Node23:0.0003672201568229567)Node21:0.002463055209027645,Pongo_abelii:0.005881365667806196)Node20:0.001492040402745289)Node14:0.003873411570283231,(((Papio_anubis:0.001366166072119183,(Mandrillus_leucophaeus:0.001741321893461958,Cercocebus_atys:0.001744130242907196)Node33:0.0004888736694916345)Node31:0.0008209568172959334,((Macaca_thibetana_thibetana:0.001329047883860175,(Macaca_mulatta:0.0002702663137059569,Macaca_fascicularis:0.0002590266749836852)Node39:0.0005408128827047858)Node37:0.0003828600964703617,Macaca_nemestrina:0.0003717133159347157)Node36:0.001045606730763406)Node30:0.004369214558740295,((Trachypithecus_francoisi:0.005107398599517245,(Rhinopithecus_roxellana:0.0002875106433212481,Rhinopithecus_bieti:0.002470281798000481)Node46:0.002786250591565166)Node44:0.002481160892577567,Colobus_angolensis_palliatus:0.004915604740537025)Node43:0.001067350280577383)Node29:0.006950073685537165)Node13:0.008750762396894539)Node7:0.04539689992801085)
+
+dS tree: 
+	(Nycticebus_coucang:0.2902857703063263,((Propithecus_coquereli:0.08751418379828867,Microcebus_murinus:0.1999349994757963)Node3:0.03498844966907608,Lemur_catta:0.1171435816178032)Node2:0.1574699034319198,((Callithrix_jacchus:0.08542491637366648,(Cebus_imitator:0.01751770374185078,Sapajus_apella:0.01659640539051759)Node10:0.04983102188159291)Node8:0.05847971953118044,((((Symphalangus_syndactylus:0.02252856725215701,Hylobates_moloch:0.02148264171059691)Node16:0.0001201177888756702,Nomascus_leucogenys:0.01496720275550446)Node15:0.02502743422076734,((Gorilla_gorilla_gorilla:0.02075833650650994,(Homo_sapiens:0.01310213453111923,(Pan_paniscus:0.004423744342709901,Pan_troglodytes:0.007682193230652684)Node25:0.009320307680479289)Node23:0.004537682786875511)Node21:0.02325547310137298,Pongo_abelii:0.0289294309831718)Node20:0.006877162327037807)Node14:0.02328487152475442,(((Papio_anubis:0.01195343904776779,(Mandrillus_leucophaeus:0.01242119352075214,Cercocebus_atys:0.01780537053447153)Node33:0.001969460349423052)Node31:0.004342294484057969,((Macaca_thibetana_thibetana:0.005974401888317609,(Macaca_mulatta:0.004050699644444753,Macaca_fascicularis:0.004276849655014318)Node39:0.001555421444873121)Node37:0,Macaca_nemestrina:0.005229824722167225)Node36:0.01386592770957098)Node30:0.01303890209514712,((Trachypithecus_francoisi:0.02170967387513776,(Rhinopithecus_roxellana:0.006358089306541002,Rhinopithecus_bieti:0.008946011221119984)Node46:0.009765931357850246)Node44:0.007345172179956793,Colobus_angolensis_palliatus:0.02713821293955333)Node43:0.01224153344413453)Node29:0.03610261460193957)Node13:0.07349820402865657)Node7:0.2666132946184105)
+
+dN tree: 
+	(Nycticebus_coucang:0.08265949081369345,((Propithecus_coquereli:0.03063203834406007,Microcebus_murinus:0.07249097824610294)Node3:0.009617448302369047,Lemur_catta:0.04462693596445972)Node2:0.03724621221322678,((Callithrix_jacchus:0.02359646275733519,(Cebus_imitator:0.004890771386070583,Sapajus_apella:0.003184421314334324)Node10:0.01477929199222091)Node8:0.02464062351171163,((((Symphalangus_syndactylus:0.004107305212663351,Hylobates_moloch:0.007274009826136029)Node16:0.0001311511205008256,Nomascus_leucogenys:0.003858680430926829)Node15:0.008429579716975217,((Gorilla_gorilla_gorilla:0.005533183543960467,(Homo_sapiens:0.005424824503820814,(Pan_paniscus:0.0006902866628690082,Pan_troglodytes:0.001036739339971989)Node25:0.003650562426127816)Node23:0.0005094190216963587)Node21:0.003416825442868892,Pongo_abelii:0.008158810155339175)Node20:0.002069804034924997)Node14:0.005373314879641394,(((Papio_anubis:0.001895187317479529,(Mandrillus_leucophaeus:0.002415614935466383,Cercocebus_atys:0.002419510763623943)Node33:0.0006781804915071824)Node31:0.001138856380706458,((Macaca_thibetana_thibetana:0.001843695832606705,(Macaca_mulatta:0.0003749216881685149,Macaca_fascicularis:0.0003593297179137867)Node39:0.0007502321550423036)Node37:0.0005311152238425069,Macaca_nemestrina:0.000515652069301482)Node36:0.001450497604687379)Node30:0.00606110793413785,((Trachypithecus_francoisi:0.007085139390193669,(Rhinopithecus_roxellana:0.000398843549099113,Rhinopithecus_bieti:0.003426850387895313)Node46:0.003865171952530727)Node44:0.003441942200295669,Colobus_angolensis_palliatus:0.006819077088890919)Node43:0.001480660921348076)Node29:0.009641354571151402)Node13:0.01213932497031334)Node7:0.06297596665023009)
+
+Estimating pairwise dN/dS: total of 325 analyses

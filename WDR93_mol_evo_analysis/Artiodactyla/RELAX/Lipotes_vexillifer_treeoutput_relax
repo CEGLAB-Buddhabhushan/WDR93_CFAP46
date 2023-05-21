@@ -1,0 +1,132 @@
+[2J[H            /HYPHY 2.5.48(MP) for Linux on x86_64\            
+***************** TYPES OF STANDARD ANALYSES *****************
+
+
+	(1) Selection Analyses
+	(2) Evolutionary Hypothesis Testing
+	(3) Relative evolutionary rate inference
+	(4) Coevolutionary analysis
+	(5) Basic Analyses
+	(6) Codon Selection Analyses
+	(7) Compartmentalization
+	(8) Data File Tools
+	(9) Miscellaneous
+	(10) Model Comparison
+	(11) Molecular Clock
+	(12) Phylogeny Reconstruction
+	(13) Positive Selection
+	(14) Recombination
+	(15) Selection/Recombination
+	(16) Relative Rate
+	(17) Relative Ratio
+
+ Please select type of analyses you want to list (or press ENTER to process custom batch file):[2J[H***************** FILES IN 'Selection Analyses' ***************** 
+
+
+	(1) [MEME] Test for episodic site-level selection using MEME (Mixed Effects Model of Evolution).
+	(2) [FEL] Test for pervasive site-level selection using FEL (Fixed Effects Likelihood).
+	(3) [SLAC] Test for pervasive site-level selection using SLAC (Single Likelihood Ancestor Counting).
+	(4) [FUBAR] Test for pervasive site-level selection using FUBAR (Fast Unconstrained Bayesian AppRoximation for inferring selection).
+	(5) [BUSTED] Test for episodic gene-wide selection using BUSTED (Branch-site Unrestricted Statistical Test of Episodic Diversification).
+	(6) [aBSREL] Test for lineage-specific evolution using the branch-site method aBS-REL (Adaptive Branch-Site Random Effects Likelihood).
+	(7) [RELAX] Test for relaxation of selection pressure along a specified set of test branches using RELAX (a random effects test of selection relaxation).
+	(8) [FADE] Test a protein alignment for directional selection towards specific amino acids along a specified set of test branches using FADE (a FUBAR Approach to Directional Evolution).
+	(9) [PRIME] 
+
+ Please select the analysis you would like to perform (or press ENTER to return to the list of analysis types):
+Analysis Description
+--------------------
+RELAX (a random effects test of selection relaxation) uses a random
+effects branch-site model framework to test whether a set of 'Test'
+branches evolves under relaxed selection relative to a set of
+'Reference' branches (R), as measured by the relaxation parameter (K).
+Version 2.1 adds a check for stability in K estimates to try to mitigate
+convergence problems. Version 3 provides support for >2 branch sets.
+Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword
+support. Version 3.1.1 adds some bug fixes for better convergence.
+Version 4.0 adds support for synonymous rate variation. Version 4.1 adds
+further support for multiple hit models
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree, with at least two
+groups of branches defined using the {} notation (one group can be
+defined as all unlabeled branches)
+
+- __Citation__: RELAX: Detecting Relaxed Selection in a Phylogenetic Framework (2015).
+Mol Biol Evol 32 (3): 820-832
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution g
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 3.1.1
+
+
+>code –> Universal
+
+
+>Select a coding sequence alignment file (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Artiodactyla/RELAX/`) 
+
+>Select a coding sequence alignment file (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Artiodactyla/RELAX/`) 
+-------
+>[WARNING] This dataset contains 1 duplicate sequence. Identical
+sequences do not contribute any information to the analysis and only
+slow down computation. Please consider removing duplicate or 'nearly'
+duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+
+
+>Please select a tree file for the data: (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Artiodactyla/RELAX/`) /media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Artiodactyla/RELAX/Lipotes_vexillifer_treeLabled.txt
+/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Artiodactyla/RELAX/Lipotes_vexillifer_treeLabled.txt
+
+>Loaded a multiple sequence alignment with **33** sequences, **722** codons, and **1** partitions from `/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Artiodactyla/RELAX/Artiodactyla.aln`
+
+
+####Choose the set of branches to use as the _test_ set
+
+1. [**Unlabeled branches**] Set of 62 unlabeled branches
+2. [**fg**] Set fg with 1 branches
+
+>Please choose an option (or press q to cancel selection):The number of points in the initial distributional guess for likelihood fitting (permissible range = [1,10000], default value = 250, integer): 
+>grid-size –> 250
+The number of initial random guesses to 'seed' rate values optimization (permissible range = [1,25], default value = 1, integer): 
+>starting-points –> 1
+
+
+### Branch sets for RELAX analysis
+
+>multiple-hits –> None
+
+* Selected 62 branches as the _Reference_ set: `Vicugna_pacos, Camelus_dromedarius, Camelus_ferus, Camelus_bactrianus, Node4, Node2, Physeter_catodon, Delphinapterus_leucas, Monodon_monoceros, Node16, Neophocaena_asiaeorientalis, Phocoena_sinus, Node19, Node15, Orcinus_orca, Lagenorhynchus_obliquidens, Globicephala_melas, Tursiops_truncatus, Node26, Node24, Node22, Node14, Node12, Node10, Balaenoptera_musculus, Balaenoptera_acutorostrata, Node29, Node9, Bos_mutus, Bison_bison_bison, Node37, Bos_taurus, Bos_indicus, Node40, Node36, Bubalus_bubalis, Node35, Oryx_dammah, Capra_hircus, Ovis_aries, Node46, Node44, Node34, Muntiacus_muntjak, Cervus_canadensis, Cervus_elaphus, Node53, Axis_porcinus, Node52, Node50, Odocoileus_virginianus_texanus, Rangifer_tarandus, Node57, Node49, Node33, Giraffa_camelopardalis, Node32, Node8, Sus_scrofa, Catagonus_wagneri, Node61, Node7`
+
+* Selected 1 branches as the _Test_ set: `Lipotes_vexillifer`
+The number omega rate classes to include in the model (permissible range = [2,10], default value = 3, integer): 
+>rates –> 3
+
+>models –> All
+
+>srv –> No
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+Error:
+Internal error 
+Internal error in ComputeBranchCache (branch GYocCaYs.tree_0.Node19, eval #1131 ) reversible model cached likelihood =   -11789.93121291413, directly computed likelihood =   -11789.93209245003. This is most likely because a non-reversible model was incorrectly auto-detected (or specified by the model file in environment variables; for smaller errors, this could be due to numerical instability of calculations for larger alignments).
+
+Function call stack
+1 :  [namespace = GYocCaYs] Optimize(mles, likelihoodFunction);
+-------
+2 :  [namespace = hEyXKwyJ] return estimators.FitSingleModel_Ext(data_filter,tree,"models.DNA.GTR.ModelDescription",initial_values,run_options);
+-------
+3 :  [namespace = NngllxVV] return estimators.FitGTR_Ext(data_filter,tree,initial_values,{});
+-------
+4 :  [namespace = relax] gtr_results=estimators.FitGTR(filter_names,trees,gtr_results);
+-------
+5 :  [namespace = relax] doGTR("relax");
+-------
+6 :  namespace 
+
+Step 0.doGTR("relax");;
+-------

@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Actinopterygii/Actinopterygii_group1/gBGC/`) 
+
+A tree was found in the data file:
+(((((Sparus_aurata:31.841,Acanthopagrus_latus:31.841):50.91273,Scatophagus_argus:82.75373):3.18372,Larimichthys_crocea:85.93745):9.58748,(Dicentrarchus_labrax:25.83527,Morone_saxatilis:25.83527):69.68966):1.18565,((Cheilinus_undulatus:42.54118,Labrus_bergylta:42.54118):50.27838,((Micropterus_dolomieu:9.13,Micropterus_salmoides:9.13):49.99548,Siniperca_chuatsi:59.12548):33.69408):3.89102,(((Etheostoma_cragini:26.76663,Etheostoma_spectabile:26.76663):5.73599,(Sander_lucioperca:30.85028,(Perca_fluviatilis:20.20494,Perca_flavescens:20.20494):10.64534):1.65234):44.47236,(((Sebastes_umbrosus:75.22844,((Cyclopterus_lumpus:45.92825,(Gasterosteus_aculeatus_aculeatus:27.01348,Pungitius_pungitius:27.01348):18.91477):0.24965,Anarrhichthys_ocellatus:46.1779):29.05054):1.69136,((Trematomus_bernacchii:16.6857,((Pseudochaenichthys_georgianus:13.06448,Gymnodraco_acuticeps:13.06448):2.84202,Notothenia_coriiceps:15.9065):0.7792):52.12179,Cottoperca_gobio:68.80749):8.11231):0.00362,((Epinephelus_fuscoguttatus:14.67433,Epinephelus_lanceolatus:14.67433):35.84187,Plectropomus_leopardus:50.5162):26.40722):0.05156):33.46306)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :2631
+Synonymous  sites      :635.6719898046656
+Nonsynonymous  sites   :1893.501278478804
+
+Total tree lengths:
+	E[syn]        : 0.7869468932015552
+	E[non-syn]    : 1.073076320003497
+	dS            : 3.257115791195265
+	dN            : 1.491028197349488
+
+
+E[Syn subs/nucleotide site] tree: 
+	(((((Sparus_aurata:0.008444848996017195,Acanthopagrus_latus:0.01535621293441427)Node4:0.03315492636796597,Scatophagus_argus:0.04228763644392897)Node3:0.00616871413887532,Larimichthys_crocea:0.04760068684862365)Node2:0.001607965455495169,(Dicentrarchus_labrax:0.008293891329006932,Morone_saxatilis:0.006190551301247454)Node9:0.03212810434006826)Node1:0.000816252977008103,((Cheilinus_undulatus:0.05604997189914909,Labrus_bergylta:0.04067722537966348)Node13:0.04661171598948866,((Micropterus_dolomieu:0.001388530098482335,Micropterus_salmoides:0.001080959608652183)Node17:0.02542549616640036,Siniperca_chuatsi:0.009973549997875019)Node16:0.0062234982626018)Node12:0.001675691254120741,(((Etheostoma_cragini:0.01092715514780274,Etheostoma_spectabile:0.004619257404832149)Node23:0.01141634080675223,(Sander_lucioperca:0.003585597777579038,(Perca_fluviatilis:0.005434512589157105,Perca_flavescens:0.003610677542645177)Node28:0.003005688588763244)Node26:0)Node22:0.01937876156094466,(((Sebastes_umbrosus:0.02451988250984513,((Cyclopterus_lumpus:0.02799675890400946,(Gasterosteus_aculeatus_aculeatus:0.01722377905798178,Pungitius_pungitius:0.01126726421410161)Node38:0.02818538964655796)Node36:0.002747155950590302,Anarrhichthys_ocellatus:0.01456801571079053)Node35:0.008134502100013475)Node33:0.003529981195492851,((Trematomus_bernacchii:0.002715145638462001,((Pseudochaenichthys_georgianus:0.007369069465119917,Gymnodraco_acuticeps:0.004473068095991482)Node46:0.003748068684284046,Notothenia_coriiceps:0.003616379869528962)Node45:0.004833669821609985)Node43:0.04171071641245225,Cottoperca_gobio:0.02320504854468794)Node42:0.007108407485378624)Node32:0,((Epinephelus_fuscoguttatus:0.003079519055079319,Epinephelus_lanceolatus:0.001339886147142698)Node52:0.02500868307048694,Plectropomus_leopardus:0.04983717146199023)Node51:0.008399695448815801)Node31:0)Node21:0.009195213503580648)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(((((Sparus_aurata:0.01501164542416731,Acanthopagrus_latus:0.01786018615088152)Node4:0.04878227811703211,Scatophagus_argus:0.05398616673527334)Node3:0.005972151791135082,Larimichthys_crocea:0.05916307231837348)Node2:0.002232543357671369,(Dicentrarchus_labrax:0.01011644672156933,Morone_saxatilis:0.008948142861403484)Node9:0.02637102824244998)Node1:0.00198919769258317,((Cheilinus_undulatus:0.07509250313806037,Labrus_bergylta:0.05221953332080626)Node13:0.05425645052426222,((Micropterus_dolomieu:0.001142583047589362,Micropterus_salmoides:0.001718253417706315)Node17:0.03362469793829582,Siniperca_chuatsi:0.01852854456574675)Node16:0.005581649874214035)Node12:0.002042019235681397,(((Etheostoma_cragini:0.01400897903027469,Etheostoma_spectabile:0.01364533572501635)Node23:0.01002434898502393,(Sander_lucioperca:0.007787301113940583,(Perca_fluviatilis:0.004427912964881751,Perca_flavescens:0.007213859157320032)Node28:0.002582008810377895)Node26:0.0011737111638608)Node22:0.02474381074901959,(((Sebastes_umbrosus:0.03489983067300866,((Cyclopterus_lumpus:0.04514878189469828,(Gasterosteus_aculeatus_aculeatus:0.02825176861540842,Pungitius_pungitius:0.02844430215330888)Node38:0.04106257658138003)Node36:0.002489542391682335,Anarrhichthys_ocellatus:0.02048657583386857)Node35:0.01723738321713507)Node33:0.002003072538755369,((Trematomus_bernacchii:0.003538838214240917,((Pseudochaenichthys_georgianus:0.007506162242006918,Gymnodraco_acuticeps:0.00452583668203935)Node46:0.003362631009916741,Notothenia_coriiceps:0.00927379871687389)Node45:0.005688211662058218)Node43:0.06548716121755586,Cottoperca_gobio:0.04236237103634943)Node42:0.004697025915472376)Node32:0.00249435563017658,((Epinephelus_fuscoguttatus:0.005133046487592457,Epinephelus_lanceolatus:0.008477819625449775)Node52:0.04382896995127084,Plectropomus_leopardus:0.0493743818907263)Node51:0.009776906367607694)Node31:0)Node21:0.007278607280296201)
+
+dS tree: 
+	(((((Sparus_aurata:0.03495261402873625,Acanthopagrus_latus:0.06355824525610929)Node4:0.1372258219225978,Scatophagus_argus:0.1750254427887653)Node3:0.02553185787589636,Larimichthys_crocea:0.1970157708808481)Node2:0.006655251735581093,(Dicentrarchus_labrax:0.03432781125580606,Morone_saxatilis:0.0256222402981559)Node9:0.1329758804453447)Node1:0.003378411534490042,((Cheilinus_undulatus:0.231986745415629,Labrus_bergylta:0.1683600688568661)Node13:0.1929224926302464,((Micropterus_dolomieu:0.005747024798480761,Micropterus_salmoides:0.004474012975210409)Node17:0.1052342741015775,Siniperca_chuatsi:0.04127979597224747)Node16:0.02575860536805605)Node12:0.00693556387618467,(((Etheostoma_cragini:0.04522669813200884,Etheostoma_spectabile:0.01911876947078939)Node23:0.0472514018932861,(Sander_lucioperca:0.01484052766853753,(Perca_fluviatilis:0.0224930512141427,Perca_flavescens:0.01494433098683269)Node28:0.01244032583450172)Node26:0)Node22:0.0802072806173395,(((Sebastes_umbrosus:0.1014860052323939,((Cyclopterus_lumpus:0.1158765430250963,(Gasterosteus_aculeatus_aculeatus:0.07128796522161542,Pungitius_pungitius:0.04663438474992525)Node38:0.1166572719098118)Node36:0.01137027810242841,Anarrhichthys_ocellatus:0.06029595443849547)Node35:0.03366811086282406)Node33:0.01461033469194638,((Trematomus_bernacchii:0.01123778975535583,((Pseudochaenichthys_georgianus:0.03050004101751944,Gymnodraco_acuticeps:0.01851370258451997)Node46:0.01551298290079062,Notothenia_coriiceps:0.01496793250187797)Node45:0.02000620682462943)Node43:0.1726376128589273,Cottoperca_gobio:0.0960440033543631)Node42:0.02942118009600852)Node32:0,((Epinephelus_fuscoguttatus:0.01274590474940292,Epinephelus_lanceolatus:0.005545691031967137)Node52:0.1035091150998647,Plectropomus_leopardus:0.2062724175667837)Node51:0.03476572679036135)Node31:0)Node21:0.03805831799408808)
+
+dN tree: 
+	(((((Sparus_aurata:0.0208585225475602,Acanthopagrus_latus:0.02481653975999431)Node4:0.06778245950223065,Scatophagus_argus:0.07501320769881602)Node3:0.008298241749854879,Larimichthys_crocea:0.08220646325345646)Node2:0.003102095383189953,(Dicentrarchus_labrax:0.01405669572392996,Morone_saxatilis:0.01243334986669042)Node9:0.03664226483207129)Node1:0.002763969155273483,((Cheilinus_undulatus:0.1043402389012163,Labrus_bergylta:0.07255848925405373)Node13:0.07538876416498383,((Micropterus_dolomieu:0.001587607060198381,Micropterus_salmoides:0.002387494950949895)Node17:0.04672116215666269,Siniperca_chuatsi:0.02574521670861676)Node16:0.007755643466401555)Node12:0.002837364130746161,(((Etheostoma_cragini:0.01946532819785751,Etheostoma_spectabile:0.01896004967124182)Node23:0.01392872689306356,(Sander_lucioperca:0.01082037253612925,(Perca_fluviatilis:0.006152538233279201,Perca_flavescens:0.01002358100236237)Node28:0.003587673933635681)Node26:0.001630859248533817)Node22:0.03438126333506952,(((Sebastes_umbrosus:0.04849294560521927,((Cyclopterus_lumpus:0.06273375493064443,(Gasterosteus_aculeatus_aculeatus:0.03925553368881531,Pungitius_pungitius:0.03952305700341432)Node38:0.05705601586517241)Node36:0.003459192822820977,Anarrhichthys_ocellatus:0.02846588044673009)Node35:0.02395116167057294)Node33:0.002783248107283688,((Trematomus_bernacchii:0.004917178270483052,((Pseudochaenichthys_georgianus:0.01042973304701747,Gymnodraco_acuticeps:0.006288602202588279)Node46:0.004672340223714288,Notothenia_coriiceps:0.01288584523359662)Node45:0.007903709943569865)Node43:0.09099371789271184,Cottoperca_gobio:0.05886206651319301)Node42:0.00652646783187591)Node32:0.003465880766801946,((Epinephelus_fuscoguttatus:0.007132313805304322,Epinephelus_lanceolatus:0.01177984070466422)Node52:0.06089989019412454,Plectropomus_leopardus:0.06860518143344632)Node51:0.01358490799321834)Node31:0)Node21:0.01011354783443505)
+
+Estimating pairwise dN/dS: total of 406 analyses

@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Perissodactyla/gBGC/`) 
+
+A tree was found in the data file:
+((Equus_przewalskii:2.59,Equus_caballus:2.59):8.51,(Equus_asinus:2.78,Equus_quagga:2.78):8.32,((Tapirus_indicus:23.34006,Tapirus_terrestris:23.34006):25.25994,(Rhinoceros_unicornis:26.689,(Dicerorhinus_sumatrensis:26.6,(Ceratotherium_simum_simum:15.21354,Diceros_bicornis:15.21354):11.38646):0.089):21.911):51.06)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :2373
+Synonymous  sites      :564.9900424617038
+Nonsynonymous  sites   :1725.145792982447
+
+Total tree lengths:
+	E[syn]        : 0.08822141428776362
+	E[non-syn]    : 0.084278459171794
+	dS            : 0.3705364703291265
+	dN            : 0.1159280476051348
+
+
+E[Syn subs/nucleotide site] tree: 
+	((Equus_przewalskii:0.001345600102047139,Equus_caballus:0.0004308771027378685)Node1:0.004833488722804557,(Equus_asinus:0.001790737915481933,Equus_quagga:0.000434188749853718)Node4:0.002002561622780067,((Tapirus_indicus:0.003464611388153039,Tapirus_terrestris:0.003511868021099116)Node8:0.01144717835976434,(Rhinoceros_unicornis:0.001663227480490119,(Dicerorhinus_sumatrensis:0.003040246114635135,(Ceratotherium_simum_simum:0.0005036596943543259,Diceros_bicornis:0.0005036719488802672)Node15:0.003069809825757313)Node13:0.0005168729181549175)Node11:0.0150550815352927)Node7:0.03460773278547705)
+
+E[Non-syn subs/nucleotide site] tree: 
+	((Equus_przewalskii:0,Equus_caballus:0)Node1:0.00156036386591491,(Equus_asinus:0.001728657691432807,Equus_quagga:0.001291432514326101)Node4:0.003213472689947325,((Tapirus_indicus:0.002536691321350713,Tapirus_terrestris:0.003712012246018758)Node8:0.0072516302878762,(Rhinoceros_unicornis:0.006978508929318288,(Dicerorhinus_sumatrensis:0.003294517091808473,(Ceratotherium_simum_simum:0.002469912207783978,Diceros_bicornis:0.001480665005466456)Node15:0.002148729638465867)Node13:0.0006327730353805028)Node11:0.01025157484509084)Node7:0.03572751780161277)
+
+dS tree: 
+	((Equus_przewalskii:0.005651620032532339,Equus_caballus:0.001809715725859482)Node1:0.02030101042000694,(Equus_asinus:0.007521231798924425,Equus_quagga:0.001823624888880605)Node4:0.008410907049179021,((Tapirus_indicus:0.01455162428751022,Tapirus_terrestris:0.01475010564391155)Node8:0.04807899645339683,(Rhinoceros_unicornis:0.006985678533388626,(Dicerorhinus_sumatrensis:0.01276925872639285,(Ceratotherium_simum_simum:0.002115407998157468,Diceros_bicornis:0.002115459468073525)Node15:0.01289342850146934)Node13:0.002170904516188454)Node11:0.06323245685461994)Node7:0.1453550394306349)
+
+dN tree: 
+	((Equus_przewalskii:0,Equus_caballus:0)Node1:0.002146336540875624,(Equus_asinus:0.002377830742454698,Equus_quagga:0.001776411807606001)Node4:0.004420247102745935,((Tapirus_indicus:0.003489310022406025,Tapirus_terrestris:0.005106006168078188)Node8:0.009974877916480714,(Rhinoceros_unicornis:0.00959918967813336,(Dicerorhinus_sumatrensis:0.004531726588363219,(Ceratotherium_simum_simum:0.003397452953201513,Diceros_bicornis:0.002036707895799072)Node15:0.0029556547932476)Node13:0.0008704020373617264)Node11:0.01410140940340113)Node7:0.04914448395497999)
+
+Estimating pairwise dN/dS: total of 45 analyses

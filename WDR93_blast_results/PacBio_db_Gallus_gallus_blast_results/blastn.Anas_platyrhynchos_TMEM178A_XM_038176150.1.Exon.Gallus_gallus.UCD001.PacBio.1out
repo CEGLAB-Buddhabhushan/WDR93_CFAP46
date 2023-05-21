@@ -1,0 +1,100 @@
+BLASTN 2.6.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: UCD00_PACKBIO.fa
+           24,650,573 sequences; 169,833,148,751 total letters
+
+
+
+Query= Exon1
+
+Length=103
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  SRR5444500.43654 /1                                                 66.2    1e-07
+  SRR2028174.138911 /1                                                62.6    2e-06
+  SRR5444499.125223 /1                                                53.6    9e-04
+  SRR5444489.85119 /1                                                 51.8    0.003
+  SRR5444482.14771 /1                                                 51.8    0.003
+
+
+
+Query_1   1      ATGACTGCAGCTGTTCTCTGCAGGTGCATTGTGGCCACAGTCAGCTTCTTTTGGGAGAAA  60
+22159652  29546  ...G.........A...............CA....AG..AC.......C..GCA.G.G..  29606
+                                                             \               
+                                                             |               
+                                                             C
+6564515   9566   ...G.........A...............CA...G....AC.......C..A...GA..G  9628
+                                                      \             \        
+                                                      |             |        
+                                                      G            GC
+22063760  11148  ...G.........A...............CA.-..AG..AC.......C..A...GA...  11088
+                                                                    \        
+                                                                    |        
+                                                                   GC
+20097671  943    ...G.........A...............AT....AG..AC.......-C...CAG.G..  883
+                                         \    \                              
+                                         |    |                              
+                                         T    C
+18688499  9878   ...G........T................CAC...AG..AA...T...C.GGCA.G....  9817
+                              \                                              
+                              |                                              
+                             GA
+
+Query_1   61     AGCCTCACCCAGCACGTCACAGGTTGTCTGTTCCTGATGACA  102
+22159652  29607  .......T.......A.TG.....CT....              29636
+6564515   9629   G......T.......T.GG...........C.TT.C......  9672
+                                \        \                 
+                                |        |                 
+                                A        C
+22063760  11087  G......-T......A.TG.....CT....              11059
+20097671  882    .......T.......                             868
+18688499  9816   .......T.......                             9802
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 11489985751328
+
+
+Query= Exon2
+
+Length=242
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 34802819993338
+
+
+  Database: UCD00_PACKBIO.fa
+    Posted date:  Aug 21, 2021  12:17 AM
+  Number of letters in database: 169,833,148,751
+  Number of sequences in database:  24,650,573
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2

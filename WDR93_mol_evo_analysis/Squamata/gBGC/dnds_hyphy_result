@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Squamata/gBGC/`) 
+
+A tree was found in the data file:
+(Gekko_japonicus:211.68615,(Varanus_komodoensis:157.16052,(Anolis_carolinensis:84.82432,Sceloporus_undulatus:84.82432):72.3362):9.73321,((Podarcis_muralis:43.28648,Lacerta_agilis:43.28648):3.60488,Zootoca_vivipara_carniolica:46.89136):120.00237)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :2820
+Synonymous  sites      :674.5070938336544
+Nonsynonymous  sites   :2039.607703760616
+
+Total tree lengths:
+	E[syn]        : 0.441627539164778
+	E[non-syn]    : 0.4657416779162699
+	dS            : 1.846369996446337
+	dN            : 0.6439432099134839
+
+
+E[Syn subs/nucleotide site] tree: 
+	(Gekko_japonicus:0.1169278544898074,(Varanus_komodoensis:0.06230104560516056,(Anolis_carolinensis:0.05542551974582879,Sceloporus_undulatus:0.03828874342621563)Node4:0.05118234636379603)Node2:0.01162216829315575,((Podarcis_muralis:0.01298217906076433,Lacerta_agilis:0.01084415559425366)Node8:0.0008124190012203506,Zootoca_vivipara_carniolica:0.008877233195562856)Node7:0.07236387438901254)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(Gekko_japonicus:0.1141321228354955,(Varanus_komodoensis:0.07044557463831423,(Anolis_carolinensis:0.06801054784097328,Sceloporus_undulatus:0.04451709620139114)Node4:0.04200995788185322)Node2:0.009745171359131473,((Podarcis_muralis:0.01258622423185536,Lacerta_agilis:0.01184633077672742)Node8:0.004446346999861196,Zootoca_vivipara_carniolica:0.01133289106756837)Node7:0.07666941408309873)
+
+dS tree: 
+	(Gekko_japonicus:0.4888555697571002,(Varanus_komodoensis:0.2604701273162308,(Anolis_carolinensis:0.2317247173708503,Sceloporus_undulatus:0.1600787559523525)Node4:0.2139847276113307)Node2:0.0485903185990539,((Podarcis_muralis:0.05427629343863363,Lacerta_agilis:0.04533757918243188)Node8:0.003396586343399371,Zootoca_vivipara_carniolica:0.03711420953218475)Node7:0.3025411113427692)
+
+dN tree: 
+	(Gekko_japonicus:0.157801221187127,(Varanus_komodoensis:0.09739937739682218,(Anolis_carolinensis:0.09403266351559858,Sceloporus_undulatus:0.06155017509320859)Node4:0.05808375846413768)Node2:0.01347385734133125,((Podarcis_muralis:0.01740195051645964,Lacerta_agilis:0.01637895989938475)Node8:0.006147603049591252,Zootoca_vivipara_carniolica:0.01566906849371938)Node7:0.1060045749561035)
+
+Estimating pairwise dN/dS: total of 21 analyses

@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Artiodactyla/gBGC/`) 
+
+A tree was found in the data file:
+(Vicugna_pacos:20.91703,(Camelus_dromedarius:4.3517,(Camelus_ferus:0.82006,Camelus_bactrianus:0.82006):3.53164):16.56533,((((Physeter_catodon:32.7,(Lipotes_vexillifer:24.86478,((Delphinapterus_leucas:6.1,Monodon_monoceros:6.1):11.53872,(Orcinus_orca:9.68381,(Lagenorhynchus_obliquidens:8.46273,(Globicephala_melas:7.73495,Tursiops_truncatus:7.73495):0.72778):1.22108):7.95491):7.22606):7.83522):1.6965,(Balaenoptera_musculus:13.745,Balaenoptera_acutorostrata_scammoni:13.745):20.6515):23.3916,((Moschus_berezovskii:21.62563,((((Bos_mutus:1.49662,Bison_bison_bison:1.49662):2.80348,Bos_taurus:4.3001):8.7599,(Bubalus_bubalis:1.30779,Bubalus_carabanensis:1.30779):11.75221):8.56563,(Oryx_dammah:13.28364,((Capra_hircus:7.65408,Ovis_aries:7.65408):0.70348,Budorcas_taxicolor:8.35756):4.92608):8.34199):0):2.06947,((Cervus_canadensis:3.00634,Cervus_elaphus:3.00634):9.79012,Odocoileus_virginianus_texanus:12.79646):10.89864):34.093):4.05455,(Phacochoerus_africanus:10.9237,Sus_scrofa:10.9237):50.91895):45.24032)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :15150
+Synonymous  sites      :3679.042763152239
+Nonsynonymous  sites   :10920.11153333655
+
+Total tree lengths:
+	E[syn]        : 0.4151961821036612
+	E[non-syn]    : 0.4172229647041872
+	dS            : 1.709744236155859
+	dN            : 0.5788336406612807
+
+
+E[Syn subs/nucleotide site] tree: 
+	(Vicugna_pacos:0.007184104613872539,(Camelus_dromedarius:0.001432723156911313,(Camelus_ferus:0.0002434612301279807,Camelus_bactrianus:0.002955392658777747)Node4:0.001183407086055094)Node2:0.006801305100892271,((((Physeter_catodon:0.009009272925406217,(Lipotes_vexillifer:0.006472498150571905,((Delphinapterus_leucas:0.001017984993065177,Monodon_monoceros:0.001732231975087544)Node15:0.005839717945470752,(Orcinus_orca:0.002283468579724582,(Lagenorhynchus_obliquidens:0.001594996592742576,(Globicephala_melas:0.002853974087978217,Tursiops_truncatus:0.002293318266731303)Node22:0.0007918020635983683)Node20:0.0002097265597366675)Node18:0.002927192972092622)Node14:0.002780020469608053)Node12:0.004243355887948758)Node10:0.002942857570703262,(Balaenoptera_musculus:0.004925102956684554,Balaenoptera_acutorostrata_scammoni:0.0046429967175109)Node25:0.00509482962931965)Node9:0.01713594138678728,((Moschus_berezovskii:0.01882949805017823,((((Bos_mutus:0.002407297988849527,Bison_bison_bison:0.003254334585745775)Node34:0.001208923452748535,Bos_taurus:0.003398666884604556)Node33:0.007617966692212436,(Bubalus_bubalis:0.001824583975482095,Bubalus_carabanensis:0.001328036148418199)Node38:0.005482514759256246)Node32:0.008901358916056654,(Oryx_dammah:0.01166370286184711,((Capra_hircus:0.005860075130288617,Ovis_aries:0.005713371520678961)Node44:0.001960368463748896,Budorcas_taxicolor:0.00653736623759094)Node43:0.005067169726720808)Node41:0.00718240239352655)Node31:0.002969784717272214)Node29:0.002366281217082407,((Cervus_canadensis:0.0006756116463648843,Cervus_elaphus:0.0005498819260050039)Node49:0.007343468401604104,Odocoileus_virginianus_texanus:0.01474082543604057)Node48:0.009996316967767952)Node28:0.0430209654241164)Node8:0.01824399822285389,(Phacochoerus_africanus:0.006676838128919825,Sus_scrofa:0.005512809306264386)Node53:0.0524794617647134)Node7:0.05379061757929663)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(Vicugna_pacos:0.00768927454774478,(Camelus_dromedarius:0.0006856993124785491,(Camelus_ferus:0.0005049746188074151,Camelus_bactrianus:0.00235274457727803)Node4:0.001517602175888237)Node2:0.00518241733222971,((((Physeter_catodon:0.01679693726476966,(Lipotes_vexillifer:0.01408029565389542,((Delphinapterus_leucas:0.001210874280266142,Monodon_monoceros:0.001752414309046691)Node15:0.005876959132643186,(Orcinus_orca:0.002726833281995958,(Lagenorhynchus_obliquidens:0.002731777563285038,(Globicephala_melas:0.002410394118325631,Tursiops_truncatus:0.004060405446184787)Node22:0)Node20:0.0005528734656327876)Node18:0.006917048267285995)Node14:0.00318671394641384)Node12:0.01001826467155048)Node10:0.001342824177035427,(Balaenoptera_musculus:0.003404805686561978,Balaenoptera_acutorostrata_scammoni:0.007292427502228495)Node25:0.01265064624184032)Node9:0.01873204139493941,((Moschus_berezovskii:0.01773690277592293,((((Bos_mutus:0.001958738899623059,Bison_bison_bison:0.002397025142524962)Node34:0.0006430992731810079,Bos_taurus:0.0011556536747011)Node33:0.004062446717638914,(Bubalus_bubalis:0.001387049040627038,Bubalus_carabanensis:0.001405953169096432)Node38:0.005621732034552916)Node32:0.004480222512237976,(Oryx_dammah:0.009684816785166368,((Capra_hircus:0.00265517493066484,Ovis_aries:0.005326983471479246)Node44:0.002921658904146718,Budorcas_taxicolor:0.003683628488927563)Node43:0.005132744899924458)Node41:0.004680534342342226)Node31:0.002931710634965691)Node29:0.002178870241324499,((Cervus_canadensis:0.0009807141167287525,Cervus_elaphus:0.0005518231848491811)Node49:0.007027157000642873,Odocoileus_virginianus_texanus:0.01099781190497801)Node48:0.00934606140200938)Node28:0.04477906501159214)Node8:0.01314486966504574,(Phacochoerus_africanus:0.00666315961129085,Sus_scrofa:0.005240047361119539)Node53:0.05621337397153985)Node7:0.04855668656701503)
+
+dS tree: 
+	(Vicugna_pacos:0.02958356069960831,(Camelus_dromedarius:0.005899837872123208,(Camelus_ferus:0.001002553618941526,Camelus_bactrianus:0.0121700675047658)Node4:0.004873174493457983)Node2:0.0280072233219253,((((Physeter_catodon:0.03709945592014751,(Lipotes_vexillifer:0.02665322294246643,((Delphinapterus_leucas:0.004191979718040383,Monodon_monoceros:0.007133190917327304)Node15:0.02404748532960201,(Orcinus_orca:0.009403138590644291,(Lagenorhynchus_obliquidens:0.006568066732485031,(Globicephala_melas:0.0117524340477694,Tursiops_truncatus:0.009443698803655774)Node22:0.003260576741227428)Node20:0.0008636369796604709)Node18:0.01205394347990843)Node14:0.01144789903949784)Node12:0.01747379572379368)Node10:0.01211844902774497,(Balaenoptera_musculus:0.02028117491350926,Balaenoptera_acutorostrata_scammoni:0.01911948427857385)Node25:0.0209800955991222)Node9:0.07056441817147875,((Moschus_berezovskii:0.077538347288951,((((Bos_mutus:0.009913058064000864,Bison_bison_bison:0.01340108613790753)Node34:0.004978248824008685,Bos_taurus:0.01399543484991788)Node33:0.03137016958403933,(Bubalus_bubalis:0.007513488972025272,Bubalus_carabanensis:0.005468745253533537)Node38:0.02257655155156866)Node32:0.03665507477350242,(Oryx_dammah:0.04803018332018005,((Capra_hircus:0.02413131456721771,Ovis_aries:0.02352720098967344)Node44:0.00807263849261401,Budorcas_taxicolor:0.02692034446879964)Node43:0.02086619436139552)Node41:0.02957655109414789)Node31:0.01222933283551297)Node29:0.009744154321294857,((Cervus_canadensis:0.002782114017521804,Cervus_elaphus:0.002264369216474662)Node49:0.03023980786485315,Odocoileus_virginianus_texanus:0.06070152475332168)Node48:0.04116402331021714)Node28:0.177156849793429)Node8:0.07512730644082462,(Phacochoerus_africanus:0.02749467841642197,Sus_scrofa:0.02270130204149775)Node53:0.2161061713384896)Node7:0.2215054047450392)
+
+dN tree: 
+	(Vicugna_pacos:0.01066770325950509,(Camelus_dromedarius:0.0009513038902887419,(Camelus_ferus:0.0007005757634963306,Camelus_bactrianus:0.003264076583554033)Node4:0.002105443052895438)Node2:0.007189818743480444,((((Physeter_catodon:0.02330320517188967,(Lipotes_vexillifer:0.01953427659647158,((Delphinapterus_leucas:0.001679904576984386,Monodon_monoceros:0.002431209305968097)Node15:0.008153390245854025,(Orcinus_orca:0.003783067974729408,(Lagenorhynchus_obliquidens:0.003789927415798385,(Globicephala_melas:0.003344056585974785,Tursiops_truncatus:0.005633197272931523)Node22:0)Node20:0.0007670281552314424)Node18:0.009596356312797118)Node14:0.004421082709712812)Node12:0.01389882413843951)Node10:0.001862965064045536,(Balaenoptera_musculus:0.004723651951167688,Balaenoptera_acutorostrata_scammoni:0.01011713811910173)Node25:0.01755085467568677)Node9:0.02598786892120892,((Moschus_berezovskii:0.02460726488323045,((((Bos_mutus:0.002717453410498494,Bison_bison_bison:0.003325509157886544)Node34:0.000892202791056603,Bos_taurus:0.001603294354482861)Node33:0.005636029227755025,(Bubalus_bubalis:0.001924320360771905,Bubalus_carabanensis:0.001950546974432123)Node38:0.00779930132247046)Node32:0.006215629836123713,(Oryx_dammah:0.01343621572429488,((Capra_hircus:0.003683652870831222,Ovis_aries:0.007390382355211366)Node44:0.004053359003037447,Budorcas_taxicolor:0.005110476338715675)Node43:0.007120905770647955)Node41:0.006493532146628059)Node31:0.004067304256384225)Node29:0.003022852290042523,((Cervus_canadensis:0.001360592226836067,Cervus_elaphus:0.0007655710497959289)Node49:0.009749115495271054,Odocoileus_virginianus_texanus:0.01525779749151595)Node48:0.01296624396263648)Node28:0.0621241672170303)Node8:0.01823651478444157,(Phacochoerus_africanus:0.009244124275002976,Sus_scrofa:0.007269771675739016)Node53:0.0779875382287986)Node7:0.06736504469249782)
+
+Estimating pairwise dN/dS: total of 406 analyses

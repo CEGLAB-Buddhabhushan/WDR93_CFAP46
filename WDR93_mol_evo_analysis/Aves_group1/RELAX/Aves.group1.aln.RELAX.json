@@ -1,0 +1,952 @@
+{
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM / UCSD viral evolution g",
+   "citation":"RELAX: Detecting Relaxed Selection in a Phylogenetic Framework (2015). Mol Biol Evol 32 (3): 820-832",
+   "contact":"spond@temple.edu",
+   "info":"RELAX (a random effects test of selection relaxation) uses a random effects branch-site model framework to test whether a set of 'Test' branches evolves under relaxed selection relative to a set of 'Reference' branches (R), as measured by the relaxation parameter (K).\n                                                Version 2.1 adds a check for stability in K estimates to try to mitigate convergence problems. \n                                                Version 3 provides support for >2 branch sets.\n                                                Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword support.\n                                                Version 3.1.1 adds some bug fixes for better convergence.\n                                                Version 4.0 adds support for synonymous rate variation.\n                                                Version 4.1 adds further support for multiple hit models",
+   "requirements":"in-frame codon alignment and a phylogenetic tree, with at least two groups of branches defined using the {} notation (one group can be defined as all unlabeled branches)",
+   "version":"3.1.1"
+  },
+ "branch attributes":{
+   "0":{
+     "Camarhynchus_parvulus":{
+       "General descriptive":0.0009939105199312452,
+       "MG94xREV with separate rates for branch sets":0.0009952248934309205,
+       "Nucleotide GTR":0.00100383485236615,
+       "RELAX alternative":0.0009946292595226908,
+       "RELAX null":0.0009943732243445616,
+       "RELAX partitioned descriptive":0.0009942954279010291,
+       "k (general descriptive)":0.3882872743949159,
+       "original name":"Camarhynchus_parvulus"
+      },
+     "Catharus_ustulatus":{
+       "General descriptive":0.02095543848175072,
+       "MG94xREV with separate rates for branch sets":0.02114368159773004,
+       "Nucleotide GTR":0.0209213209522005,
+       "RELAX alternative":0.02121594224229514,
+       "RELAX null":0.02122309846401416,
+       "RELAX partitioned descriptive":0.02122895901092155,
+       "k (general descriptive)":0,
+       "original name":"Catharus_ustulatus"
+      },
+     "Chiroxiphia_lanceolata":{
+       "General descriptive":0.004434236192286585,
+       "MG94xREV with separate rates for branch sets":0.004435068829774768,
+       "Nucleotide GTR":0.004431135728249211,
+       "RELAX alternative":0.00444304331493011,
+       "RELAX null":0.004442491538425987,
+       "RELAX partitioned descriptive":0.00444187174155142,
+       "k (general descriptive)":0.2932433381602304,
+       "original name":"Chiroxiphia_lanceolata"
+      },
+     "Corapipo_altera":{
+       "General descriptive":0.007012364955694452,
+       "MG94xREV with separate rates for branch sets":0.006900552709502034,
+       "Nucleotide GTR":0.006892808139868318,
+       "RELAX alternative":0.006930804696649581,
+       "RELAX null":0.006933527553059779,
+       "RELAX partitioned descriptive":0.006932281053576873,
+       "k (general descriptive)":0.4965477919388925,
+       "original name":"Corapipo_altera"
+      },
+     "Corvus_brachyrhynchos":{
+       "General descriptive":0,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4071131363764965,
+       "original name":"Corvus_brachyrhynchos"
+      },
+     "Corvus_cornix_cornix":{
+       "General descriptive":0.0004864691831102311,
+       "MG94xREV with separate rates for branch sets":0.0004868211011660423,
+       "Nucleotide GTR":0.000485491086633421,
+       "RELAX alternative":0.0004857805722585245,
+       "RELAX null":0.0004865305860378904,
+       "RELAX partitioned descriptive":0.0004866955398318132,
+       "k (general descriptive)":0,
+       "original name":"Corvus_cornix_cornix"
+      },
+     "Corvus_hawaiiensis":{
+       "General descriptive":0.03581742944365691,
+       "MG94xREV with separate rates for branch sets":0.03607323434601725,
+       "Nucleotide GTR":0.03455677932036041,
+       "RELAX alternative":0.03685516281740325,
+       "RELAX null":0.03686341401892036,
+       "RELAX partitioned descriptive":0.03686985451367552,
+       "k (general descriptive)":0.1766695339430808,
+       "original name":"Corvus_hawaiiensis"
+      },
+     "Corvus_kubaryi":{
+       "General descriptive":0.003010817795210331,
+       "MG94xREV with separate rates for branch sets":0.002938196162098019,
+       "Nucleotide GTR":0.002917624715569401,
+       "RELAX alternative":0.002941894073547642,
+       "RELAX null":0.002936861448108502,
+       "RELAX partitioned descriptive":0.002937157821886792,
+       "k (general descriptive)":0.6074854388714461,
+       "original name":"Corvus_kubaryi"
+      },
+     "Corvus_moneduloides":{
+       "General descriptive":0.001478495965852261,
+       "MG94xREV with separate rates for branch sets":0.001462711503071389,
+       "Nucleotide GTR":0.001460108012018037,
+       "RELAX alternative":0.001465883042851021,
+       "RELAX null":0.001465721502750747,
+       "RELAX partitioned descriptive":0.001464334450316361,
+       "k (general descriptive)":0.5814914429279741,
+       "original name":"Corvus_moneduloides"
+      },
+     "Cyanistes_caeruleus_caeruleus":{
+       "General descriptive":0.009824082443127867,
+       "MG94xREV with separate rates for branch sets":0.009406059497340491,
+       "Nucleotide GTR":0.009358316564242627,
+       "RELAX alternative":0.009479631368993945,
+       "RELAX null":0.00948314625115828,
+       "RELAX partitioned descriptive":0.009484369118469699,
+       "k (general descriptive)":0.5609408082881343,
+       "original name":"Cyanistes_caeruleus_caeruleus"
+      },
+     "Empidonax_traillii":{
+       "General descriptive":0.01593739677014641,
+       "MG94xREV with separate rates for branch sets":0.01592010596257793,
+       "Nucleotide GTR":0.01593154734358109,
+       "RELAX alternative":0.01602130797128077,
+       "RELAX null":0.01602293610791604,
+       "RELAX partitioned descriptive":0.01602567748766709,
+       "k (general descriptive)":0.2974344318920942,
+       "original name":"Empidonax_traillii"
+      },
+     "Ficedula_albicollis":{
+       "General descriptive":0.02331021570606884,
+       "MG94xREV with separate rates for branch sets":0.02227807738545218,
+       "Nucleotide GTR":0.02236730650515368,
+       "RELAX alternative":0.022538828597705,
+       "RELAX null":0.02254625954204497,
+       "RELAX partitioned descriptive":0.02255396873731173,
+       "k (general descriptive)":0.493259424870962,
+       "original name":"Ficedula_albicollis"
+      },
+     "Geospiza_fortis":{
+       "General descriptive":0.0004788951396360769,
+       "MG94xREV with separate rates for branch sets":0.0004773012338309077,
+       "Nucleotide GTR":0.0004678266273341504,
+       "RELAX alternative":0.0004782496687569921,
+       "RELAX null":0.0004783373191989682,
+       "RELAX partitioned descriptive":0.0004783173756655355,
+       "k (general descriptive)":0,
+       "original name":"Geospiza_fortis"
+      },
+     "Hirundo_rustica":{
+       "General descriptive":0.03673979706769026,
+       "MG94xREV with separate rates for branch sets":0.03681202716242314,
+       "Nucleotide GTR":0.03679675210708669,
+       "RELAX alternative":0.03742339927701683,
+       "RELAX null":0.03742115920410962,
+       "RELAX partitioned descriptive":0.03742378211049067,
+       "k (general descriptive)":0.200787647797334,
+       "original name":"Hirundo_rustica"
+      },
+     "Lepidothrix_coronata":{
+       "General descriptive":0.00415130785544207,
+       "MG94xREV with separate rates for branch sets":0.004189903959154944,
+       "Nucleotide GTR":0.004132355034892984,
+       "RELAX alternative":0.00421039331176914,
+       "RELAX null":0.004210800513078625,
+       "RELAX partitioned descriptive":0.004210059012422697,
+       "k (general descriptive)":0.5495576958451367,
+       "original name":"Lepidothrix_coronata"
+      },
+     "Lonchura_striata_domestica":{
+       "General descriptive":0.01459377340506311,
+       "MG94xREV with separate rates for branch sets":0.00699864012812226,
+       "Nucleotide GTR":0.006974409492172622,
+       "RELAX alternative":0.007111324676960778,
+       "RELAX null":0.007114099153733573,
+       "RELAX partitioned descriptive":0.00711404059482444,
+       "k (general descriptive)":0.9493218526576989,
+       "original name":"Lonchura_striata_domestica"
+      },
+     "Manacus_candei":{
+       "General descriptive":0.001957018849136551,
+       "MG94xREV with separate rates for branch sets":0.001961939995687423,
+       "Nucleotide GTR":0.00195984710355544,
+       "RELAX alternative":0.001961842500565554,
+       "RELAX null":0.001962312180736344,
+       "RELAX partitioned descriptive":0.001962084879872939,
+       "k (general descriptive)":0,
+       "original name":"Manacus_candei"
+      },
+     "Manacus_vitellinus":{
+       "General descriptive":0.05985760172048248,
+       "MG94xREV with separate rates for branch sets":0.00245265564230654,
+       "Nucleotide GTR":0.002451986002743406,
+       "RELAX alternative":0.00245736852715051,
+       "RELAX null":0.002456383258430544,
+       "RELAX partitioned descriptive":0.002456571467717716,
+       "k (general descriptive)":1.555330468633372,
+       "original name":"Manacus_vitellinus"
+      },
+     "Molothrus_ater":{
+       "General descriptive":0.009370105256334768,
+       "MG94xREV with separate rates for branch sets":0.009196372969401049,
+       "Nucleotide GTR":0.009115971005454682,
+       "RELAX alternative":0.009244138078644602,
+       "RELAX null":0.009251017358462784,
+       "RELAX partitioned descriptive":0.009251210916285465,
+       "k (general descriptive)":0.49374645528393,
+       "original name":"Molothrus_ater"
+      },
+     "Motacilla_alba_alba":{
+       "General descriptive":0.01825262146884613,
+       "MG94xREV with separate rates for branch sets":0.01826893285228786,
+       "Nucleotide GTR":0.0176738328317157,
+       "RELAX alternative":0.01847384197119995,
+       "RELAX null":0.01848000143500701,
+       "RELAX partitioned descriptive":0.01848264869706208,
+       "k (general descriptive)":0.1714869105525018,
+       "original name":"Motacilla_alba_alba"
+      },
+     "Myiozetetes_cayanensis":{
+       "General descriptive":0.008843641532724017,
+       "MG94xREV with separate rates for branch sets":0.008971915815979323,
+       "Nucleotide GTR":0.008967694929913731,
+       "RELAX alternative":0.009003205557278394,
+       "RELAX null":0.009006355975232191,
+       "RELAX partitioned descriptive":0.009006308807679463,
+       "k (general descriptive)":0.5682932061078468,
+       "original name":"Myiozetetes_cayanensis"
+      },
+     "Neopelma_chrysocephalum":{
+       "General descriptive":0.01370269430873406,
+       "MG94xREV with separate rates for branch sets":0.01372544458033589,
+       "Nucleotide GTR":0.01371509630337647,
+       "RELAX alternative":0.01375172252864778,
+       "RELAX null":0.01375316520591622,
+       "RELAX partitioned descriptive":0.0137538215645629,
+       "k (general descriptive)":0.05716958762998157,
+       "original name":"Neopelma_chrysocephalum"
+      },
+     "Node1":{
+       "General descriptive":0.0896802569396232,
+       "MG94xREV with separate rates for branch sets":0.0895460524927888,
+       "Nucleotide GTR":0.0886013587401434,
+       "RELAX alternative":0.09168576324169452,
+       "RELAX null":0.09174839684494011,
+       "RELAX partitioned descriptive":0.09178170331674801,
+       "k (general descriptive)":0.1081617386987936
+      },
+     "Node10":{
+       "General descriptive":0.01187714393803894,
+       "MG94xREV with separate rates for branch sets":0.01181255058291884,
+       "Nucleotide GTR":0.01148766910928919,
+       "RELAX alternative":0.01187676349599657,
+       "RELAX null":0.01188086382938834,
+       "RELAX partitioned descriptive":0.01188080134923026,
+       "k (general descriptive)":0.526946378152875
+      },
+     "Node12":{
+       "General descriptive":0.0035305959999864,
+       "MG94xREV with separate rates for branch sets":0.003509957881910653,
+       "Nucleotide GTR":0.003447645401625826,
+       "RELAX alternative":0.003486675794893187,
+       "RELAX null":0.003487117982007012,
+       "RELAX partitioned descriptive":0.003485386063051889,
+       "k (general descriptive)":0
+      },
+     "Node15":{
+       "General descriptive":0.003806746563132739,
+       "MG94xREV with separate rates for branch sets":0.004150938518347482,
+       "Nucleotide GTR":0.003169264187034035,
+       "RELAX alternative":0.004267362229674291,
+       "RELAX null":0.004269235951053029,
+       "RELAX partitioned descriptive":0.004266827333492938,
+       "k (general descriptive)":0.1128499727624061
+      },
+     "Node16":{
+       "General descriptive":0.0008704042423253926,
+       "MG94xREV with separate rates for branch sets":0.0009669409225073529,
+       "Nucleotide GTR":0.001210125915629512,
+       "RELAX alternative":0.0007998795945108798,
+       "RELAX null":0.0007978479685755195,
+       "RELAX partitioned descriptive":0.0007965663958248802,
+       "k (general descriptive)":0
+      },
+     "Node17":{
+       "General descriptive":0.0348092552902175,
+       "MG94xREV with separate rates for branch sets":0.03507676345989572,
+       "Nucleotide GTR":0.03356031364620958,
+       "RELAX alternative":0.03580732002361824,
+       "RELAX null":0.03584029442500147,
+       "RELAX partitioned descriptive":0.03584278866461224,
+       "k (general descriptive)":0.1686182414825354
+      },
+     "Node18":{
+       "General descriptive":0.0009857702826596819,
+       "MG94xREV with separate rates for branch sets":0.0009858564514668535,
+       "Nucleotide GTR":0.0009755102715661814,
+       "RELAX alternative":0.0009855333349877422,
+       "RELAX null":0.0009853280972360841,
+       "RELAX partitioned descriptive":0.0009860742565009073,
+       "k (general descriptive)":0
+      },
+     "Node2":{
+       "General descriptive":0.002453062925300891,
+       "MG94xREV with separate rates for branch sets":0.002284777086545913,
+       "Nucleotide GTR":0.002196703796787392,
+       "RELAX alternative":0.002209589409987088,
+       "RELAX null":0.00220998473223062,
+       "RELAX partitioned descriptive":0.00220777445136708,
+       "k (general descriptive)":0
+      },
+     "Node21":{
+       "General descriptive":0.002451932536211461,
+       "MG94xREV with separate rates for branch sets":0.002434303064420674,
+       "Nucleotide GTR":0.00243393965034993,
+       "RELAX alternative":0.002438585711426258,
+       "RELAX null":0.002439036079130438,
+       "RELAX partitioned descriptive":0.002438255438596403,
+       "k (general descriptive)":0.5363478390938851
+      },
+     "Node26":{
+       "General descriptive":0.03037329715572224,
+       "MG94xREV with separate rates for branch sets":0.03041216750621291,
+       "Nucleotide GTR":0.03147760454954568,
+       "RELAX alternative":0.0301236287349677,
+       "RELAX null":0.03014381733387074,
+       "RELAX partitioned descriptive":0.03014062705886499,
+       "k (general descriptive)":0
+      },
+     "Node30":{
+       "General descriptive":0.04954093115554398,
+       "MG94xREV with separate rates for branch sets":0.04921943582434807,
+       "Nucleotide GTR":0.05010950579501149,
+       "RELAX alternative":0.05008449050952504,
+       "RELAX null":0.05011295534047241,
+       "RELAX partitioned descriptive":0.0501285979832639,
+       "k (general descriptive)":0.1811756191578213
+      },
+     "Node33":{
+       "General descriptive":0.01367431265109553,
+       "MG94xREV with separate rates for branch sets":0.01335926169504467,
+       "Nucleotide GTR":0.014823476267555,
+       "RELAX alternative":0.0130904834169001,
+       "RELAX null":0.01309203089841002,
+       "RELAX partitioned descriptive":0.01308720362801308,
+       "k (general descriptive)":0.1135060533043919
+      },
+     "Node34":{
+       "General descriptive":0.003410280171497893,
+       "MG94xREV with separate rates for branch sets":0.003422314354367957,
+       "Nucleotide GTR":0.003468634600908596,
+       "RELAX alternative":0.003405642459813118,
+       "RELAX null":0.003405938469046958,
+       "RELAX partitioned descriptive":0.003404640335941429,
+       "k (general descriptive)":0
+      },
+     "Node36":{
+       "General descriptive":0.008963177384408699,
+       "MG94xREV with separate rates for branch sets":0.008953834354881609,
+       "Nucleotide GTR":0.009277198000501041,
+       "RELAX alternative":0.008951989758435868,
+       "RELAX null":0.008952431558271008,
+       "RELAX partitioned descriptive":0.00895219588083113,
+       "k (general descriptive)":0
+      },
+     "Node37":{
+       "General descriptive":0.01170201255432174,
+       "MG94xREV with separate rates for branch sets":0.01167690873817323,
+       "Nucleotide GTR":0.0114792433693172,
+       "RELAX alternative":0.01178380824097734,
+       "RELAX null":0.01178055400126523,
+       "RELAX partitioned descriptive":0.01178191845868614,
+       "k (general descriptive)":0
+      },
+     "Node4":{
+       "General descriptive":0.0232518022829225,
+       "MG94xREV with separate rates for branch sets":0.02330419242251651,
+       "Nucleotide GTR":0.02292874911127981,
+       "RELAX alternative":0.02353952521678692,
+       "RELAX null":0.02354642223122996,
+       "RELAX partitioned descriptive":0.02354802696892295,
+       "k (general descriptive)":0.3901570365178716
+      },
+     "Node41":{
+       "General descriptive":0.01173072039691117,
+       "MG94xREV with separate rates for branch sets":0.01180615672420194,
+       "Nucleotide GTR":0.01168893233537574,
+       "RELAX alternative":0.01185902440423939,
+       "RELAX null":0.0118678629519768,
+       "RELAX partitioned descriptive":0.01186739009561616,
+       "k (general descriptive)":0
+      },
+     "Node42":{
+       "General descriptive":0.003705562941778916,
+       "MG94xREV with separate rates for branch sets":0.003689089583898242,
+       "Nucleotide GTR":0.003664623633190154,
+       "RELAX alternative":0.003692960392468984,
+       "RELAX null":0.003694853319787333,
+       "RELAX partitioned descriptive":0.003694900853631249,
+       "k (general descriptive)":0.1858859561121973
+      },
+     "Node46":{
+       "General descriptive":0,
+       "MG94xREV with separate rates for branch sets":4.727207025651686e-05,
+       "Nucleotide GTR":0.0001828046148331449,
+       "RELAX alternative":4.566651997112304e-05,
+       "RELAX null":4.70557215970959e-05,
+       "RELAX partitioned descriptive":4.862020259246703e-05,
+       "k (general descriptive)":0.4082212320884698
+      },
+     "Node47":{
+       "General descriptive":0.02558256337834152,
+       "MG94xREV with separate rates for branch sets":0.02444619836746099,
+       "Nucleotide GTR":0.02432915925369254,
+       "RELAX alternative":0.02486126504377095,
+       "RELAX null":0.02488480207575659,
+       "RELAX partitioned descriptive":0.02488374432318029,
+       "k (general descriptive)":0.5764465671893904
+      },
+     "Node5":{
+       "General descriptive":0.002433887963832104,
+       "MG94xREV with separate rates for branch sets":0.00277221906523927,
+       "Nucleotide GTR":0.002614093161873624,
+       "RELAX alternative":0.002778464558715928,
+       "RELAX null":0.002778256734854532,
+       "RELAX partitioned descriptive":0.002777808939563043,
+       "k (general descriptive)":0.2642139919697372
+      },
+     "Node50":{
+       "General descriptive":0.0007908814107378183,
+       "MG94xREV with separate rates for branch sets":0.001047259419378813,
+       "Nucleotide GTR":0.001039788603020712,
+       "RELAX alternative":0.0009381488995635405,
+       "RELAX null":0.000935878845049442,
+       "RELAX partitioned descriptive":0.0009350150075915905,
+       "k (general descriptive)":0
+      },
+     "Node52":{
+       "General descriptive":0.004574976841223974,
+       "MG94xREV with separate rates for branch sets":0.004415730079815292,
+       "Nucleotide GTR":0.004433112900310579,
+       "RELAX alternative":0.004445252741146266,
+       "RELAX null":0.004444175793544169,
+       "RELAX partitioned descriptive":0.004444959041696134,
+       "k (general descriptive)":0.5074366141086495
+      },
+     "Node53":{
+       "General descriptive":0.001827386772939445,
+       "MG94xREV with separate rates for branch sets":0.001721293843221583,
+       "Nucleotide GTR":0.001774701144416449,
+       "RELAX alternative":0.001713155818260894,
+       "RELAX null":0.001713901691395479,
+       "RELAX partitioned descriptive":0.001713481232445185,
+       "k (general descriptive)":0
+      },
+     "Node55":{
+       "General descriptive":0.006276153898467005,
+       "MG94xREV with separate rates for branch sets":0.005951809021950423,
+       "Nucleotide GTR":0.005947210755911396,
+       "RELAX alternative":0.005981626232831085,
+       "RELAX null":0.005984515182277217,
+       "RELAX partitioned descriptive":0.005984068123802442,
+       "k (general descriptive)":0.6088360818145863
+      },
+     "Node59":{
+       "General descriptive":0.006737699929239092,
+       "MG94xREV with separate rates for branch sets":0.006802503938189732,
+       "Nucleotide GTR":0.00666452893906568,
+       "RELAX alternative":0.006836907734101833,
+       "RELAX null":0.006839885753682364,
+       "RELAX partitioned descriptive":0.006839124790848307,
+       "k (general descriptive)":0.3765473738485154
+      },
+     "Node9":{
+       "General descriptive":0.001036932674734733,
+       "MG94xREV with separate rates for branch sets":0.0008683709565536754,
+       "Nucleotide GTR":0.001030181678672019,
+       "RELAX alternative":0.0008880185255697923,
+       "RELAX null":0.0008885116241787679,
+       "RELAX partitioned descriptive":0.0008892228782864843,
+       "k (general descriptive)":0
+      },
+     "Onychostruthus_taczanowskii":{
+       "General descriptive":0.005530214531390972,
+       "MG94xREV with separate rates for branch sets":0.005477566014672746,
+       "Nucleotide GTR":0.005588760318612066,
+       "RELAX alternative":0.005427220242990308,
+       "RELAX null":0.005429029814199835,
+       "RELAX partitioned descriptive":0.005427078033323211,
+       "k (general descriptive)":0.2787537555777812,
+       "original name":"Onychostruthus_taczanowskii"
+      },
+     "Parus_major":{
+       "General descriptive":0.009573667917333471,
+       "MG94xREV with separate rates for branch sets":0.008937845736180132,
+       "Nucleotide GTR":0.008860520060534074,
+       "RELAX alternative":0.008978612872927776,
+       "RELAX null":0.008982333157222657,
+       "RELAX partitioned descriptive":0.008981086363750512,
+       "k (general descriptive)":0.7098862467581575,
+       "original name":"Parus_major"
+      },
+     "Passer_montanus":{
+       "General descriptive":0.02167946156727716,
+       "MG94xREV with separate rates for branch sets":0.0212157995486064,
+       "Nucleotide GTR":0.02104261373863064,
+       "RELAX alternative":0.02149717946420702,
+       "RELAX null":0.02151245459450176,
+       "RELAX partitioned descriptive":0.02151318774999792,
+       "k (general descriptive)":0.4435476068202421,
+       "original name":"Passer_montanus"
+      },
+     "Pipra_filicauda":{
+       "General descriptive":0.008349522517994572,
+       "MG94xREV with separate rates for branch sets":0.008357507435356919,
+       "Nucleotide GTR":0.008343797983827905,
+       "RELAX alternative":0.008380472764399311,
+       "RELAX null":0.008381316628890245,
+       "RELAX partitioned descriptive":0.008381505558731853,
+       "k (general descriptive)":0.2300259359685183,
+       "original name":"Pipra_filicauda"
+      },
+     "Pseudopodoces_humilis":{
+       "General descriptive":1e+26,
+       "MG94xREV with separate rates for branch sets":0.004291665603696222,
+       "Nucleotide GTR":0.004433910704056521,
+       "RELAX alternative":0.004307684601084006,
+       "RELAX null":0.004311200614906272,
+       "RELAX partitioned descriptive":0.00431076107250105,
+       "k (general descriptive)":44.39423726441198,
+       "original name":"Pseudopodoces_humilis"
+      },
+     "Pyrgilauda_ruficollis":{
+       "General descriptive":0.003854177707425813,
+       "MG94xREV with separate rates for branch sets":0.003905647397133454,
+       "Nucleotide GTR":0.003750857255347764,
+       "RELAX alternative":0.00396996649360768,
+       "RELAX null":0.003973039298005202,
+       "RELAX partitioned descriptive":0.003973075774675591,
+       "k (general descriptive)":0,
+       "original name":"Pyrgilauda_ruficollis"
+      },
+     "Serinus_canaria":{
+       "General descriptive":0.02340159007610618,
+       "MG94xREV with separate rates for branch sets":0.02343838826155996,
+       "Nucleotide GTR":0.02342943580346731,
+       "RELAX alternative":0.02348325390801667,
+       "RELAX null":0.02349027946776192,
+       "RELAX partitioned descriptive":0.0234915997819424,
+       "k (general descriptive)":0.1187405549909467,
+       "original name":"Serinus_canaria"
+      },
+     "Sturnus_vulgaris":{
+       "General descriptive":0.02158255088074961,
+       "MG94xREV with separate rates for branch sets":0.02141735885226425,
+       "Nucleotide GTR":0.02135622066837602,
+       "RELAX alternative":0.02168382017112091,
+       "RELAX null":0.02169958349547074,
+       "RELAX partitioned descriptive":0.02170279381228586,
+       "k (general descriptive)":0.3638348015663076,
+       "original name":"Sturnus_vulgaris"
+      },
+     "Taeniopygia_guttata":{
+       "General descriptive":0.01547116975479787,
+       "MG94xREV with separate rates for branch sets":0.01558629770105887,
+       "Nucleotide GTR":0.01553156833616507,
+       "RELAX alternative":0.01560451170752076,
+       "RELAX null":0.01559927618598676,
+       "RELAX partitioned descriptive":0.01560491777157346,
+       "k (general descriptive)":0.08783101104373721,
+       "original name":"Taeniopygia_guttata"
+      },
+     "Zonotrichia_albicollis":{
+       "General descriptive":0.03067839918540999,
+       "MG94xREV with separate rates for branch sets":0.0305912018201554,
+       "Nucleotide GTR":0.03052032859732676,
+       "RELAX alternative":0.03103996572304824,
+       "RELAX null":0.03104799556729496,
+       "RELAX partitioned descriptive":0.03105348019724858,
+       "k (general descriptive)":0.2956674028068948,
+       "original name":"Zonotrichia_albicollis"
+      }
+    },
+   "attributes":{
+     "General descriptive":{
+       "attribute type":"branch length",
+       "display order":4
+      },
+     "MG94xREV with separate rates for branch sets":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "RELAX alternative":{
+       "attribute type":"branch length",
+       "display order":2
+      },
+     "RELAX null":{
+       "attribute type":"branch length",
+       "display order":3
+      },
+     "RELAX partitioned descriptive":{
+       "attribute type":"branch length",
+       "display order":5
+      },
+     "k (general descriptive)":{
+       "attribute type":"branch label",
+       "display order":4
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      }
+    }
+  },
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741] 
+      ],
+     "name":"relax.filter.default"
+    }
+  },
+ "fits":{
+   "General descriptive":{
+     "AIC-c":22417.38004973101,
+     "Log Likelihood":-11070.88912678875,
+     "Rate Distributions":{
+       "Shared":{
+         "0":{
+           "omega":0.05874006721240015,
+           "proportion":0.8952332056941104
+          },
+         "1":{
+           "omega":0.9748567820953736,
+           "proportion":0.1022746456598495
+          },
+         "2":{
+           "omega":340.1525870921841,
+           "proportion":0.002492148646040177
+          }
+        }
+      },
+     "display order":4,
+     "estimated parameters":137
+    },
+   "MG94xREV with separate rates for branch sets":{
+     "AIC-c":22376.40994247687,
+     "Equilibrium frequencies":      [
+[0.01703682732923568],
+      [0.01919949232829711],
+      [0.02464092626149774],
+      [0.01972151617984123],
+      [0.01129622404537155],
+      [0.01273017344759145],
+      [0.01633810206303508],
+      [0.01307630000449743],
+      [0.009056844531337045],
+      [0.01020652576548631],
+      [0.01309921348299168],
+      [0.01048403570168034],
+      [0.01438522629595446],
+      [0.01621129548199665],
+      [0.02080582807840633],
+      [0.01665207187135769],
+      [0.01680673236911207],
+      [0.01894018897701572],
+      [0.02430813231835442],
+      [0.01945516251015353],
+      [0.01114366018057221],
+      [0.01255824303501024],
+      [0.0161174439046796],
+      [0.01289969489663583],
+      [0.008934525143987992],
+      [0.01006867908232012],
+      [0.01292229891164732],
+      [0.01034244104147192],
+      [0.0141909431699374],
+      [0.0159923499403534],
+      [0.02052482997415107],
+      [0.01642717331840703],
+      [0.02336448885519897],
+      [0.02633039097368729],
+      [0.03379283219185929],
+      [0.02704630011720608],
+      [0.01549176356098896],
+      [0.0174582972459077],
+      [0.02240624948471625],
+      [0.01793297894133351],
+      [0.01242065432878855],
+      [0.01399733958028584],
+      [0.01796440273301531],
+      [0.01437791970157908],
+      [0.0197280545829434],
+      [0.02223234557102487],
+      [0.0285333371564387],
+      [0.02283683106810967],
+      [0.0175491687898457],
+      [0.01802632123358876],
+      [0.01032523876519196],
+      [0.01163593071815399],
+      [0.01493373397104607],
+      [0.01195230540483458],
+      [0.009329207270363018],
+      [0.01197324931807886],
+      [0.009582863389381885],
+      [0.01314872081152692],
+      [0.01481782725558429],
+      [0.01901742934225014],
+      [0.01522071599468262] 
+      ],
+     "Log Likelihood":-11112.96413973598,
+     "Rate Distributions":{
+       "non-synonymous/synonymous rate ratio for *Reference*":        [
+[0.5907985067404415, 1] 
+        ],
+       "non-synonymous/synonymous rate ratio for *Test*":        [
+[0.200377877664475, 1] 
+        ]
+      },
+     "display order":1,
+     "estimated parameters":75
+    },
+   "Nucleotide GTR":{
+     "AIC-c":22706.83240146395,
+     "Equilibrium frequencies":      [
+[0.2494475180223431],
+      [0.2397085943334401],
+      [0.2693825918644171],
+      [0.2414612957797998] 
+      ],
+     "Log Likelihood":-11284.34832742881,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0.3148393055834563,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0.2441309642199126,
+       "Substitution rate from nucleotide C to nucleotide G":0.3290537549681223,
+       "Substitution rate from nucleotide C to nucleotide T":1.037912888579816,
+       "Substitution rate from nucleotide G to nucleotide T":0.1994277119257711
+      },
+     "display order":0,
+     "estimated parameters":69
+    },
+   "RELAX alternative":{
+     "AIC-c":22378.10544812764,
+     "Log Likelihood":-11109.78565171764,
+     "Rate Distributions":{
+       "Reference":{
+         "0":{
+           "omega":0.3780170370001135,
+           "proportion":0.8371471463582884
+          },
+         "1":{
+           "omega":0.9964026,
+           "proportion":0.09217154589229921
+          },
+         "2":{
+           "omega":2.737941109350713,
+           "proportion":0.07068130774941243
+          }
+        },
+       "Test":{
+         "0":{
+           "omega":0.29848428997214,
+           "proportion":0.8371471463582884
+          },
+         "1":{
+           "omega":0.9955310235750158,
+           "proportion":0.09217154589229921
+          },
+         "2":{
+           "omega":3.496557490639454,
+           "proportion":0.07068130774941243
+          }
+        }
+      },
+     "display order":2,
+     "estimated parameters":79
+    },
+   "RELAX null":{
+     "AIC-c":22376.15940077777,
+     "Log Likelihood":-11109.81931585476,
+     "Rate Distributions":{
+       "Reference":{
+         "0":{
+           "omega":0.37601807828212,
+           "proportion":0.8371456020415652
+          },
+         "1":{
+           "omega":0.9992612061208889,
+           "proportion":0.09176870407962759
+          },
+         "2":{
+           "omega":2.769012487647851,
+           "proportion":0.07108569387880723
+          }
+        },
+       "Test":{
+         "0":{
+           "omega":0.37601807828212,
+           "proportion":0.8371456020415652
+          },
+         "1":{
+           "omega":0.9992612061208889,
+           "proportion":0.09176870407962759
+          },
+         "2":{
+           "omega":2.769012487647851,
+           "proportion":0.07108569387880723
+          }
+        }
+      },
+     "display order":3,
+     "estimated parameters":78
+    },
+   "RELAX partitioned descriptive":{
+     "AIC-c":22384.49544305147,
+     "Log Likelihood":-11108.95304696952,
+     "Rate Distributions":{
+       "Reference":{
+         "0":{
+           "omega":0.3764189361580325,
+           "proportion":0.8364274760970514
+          },
+         "1":{
+           "omega":0.9999,
+           "proportion":0.09202137275160487
+          },
+         "2":{
+           "omega":2.787330513544516,
+           "proportion":0.07155115115134376
+          }
+        },
+       "Test":{
+         "0":{
+           "omega":0.2010728755889863,
+           "proportion":1
+          },
+         "1":{
+           "omega":0.461038047598378,
+           "proportion":0
+          },
+         "2":{
+           "omega":1.091754482385101,
+           "proportion":0
+          }
+        }
+      },
+     "display order":5,
+     "estimated parameters":83
+    }
+  },
+ "input":{
+   "file name":"/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Aves/Aves.group1/RELAX/Aves.group1.aln",
+   "number of sequences":32,
+   "number of sites":742,
+   "partition count":1,
+   "trees":{
+     "0":"(((Hirundo_rustica,((Parus_major,Cyanistes_caeruleus_caeruleus)Node5,Pseudopodoces_humilis)Node4)Node2,((Sturnus_vulgaris,(Catharus_ustulatus,Ficedula_albicollis)Node12)Node10,((((Corvus_moneduloides,Corvus_kubaryi)Node18,(Corvus_cornix_cornix,Corvus_brachyrhynchos)Node21)Node17,(Geospiza_fortis,Camarhynchus_parvulus)Node30,(Taeniopygia_guttata,Lonchura_striata_domestica)Node26,Corvus_hawaiiensis)Node16,((Motacilla_alba_alba,((Zonotrichia_albicollis,Molothrus_ater)Node37,Serinus_canaria)Node36)Node34,((Pyrgilauda_ruficollis,Onychostruthus_taczanowskii)Node42,Passer_montanus)Node41)Node33)Node15)Node9)Node1,((Myiozetetes_cayanensis,Empidonax_traillii)Node47,(Neopelma_chrysocephalum,((Pipra_filicauda,(Manacus_vitellinus,Manacus_candei)Node55)Node53,Lepidothrix_coronata)Node52)Node50)Node46,(Chiroxiphia_lanceolata,Corapipo_altera)Node59)"
+    }
+  },
+ "runtime":"2.5.48",
+ "test results":{
+   "LRT":0.06732827424275456,
+   "p-value":0.7952672842315593,
+   "relaxation or intensification parameter":1.242822857919479
+  },
+ "tested":{
+   "0":{
+     "Camarhynchus_parvulus":"Reference",
+     "Catharus_ustulatus":"Reference",
+     "Chiroxiphia_lanceolata":"Reference",
+     "Corapipo_altera":"Reference",
+     "Corvus_brachyrhynchos":"Reference",
+     "Corvus_cornix_cornix":"Reference",
+     "Corvus_hawaiiensis":"Reference",
+     "Corvus_kubaryi":"Test",
+     "Corvus_moneduloides":"Reference",
+     "Cyanistes_caeruleus_caeruleus":"Reference",
+     "Empidonax_traillii":"Reference",
+     "Ficedula_albicollis":"Reference",
+     "Geospiza_fortis":"Reference",
+     "Hirundo_rustica":"Reference",
+     "Lepidothrix_coronata":"Reference",
+     "Lonchura_striata_domestica":"Reference",
+     "Manacus_candei":"Reference",
+     "Manacus_vitellinus":"Reference",
+     "Molothrus_ater":"Reference",
+     "Motacilla_alba_alba":"Reference",
+     "Myiozetetes_cayanensis":"Reference",
+     "Neopelma_chrysocephalum":"Reference",
+     "Node1":"Reference",
+     "Node10":"Reference",
+     "Node12":"Reference",
+     "Node15":"Reference",
+     "Node16":"Reference",
+     "Node17":"Reference",
+     "Node18":"Reference",
+     "Node2":"Reference",
+     "Node21":"Reference",
+     "Node26":"Reference",
+     "Node30":"Reference",
+     "Node33":"Reference",
+     "Node34":"Reference",
+     "Node36":"Reference",
+     "Node37":"Reference",
+     "Node4":"Reference",
+     "Node41":"Reference",
+     "Node42":"Reference",
+     "Node46":"Reference",
+     "Node47":"Reference",
+     "Node5":"Reference",
+     "Node50":"Reference",
+     "Node52":"Reference",
+     "Node53":"Reference",
+     "Node55":"Reference",
+     "Node59":"Reference",
+     "Node9":"Reference",
+     "Onychostruthus_taczanowskii":"Reference",
+     "Parus_major":"Reference",
+     "Passer_montanus":"Reference",
+     "Pipra_filicauda":"Reference",
+     "Pseudopodoces_humilis":"Reference",
+     "Pyrgilauda_ruficollis":"Reference",
+     "Serinus_canaria":"Reference",
+     "Sturnus_vulgaris":"Reference",
+     "Taeniopygia_guttata":"Reference",
+     "Zonotrichia_albicollis":"Reference"
+    }
+  },
+ "timers":{
+   "General descriptive model fitting":{
+     "order":2,
+     "timer":141
+    },
+   "Overall":{
+     "order":0,
+     "timer":206
+    },
+   "Preliminary model fitting":{
+     "order":1,
+     "timer":10
+    },
+   "RELAX alternative model fitting":{
+     "order":3,
+     "timer":39
+    },
+   "RELAX null model fitting":{
+     "order":4,
+     "timer":4
+    },
+   "RELAX partitioned descriptive":{
+     "order":5,
+     "timer":11
+    }
+  }
+}

@@ -1,0 +1,446 @@
+BLASTN 2.12.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: Lagopus_muta.fna
+           165 sequences; 1,026,771,810 total letters
+
+
+
+Query= Exon1
+
+Length=264
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  179     2e-43
+
+
+
+Query_1  1        ATGCCCGCGCGTGTCCGGAAGCATTCCCTGGAGATTCCTCCGCCATCTGAAGAGGACTGG  60
+12       7574280  ...T.T.T.......G..C.....C......T.....T..T......C..GC...T....  7574339
+
+Query_1  61       CTGAAGGATGACGAGGAAGACTTCTTCCAGCAGGATCCCGAGCGAATACGCGATGCTTTG  120
+12       7574348  ...G....G........G..T.......G..........A.C..GC.GT.T.....CGCA  7574407
+                  \                                                           
+                  |                                                           
+                  AGGAGGAT
+
+Query_1  121      CCTCAGCCCTTCAGGATGGCCAACAAACTGGTGATGCTGGTTTTTGAAAATGCTATGGAA  180
+12       7574408  .....A...C.........T..G....G.....G..T....C.C...C.G.---------  7574458
+
+Query_1  181      ATCATTGAAAGAAGGGAGACGCTCCGAGAAGCACAAAAACTGAAGGCCCAGCCCACAAAA  240
+12       7574459  --.GC...G.........G......A.............TG.......TGT.....C...  7574516
+
+Query_1  241      TGCTTTCCTACAGCTGAATTCCAG  264
+12       7574517  ..T.....................  7574540
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 240263445240
+
+
+Query= Exon2
+
+Length=196
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  196     2e-48
+
+
+
+Query_2  1        GTAACTGGAACAGCCAATTGCCTGTCAGTGTCTGGAAAATTCATCTTTGTTGGTCTGTCC  60
+12       7575123  ........GGT.............G...............A...T.............GA  7575182
+
+Query_2  61       GTGGGTCTGGCTGCCTTCAGGATGTACGACTGTAAGCAGGTCTGTGTTTGGGATGCAGTC  120
+12       7575183  ......A..................TT...............A...C.............  7575242
+
+Query_2  121      AAGACAGAGATTTGTGTCATCCGCTCCTCGGACTTGGGGAACGAGCACCATGTCCTGCTC  180
+12       7575243  ....T....G.....AC....A.....A.AA.T..A.....T...A.-------....A.  7575295
+
+Query_2  181      ACTGTGGATGAAAT  194
+12       7575296  ..............  7575311
+                   \            
+                   |            
+                  AG
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 171470093175
+
+
+Query= Exon3
+
+Length=65
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  74.3    3e-12
+NC_064434.1 Lagopus muta isolate bLagMut1 chromosome 2, bLagMut1 ...  46.4    4e-04
+
+
+
+Query_3  1          GGCTTGTCTCGCTCTTCTGCTTTCACAGGGAAAGCTTCCTACTCATTAAGATCTTAAATG  60
+12       7575953    .......T.G......T..........A.....-......G........A...C....C.  7576011
+1        104646414              ..C.........C...............TT.....               104646448
+
+Query_3  61         AGGTG  65
+12       7576012    .....  7576016
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 37990386030
+
+
+Query= Exon4
+
+Length=79
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 52365126690
+
+
+Query= Exon5
+
+Length=128
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  125     1e-27
+
+
+
+Query_5  1        GCAGCTCAGAAGTTTGGCTGGAGGTCTACCGATTGCCCAAGGATTCCTGGCTGAAGGAGA  60
+12       7576835  ........A..................G.G.G.....T......................  7576894
+
+Query_5  61       CAGAGAAGAGCTCAGGAGCTGCAGCAGGGCTGGCTTTCAGGGAGAAGAGGTCAA  114
+12       7576895  ...GA.G...T.....G..CC.....A.....A.G..T.....A.G........  7576948
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 101649935475
+
+
+Query= Exon6
+
+Length=39
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 13347977760
+
+
+Query= Exon7
+
+Length=88
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  109     7e-23
+
+
+
+Query_7  1        GAGTCTTTTGTGTCTGCAAACAAAGCTGAGGCAAAGCTGAGTCTCCCAGTGCTGGTGCTG  60
+12       7577941  ......CC..........G.....AT...T.T..............G.......C.....  7578003
+                                                                   \          
+                                                                   |          
+                                                                 TGC
+
+Query_7  61       AAAGTGAAGCCACCCAAACCCATTACAG  88
+12       7578004  ............................  7578031
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 61606031400
+
+
+Query= Exon8
+
+Length=184
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  164     9e-39
+
+
+
+Query_8  7        ATTTTAAAAGCCCTTTGGATGCGTTGAAGAAAGTGGATGATGGCAGCATGCTTGGCTTGG  66
+12       7578697  ....CC..G.............C..........CA.................G..T....  7578756
+
+Query_8  67       GGCACAATCACCTGATCAAGGACTCTCAGTGGGAGCAACACGAGGCAATCTTCCGCAGCA  126
+12       7578757  ....G.G........GTG......TCT........A.G.---.......-..TT......  7578812
+
+Query_8  127      TTTATCGGGAGTTTCTGGAGGCTGAGGGTGAGAGTGAGAGCAAGGATGAGGTTCCCAG  184
+12       7578813  C...-.A..G..A........G...........A..................C.T...  7578869
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 159148888875
+
+
+Query= Exon9
+
+Length=71
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 44150989170
+
+
+Query= Exon10
+
+Length=87
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  57.2    4e-07
+
+
+
+Query_10  1        ATGTTCCAGCTAGCATCAGTGTGTACTGGGACGGAAGCCACAATCTCTGTTTCTAT  56
+12        7579538  ...........G.T.C.......C.......T..G.AG...........C...A..  7579593
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 60579264210
+
+
+Query= Exon11
+
+Length=126
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 99596401425
+
+
+Query= Exon12
+
+Length=217
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  136     2e-30
+
+
+
+Query_12  16       TGACTGTTATGCCAGAGAAACGTCCTATACGTAGCATCCACTTCCTGCAGAGTGCTGCAT  75
+12        7579775  ..G...CC..T.T....G.TT...TC..C..CT....T..T..T...............G  7579834
+
+Query_12  76       CTGCCAGCAGTGAGGCACCTTGCCCTGGTACAGATCCTCCCTCTCCAGCTGTGGAGCTTT  135
+12        7579835  .........A..G.A..T.C..........T.A..T..G.......CAT......A...C  7579896
+                                              \                                
+                                              |                                
+                                             TG
+
+Query_12  136      TAGTGCTGTGTACAGATGGGTCTTTGTATTTGTTGAGAGCGTCCAGGGCCAAGAAGCCCA  195
+12        7579897  ........C......TG.A........G....G.......ACG.G......G....T...  7579956
+
+Query_12  196      GCATCAC  202
+12        7579957  .......  7579963
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 192005402820
+
+
+Query= Exon13
+
+Length=61
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 34910090070
+
+
+Query= Exon14
+
+Length=157
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 131426179200
+
+
+Query= Exon15
+
+Length=178
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  194     5e-48
+
+
+
+Query_15  7        AGCAGCAGACAGATGCATTGGCACAGAGCAGAGCCAGTCACAGCACCATCTTCCTCTTTT  66
+12        7580689  ........G.......C......................................T.C.C  7580748
+
+Query_15  67       ACTTCAACTCCTACCCACTGGAGGAGGCTTTCCCAAAGAAACCAGATTTGCCTTTCAAGT  126
+12        7580749  .TG...........GT..C.A..........T...G....G...................  7580808
+
+Query_15  127      CCTTACAGAACCTGTCATTGTTTGAGAGATGTAACATGTTCTTGCGTGAT  176
+12        7580809  .....G........C..----..A.....C.......T.....CA.....  7580854
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 152988286725
+
+
+Query= Exon16
+
+Length=118
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_064442.1 Lagopus muta isolate bLagMut1 chromosome 10, bLagMut1...  65.3    4e-09
+
+
+
+Query_16  2        CAGCAGCGCCTGGTAGGACTCGAGGAGCAGTTGCCTGAGTACTGGAGTCGGCTGCAGGCA  61
+12        7581740  ......T.A..AC.....T..AG...A..-..AT.....C....A...-..A......T.  7581797
+
+Query_16  62       CGAGCAGCTGCCATGGACAAGGAGAGTCAGAAAATAAAGGGACAGAAGAAGC  113
+12        7581798  T.......A.----------...A........C...................  7581839
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 91382265225
+
+
+  Database: Lagopus_muta.fna
+    Posted date:  Nov 28, 2022  4:15 PM
+  Number of letters in database: 1,026,771,810
+  Number of sequences in database:  165
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2

@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Aves/Aves_group1/gBGC/`) 
+
+A tree was found in the data file:
+(((Hirundo_rustica:25.05005,((Parus_major:10.10259,Cyanistes_caeruleus_caeruleus:10.10259):13.0873,Pseudopodoces_humilis:23.18989):1.86016):0.44567,((Sturnus_vulgaris:21.80696,(Catharus_ustulatus:21.64584,Ficedula_albicollis:21.64584):0.16112):3.41702,((((Corvus_moneduloides:6.31563,Corvus_kubaryi:6.31563):0.13394,(Corvus_cornix_cornix:3.27791,Corvus_brachyrhynchos:3.27791):3.17166):10.04272,(((Taeniopygia_guttata:12.47069,Lonchura_striata_domestica:12.47069):3.56993,Corvus_hawaiiensis:16.04062):0.24588,(Geospiza_fortis:0.55787,Camarhynchus_parvulus:0.55787):15.72863):0.20579):7.70663,((Motacilla_alba_alba:22.1,((Zonotrichia_albicollis:14.37688,Molothrus_ater:14.37688):5.82144,Serinus_canaria:20.19832):1.90168):1.10266,((Pyrgilauda_ruficollis:9.61623,Onychostruthus_taczanowskii:9.61623):6.12597,Passer_montanus:15.7422):7.46046):0.99626):1.02506):0.27174):0.54559,((Myiozetetes_cayanensis:13.17,Empidonax_traillii:13.17):7.60069,(Neopelma_chrysocephalum:14.99669,((Pipra_filicauda:5.07459,(Manacus_vitellinus:1.15196,Manacus_candei:1.15196):3.92263):0.65206,Lepidothrix_coronata:5.72665):9.27004):5.774):5.27062,(Chiroxiphia_lanceolata:9.45458,Corapipo_altera:9.45458):73.51177)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :2226
+Synonymous  sites      :533.8038629103896
+Nonsynonymous  sites   :1612.876566253153
+
+Total tree lengths:
+	E[syn]        : 0.2977863897001663
+	E[non-syn]    : 0.4303504152066697
+	dS            : 1.241790383191453
+	dN            : 0.5939450323067614
+
+
+E[Syn subs/nucleotide site] tree: 
+	(((Hirundo_rustica:0.01508425409147512,((Parus_major:0.004038434406551763,Cyanistes_caeruleus_caeruleus:0.006208392638288142)Node5:0.001398797352803013,Pseudopodoces_humilis:0.004029989750096401)Node4:0.01220708372577941)Node2:0,((Sturnus_vulgaris:0.009716621687680905,(Catharus_ustulatus:0.005775272914376606,Ficedula_albicollis:0.01349444759993291)Node12:0.0008868206498076789)Node10:0.004492906345756865,((((Corvus_moneduloides:0.0009988057379161231,Corvus_kubaryi:0.001985517197339209)Node18:0,(Corvus_cornix_cornix:2.429633995318526e-19,Corvus_brachyrhynchos:4.331643932684779e-19)Node21:0.001495664462740463)Node17:0.01393160361555169,(((Taeniopygia_guttata:0.005278641871911134,Lonchura_striata_domestica:0.005730314022499337)Node26:0.006272302557955581,Corvus_hawaiiensis:0.01448651828297228)Node25:0,(Geospiza_fortis:0,Camarhynchus_parvulus:0.0005006818606240761)Node30:0.01866200534962271)Node24:0)Node16:0,((Motacilla_alba_alba:0.007002674805991828,((Zonotrichia_albicollis:0.01424798788242793,Molothrus_ater:0.005573912304928662)Node37:0.002462278347952517,Serinus_canaria:0.00838519162834965)Node36:0.002447087415130769)Node34:0.000917012534437437,((Pyrgilauda_ruficollis:0.0005216767099136628,Onychostruthus_taczanowskii:0.002500556632514779)Node42:0.001464312669936115,Passer_montanus:0.01202647366044771)Node41:0.003349980201922096)Node33:0.004185594479375447)Node15:0.002260309573230446)Node9:0)Node1:0.03129893989903707,((Myiozetetes_cayanensis:0.003379277138340601,Empidonax_traillii:0.007501396753828336)Node47:0.0124590107188812,(Neopelma_chrysocephalum:0.004400193860962985,((Pipra_filicauda:0.003507658284941038,(Manacus_vitellinus:0.001396095966103637,Manacus_candei:0.0004901958200644376)Node55:0.004100472759237672)Node53:0.0004657578055762679,Lepidothrix_coronata:0.002557438569814889)Node52:0.002688458265642409)Node50:0)Node46:0.0003963903169285622,(Chiroxiphia_lanceolata:0.002026130217974835,Corapipo_altera:0.004041411630326233)Node59:0.003057436724265797)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(((Hirundo_rustica:0.02217435380275957,((Parus_major:0.004915177365303346,Cyanistes_caeruleus_caeruleus:0.003432625595587224)Node5:0.001422811049987556,Pseudopodoces_humilis:0.000523868998524201)Node4:0.0109392412471495)Node2:0.002238057630152604,((Sturnus_vulgaris:0.01181048868221761,(Catharus_ustulatus:0.01545564934527283,Ficedula_albicollis:0.009099291642466152)Node12:0.0026974180182676)Node10:0.007440164851257056,((((Corvus_moneduloides:0.0004862792888966768,Corvus_kubaryi:0.0009754445176614856)Node18:0.0009863933061561101,(Corvus_cornix_cornix:0.0004866890975543886,Corvus_brachyrhynchos:0)Node21:0.0009665383582368928)Node17:0.02126266636698701,(((Taeniopygia_guttata:0.01037596100836406,Lonchura_striata_domestica:0.001535949487112723)Node26:0.02400107159410458,Corvus_hawaiiensis:0.02173736971108379)Node25:0,(Geospiza_fortis:0.0004782367145417849,Camarhynchus_parvulus:0.0005020569852763929)Node30:0.03104006078552005)Node24:0)Node16:0.0008019579591291839,((Motacilla_alba_alba:0.01134568450278743,((Zonotrichia_albicollis:0.01658997893017803,Molothrus_ater:0.003775211585524533)Node37:0.009281600121838764,Serinus_canaria:0.01514480233583247)Node36:0.00658919708362148)Node34:0.002523901446085762,((Pyrgilauda_ruficollis:0.003301256889040897,Onychostruthus_taczanowskii:0.003103738252115437)Node42:0.002259604530131961,Passer_montanus:0.009508995271818815)Node41:0.008368439651955913)Node33:0.009446498096466213)Node15:0.001858841095338847)Node9:0.0008400255414373965)Node1:0.05883228190319645,((Myiozetetes_cayanensis:0.00559674481043749,Empidonax_traillii:0.008622456371521772)Node47:0.01236691446448041,(Neopelma_chrysocephalum:0.009383382857504454,((Pipra_filicauda:0.004903501702932263,(Manacus_vitellinus:0.001093768795236696,Manacus_candei:0.001467310901605592)Node55:0.001966971285579676)Node53:0.001356068829299724,Lepidothrix_coronata:0.00158529783608273)Node52:0.001868972964433312)Node50:0.0008371941339427447)Node46:0,(Chiroxiphia_lanceolata:0.002452339912719089,Corapipo_altera:0.00293617520325214)Node59:0.003357434490700873)
+
+dS tree: 
+	(((Hirundo_rustica:0.06290241030582489,((Parus_major:0.01684055814053432,Cyanistes_caeruleus_caeruleus:0.0258894379997197)Node5:0.005833084253761219,Pseudopodoces_humilis:0.0168053433236779)Node4:0.05090440564711037)Node2:0,((Sturnus_vulgaris:0.04051900216467452,(Catharus_ustulatus:0.02408329800633241,Ficedula_albicollis:0.05627280438488189)Node12:0.003698105059991448)Node10:0.01873573838736663,((((Corvus_moneduloides:0.004165090826580484,Corvus_kubaryi:0.008279747653341786)Node18:0,(Corvus_cornix_cornix:1.013174622621071e-18,Corvus_brachyrhynchos:1.806326267776555e-18)Node21:0.006237026978238958)Node17:0.05809577600120146,(((Taeniopygia_guttata:0.02201231130627227,Lonchura_striata_domestica:0.02389581623583124)Node26:0.02615594690133025,Corvus_hawaiiensis:0.0604098095545435)Node25:0,(Geospiza_fortis:0,Camarhynchus_parvulus:0.002087878899325779)Node30:0.07782188701626876)Node24:0)Node16:0,((Motacilla_alba_alba:0.0292016510205633,((Zonotrichia_albicollis:0.05941512085237344,Molothrus_ater:0.02324360997150384)Node37:0.01026787549392915,Serinus_canaria:0.03496684430670693)Node36:0.01020452822574557)Node34:0.003824007362045646,((Pyrgilauda_ruficollis:0.002175428911166861,Onychostruthus_taczanowskii:0.01042749865770887)Node42:0.006106287776761516,Passer_montanus:0.05015124885420821)Node41:0.01396965523782733)Node33:0.0174542260902556)Node15:0.009425651366737318)Node9:0)Node1:0.1305188011105726,((Myiozetetes_cayanensis:0.01409182554231338,Empidonax_traillii:0.03128135694444199)Node47:0.05195495909119198,(Neopelma_chrysocephalum:0.0183491207446505,((Pipra_filicauda:0.01462718403667584,(Manacus_vitellinus:0.00582181927946893,Manacus_candei:0.002044151365848425)Node55:0.01709926247498012)Node53:0.001942243110718772,Lepidothrix_coronata:0.01066470037397165)Node52:0.01121106180590647)Node50:0)Node46:0.001652975759059097,(Chiroxiphia_lanceolata:0.008449106832276917,Corapipo_altera:0.01685297337500983)Node59:0.01274972817002295)
+
+dN tree: 
+	(((Hirundo_rustica:0.03060377501770671,((Parus_major:0.00678364671177692,Cyanistes_caeruleus_caeruleus:0.004737513542978618)Node5:0.001963682443864826,Pseudopodoces_humilis:0.0007230140328865305)Node4:0.01509771517898833)Node2:0.00308883915171085,((Sturnus_vulgaris:0.01630016106421003,(Catharus_ustulatus:0.02133100335291083,Ficedula_albicollis:0.0125583219571376)Node12:0.003722822089611311)Node10:0.01026849004159858,((((Corvus_moneduloides:0.0006711348653286237,Corvus_kubaryi:0.001346252739822906)Node18:0.001361363631566874,(Corvus_cornix_cornix:0.0006717004598019724,Corvus_brachyrhynchos:0)Node21:0.001333960967908085)Node17:0.02934551615618439,(((Taeniopygia_guttata:0.01432030800613243,Lonchura_striata_domestica:0.002119829644655076)Node26:0.03312490644748518,Corvus_hawaiiensis:0.03000067456450215)Node25:0,(Geospiza_fortis:0.0006600349641405377,Camarhynchus_parvulus:0.0006929103395813356)Node30:0.04283971678569396)Node24:0)Node16:0.001106816513038339,((Motacilla_alba_alba:0.0156586649168544,((Zonotrichia_albicollis:0.02289654017626788,Molothrus_ater:0.005210331134576484)Node37:0.01280993369456037,Serinus_canaria:0.02090199008711476)Node36:0.009094032993619201)Node34:0.003483344439704066,((Pyrgilauda_ruficollis:0.004556205966880928,Onychostruthus_taczanowskii:0.004283602039838031)Node42:0.003118576950844154,Passer_montanus:0.01312377147635138)Node41:0.0115496418355985)Node33:0.01303751644900104)Node15:0.002565466176892063)Node9:0.00115935521314168)Node1:0.08119695099839405,((Myiozetetes_cayanensis:0.007724307122258991,Empidonax_traillii:0.01190022118530482)Node47:0.01706810810816416,(Neopelma_chrysocephalum:0.01295040840560299,((Pipra_filicauda:0.006767532630276928,(Manacus_vitellinus:0.001509557141035886,Manacus_candei:0.002025098594222733)Node55:0.0027147012817428)Node53:0.001871568647707287,Lepidothrix_coronata:0.002187937413783638)Node52:0.002579449603197693)Node50:0.001155447466439317)Node46:0,(Chiroxiphia_lanceolata:0.003384579303792723,Corapipo_altera:0.004052341102346577)Node59:0.004633739080022755)
+
+Estimating pairwise dN/dS: total of 496 analyses

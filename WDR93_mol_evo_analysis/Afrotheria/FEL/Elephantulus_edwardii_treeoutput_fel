@@ -1,0 +1,203 @@
+[2J[H     /HYPHY 2.3.14.20181224beta(MP) for Linux on x86_64\     
+***************** TYPES OF STANDARD ANALYSES *****************
+
+
+	(1) Selection Analyses
+	(2) Evolutionary Hypothesis Testing
+	(3) Relative evolutionary rate inference
+	(4) Coevolutionary analysis
+	(5) Basic Analyses
+	(6) Codon Selection Analyses
+	(7) Compartmentalization
+	(8) Data File Tools
+	(9) Miscellaneous
+	(10) Model Comparison
+	(11) Kernel Analysis Tools
+	(12) Molecular Clock
+	(13) Phylogeny Reconstruction
+	(14) Positive Selection
+	(15) Recombination
+	(16) Selection/Recombination
+	(17) Relative Rate
+	(18) Relative Ratio
+	(19) Substitution Rates
+
+ Please select type of analyses you want to list (or press ENTER to process custom batch file):[2J[H***************** FILES IN 'Selection Analyses' ***************** 
+
+
+	(1) [MEME] Test for episodic site-level selection using MEME (Mixed Effects Model of Evolution).
+	(2) [FEL] Test for pervasive site-level selection using FEL (Fixed Effects Likelihood).
+	(3) [SLAC] Test for pervasive site-level selection using SLAC (Single Likelihood Ancestor Counting).
+	(4) [FUBAR] Test for pervasive site-level selection using FUBAR (Fast Unconstrained Bayesian AppRoximation for inferring selection).
+	(5) [BUSTED] Test for episodic gene-wide selection using BUSTED (Branch-site Unrestricted Statistical Test of Episodic Diversification).
+	(6) [aBSREL] Test for lineage-specific evolution using the branch-site method aBS-REL (Adaptive Branch-Site Random Effects Likelihood).
+	(7) [RELAX] Test for relaxation of selection pressure along a specified set of test branches using RELAX (a random effects test of selection relaxation).
+
+ Please select the analysis you would like to perform (or press ENTER to return to the list of analysis types):
+Analysis Description
+--------------------
+FEL (Fixed Effects Likelihood) estimates site-wise synonymous (&alpha;)
+and non-synonymous (&beta;) rates, and uses a likelihood ratio test to
+determine if beta &neq; alpha at a site. The estimates aggregate
+information over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well, in which case an additional (nuisance) parameter
+will be inferred -- the non-synonymous rate on branches NOT selected for
+testing. Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.00
+
+
+
+####Choose Genetic Code
+
+1. [**Universal**] Universal code. (Genebank transl_table=1).
+2. [**Vertebrate mtDNA**] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+3. [**Yeast mtDNA**] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+4. [**Mold/Protozoan mtDNA**] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+5. [**Invertebrate mtDNA**] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+6. [**Ciliate Nuclear**] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+7. [**Echinoderm mtDNA**] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+8. [**Euplotid Nuclear**] Euplotid Nuclear code. (Genebank transl_table=10).
+9. [**Alt. Yeast Nuclear**] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+10. [**Ascidian mtDNA**] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+11. [**Flatworm mtDNA**] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+12. [**Blepharisma Nuclear**] Blepharisma Nuclear code. (Genebank transl_table=15).
+13. [**Chlorophycean mtDNA**] Chlorophycean Mitochondrial Code (transl_table=16).
+14. [**Trematode mtDNA**] Trematode Mitochondrial Code (transl_table=21).
+15. [**Scenedesmus obliquus mtDNA**] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+16. [**Thraustochytrium mtDNA**] Thraustochytrium Mitochondrial Code (transl_table=23).
+17. [**Pterobranchia mtDNA**] Pterobranchia Mitochondrial Code (transl_table=24).
+18. [**SR1 and Gracilibacteria**] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+19. [**Pachysolen Nuclear**] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+>Please choose an option (or press q to cancel selection):
+
+>Select a coding sequence alignment file (`/usr/local/lib/hyphy/TemplateBatchFiles/SelectionAnalyses/`) 
+
+>Please select a tree file for the data: (`/usr/local/lib/hyphy/TemplateBatchFiles/SelectionAnalyses/`) 
+>Loaded a multiple sequence alignment with **9** sequences, **689** codons, and **1** partitions from `/media/sagar/disk4/BUDDHA/Morpheus_WDR93/Afrotheria/FEL/Afrotheria.aln`
+
+
+####Choose the set of branches to test for selection
+
+1. [**All**] Include all branches in the analysis
+2. [**Internal**] Include all internal branches in the analysis
+3. [**Leaves**] Include all leaf branches in the analysis
+4. [**Unlabeled branches**] Set of 14 unlabeled branches
+5. [**fg**] Set fg with 1 branches
+
+>Please choose an option (or press q to cancel selection):
+
+####Use synonymous rate variation? Strongly recommended YES for selection inference.
+
+1. [**Yes**] [Recommended] Consider synonymous rate variation (dS varies across sites).
+2. [**No**] Ignore synonymous rate variation (dS := 1 at each site).
+
+>Please choose an option (or press q to cancel selection):Yes
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+
+### Branches to include in the FEL analysis
+Selected 1 branches to include in FEL calculations: `Elephantulus_edwardii`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+* Log(L) = -8403.86, AIC-c = 16853.78 (23 estimated parameters)
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -8516.16, AIC-c = 17094.64 (31 estimated parameters)
+* non-synonymous/synonymous rate ratio for *background* =   0.3147
+* non-synonymous/synonymous rate ratio for *test* = 10000.0000
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -8516.16
+* non-synonymous/synonymous rate ratio for *background* =   0.3147
+* non-synonymous/synonymous rate ratio for *test* = 10000.0000
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |     alpha      |      beta      |      LRT       |Selection detected?|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|
+|       6        |       1        |        0.000   |    10000.000   |       24.091   |  Pos. p = 0.0000  |
+|       8        |       1        |        0.000   |    10000.000   |       11.950   |  Pos. p = 0.0005  |
+|       48       |       1        |        0.000   |    10000.000   |        7.806   |  Pos. p = 0.0052  |
+|       55       |       1        |        1.717   |    10000.000   |        3.089   |  Pos. p = 0.0788  |
+|       80       |       1        |        0.740   |    10000.000   |       12.690   |  Pos. p = 0.0004  |
+|       82       |       1        |        2.855   |    10000.000   |        4.329   |  Pos. p = 0.0375  |
+|       83       |       1        |        0.000   |    10000.000   |       12.877   |  Pos. p = 0.0003  |
+|       92       |       1        |        6.259   |    10000.000   |        5.432   |  Pos. p = 0.0198  |
+|       97       |       1        |        0.000   |    10000.000   |        4.880   |  Pos. p = 0.0272  |
+|      105       |       1        |        0.000   |    10000.000   |        5.288   |  Pos. p = 0.0215  |
+|      109       |       1        |        0.000   |    10000.000   |       12.739   |  Pos. p = 0.0004  |
+|      118       |       1        |        0.000   |    10000.000   |       17.941   |  Pos. p = 0.0000  |
+|      124       |       1        |        0.000   |    10000.000   |       12.844   |  Pos. p = 0.0003  |
+|      125       |       1        |        5.637   |    10000.000   |        6.487   |  Pos. p = 0.0109  |
+|      135       |       1        |        0.000   |    10000.000   |       16.624   |  Pos. p = 0.0000  |
+|      137       |       1        |        0.000   |    10000.000   |       23.025   |  Pos. p = 0.0000  |
+|      144       |       1        |        0.000   |    10000.000   |       10.253   |  Pos. p = 0.0014  |
+|      178       |       1        |        0.000   |    10000.000   |       20.499   |  Pos. p = 0.0000  |
+|      187       |       1        |        0.000   |    10000.000   |       20.755   |  Pos. p = 0.0000  |
+|      204       |       1        |        0.000   |    10000.000   |       25.749   |  Pos. p = 0.0000  |
+|      233       |       1        |        0.000   |    10000.000   |       10.963   |  Pos. p = 0.0009  |
+|      234       |       1        |        0.000   |    10000.000   |       20.884   |  Pos. p = 0.0000  |
+|      236       |       1        |        1.663   |    10000.000   |        3.799   |  Pos. p = 0.0513  |
+|      248       |       1        |        0.000   |    10000.000   |       12.880   |  Pos. p = 0.0003  |
+|      255       |       1        |        1.083   |    10000.000   |       13.853   |  Pos. p = 0.0002  |
+|      260       |       1        |        0.882   |    10000.000   |        9.209   |  Pos. p = 0.0024  |
+|      263       |       1        |        0.683   |    10000.000   |       18.890   |  Pos. p = 0.0000  |
+|      275       |       1        |        0.000   |    10000.000   |       23.025   |  Pos. p = 0.0000  |
+|      323       |       1        |        0.000   |    10000.000   |        9.212   |  Pos. p = 0.0024  |
+|      336       |       1        |        3.238   |    10000.000   |        8.875   |  Pos. p = 0.0029  |
+|      340       |       1        |        1.908   |    10000.000   |        5.657   |  Pos. p = 0.0174  |
+|      344       |       1        |        4.961   |    10000.000   |        3.311   |  Pos. p = 0.0688  |
+|      356       |       1        |        0.000   |    10000.000   |       10.188   |  Pos. p = 0.0014  |
+|      363       |       1        |        3.212   |    10000.000   |        5.424   |  Pos. p = 0.0199  |
+|      369       |       1        |        3.320   |    10000.000   |        8.644   |  Pos. p = 0.0033  |
+|      373       |       1        |        0.000   |    10000.000   |       10.134   |  Pos. p = 0.0015  |
+|      379       |       1        |        0.000   |    10000.000   |       14.890   |  Pos. p = 0.0001  |
+|      388       |       1        |        0.000   |    10000.000   |       12.100   |  Pos. p = 0.0005  |
+|      632       |       1        |        0.000   |    10000.000   |       12.100   |  Pos. p = 0.0005  |
+|      423       |       1        |        1.782   |    10000.000   |        4.946   |  Pos. p = 0.0261  |
+|      427       |       1        |        0.000   |    10000.000   |       10.112   |  Pos. p = 0.0015  |
+|      443       |       1        |        0.901   |    10000.000   |       16.518   |  Pos. p = 0.0000  |
+|      460       |       1        |        1.369   |    10000.000   |        7.013   |  Pos. p = 0.0081  |
+|      466       |       1        |        5.488   |    10000.000   |        2.733   |  Pos. p = 0.0983  |
+|      507       |       1        |        1.896   |    10000.000   |       14.012   |  Pos. p = 0.0002  |
+|      520       |       1        |        0.000   |    10000.000   |       10.057   |  Pos. p = 0.0015  |
+|      533       |       1        |        0.000   |    10000.000   |       21.066   |  Pos. p = 0.0000  |
+|      546       |       1        |        5.527   |    10000.000   |        6.249   |  Pos. p = 0.0124  |
+|      556       |       1        |        1.369   |    10000.000   |        7.013   |  Pos. p = 0.0081  |
+|      572       |       1        |        0.787   |    10000.000   |       12.928   |  Pos. p = 0.0003  |
+|      578       |       1        |        1.732   |    10000.000   |       11.150   |  Pos. p = 0.0008  |
+|      581       |       1        |        0.678   |    10000.000   |       21.556   |  Pos. p = 0.0000  |
+|      582       |       1        |        0.000   |    10000.000   |       10.064   |  Pos. p = 0.0015  |
+|      592       |       1        |        1.572   |    10000.000   |        8.003   |  Pos. p = 0.0047  |
+|      594       |       1        |        0.000   |    10000.000   |       12.130   |  Pos. p = 0.0005  |
+|      597       |       1        |        3.934   |    10000.000   |        3.953   |  Pos. p = 0.0468  |
+|      599       |       1        |        0.896   |    10000.000   |       13.906   |  Pos. p = 0.0002  |
+|      606       |       1        |        4.740   |    10000.000   |       10.989   |  Pos. p = 0.0009  |
+|      611       |       1        |        1.433   |    10000.000   |        7.945   |  Pos. p = 0.0048  |
+|      615       |       1        |        0.000   |    10000.000   |        9.539   |  Pos. p = 0.0020  |
+|      623       |       1        |        1.257   |    10000.000   |        9.175   |  Pos. p = 0.0025  |
+|      625       |       1        |        1.064   |    10000.000   |       14.911   |  Pos. p = 0.0001  |
+|      627       |       1        |        0.000   |    10000.000   |       12.222   |  Pos. p = 0.0005  |
+|      629       |       1        |        1.228   |    10000.000   |       12.943   |  Pos. p = 0.0003  |
+|      635       |       1        |        2.682   |    10000.000   |        4.721   |  Pos. p = 0.0298  |
+|      664       |       1        |        5.457   |    10000.000   |        2.799   |  Pos. p = 0.0943  |
+|      673       |       1        |        2.018   |    10000.000   |        8.886   |  Pos. p = 0.0029  |
+|      677       |       1        |        0.916   |    10000.000   |        3.417   |  Pos. p = 0.0645  |
+|      679       |       1        |        5.608   |    10000.000   |        3.342   |  Pos. p = 0.0675  |
+|      689       |       1        |        0.000   |    10000.000   |        9.497   |  Pos. p = 0.0021  |
+
+### ** Found _70_ sites under pervasive positive diversifying and _0_ sites under negative selection at p <= 0.1**

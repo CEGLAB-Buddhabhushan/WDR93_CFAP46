@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Actinopterygii/Actinopterygii_group2/gBGC/`) 
+
+A tree was found in the data file:
+((Betta_splendens:66.09232,Anabas_testudineus:66.09232):16.44457,Mastacembelus_armatus:82.53689,((Lates_calcarifer:72.53114,(((Paralichthys_olivaceus:36.64993,(Hippoglossus_hippoglossus:4.4057,Hippoglossus_stenolepis:4.4057):32.24423):11.71513,Scophthalmus_maximus:48.36506):0.18696,(Cynoglossus_semilaevis:45.06785,Solea_senegalensis:45.06785):3.48417):23.97912):1.33282,((Toxotes_jaculatrix:51.19926,Xiphias_gladius:51.19926):20.04642,((Seriola_dumerili:17.24349,Seriola_lalandi_dorsalis:17.24349):28.99759,Echeneis_naucrates:46.24108):25.0046):2.61828):26.97359)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :2154
+Synonymous  sites      :517.9785269797428
+Nonsynonymous  sites   :1554.001700901055
+
+Total tree lengths:
+	E[syn]        : 0.9359356579079473
+	E[non-syn]    : 1.044978455325547
+	dS            : 3.892063670841245
+	dN            : 1.448443455027174
+
+
+E[Syn subs/nucleotide site] tree: 
+	((Betta_splendens:0.1308715349360567,Anabas_testudineus:0.04242032067088259)Node1:0.0080518576529124,Mastacembelus_armatus:0.06193026365985129,((Lates_calcarifer:0.05079310387629563,(((Paralichthys_olivaceus:0.01951920295119223,(Hippoglossus_hippoglossus:0.0005935485989008107,Hippoglossus_stenolepis:0.0006030642261848306)Node12:0.01706605333108262)Node10:0.03480943754883115,Scophthalmus_maximus:0.03508277170797772)Node9:0.008999926114502217,(Cynoglossus_semilaevis:0.2033018606225223,Solea_senegalensis:0.1017564125663932)Node16:0.02488046924829168)Node8:0.004559048860563145)Node6:0,((Toxotes_jaculatrix:0.03681808720547754,Xiphias_gladius:0.02925613414774016)Node20:0.001001046079736645,((Seriola_dumerili:0.001736963167348424,Seriola_lalandi_dorsalis:0.005117207122782133)Node24:0.01636347492369595,Echeneis_naucrates:0.0745848863380232)Node23:0.005969504188082603)Node19:0)Node5:0.01984947816261992)
+
+E[Non-syn subs/nucleotide site] tree: 
+	((Betta_splendens:0.1266780514897934,Anabas_testudineus:0.04367332128349489)Node1:0.01671669620969275,Mastacembelus_armatus:0.1048795860146043,((Lates_calcarifer:0.03970602641236095,(((Paralichthys_olivaceus:0.02019617895822434,(Hippoglossus_hippoglossus:0.002873446018317408,Hippoglossus_stenolepis:0.001721813061993554)Node12:0.02719980052040066)Node10:0.0342685788805683,Scophthalmus_maximus:0.0484367484828894)Node9:0.004055795044043304,(Cynoglossus_semilaevis:0.1817192985063862,Solea_senegalensis:0.08593619802041456)Node16:0.05584728346394022)Node8:0.009211026350581245)Node6:0,((Toxotes_jaculatrix:0.03945798092275384,Xiphias_gladius:0.03874578146576847)Node20:0.004059196811514271,((Seriola_dumerili:0.003083792441673927,Seriola_lalandi_dorsalis:0.005704247328796739)Node24:0.02188948854899455,Echeneis_naucrates:0.1022333828364559)Node23:0.01479943297838544)Node19:0.0008888683040041133)Node5:0.01099643496949425)
+
+dS tree: 
+	((Betta_splendens:0.5442258154907852,Anabas_testudineus:0.1764037811719066)Node1:0.03348343701717116,Mastacembelus_armatus:0.2575353629061473,((Lates_calcarifer:0.2112217786082463,(((Paralichthys_olivaceus:0.08117008904215124,(Hippoglossus_hippoglossus:0.002468256144684442,Hippoglossus_stenolepis:0.002507826628984808)Node12:0.0709687312512659)Node10:0.144754125074213,Scophthalmus_maximus:0.1458907779432705)Node9:0.03742595463111913,(Cynoglossus_semilaevis:0.8454254085286417,Solea_senegalensis:0.4231513494314847)Node16:0.1034647730926425)Node8:0.0189586840653668)Node6:0,((Toxotes_jaculatrix:0.1531070415274186,Xiphias_gladius:0.1216608598076051)Node20:0.004162823637353332,((Seriola_dumerili:0.007223115375620242,Seriola_lalandi_dorsalis:0.02127977043130165)Node24:0.06804707753265518,Echeneis_naucrates:0.3101592765029522)Node23:0.02482402522765734)Node19:0)Node5:0.08254352977059877)
+
+dN tree: 
+	((Betta_splendens:0.1755883038936189,Anabas_testudineus:0.06053554123531665)Node1:0.02317099370920884,Mastacembelus_armatus:0.1453734755531273,((Lates_calcarifer:0.05503647830155824,(((Paralichthys_olivaceus:0.02799390081155715,(Hippoglossus_hippoglossus:0.003982880276042751,Hippoglossus_stenolepis:0.002386603137811018)Node12:0.03770161273759985)Node10:0.04749963842764416,Scophthalmus_maximus:0.06713812228882933)Node9:0.00562173292333193,(Cynoglossus_semilaevis:0.2518809141301438,Solea_senegalensis:0.1191160668798772)Node16:0.07740985644454362)Node8:0.01276739320661482)Node6:0,((Toxotes_jaculatrix:0.05469266272896015,Xiphias_gladius:0.05370548386715003)Node20:0.005626448109375944,((Seriola_dumerili:0.004274441215549593,Seriola_lalandi_dorsalis:0.007906650770783489)Node24:0.03034099532014371,Echeneis_naucrates:0.1417055763208248)Node23:0.02051347731277158)Node19:0.001232059350845438)Node5:0.01524214607394355)
+
+Estimating pairwise dN/dS: total of 105 analyses

@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Actinopterygii/Actinopterygii_group4/gBGC/`) 
+
+A tree was found in the data file:
+(Esox_lucius:111.91875,((Oncorhynchus_tshawytscha:14.31068,Oncorhynchus_keta:14.31068):4.73948,Salmo_salar:19.05016):92.86859,((((Sphaeramia_orbicularis:115.502,((Thunnus_albacares:3.71368,Thunnus_maccoyii:3.71368):90.95212,((Syngnathus_scovelli:30.4751,Syngnathus_acus:30.4751):22.15077,(Hippocampus_comes:16.73277,Hippocampus_zosterae:16.73277):35.8931):42.03993):20.8362):11.27724,Myripristis_murdjan:126.77924):12.69576,Gadus_morhua:139.475):29.85315,Hypomesus_transpacificus:169.32815):128.96946)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :2526
+Synonymous  sites      :609.6612185791851
+Nonsynonymous  sites   :1823.829656693939
+
+Total tree lengths:
+	E[syn]        : 1.186727496494612
+	E[non-syn]    : 1.157040725183008
+	dS            : 4.916949881003529
+	dN            : 1.602498819495147
+
+
+E[Syn subs/nucleotide site] tree: 
+	(Esox_lucius:0.08945543110075743,((Oncorhynchus_tshawytscha:0.001567350584561636,Oncorhynchus_keta:0.002101732633177429)Node3:0.00512035976624219,Salmo_salar:0.006280709618866024)Node2:0.0151910534853064,((((Sphaeramia_orbicularis:0.1190385476738742,((Thunnus_albacares:0.003023632634908323,Thunnus_maccoyii:0.001811868362349646)Node13:0.02856033810774975,((Syngnathus_scovelli:0.01144963291496709,Syngnathus_acus:0.009488426197212818)Node17:0.05328909113120541,(Hippocampus_comes:0.009596558620163795,Hippocampus_zosterae:0.006963577032818844)Node20:0.02693490526225226)Node16:0.1188806893795037)Node12:0.02902355392426217)Node10:0.02828895904665596,Myripristis_murdjan:0.05866993197232304)Node9:0.02723285221103422,Gadus_morhua:0.2282349116283675)Node8:0.04968269331041299,Hypomesus_transpacificus:0.1091229597357906)Node7:0.1477177301598483)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(Esox_lucius:0.07705880625683173,((Oncorhynchus_tshawytscha:0.002412440284127731,Oncorhynchus_keta:0.004632122757046601)Node3:0.00982554085969338,Salmo_salar:0.01661805284816004)Node2:0.03612996907140089,((((Sphaeramia_orbicularis:0.1090334077625091,((Thunnus_albacares:0.001168048553078877,Thunnus_maccoyii:0.004495715989699421)Node13:0.0411632563760378,((Syngnathus_scovelli:0.007224913092008741,Syngnathus_acus:0.01193954841873316)Node17:0.04685433153552928,(Hippocampus_comes:0.003906119732970623,Hippocampus_zosterae:0.01298709791993571)Node20:0.0209232483832921)Node16:0.145953310036054)Node12:0.01183961874422114)Node10:0.07262538441134922,Myripristis_murdjan:0.06315643845741216)Node9:0.04299938340438562,Gadus_morhua:0.1910102490875148)Node8:0.06716125265276229,Hypomesus_transpacificus:0.09110986193663563)Node7:0.0648126066116181)
+
+dS tree: 
+	(Esox_lucius:0.3706393191404288,((Oncorhynchus_tshawytscha:0.006493979698806224,Oncorhynchus_keta:0.008708076665559851)Node3:0.02121510828533676,Salmo_salar:0.02602276807803048)Node2:0.06294085950441672,((((Sphaeramia_orbicularis:0.4932105934587199,((Thunnus_albacares:0.01252777083898836,Thunnus_maccoyii:0.007507086466745231)Node13:0.1183336119497744,((Syngnathus_scovelli:0.04743908889367941,Syngnathus_acus:0.03931325110364808)Node17:0.2207918760375299,(Hippocampus_comes:0.03976127451739043,Hippocampus_zosterae:0.02885208218737264)Node20:0.1115989809078076)Node16:0.4925565416026593)Node12:0.1202528469557951)Node10:0.1172092112376535,Myripristis_murdjan:0.2430862315754126)Node9:0.1128334599425365,Gadus_morhua:0.9456422176841739)Node8:0.2058495431193366,Hypomesus_transpacificus:0.4521274896490818)Node7:0.6120366115026435)
+
+dN tree: 
+	(Esox_lucius:0.1067262745127198,((Oncorhynchus_tshawytscha:0.003341224404012016,Oncorhynchus_keta:0.006415479670129763)Node3:0.01360835213995561,Salmo_salar:0.02301596606919115)Node2:0.05003992644784255,((((Sphaeramia_orbicularis:0.1510110261653216,((Thunnus_albacares:0.001617744636538922,Thunnus_maccoyii:0.006226556602093044)Node13:0.05701101812016445,((Syngnathus_scovelli:0.01000648849163695,Syngnathus_acus:0.01653624788643354)Node17:0.06489314450193097,(Hippocampus_comes:0.005409967103709386,Hippocampus_zosterae:0.01798710160532429)Node20:0.02897865226734005)Node16:0.2021450083333857)Node12:0.01639784551048198)Node10:0.1005859951611992,Myripristis_murdjan:0.0874715261690663)Node9:0.05955404995243217,Gadus_morhua:0.2645487682603411)Node8:0.09301818488268325,Hypomesus_transpacificus:0.12618695523853)Node7:0.08976531536268409)
+
+Estimating pairwise dN/dS: total of 91 analyses

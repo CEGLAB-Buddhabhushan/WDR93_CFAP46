@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Aves_group1/gBGC/`) 
+
+A tree was found in the data file:
+(Struthio_camelus_australis:65.07832,(Nothoprocta_perdicaria:62.3538,((Apteryx_australis_mantelli:3.8,Apteryx_rowi:3.8):57.49895,Dromaius_novaehollandiae:61.29895):1.05485):2.72452,((Anas_platyrhynchos:10.52724,Aythya_fuligula:10.52724):23.8111,(Cygnus_atratus:34.04907,Oxyura_jamaicensis:34.04907):0.28927):115.74698)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :9168
+Synonymous  sites      :2093.132040465936
+Nonsynonymous  sites   :6684.171709955373
+
+Total tree lengths:
+	E[syn]        : 0.1751220121917808
+	E[non-syn]    : 0.183476925899353
+	dS            : 0.7670412457194311
+	dN            : 0.2516566793369376
+
+
+E[Syn subs/nucleotide site] tree: 
+	(Struthio_camelus_australis:0.02743936976430229,(Nothoprocta_perdicaria:0.0418540244757358,((Apteryx_australis_mantelli:0.0004021663572742471,Apteryx_rowi:0)Node5:0.01090133822456984,Dromaius_novaehollandiae:0.01209700449128978)Node4:0.0007700248887674179)Node2:0.0007210992551948485,((Anas_platyrhynchos:0.002221674124746864,Aythya_fuligula:0.003564232116097243)Node10:0.005604041729383641,(Cygnus_atratus:0.005696624022320542,Oxyura_jamaicensis:0.006259686512567929)Node13:0.0001597547614323946)Node9:0.05743097146809795)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(Struthio_camelus_australis:0.02166179579007992,(Nothoprocta_perdicaria:0.04129371828205265,((Apteryx_australis_mantelli:9.836874568447075e-05,Apteryx_rowi:0.0002935201122185213)Node5:0.009419570023708385,Dromaius_novaehollandiae:0.01345851086721345)Node4:0.001568100193103569)Node2:0.004720520036365086,((Anas_platyrhynchos:0.003327214191262787,Aythya_fuligula:0.002733792532814998)Node10:0.006676809478167007,(Cygnus_atratus:0.004184763655525351,Oxyura_jamaicensis:0.01168607927733344)Node13:0.0001881382090467056)Node9:0.0621660245047767)
+
+dS tree: 
+	(Struthio_camelus_australis:0.1201855101043337,(Nothoprocta_perdicaria:0.1833222601227438,((Apteryx_australis_mantelli:0.001761504335230351,Apteryx_rowi:0)Node5:0.04774828673522604,Dromaius_novaehollandiae:0.052985351631929)Node4:0.003372739055032671)Node2:0.003158442871169627,((Anas_platyrhynchos:0.00973101934417153,Aythya_fuligula:0.0156114757256812)Node10:0.02454592141428039,(Cygnus_atratus:0.02495143546940735,Oxyura_jamaicensis:0.02741767114436216)Node13:0.000699732087845812)Node9:0.2515498956780175)
+
+dN tree: 
+	(Struthio_camelus_australis:0.02971128696584287,(Nothoprocta_perdicaria:0.05663840272774594,((Apteryx_australis_mantelli:0.0001349224256300934,Apteryx_rowi:0.0004025917504200936)Node5:0.01291986826860483,Dromaius_novaehollandiae:0.01845967353693801)Node4:0.002150803898254359)Node2:0.006474658277993888,((Anas_platyrhynchos:0.004563602048113886,Aythya_fuligula:0.003749665781852758)Node10:0.009157901973802498,(Cygnus_atratus:0.005739815620941398,Oxyura_jamaicensis:0.0160286089980337)Node13:0.0002580500883858523)Node9:0.08526682697437736)
+
+Estimating pairwise dN/dS: total of 36 analyses

@@ -1,0 +1,11 @@
+ALPHABET: A C G T 
+ORDER: 0
+SUBST_MOD: HKY85
+TRAINING_LNL: -24866.679060
+BACKGROUND: 0.333254 0.176648 0.209431 0.280667 
+RATE_MAT:
+  -0.890377    0.106156    0.615556    0.168665 
+   0.200268   -1.151055    0.125857    0.824930 
+   0.979495    0.106156   -1.254315    0.168665 
+   0.200268    0.519199    0.125857   -0.845323 
+TREE: ((Struthio_camelus_australis:0.0464942,(Nothoprocta_perdicaria:0.0788432,((Apteryx_australis_mantelli:0.00141076,Apteryx_rowi:0.000933219):0.0193731,Dromaius_novaehollandiae:0.0248346):0.00254018):0.0062117):0.0562363,((Anas_platyrhynchos:0.00535241,Aythya_fuligula:0.00610195):0.0114706,(Cygnus_atratus:0.00950031,Oxyura_jamaicensis:0.0175135):0.000805718):0.0562363);

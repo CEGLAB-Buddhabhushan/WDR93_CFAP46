@@ -1,0 +1,163 @@
+[2J[H     /HYPHY 2.3.14.20230213beta(MP) for Linux on x86_64\     
+***************** TYPES OF STANDARD ANALYSES *****************
+
+
+	(1) Selection Analyses
+	(2) Evolutionary Hypothesis Testing
+	(3) Relative evolutionary rate inference
+	(4) Coevolutionary analysis
+	(5) Basic Analyses
+	(6) Codon Selection Analyses
+	(7) Compartmentalization
+	(8) Data File Tools
+	(9) Miscellaneous
+	(10) Model Comparison
+	(11) Kernel Analysis Tools
+	(12) Molecular Clock
+	(13) Phylogeny Reconstruction
+	(14) Positive Selection
+	(15) Recombination
+	(16) Selection/Recombination
+	(17) Relative Rate
+	(18) Relative Ratio
+	(19) Substitution Rates
+
+ Please select type of analyses you want to list (or press ENTER to process custom batch file):[2J[H***************** FILES IN 'Selection Analyses' ***************** 
+
+
+	(1) [MEME] Test for episodic site-level selection using MEME (Mixed Effects Model of Evolution).
+	(2) [FEL] Test for pervasive site-level selection using FEL (Fixed Effects Likelihood).
+	(3) [SLAC] Test for pervasive site-level selection using SLAC (Single Likelihood Ancestor Counting).
+	(4) [FUBAR] Test for pervasive site-level selection using FUBAR (Fast Unconstrained Bayesian AppRoximation for inferring selection).
+	(5) [BUSTED] Test for episodic gene-wide selection using BUSTED (Branch-site Unrestricted Statistical Test of Episodic Diversification).
+	(6) [aBSREL] Test for lineage-specific evolution using the branch-site method aBS-REL (Adaptive Branch-Site Random Effects Likelihood).
+	(7) [RELAX] Test for relaxation of selection pressure along a specified set of test branches using RELAX (a random effects test of selection relaxation).
+
+ Please select the analysis you would like to perform (or press ENTER to return to the list of analysis types):
+Analysis Description
+--------------------
+MEME (Mixed Effects Model of Evolution) estimates a site-wise synonymous
+(&alpha;) and a two-category mixture of non-synonymous (&beta;-, with
+proportion p-, and &beta;+ with proportion [1-p-]) rates, and uses a
+likelihood ratio test to determine if &beta;+ > &alpha; at a site. The
+estimates aggregate information over a proportion of branches at a site,
+so the signal is derived from episodic diversification, which is a
+combination of strength of selection [effect size] and the proportion of
+the tree affected. A subset of branches can be selected for testing as
+well, in which case an additional (nuisance) parameter will be inferred
+-- the non-synonymous rate on branches NOT selected for testing.
+Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Detecting Individual Sites Subject to Episodic Diversifying Selection.
+_PLoS Genet_ 8(7): e1002764.
+
+- __Written by__: Sergei L. Kosakovsky Pond, Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.0.1
+
+
+
+####Choose Genetic Code
+
+1. [**Universal**] Universal code. (Genebank transl_table=1).
+2. [**Vertebrate mtDNA**] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+3. [**Yeast mtDNA**] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+4. [**Mold/Protozoan mtDNA**] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+5. [**Invertebrate mtDNA**] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+6. [**Ciliate Nuclear**] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+7. [**Echinoderm mtDNA**] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+8. [**Euplotid Nuclear**] Euplotid Nuclear code. (Genebank transl_table=10).
+9. [**Alt. Yeast Nuclear**] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+10. [**Ascidian mtDNA**] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+11. [**Flatworm mtDNA**] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+12. [**Blepharisma Nuclear**] Blepharisma Nuclear code. (Genebank transl_table=15).
+13. [**Chlorophycean mtDNA**] Chlorophycean Mitochondrial Code (transl_table=16).
+14. [**Trematode mtDNA**] Trematode Mitochondrial Code (transl_table=21).
+15. [**Scenedesmus obliquus mtDNA**] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+16. [**Thraustochytrium mtDNA**] Thraustochytrium Mitochondrial Code (transl_table=23).
+17. [**Pterobranchia mtDNA**] Pterobranchia Mitochondrial Code (transl_table=24).
+18. [**SR1 and Gracilibacteria**] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+19. [**Pachysolen Nuclear**] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+>Please choose an option (or press q to cancel selection):
+
+>Select a coding sequence alignment file (`/usr/local/lib/hyphy/TemplateBatchFiles/SelectionAnalyses/`) 
+
+>Please select a tree file for the data: (`/usr/local/lib/hyphy/TemplateBatchFiles/SelectionAnalyses/`) 
+>Loaded a multiple sequence alignment with **14** sequences, **842** codons, and **1** partitions from `/media/morpheus/sagar/BUDDHA/WDR93_mol_evo_analysis/Actinopterygii_group4/MEME/Actinopterygii_group4.aln`
+
+
+####Choose the set of branches to test for selection
+
+1. [**All**] Include all branches in the analysis
+2. [**Internal**] Include all internal branches in the analysis
+3. [**Leaves**] Include all leaf branches in the analysis
+4. [**Unlabeled branches**] Set of 24 unlabeled branches
+5. [**fg**] Set fg with 1 branches
+
+>Please choose an option (or press q to cancel selection):
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+
+### Branches to include in the MEME analysis
+Selected 1 branches to include in the MEME analysis: `Myripristis_murdjan`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+* Log(L) = -16390.38, AIC-c = 32846.82 (33 estimated parameters)
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -15968.21, AIC-c = 32018.71 (41 estimated parameters)
+* non-synonymous/synonymous rate ratio for *background* =   0.3368
+* non-synonymous/synonymous rate ratio for *test* = 10000.0000
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -15968.21
+* non-synonymous/synonymous rate ratio for *background* =   0.3367
+* non-synonymous/synonymous rate ratio for *test* = 10000.0000
+
+### For partition 1 these sites are significant at p <=0.1
+
+|   Codon    | Partition  |   alpha    |   beta+    |     p+     |    LRT     |Episodic selection detected?| # branches |
+|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:--------------------------:|:----------:|
+|    151     |     1      |    0.000   |10000.000...|    1.000   |    6.865   |      Yes, p =  0.0145      |     1      |
+|    190     |     1      |    1.476   |10000.000...|    1.000   |    5.801   |      Yes, p =  0.0250      |     0      |
+|    209     |     1      |    0.534   |10000.000...|    1.000   |    4.778   |      Yes, p =  0.0423      |     0      |
+|    213     |     1      |    0.503   |10000.000...|    1.000   |    7.096   |      Yes, p =  0.0129      |     1      |
+|    258     |     1      |    0.587   |10000.000...|    1.000   |   18.059   |      Yes, p =  0.0001      |     1      |
+|    262     |     1      |    0.607   |10000.000...|    1.000   |    4.041   |      Yes, p =  0.0619      |     0      |
+|    300     |     1      |    0.000   |10000.000...|    1.000   |    7.476   |      Yes, p =  0.0106      |     1      |
+|    303     |     1      |    0.000   |10000.000...|    1.000   |    6.523   |      Yes, p =  0.0172      |     1      |
+|    311     |     1      |    0.846   |10000.000...|    1.000   |    8.556   |      Yes, p =  0.0061      |     1      |
+|    329     |     1      |    1.143   |10000.000...|    1.000   |    5.417   |      Yes, p =  0.0304      |     0      |
+|    368     |     1      |    8.569   |10000.000...|    1.000   |    8.435   |      Yes, p =  0.0065      |     1      |
+|    432     |     1      |    2.098   |10000.000...|    1.000   |    7.086   |      Yes, p =  0.0129      |     1      |
+|    450     |     1      |    2.462   |10000.000...|    1.000   |    4.623   |      Yes, p =  0.0458      |     0      |
+|    467     |     1      |    0.452   |10000.000...|    1.000   |    7.032   |      Yes, p =  0.0133      |     1      |
+|    496     |     1      |    8.355   |10000.000...|    1.000   |    3.744   |      Yes, p =  0.0723      |     0      |
+|    502     |     1      |    1.350   |10000.000...|    1.000   |    8.181   |      Yes, p =  0.0074      |     1      |
+|    526     |     1      |    0.855   |10000.000...|    1.000   |   18.093   |      Yes, p =  0.0000      |     1      |
+|    536     |     1      |    0.000   |10000.000...|    1.000   |    4.196   |      Yes, p =  0.0571      |     0      |
+|    541     |     1      |    0.000   |10000.000...|    1.000   |    3.687   |      Yes, p =  0.0745      |     0      |
+|    577     |     1      |    3.194   |10000.000...|    1.000   |   14.954   |      Yes, p =  0.0002      |     1      |
+|    604     |     1      |    0.219   |10000.000...|    1.000   |    7.696   |      Yes, p =  0.0095      |     1      |
+|    614     |     1      |    1.352   |10000.000...|    1.000   |    3.363   |      Yes, p =  0.0883      |     0      |
+|    633     |     1      |    0.614   |10000.000...|    1.000   |    3.246   |      Yes, p =  0.0938      |     0      |
+|    634     |     1      |    1.199   |10000.000...|    1.000   |   17.001   |      Yes, p =  0.0001      |     1      |
+|    638     |     1      |    0.567   |10000.000...|    1.000   |    4.557   |      Yes, p =  0.0474      |     0      |
+|    655     |     1      |    1.864   |10000.000...|    1.000   |    4.813   |      Yes, p =  0.0415      |     0      |
+|    670     |     1      |    1.333   |10000.000...|    1.000   |    5.546   |      Yes, p =  0.0285      |     0      |
+|    697     |     1      |    0.791   |10000.000...|    1.000   |    4.781   |      Yes, p =  0.0422      |     0      |
+|    706     |     1      |    0.456   |10000.000...|    1.000   |    3.839   |      Yes, p =  0.0688      |     0      |
+|    717     |     1      |    1.901   |10000.000...|    1.000   |    5.017   |      Yes, p =  0.0374      |     0      |
+|    760     |     1      |    1.016   |10000.000...|    1.000   |   17.746   |      Yes, p =  0.0001      |     1      |
+|    761     |     1      |    2.525   |10000.000...|    1.000   |    3.676   |      Yes, p =  0.0749      |     0      |
+|    769     |     1      |    0.000   |10000.000...|    1.000   |   11.189   |      Yes, p =  0.0016      |     1      |
+|    771     |     1      |    1.573   |10000.000...|    1.000   |    3.698   |      Yes, p =  0.0740      |     0      |
+|    782     |     1      |    2.643   |10000.000...|    1.000   |    3.535   |      Yes, p =  0.0806      |     0      |
+
+### ** Found _35_ sites under episodic diversifying positive selection at p <= 0.1**

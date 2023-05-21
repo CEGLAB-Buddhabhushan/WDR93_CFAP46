@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Chondrichthyes/gBGC/`) 
+
+A tree was found in the data file:
+((Amblyraja_radiata:213.32368,Pristis_pectinata:213.32368):57.01453,(Chiloscyllium_punctatum:218.96342,(Carcharodon_carcharias:179.0745,Scyliorhinus_canicula:179.0745):39.88892):51.37479,Callorhinchus_milii:555.93539)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :2115
+Synonymous  sites      :485.9955920641117
+Nonsynonymous  sites   :1545.830858455203
+
+Total tree lengths:
+	E[syn]        : 0.749278074301398
+	E[non-syn]    : 0.5692230006583305
+	dS            : 3.260776749881309
+	dN            : 0.7788087809266988
+
+
+E[Syn subs/nucleotide site] tree: 
+	((Amblyraja_radiata:0.05453953753733996,Pristis_pectinata:0.02138556687870403)Node1:0.03576128498141804,(Chiloscyllium_punctatum:0.06686434318165509,(Carcharodon_carcharias:0.02310780388435546,Scyliorhinus_canicula:0.03801811644715505)Node6:0.01018596229591289)Node4:0.02758613114446539,Callorhinchus_milii:0.4718293279503921)
+
+E[Non-syn subs/nucleotide site] tree: 
+	((Amblyraja_radiata:0.04333834339909201,Pristis_pectinata:0.02894801190737206)Node1:0.04126066779787065,(Chiloscyllium_punctatum:0.06555020052050341,(Carcharodon_carcharias:0.02057255450423304,Scyliorhinus_canicula:0.04538752952400594)Node6:0.01099311470269249)Node4:0.03985945205869314,Callorhinchus_milii:0.2733131262438679)
+
+dS tree: 
+	((Amblyraja_radiata:0.2373501401557096,Pristis_pectinata:0.09306766293158539)Node1:0.1556292258011293,(Chiloscyllium_punctatum:0.2909863548938215,(Carcharodon_carcharias:0.1005626512122039,Scyliorhinus_canicula:0.165450711073786)Node6:0.04432820092947224)Node4:0.1200518447559244,Callorhinchus_milii:2.053349958127676)
+
+dN tree: 
+	((Amblyraja_radiata:0.05929535937759638,Pristis_pectinata:0.03960656164237528)Node1:0.05645269138934409,(Chiloscyllium_punctatum:0.0896855392312524,(Carcharodon_carcharias:0.02814729214290283,Scyliorhinus_canicula:0.06209904817089948)Node6:0.01504073842815474)Node4:0.05453555325476058,Callorhinchus_milii:0.3739459972894131)
+
+Estimating pairwise dN/dS: total of 15 analyses

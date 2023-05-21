@@ -1,0 +1,213 @@
+BLASTN 2.13.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: Gallus_gallus_GCA_024206055.1_ASM2420605v1_genomic.fna
+           40 sequences; 1,100,561,203 total letters
+
+
+
+Query= Exon1
+
+Length=69
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+CP100567_1                                                            49.1    1e-04
+CP100592_1                                                            44.6    0.002
+CP100556_1                                                            44.6    0.002
+CP100557_1                                                            43.7    0.006
+
+
+
+Query_1  1          ATGACGGCGCGGAGGGGGCCGGGGTGGCGGCGGGAGGTGCTGGGGCCCTGCCCGCACTCT  60
+12       3805372            ....C....T......-............---C.......G....T......  3805420
+                                                                            \   
+                                                                            |   
+                                                                            G
+37       1562884      ..G..G....G.....AG..............G..G..CC......C..           1562836
+1        34455441     ..........C.A...G....-.............                         34455474
+1        137426296      .....G.........TC...--..............C....G.G......        137426247
+                                                           \                    
+                                                           |                    
+                                                          AC
+2        33696259         ...G......................                              33696234
+2        3859277    ...C...-.A..............C...........--..G.....G.......        3859332
+                                             \                                  
+                                             |                                  
+                                         CGGGC
+
+Query_1  61         GTGGCC  66
+12       3805421    ..T...  3805426
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 45122963403
+
+
+Query= Exon2
+
+Length=230
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 220112000600
+
+
+Query= Exon3
+
+Length=174
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 159581206235
+
+
+Query= Exon4
+
+Length=304
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 301553440822
+
+
+Query= Exon5
+
+Length=219
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+CP100557_1                                                            52.7    5e-05
+CP100559_1                                                            47.3    0.002
+CP100555_1                                                            44.6    0.008
+
+
+
+Query_5  22         AAACTTGAAAATGAAAAACTTCAAATGGAGAAATTACAGAAGCAGAAGG  70
+2        46984447   .....................A.....A...G....               46984482
+4        28313488         .....GT...T......T...T............TC.......  28313530
+0        171293315    ....TT..........A..................              171293350
+                                     \                               
+                                     |                               
+                                     G
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 208005840567
+
+
+Query= Exon6
+
+Length=217
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 205804720561
+
+
+Query= Exon7
+
+Length=103
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 81441443182
+
+
+Query= Exon8
+
+Length=247
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 238821520651
+
+
+  Database: Gallus_gallus_GCA_024206055.1_ASM2420605v1_genomic.fna
+    Posted date:  Feb 20, 2023  3:45 PM
+  Number of letters in database: 1,100,561,203
+  Number of sequences in database:  40
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2

@@ -1,0 +1,11 @@
+ALPHABET: A C G T 
+ORDER: 0
+SUBST_MOD: HKY85
+TRAINING_LNL: -8017.306693
+BACKGROUND: 0.276492 0.234376 0.225894 0.263238 
+RATE_MAT:
+  -0.944047    0.188105    0.544673    0.211269 
+   0.221906   -1.037921    0.181297    0.634718 
+   0.666674    0.188105   -1.066048    0.211269 
+   0.221906    0.565125    0.181297   -0.968328 
+TREE: ((Sphaerodactylus_townsendi:0.388972,Python_bivittatus:0.0430312):0.028958,(((Pseudonaja_textilis:0.0067832,Notechis_scutatus:0.00546243):0.0353041,(Pantherophis_guttatus:0.0286514,Thamnophis_elegans:0.0396625):0.00746977):0.0178386,(Crotalus_tigris:0.013575,Protobothrops_mucrosquamatus:0.0128041):0.0232693):0.028958);

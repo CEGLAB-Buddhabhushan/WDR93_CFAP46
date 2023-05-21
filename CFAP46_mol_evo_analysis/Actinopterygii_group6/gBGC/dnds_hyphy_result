@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Actinopterygii_group6/gBGC/`) 
+
+A tree was found in the data file:
+(((Electrophorus_electricus:121.4117,((((((Ictalurus_furcatus:21.99814,Ictalurus_punctatus:21.99814):37.0373,Pangasianodon_hypophthalmus:59.03544):2.22036,Clarias_gariepinus:61.2558):1.14275,Silurus_meridionalis:62.39855):0.90485,Tachysurus_fulvidraco:63.3034):51.11214,(Pygocentrus_nattereri:40.22104,Colossoma_macropomum:40.22104):74.1945):6.99616):20.69991,((Misgurnus_anguillicaudatus:84.86919,(Myxocyprinus_asiaticus:49.88402,Xyrauchen_texanus:49.88402):34.98517):11.99227,((((Carassius_auratus:4.24537,Carassius_gibelio:4.24537):21.58907,Cyprinus_carpio:25.83444):22.74924,(Danio_rerio:47.8501,(Pimephales_promelas:40.87909,(Megalobrama_amblycephala:21.7446,Ctenopharyngodon_idella:21.7446):19.13449):6.97101):0.73358):5.59066,Labeo_rohita:54.17434):42.68712):45.25015):26.02342,Chanos_chanos:168.13503,Denticeps_clupeoides:249.73809)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :12528
+Synonymous  sites      :3024.557577015791
+Nonsynonymous  sites   :9041.022064348583
+
+Total tree lengths:
+	E[syn]        : 1.546930574610697
+	E[non-syn]    : 1.530056873409212
+	dS            : 6.407530934770378
+	dN            : 2.120175393184566
+
+
+E[Syn subs/nucleotide site] tree: 
+	(((Electrophorus_electricus:0.07113952054152066,((((((Ictalurus_furcatus:0.003495258132748034,Ictalurus_punctatus:0.003553769910279735)Node9:0.02009370485181194,Pangasianodon_hypophthalmus:0.01422769620672)Node8:0.0007470534271171807,Clarias_gariepinus:0.05233071807849753)Node7:0.0008081850141516304,Silurus_meridionalis:0.05062917360769901)Node6:0.001280077870316177,Tachysurus_fulvidraco:0.04285727921409685)Node5:0.07073464707087172,(Pygocentrus_nattereri:0.01736991909388827,Colossoma_macropomum:0.0116897970504251)Node16:0.04841926872412972)Node4:0.009031805902698774)Node2:0.06222019075413753,((Misgurnus_anguillicaudatus:0.1193483488941853,(Myxocyprinus_asiaticus:0.007460056585598705,Xyrauchen_texanus:0.02110884377018876)Node22:0.05532212287135505)Node20:0.0181437042360122,((((Carassius_auratus:0.00254035992669228,Carassius_gibelio:0.003409018784978997)Node28:0.02067837983887212,Cyprinus_carpio:0.01032870891444473)Node27:0.02989633611696279,(Danio_rerio:0.1227122163075983,(Pimephales_promelas:0.05247365131341103,(Megalobrama_amblycephala:0.01042823770996452,Ctenopharyngodon_idella:0.007921138204786212)Node36:0.01433262739696441)Node34:0.01880807716832812)Node32:0.005540802311949591)Node26:0,Labeo_rohita:0.03103695614363217)Node25:0.02788751927864397)Node19:0.0910008499047668)Node1:0.03585043595584494,Chanos_chanos:0.1280065430928522,Denticeps_clupeoides:0.2320675744315548)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(((Electrophorus_electricus:0.07263331991353755,((((((Ictalurus_furcatus:0.004976276765114054,Ictalurus_punctatus:0.005541069700016869)Node9:0.02159816915626904,Pangasianodon_hypophthalmus:0.01920795893023268)Node8:0.0004533681717479752,Clarias_gariepinus:0.05560194483544732)Node7:0.00154966312438515,Silurus_meridionalis:0.05289809063794865)Node6:0.002939360962767109,Tachysurus_fulvidraco:0.05101246486436419)Node5:0.06556690764641131,(Pygocentrus_nattereri:0.01817517579478033,Colossoma_macropomum:0.01364583445899017)Node16:0.0423288665371376)Node4:0.009203729930212729)Node2:0.04451496072178365,((Misgurnus_anguillicaudatus:0.1260986014830856,(Myxocyprinus_asiaticus:0.01133594572996185,Xyrauchen_texanus:0.02429453569070895)Node22:0.0466731414643751)Node20:0.009452583695974357,((((Carassius_auratus:0.002796908748545243,Carassius_gibelio:0.001782039821429548)Node28:0.02520804521997442,Cyprinus_carpio:0.01048469811767056)Node27:0.02981127865184078,(Danio_rerio:0.1472083762484208,(Pimephales_promelas:0.06418795071418461,(Megalobrama_amblycephala:0.01114639869939325,Ctenopharyngodon_idella:0.007491939416179208)Node36:0.01012850250422634)Node34:0.01978292993180102)Node32:0.01368885858103391)Node26:0.001681905393204598,Labeo_rohita:0.02905810591920247)Node25:0.04548374782691766)Node19:0.07703340212063491)Node1:0.0367728503875157,Chanos_chanos:0.1066209994501398,Denticeps_clupeoides:0.1899859654416443)
+
+dS tree: 
+	(((Electrophorus_electricus:0.294666539039246,((((((Ictalurus_furcatus:0.01447768566874888,Ictalurus_punctatus:0.01472004691671706)Node9:0.08323000239654083,Pangasianodon_hypophthalmus:0.05893244666006816)Node8:0.003094365075423121,Clarias_gariepinus:0.2167587223564348)Node7:0.003347577819061225,Silurus_meridionalis:0.2097107662215754)Node6:0.005302202107570371,Tachysurus_fulvidraco:0.1775188536909781)Node5:0.2929895153056478,(Pygocentrus_nattereri:0.07194782736552814,Colossoma_macropomum:0.04842023129618241)Node16:0.200557133772405)Node4:0.03741058368630933)Node2:0.2577218419286734,((Misgurnus_anguillicaudatus:0.4943520091363587,(Myxocyprinus_asiaticus:0.03090025120189425,Xyrauchen_texanus:0.08743480261792487)Node22:0.2291494004277365)Node20:0.0751529177014487,((((Carassius_auratus:0.01052240810472583,Carassius_gibelio:0.01412047423489796)Node28:0.08565178080590309,Cyprinus_carpio:0.04278247710127425)Node27:0.1238334167349046,(Danio_rerio:0.5082854621727588,(Pimephales_promelas:0.2173507651664656,(Megalobrama_amblycephala:0.04319473466904127,Ctenopharyngodon_idella:0.03281009433699518)Node36:0.05936708145140813)Node34:0.07790481244443657)Node32:0.02295052072792532)Node26:0,Labeo_rohita:0.1285579714276981)Node25:0.1155127097522692)Node19:0.3769340204565615)Node1:0.148495854424424,Chanos_chanos:0.5302150582464775,Denticeps_clupeoides:0.9612455701197384)
+
+dN tree: 
+	(((Electrophorus_electricus:0.1006468323382376,((((((Ictalurus_furcatus:0.006895547303129023,Ictalurus_punctatus:0.007678171860187029)Node9:0.02992823834118519,Pangasianodon_hypophthalmus:0.02661616217339619)Node8:0.0006282250408452984,Clarias_gariepinus:0.07704672767532655)Node7:0.002147343462289843,Silurus_meridionalis:0.07330004006134119)Node6:0.004073025580454612,Tachysurus_fulvidraco:0.07068715851727118)Node5:0.09085501762387585,(Pygocentrus_nattereri:0.02518505106351756,Colossoma_macropomum:0.01890881505270902)Node16:0.05865443488611466)Node4:0.01275346169327294)Node2:0.06168367071258634,((Misgurnus_anguillicaudatus:0.1747328198223926,(Myxocyprinus_asiaticus:0.01570803910157192,Xyrauchen_texanus:0.03366455041995647)Node22:0.06467422732783931)Node20:0.0130982943853372,((((Carassius_auratus:0.003875631820427312,Carassius_gibelio:0.002469344143169941)Node28:0.03493038599708292,Cyprinus_carpio:0.01452847886923511)Node27:0.04130901310627105,(Danio_rerio:0.203984297849747,(Pimephales_promelas:0.08894421900796949,(Megalobrama_amblycephala:0.01544538680606129,Ctenopharyngodon_idella:0.01038146089433925)Node36:0.01403490429177381)Node34:0.02741289031501334)Node32:0.0189684328920559)Node26:0.002330589463900992,Labeo_rohita:0.0402653536696128)Node25:0.0630261035444869)Node19:0.1067439560371042)Node1:0.05095555196922197,Chanos_chanos:0.1477430175044699,Denticeps_clupeoides:0.2632605205597862)
+
+Estimating pairwise dN/dS: total of 231 analyses

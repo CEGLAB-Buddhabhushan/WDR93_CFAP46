@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Actinopterygii_group7/gBGC/`) 
+
+A tree was found in the data file:
+((Lepisosteus_oculatus:321.403,((Megalops_cyprinoides:175.01,Anguilla_anguilla:175.01):88.40359,((Paramormyrops_kingsleyae:23.90546,Brienomyrus_brachyistius:23.90546):147.64604,Scleropages_formosus:171.5515):91.86209):57.98941):28.5405,(Acipenser_ruthenus:137.21,Polyodon_spathula:137.21):212.7335,(Polypterus_senegalus:45.2605,Erpetoichthys_calabaricus:45.2605):397.496)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :9978
+Synonymous  sites      :2356.464679868033
+Nonsynonymous  sites   :7235.041392739371
+
+Total tree lengths:
+	E[syn]        : 1.315178548676685
+	E[non-syn]    : 0.9182235298912993
+	dS            : 5.568872587316211
+	dN            : 1.266341667436736
+
+
+E[Syn subs/nucleotide site] tree: 
+	((Lepisosteus_oculatus:0.06587479186520107,((Megalops_cyprinoides:0.05644989234266928,Anguilla_anguilla:0.1154390477419829)Node4:0.09235765164249644,((Paramormyrops_kingsleyae:0.01134741755064065,Brienomyrus_brachyistius:0.01675503047550477)Node8:0.124302649577257,Scleropages_formosus:0.1061800845030837)Node7:0)Node3:0.3553577056994115)Node1:0.06685740434940844,(Acipenser_ruthenus:0.00712530243329153,Polyodon_spathula:0.01345352802195248)Node12:0.08901538375625166,(Polypterus_senegalus:0.008233645193165625,Erpetoichthys_calabaricus:0.00782340749270566)Node15:0.1786056060316618)
+
+E[Non-syn subs/nucleotide site] tree: 
+	((Lepisosteus_oculatus:0.07024595106619515,((Megalops_cyprinoides:0.06289377372600811,Anguilla_anguilla:0.09344078161932762)Node4:0.04424925499101898,((Paramormyrops_kingsleyae:0.01784694180351748,Brienomyrus_brachyistius:0.01547043822013534)Node8:0.09635421798895477,Scleropages_formosus:0.1126071843194376)Node7:0.04014337390864518)Node3:0.09195547127777676)Node1:0.0412764868591961,(Acipenser_ruthenus:0.01042247355273716,Polyodon_spathula:0.01197884399110355)Node12:0.05785925483801743,(Polypterus_senegalus:0.009107395970695811,Erpetoichthys_calabaricus:0.007765715514634982)Node15:0.1346059702438972)
+
+dS tree: 
+	((Lepisosteus_oculatus:0.2789342351898889,((Megalops_cyprinoides:0.2390262967262881,Anguilla_anguilla:0.4888046182954084)Node4:0.3910708511618506,((Paramormyrops_kingsleyae:0.04804847417727186,Brienomyrus_brachyistius:0.07094597916653227)Node8:0.5263358488154081,Scleropages_formosus:0.449599305359035)Node7:0)Node3:1.50469439145903)Node1:0.2830949202411795,(Acipenser_ruthenus:0.0301707334240055,Polyodon_spathula:0.05696639705652599)Node12:0.376918655606423,(Polypterus_senegalus:0.03486379933435178,Erpetoichthys_calabaricus:0.03312672607789254)Node15:0.7562713552251181)
+
+dN tree: 
+	((Lepisosteus_oculatus:0.09687769035321458,((Megalops_cyprinoides:0.08673814566809286,Anguilla_anguilla:0.128866176209206)Node4:0.06102509195641478,((Paramormyrops_kingsleyae:0.02461309834304528,Brienomyrus_brachyistius:0.02133561153021465)Node8:0.1328841584871392,Scleropages_formosus:0.1552989712355919)Node7:0.05536258372515033)Node3:0.1268177530166494)Node1:0.05692528397893785,(Acipenser_ruthenus:0.01437385572024158,Polyodon_spathula:0.01652027940893038)Node12:0.0797949332194698,(Polypterus_senegalus:0.01256020415955018,Erpetoichthys_calabaricus:0.01070986400752153)Node15:0.1856379664173662)
+
+Estimating pairwise dN/dS: total of 45 analyses

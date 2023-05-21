@@ -1,0 +1,51 @@
+BLASTN 2.13.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: Gallus_gallus_GCA_024206055.1_ASM2420605v1_genomic.fna
+           40 sequences; 1,100,561,203 total letters
+
+
+
+Query= Struthio_camelus_Exon6
+
+Length=89
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+CP100564_1                                                            92.4    2e-17
+
+
+
+Query_1  5         CCTCTTCTGGTTCTTTGGCAGAAAAGTCTGGAGCTGTATGGAGAGCGTTCTGCAGAGATG  64
+9        13983473  ..A......-............G...........A.C.CA.G..TG..............  13983415
+
+Query_1  65        GTAACTGACCTCAGTGAATGTCCTG  89
+9        13983414  .......G..........G..G...  13983390
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 67134165063
+
+
+  Database: Gallus_gallus_GCA_024206055.1_ASM2420605v1_genomic.fna
+    Posted date:  Feb 20, 2023  3:45 PM
+  Number of letters in database: 1,100,561,203
+  Number of sequences in database:  40
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2

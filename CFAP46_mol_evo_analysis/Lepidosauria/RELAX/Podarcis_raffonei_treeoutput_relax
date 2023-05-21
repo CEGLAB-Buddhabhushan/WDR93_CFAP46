@@ -1,0 +1,191 @@
+[2J[H            /HYPHY 2.5.48(MP) for Linux on x86_64\            
+***************** TYPES OF STANDARD ANALYSES *****************
+
+
+	(1) Selection Analyses
+	(2) Evolutionary Hypothesis Testing
+	(3) Relative evolutionary rate inference
+	(4) Coevolutionary analysis
+	(5) Basic Analyses
+	(6) Codon Selection Analyses
+	(7) Compartmentalization
+	(8) Data File Tools
+	(9) Miscellaneous
+	(10) Model Comparison
+	(11) Molecular Clock
+	(12) Phylogeny Reconstruction
+	(13) Positive Selection
+	(14) Recombination
+	(15) Selection/Recombination
+	(16) Relative Rate
+	(17) Relative Ratio
+
+ Please select type of analyses you want to list (or press ENTER to process custom batch file):[2J[H***************** FILES IN 'Selection Analyses' ***************** 
+
+
+	(1) [MEME] Test for episodic site-level selection using MEME (Mixed Effects Model of Evolution).
+	(2) [FEL] Test for pervasive site-level selection using FEL (Fixed Effects Likelihood).
+	(3) [SLAC] Test for pervasive site-level selection using SLAC (Single Likelihood Ancestor Counting).
+	(4) [FUBAR] Test for pervasive site-level selection using FUBAR (Fast Unconstrained Bayesian AppRoximation for inferring selection).
+	(5) [BUSTED] Test for episodic gene-wide selection using BUSTED (Branch-site Unrestricted Statistical Test of Episodic Diversification).
+	(6) [aBSREL] Test for lineage-specific evolution using the branch-site method aBS-REL (Adaptive Branch-Site Random Effects Likelihood).
+	(7) [RELAX] Test for relaxation of selection pressure along a specified set of test branches using RELAX (a random effects test of selection relaxation).
+	(8) [FADE] Test a protein alignment for directional selection towards specific amino acids along a specified set of test branches using FADE (a FUBAR Approach to Directional Evolution).
+	(9) [PRIME] 
+
+ Please select the analysis you would like to perform (or press ENTER to return to the list of analysis types):
+Analysis Description
+--------------------
+RELAX (a random effects test of selection relaxation) uses a random
+effects branch-site model framework to test whether a set of 'Test'
+branches evolves under relaxed selection relative to a set of
+'Reference' branches (R), as measured by the relaxation parameter (K).
+Version 2.1 adds a check for stability in K estimates to try to mitigate
+convergence problems. Version 3 provides support for >2 branch sets.
+Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword
+support. Version 3.1.1 adds some bug fixes for better convergence.
+Version 4.0 adds support for synonymous rate variation. Version 4.1 adds
+further support for multiple hit models
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree, with at least two
+groups of branches defined using the {} notation (one group can be
+defined as all unlabeled branches)
+
+- __Citation__: RELAX: Detecting Relaxed Selection in a Phylogenetic Framework (2015).
+Mol Biol Evol 32 (3): 820-832
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution g
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 3.1.1
+
+
+>code –> Universal
+
+
+>Select a coding sequence alignment file (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Lepidosauria/RELAX/`) 
+
+>Select a coding sequence alignment file (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Lepidosauria/RELAX/`) 
+
+>Please select a tree file for the data: (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Lepidosauria/RELAX/`) /media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Lepidosauria/RELAX/Podarcis_raffonei_treeLabled.txt
+/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Lepidosauria/RELAX/Podarcis_raffonei_treeLabled.txt
+
+>Loaded a multiple sequence alignment with **17** sequences, **2932** codons, and **1** partitions from `/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Lepidosauria/RELAX/Lepidosauria.aln`
+
+
+####Choose the set of branches to use as the _test_ set
+
+1. [**Unlabeled branches**] Set of 30 unlabeled branches
+2. [**fg**] Set fg with 1 branches
+
+>Please choose an option (or press q to cancel selection):The number of points in the initial distributional guess for likelihood fitting (permissible range = [1,10000], default value = 250, integer): 
+>grid-size –> 250
+The number of initial random guesses to 'seed' rate values optimization (permissible range = [1,25], default value = 1, integer): 
+>starting-points –> 1
+
+
+### Branch sets for RELAX analysis
+
+>multiple-hits –> None
+
+* Selected 30 branches as the _Reference_ set: `Gekko_japonicus, Sphaerodactylus_townsendi, Node1, Eublepharis_macularius, Hemicordylus_capensis, Pseudonaja_textilis, Notechis_scutatus, Node11, Pantherophis_guttatus, Thamnophis_sirtalis, Node14, Node10, Crotalus_tigris, Protobothrops_mucrosquamatus, Node17, Node9, Varanus_komodoensis, Anolis_carolinensis, Pogona_vitticeps, Node22, Node20, Node8, Podarcis_muralis, Node27, Lacerta_agilis, Node26, Zootoca_vivipara, Node25, Node7, Node5`
+
+* Selected 1 branches as the _Test_ set: `Podarcis_raffonei`
+The number omega rate classes to include in the model (permissible range = [2,10], default value = 3, integer): 
+>rates –> 3
+
+>models –> All
+
+>srv –> No
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths –> Yes
+* Log(L) = -53220.63, AIC-c = 106519.28 (39 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.202
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -51519.63, AIC-c = 103133.34 (47 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.259
+* non-synonymous/synonymous rate ratio for *Reference* =   0.3534
+* non-synonymous/synonymous rate ratio for *Test* =   0.1454
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -51453.53, AIC-c = 103001.16 (47 estimated parameters)
+* non-synonymous/synonymous rate ratio for *Reference* =   0.3323
+* non-synonymous/synonymous rate ratio for *Test* =   0.0906
+
+### Fitting the general descriptive (separate k per branch) model
+
+### * Log(L) = -51241.11, AIC-c = 102644.49 (81 estimated parameters)
+* The following baseline rate distribution for branch-site combinations was inferred
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.000     |   56.206    |                                   |
+|        Negative selection         |     0.445     |   42.953    |                                   |
+|      Diversifying selection       |    96.206     |    0.841    |                                   |
+
+* Branch-level relaxation or intensification parameter distribution has mean  0.44, median  0.43, and 95% of the weight in  0.06 -  0.95
+
+### Fitting the alternative model to test K != 1
+* Log(L) = -51283.23, AIC-c = 102668.56 (51 estimated parameters)
+* Relaxation/intensification parameter (K) =     1.13
+* The following rate distribution was inferred for **test** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.095     |   52.473    |                                   |
+|        Negative selection         |     0.310     |   42.871    |                                   |
+|      Diversifying selection       |     4.357     |    4.656    |                                   |
+
+* The following rate distribution was inferred for **reference** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.125     |   52.473    |                                   |
+|        Negative selection         |     0.354     |   42.871    |                                   |
+|      Diversifying selection       |     3.684     |    4.656    |                                   |
+
+
+### * Potential convergence issues due to flat likelihood surfaces; checking to see whether K > 1 or K < 1 is robustly inferred
+
+### Fitting the null (K := 1) model
+* Log(L) = -51283.44, AIC-c = 102666.99 (50 estimated parameters)
+* The following rate distribution for test/reference branches was inferred
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.125     |   52.488    |                                   |
+|        Negative selection         |     0.354     |   42.893    |                                   |
+|      Diversifying selection       |     3.738     |    4.618    |                                   |
+
+----
+## Test for relaxation (or intensification) of selection [RELAX]
+Likelihood ratio test **p =   0.5129**.
+>No significant evidence for relaxation (or intensification) of selection among **test** branches _relative_ to the **reference** branches at P<=0.05
+----
+
+
+### Fitting the partitioned descriptive model (completely separate rate distributions for branch sets)
+* Log(L) = -51272.11, AIC-c = 102654.35 (55 estimated parameters)
+* The following rate distribution was inferred for *test* branches 
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.058     |   81.763    |                                   |
+|        Negative selection         |     0.237     |   18.237    |                                   |
+|      Diversifying selection       |     2.962     |    0.000    |       Not supported by data       |
+
+* The following rate distribution was inferred for *reference* branches 
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.134     |   52.842    |                                   |
+|        Negative selection         |     0.350     |   42.624    |                                   |
+|      Diversifying selection       |     3.894     |    4.533    |                                   |
+
+

@@ -1,0 +1,161 @@
+[2J[H     /HYPHY 2.3.14.20230213beta(MP) for Linux on x86_64\     
+***************** TYPES OF STANDARD ANALYSES *****************
+
+
+	(1) Selection Analyses
+	(2) Evolutionary Hypothesis Testing
+	(3) Relative evolutionary rate inference
+	(4) Coevolutionary analysis
+	(5) Basic Analyses
+	(6) Codon Selection Analyses
+	(7) Compartmentalization
+	(8) Data File Tools
+	(9) Miscellaneous
+	(10) Model Comparison
+	(11) Kernel Analysis Tools
+	(12) Molecular Clock
+	(13) Phylogeny Reconstruction
+	(14) Positive Selection
+	(15) Recombination
+	(16) Selection/Recombination
+	(17) Relative Rate
+	(18) Relative Ratio
+	(19) Substitution Rates
+
+ Please select type of analyses you want to list (or press ENTER to process custom batch file):[2J[H***************** FILES IN 'Selection Analyses' ***************** 
+
+
+	(1) [MEME] Test for episodic site-level selection using MEME (Mixed Effects Model of Evolution).
+	(2) [FEL] Test for pervasive site-level selection using FEL (Fixed Effects Likelihood).
+	(3) [SLAC] Test for pervasive site-level selection using SLAC (Single Likelihood Ancestor Counting).
+	(4) [FUBAR] Test for pervasive site-level selection using FUBAR (Fast Unconstrained Bayesian AppRoximation for inferring selection).
+	(5) [BUSTED] Test for episodic gene-wide selection using BUSTED (Branch-site Unrestricted Statistical Test of Episodic Diversification).
+	(6) [aBSREL] Test for lineage-specific evolution using the branch-site method aBS-REL (Adaptive Branch-Site Random Effects Likelihood).
+	(7) [RELAX] Test for relaxation of selection pressure along a specified set of test branches using RELAX (a random effects test of selection relaxation).
+
+ Please select the analysis you would like to perform (or press ENTER to return to the list of analysis types):
+Analysis Description
+--------------------
+FEL (Fixed Effects Likelihood) estimates site-wise synonymous (&alpha;)
+and non-synonymous (&beta;) rates, and uses a likelihood ratio test to
+determine if beta &neq; alpha at a site. The estimates aggregate
+information over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well, in which case an additional (nuisance) parameter
+will be inferred -- the non-synonymous rate on branches NOT selected for
+testing. Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.00
+
+
+
+####Choose Genetic Code
+
+1. [**Universal**] Universal code. (Genebank transl_table=1).
+2. [**Vertebrate mtDNA**] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+3. [**Yeast mtDNA**] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+4. [**Mold/Protozoan mtDNA**] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+5. [**Invertebrate mtDNA**] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+6. [**Ciliate Nuclear**] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+7. [**Echinoderm mtDNA**] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+8. [**Euplotid Nuclear**] Euplotid Nuclear code. (Genebank transl_table=10).
+9. [**Alt. Yeast Nuclear**] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+10. [**Ascidian mtDNA**] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+11. [**Flatworm mtDNA**] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+12. [**Blepharisma Nuclear**] Blepharisma Nuclear code. (Genebank transl_table=15).
+13. [**Chlorophycean mtDNA**] Chlorophycean Mitochondrial Code (transl_table=16).
+14. [**Trematode mtDNA**] Trematode Mitochondrial Code (transl_table=21).
+15. [**Scenedesmus obliquus mtDNA**] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+16. [**Thraustochytrium mtDNA**] Thraustochytrium Mitochondrial Code (transl_table=23).
+17. [**Pterobranchia mtDNA**] Pterobranchia Mitochondrial Code (transl_table=24).
+18. [**SR1 and Gracilibacteria**] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+19. [**Pachysolen Nuclear**] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+>Please choose an option (or press q to cancel selection):
+
+>Select a coding sequence alignment file (`/usr/local/lib/hyphy/TemplateBatchFiles/SelectionAnalyses/`) 
+
+>Please select a tree file for the data: (`/usr/local/lib/hyphy/TemplateBatchFiles/SelectionAnalyses/`) 
+>Loaded a multiple sequence alignment with **37** sequences, **905** codons, and **1** partitions from `/media/morpheus/sagar/BUDDHA/WDR93_mol_evo_analysis/Rodentia/FEL/Rodentia.aln`
+
+
+####Choose the set of branches to test for selection
+
+1. [**All**] Include all branches in the analysis
+2. [**Internal**] Include all internal branches in the analysis
+3. [**Leaves**] Include all leaf branches in the analysis
+4. [**Unlabeled branches**] Set of 70 unlabeled branches
+5. [**fg**] Set fg with 1 branches
+
+>Please choose an option (or press q to cancel selection):
+
+####Use synonymous rate variation? Strongly recommended YES for selection inference.
+
+1. [**Yes**] [Recommended] Consider synonymous rate variation (dS varies across sites).
+2. [**No**] Ignore synonymous rate variation (dS := 1 at each site).
+
+>Please choose an option (or press q to cancel selection):Yes
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+
+### Branches to include in the FEL analysis
+Selected 1 branches to include in FEL calculations: `Mastomys_coucha`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+* Log(L) = -25470.44, AIC-c = 51099.01 (79 estimated parameters)
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -24872.20, AIC-c = 49918.87 (87 estimated parameters)
+* non-synonymous/synonymous rate ratio for *background* =   0.4522
+* non-synonymous/synonymous rate ratio for *test* =   0.6335
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -24872.20
+* non-synonymous/synonymous rate ratio for *background* =   0.4519
+* non-synonymous/synonymous rate ratio for *test* =   0.6335
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |     alpha      |      beta      |      LRT       |Selection detected?|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|
+|       88       |       1        |        0.918   |       21.361   |        3.865   |  Pos. p = 0.0493  |
+|       98       |       1        |        0.745   |       12.255   |        3.094   |  Pos. p = 0.0786  |
+|      112       |       1        |        1.335   |       20.535   |        2.891   |  Pos. p = 0.0891  |
+|      132       |       1        |        0.350   |       20.562   |        4.761   |  Pos. p = 0.0291  |
+|      156       |       1        |        1.061   |    10000.000   |        4.379   |  Pos. p = 0.0364  |
+|      191       |       1        |        0.000   |        9.769   |        2.728   |  Pos. p = 0.0986  |
+|      192       |       1        |        0.544   |       10.630   |        3.406   |  Pos. p = 0.0649  |
+|      193       |       1        |        0.528   |        9.264   |        2.929   |  Pos. p = 0.0870  |
+|      206       |       1        |        0.662   |       21.156   |        4.249   |  Pos. p = 0.0393  |
+|      222       |       1        |        0.612   |       10.240   |        3.122   |  Pos. p = 0.0772  |
+|      264       |       1        |        0.000   |       13.801   |        6.937   |  Pos. p = 0.0084  |
+|      287       |       1        |        0.000   |       14.728   |        7.347   |  Pos. p = 0.0067  |
+|      296       |       1        |        0.000   |       20.314   |        4.849   |  Pos. p = 0.0277  |
+|      326       |       1        |        1.248   |       17.605   |        2.710   |  Pos. p = 0.0997  |
+|      337       |       1        |        0.808   |       18.321   |        3.402   |  Pos. p = 0.0651  |
+|      363       |       1        |        0.425   |        8.528   |        3.065   |  Pos. p = 0.0800  |
+|      370       |       1        |        0.000   |        7.915   |        4.339   |  Pos. p = 0.0372  |
+|      433       |       1        |        0.393   |       12.239   |        3.966   |  Pos. p = 0.0464  |
+|      475       |       1        |        0.892   |       15.996   |        3.170   |  Pos. p = 0.0750  |
+|      498       |       1        |        0.837   |       19.661   |        3.633   |  Pos. p = 0.0567  |
+|      530       |       1        |        1.522   |       19.052   |        3.936   |  Pos. p = 0.0473  |
+|      723       |       1        |        1.070   |       23.800   |        6.931   |  Pos. p = 0.0085  |
+|      733       |       1        |        0.891   |       19.920   |        5.233   |  Pos. p = 0.0222  |
+|      765       |       1        |        0.685   |       11.199   |        3.237   |  Pos. p = 0.0720  |
+|      803       |       1        |        1.331   |    10000.000   |        5.033   |  Pos. p = 0.0249  |
+|      835       |       1        |        0.134   |       22.006   |        4.762   |  Pos. p = 0.0291  |
+|      841       |       1        |        0.363   |       10.174   |        3.666   |  Pos. p = 0.0555  |
+|      862       |       1        |        0.623   |        9.376   |        2.946   |  Pos. p = 0.0861  |
+
+### ** Found _28_ sites under pervasive positive diversifying and _0_ sites under negative selection at p <= 0.1**

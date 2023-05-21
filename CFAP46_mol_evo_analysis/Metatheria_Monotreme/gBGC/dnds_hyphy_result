@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Metatheria_Monotreme/gBGC/`) 
+
+A tree was found in the data file:
+((((Antechinus_flavipes:18.0355,Sarcophilus_harrisii:18.0355):42.73614,(Phascolarctos_cinereus:34.87318,Vombatus_ursinus:34.87318):25.89846):2.22836,Dromiciops_gliroides:63):15.1868,Gracilinanus_agilis:78.1868,(Tachyglossus_aculeatus:46.7284,Ornithorhynchus_anatinus:46.7284):235.217)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :11046
+Synonymous  sites      :2566.578264992772
+Nonsynonymous  sites   :8063.962805669383
+
+Total tree lengths:
+	E[syn]        : 0.8320633569226844
+	E[non-syn]    : 0.5638642504146907
+	dS            : 3.581021457997056
+	dN            : 0.7723801138692946
+
+
+E[Syn subs/nucleotide site] tree: 
+	((((Antechinus_flavipes:0.01234271684344322,Sarcophilus_harrisii:0.02424593796538144)Node3:0.07672249425216855,(Phascolarctos_cinereus:0.02323181189421993,Vombatus_ursinus:0.01717650442514823)Node6:0.02615318511488413)Node2:0.005244800997905774,Dromiciops_gliroides:0.04918414066540214)Node1:0.01074269392835817,Gracilinanus_agilis:0.1324944247691053,(Tachyglossus_aculeatus:0.02388508592315534,Ornithorhynchus_anatinus:0.01367714518909675)Node11:0.4169624149544155)
+
+E[Non-syn subs/nucleotide site] tree: 
+	((((Antechinus_flavipes:0.0194440606194352,Sarcophilus_harrisii:0.01999491475664985)Node3:0.06063470763597387,(Phascolarctos_cinereus:0.01520463748847454,Vombatus_ursinus:0.01392041502537071)Node6:0.02530888493250946)Node2:0.00160432516252148,Dromiciops_gliroides:0.03446632869865799)Node1:0.02805280534837959,Gracilinanus_agilis:0.1134481238259488,(Tachyglossus_aculeatus:0.01343748666587504,Ornithorhynchus_anatinus:0.01806491867819543)Node11:0.2002826415766988)
+
+dS tree: 
+	((((Antechinus_flavipes:0.05312039461732826,Sarcophilus_harrisii:0.1043492943186588)Node3:0.3301970888901922,(Phascolarctos_cinereus:0.0999847141557072,Vombatus_ursinus:0.07392397514934994)Node6:0.1125576752204841)Node2:0.02257249374120696,Dromiciops_gliroides:0.2116779469382602)Node1:0.04623424064295135,Gracilinanus_agilis:0.5702274643098242,(Tachyglossus_aculeatus:0.1027962648580743,Ornithorhynchus_anatinus:0.05886348677513954)Node11:1.794516418379879)
+
+dN tree: 
+	((((Antechinus_flavipes:0.02663443505112405,Sarcophilus_harrisii:0.02738899393815104)Node3:0.08305730032337003,(Phascolarctos_cinereus:0.02082728178999188,Vombatus_ursinus:0.01906815644811013)Node6:0.03466805957586424)Node2:0.002197601374444985,Dromiciops_gliroides:0.04721190759184973)Node1:0.03842667623173378,Gracilinanus_agilis:0.1554010113861639,(Tachyglossus_aculeatus:0.01840664215451259,Ornithorhynchus_anatinus:0.02474528919938175)Node11:0.2743467588045964)
+
+Estimating pairwise dN/dS: total of 28 analyses

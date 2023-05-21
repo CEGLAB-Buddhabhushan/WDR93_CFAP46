@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Aves/Aves_group3/gBGC/`) 
+
+A tree was found in the data file:
+(((((((Egretta_garzetta:63.96385,Pelecanus_crispus:63.96385):3.80533,(Aptenodytes_forsteri:65.26467,Fulmarus_glacialis:65.26467):2.50451):0.90702,Gavia_stellata:68.6762):0,Phaethon_lepturus:68.6762):1.21658,Balearica_regulorum_gibbericeps:69.89278):2.05146,(Calidris_pugnax:70.50955,Charadrius_vociferus:70.50955):1.43469):0.61883,(Mesitornis_unicolor:63.48622,Columba_livia:63.48622):9.07685,Opisthocomus_hoazin:73.86241)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :2157
+Synonymous  sites      :520.713495888646
+Nonsynonymous  sites   :1560.166136541445
+
+Total tree lengths:
+	E[syn]        : 0.2228704137950018
+	E[non-syn]    : 0.2748891715900597
+	dS            : 0.923216867531743
+	dN            : 0.3800466688978207
+
+
+E[Syn subs/nucleotide site] tree: 
+	(((((((Egretta_garzetta:0.0192755100292464,Pelecanus_crispus:0.01386157877676472)Node6:0.001725304281978318,(Aptenodytes_forsteri:0.008798161816991132,Fulmarus_glacialis:0.01293101028501317)Node9:0)Node5:0.00332427790104291,Gavia_stellata:0.0162327175566004)Node4:0.0003868786776561102,Phaethon_lepturus:0.01284879896060478)Node3:0.003500674391583298,Balearica_regulorum_gibbericeps:0.01446288030809244)Node2:0.0009559211860465322,(Calidris_pugnax:0.01944918800087987,Charadrius_vociferus:0.01334567011750266)Node15:0.002912292838859668)Node1:0.0005061968368256447,(Mesitornis_unicolor:0.02169825320952358,Columba_livia:0.03394946527567264)Node18:0.004039723269607031,Opisthocomus_hoazin:0.01866591007451051)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(((((((Egretta_garzetta:0.01224377595737059,Pelecanus_crispus:0.01685786590447823)Node6:0.002062916917588939,(Aptenodytes_forsteri:0.01181761508037235,Fulmarus_glacialis:0.01011591084453381)Node9:0)Node5:0.001425553594856171,Gavia_stellata:0.01589808980158108)Node4:0.001387575034452726,Phaethon_lepturus:0.01676738706574231)Node3:0.0005077255847528196,Balearica_regulorum_gibbericeps:0.02398704747111048)Node2:0,(Calidris_pugnax:0.03562867423395449,Charadrius_vociferus:0.01088338800585034)Node15:0.005707789291797202)Node1:0.001124027539841516,(Mesitornis_unicolor:0.03643369684314744,Columba_livia:0.03969960663700171)Node18:0.006632309399983161,Opisthocomus_hoazin:0.02570821638164433)
+
+dS tree: 
+	(((((((Egretta_garzetta:0.07984674002376103,Pelecanus_crispus:0.05742010848106666)Node6:0.007146888578096442,(Aptenodytes_forsteri:0.03644544493102252,Fulmarus_glacialis:0.05356532796825787)Node9:0)Node5:0.01377046588798796,Gavia_stellata:0.06724229743619851)Node4:0.001602603570472247,Phaethon_lepturus:0.05322477634409403)Node3:0.01450116949582566,Balearica_regulorum_gibbericeps:0.0599109358041811)Node2:0.003959801339090527,(Calidris_pugnax:0.0805661824575971,Charadrius_vociferus:0.05528301200322496)Node15:0.01206386180312036)Node1:0.002096866291451778,(Mesitornis_unicolor:0.08988269469196004,Columba_livia:0.1406320311991411)Node18:0.0167341218565339,Opisthocomus_hoazin:0.07732153736865932)
+
+dN tree: 
+	(((((((Egretta_garzetta:0.01692757208446615,Pelecanus_crispus:0.02330675939202683)Node6:0.002852075613628817,(Aptenodytes_forsteri:0.01633838546506999,Fulmarus_glacialis:0.01398570266371103)Node9:0)Node5:0.001970892094172227,Gavia_stellata:0.02197982567294329)Node4:0.001918385022731855,Phaethon_lepturus:0.02318166831961962)Node3:0.000701953503964377,Balearica_regulorum_gibbericeps:0.03316317421802397)Node2:0,(Calidris_pugnax:0.04925824790236904,Charadrius_vociferus:0.01504677442920231)Node15:0.007891275944303585)Node1:0.001554018733423358,(Mesitornis_unicolor:0.05037122794171183,Columba_livia:0.05488649542531455)Node18:0.009169466661721542,Opisthocomus_hoazin:0.0355427678094164)
+
+Estimating pairwise dN/dS: total of 66 analyses

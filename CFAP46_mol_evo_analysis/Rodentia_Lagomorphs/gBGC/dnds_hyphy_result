@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Rodentia_Lagomorphs/gBGC/`) 
+
+A tree was found in the data file:
+(Ochotona_princeps:13.25036,Ochotona_curzoniae:13.25036,((((Marmota_marmota_marmota:4.40329,Marmota_monax:4.40329):6.97935,(Ictidomys_tridecemlineatus:8.775,Urocitellus_parryii:8.775):2.60764):23.07995,Sciurus_carolinensis:34.46259):35.73991,(((((((((Peromyscus_californicus_insignis:11.50311,Peromyscus_leucopus:11.50311):0.08277,Peromyscus_maniculatus_bairdii:11.58588):3.32707,Onychomys_torridus:14.91295):3.63705,(((((Microtus_oregoni:7.23361,Microtus_ochrogaster:7.23361):0.76189,Microtus_fortis:7.9955):1.85499,Arvicola_amphibius:9.85049):0.63517,Myodes_glareolus:10.48566):6.64748,((Mesocricetus_auratus:14.37047,Cricetulus_griseus:14.37047):2.76267,Phodopus_roborovskii:17.13314):0):1.41686):7.62238,((Rattus_norvegicus:11.64917,(((((Mus_musculus:4.77654,Mus_caroli:5.58954):1.61238,Mus_pahari:7.20192):1.98989,Mastomys_coucha:9.19181):0.34832,Apodemus_sylvaticus:9.54013):0.51211,(Grammomys_surdaster:8.19026,Arvicanthis_niloticus:8.19026):1.86198):1.59693):0.79541,(Acomys_russatus:11.73102,(Psammomys_obesus:9.3468,Meriones_unguiculatus:9.3468):2.38422):0.71356):13.7278):17.3336,Nannospalax_galili:43.50598):9.09402,Jaculus_jaculus:52.6):15.71756,(Perognathus_longimembris_pacificus:30.36164,(Dipodomys_spectabilis:9.27055,Dipodomys_ordii:9.27055):21.09109):37.95592):1.59369,((Heterocephalus_glaber:32.14628,Fukomys_damarensis:32.14628):8.78526,((Octodon_degus:32.2,Chinchilla_lanigera:32.2):2.9801,Cavia_porcellus:35.1801):5.75144):28.97971):0.29125):74.48836)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :11604
+Synonymous  sites      :2738.691327021339
+Nonsynonymous  sites   :8434.018691037785
+
+Total tree lengths:
+	E[syn]        : 1.461805151965194
+	E[non-syn]    : 1.16103759130494
+	dS            : 6.193756417906803
+	dN            : 1.597421194218949
+
+
+E[Syn subs/nucleotide site] tree: 
+	(Ochotona_princeps:0.01221938186725371,Ochotona_curzoniae:0.02074766605502499,((((Marmota_marmota_marmota:0.001898597905614295,Marmota_monax:0.002021943079200657)Node6:0.003489562849727886,(Ictidomys_tridecemlineatus:0.007895260741984704,Urocitellus_parryii:0.003608113244251532)Node9:0.004059954358177887)Node5:0.02980213881794216,Sciurus_carolinensis:0.04894047653812655)Node4:0.03407390357906084,(((((((((Peromyscus_californicus_insignis:0.01951395475836171,Peromyscus_leucopus:0.006417916648443098)Node21:0.0004055103488491341,Peromyscus_maniculatus_bairdii:0.006169180231125455)Node20:0.01241106084880531,Onychomys_torridus:0.01462614468508797)Node19:0.02008889088299654,(((((Microtus_oregoni:0.006253651765302248,Microtus_ochrogaster:0.005014166487472799)Node30:0.003392470550263165,Microtus_fortis:0.00675790723865468)Node29:0.007924500949591439,Arvicola_amphibius:0.0140266324049347)Node28:0.00331507164197742,Myodes_glareolus:0.01353015146317805)Node27:0.02637111759342378,((Mesocricetus_auratus:0.02016508613844305,Cricetulus_griseus:0.01741422096925703)Node37:0.001825498009732589,Phodopus_roborovskii:0.020182595717514)Node36:0.01059138008351386)Node26:0.0005458953591114503)Node18:0.008772510182009792,((Rattus_norvegicus:0.03211887698125892,(((((Mus_musculus:0.006317473687333343,Mus_caroli:0.006353466868329352)Node48:0.00790835590777802,Mus_pahari:0.01341777551061387)Node47:0.0104243765406475,Mastomys_coucha:0.02006664501647806)Node46:0.002365029224620524,Apodemus_sylvaticus:0.02524231036345675)Node45:0.002035297304334326,(Grammomys_surdaster:0.01572076765180786,Arvicanthis_niloticus:0.01201943469777491)Node54:0.009910950750695948)Node44:0.002287450694285036)Node42:0.01883606858278126,(Acomys_russatus:0.03483273198932325,(Psammomys_obesus:0.005477302840412542,Meriones_unguiculatus:0.009825579492141561)Node59:0.0279034205426478)Node57:0.004845109995779413)Node41:0.005720035461961798)Node17:0.03097536555726401,Nannospalax_galili:0.05555295985762715)Node16:0.01632188406780437,Jaculus_jaculus:0.06813313937162971)Node15:0.02408976156523565,(Perognathus_longimembris_pacificus:0.04350195923944583,(Dipodomys_spectabilis:0.008869626759728683,Dipodomys_ordii:0.0082430206437427)Node66:0.04362459697508181)Node64:0.07579404024679506)Node14:0.005469748859152586,((Heterocephalus_glaber:0.01888614852648292,Fukomys_damarensis:0.02434004326327428)Node70:0.008473685546478841,((Octodon_degus:0.04426338959877985,Chinchilla_lanigera:0.02241571367312395)Node74:0.004613115672570845,Cavia_porcellus:0.04173791973436364)Node73:0.005368332843772906)Node69:0.04799034655824311)Node13:0.02041972129909214)Node3:0.154619658006628)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(Ochotona_princeps:0.008204886980131706,Ochotona_curzoniae:0.006775238141768385,((((Marmota_marmota_marmota:0.002828621449678043,Marmota_monax:0.004152353846467152)Node6:0.003701459543526229,(Ictidomys_tridecemlineatus:0.003866846192480294,Urocitellus_parryii:0.003075892245895932)Node9:0.002947459196264206)Node5:0.02445567976443421,Sciurus_carolinensis:0.03528733443495738)Node4:0.03655899537586905,(((((((((Peromyscus_californicus_insignis:0.01085456802359708,Peromyscus_leucopus:0.002007847996507228)Node21:0,Peromyscus_maniculatus_bairdii:0.0009515109691990084)Node20:0.007527304473291512,Onychomys_torridus:0.009183651657775122)Node19:0.01652819707943437,(((((Microtus_oregoni:0.005055598243680291,Microtus_ochrogaster:0.003464802664140756)Node30:0.000628874862694706,Microtus_fortis:0.005284148863767458)Node29:0.007801734244852468,Arvicola_amphibius:0.0107059576207517)Node28:0.003487156086863612,Myodes_glareolus:0.01291711462393944)Node27:0.01955269305070849,((Mesocricetus_auratus:0.01735690525975221,Cricetulus_griseus:0.03366931198254181)Node37:0.003208670348956306,Phodopus_roborovskii:0.01635810520783284)Node36:0.007094572156265893)Node26:0.003021862250744464)Node18:0.007804921265307976,((Rattus_norvegicus:0.0304720727582382,(((((Mus_musculus:0.005466682411575979,Mus_caroli:0.004647685769107466)Node48:0.009447300744742166,Mus_pahari:0.0118791003327131)Node47:0.01215524588778097,Mastomys_coucha:0.02162310975871576)Node46:0.003662025177588946,Apodemus_sylvaticus:0.01729046094556563)Node45:0.003878004244507939,(Grammomys_surdaster:0.008926550511726075,Arvicanthis_niloticus:0.01055721383168086)Node54:0.009517995943197471)Node44:0.007178540228604453)Node42:0.02897821062363568,(Acomys_russatus:0.02801516622904188,(Psammomys_obesus:0.006922056075004109,Meriones_unguiculatus:0.004704416990827036)Node59:0.05468851830134622)Node57:0.007547595932853773)Node41:0.002995269177185224)Node17:0.02219577562015447,Nannospalax_galili:0.03302637806957957)Node16:0.02012719430081379,Jaculus_jaculus:0.04716625504028637)Node15:0.01918159095414003,(Perognathus_longimembris_pacificus:0.03190259613398451,(Dipodomys_spectabilis:0.003852520051748393,Dipodomys_ordii:0.006271363218213435)Node66:0.03902486465737092)Node64:0.05760413827310403)Node14:0.01300644023068352,((Heterocephalus_glaber:0.0116334626461979,Fukomys_damarensis:0.01366356505340799)Node70:0.006161203255478476,((Octodon_degus:0.02504347075860019,Chinchilla_lanigera:0.01549863484419338)Node74:0.003523014627200733,Cavia_porcellus:0.02895431258992297)Node73:0.004305648207590283)Node69:0.03079175290817261)Node13:0.009933716899730025)Node3:0.09129619498464979)
+
+dS tree: 
+	(Ochotona_princeps:0.05177425648104343,Ochotona_curzoniae:0.08790910991943053,((((Marmota_marmota_marmota:0.008044473606563775,Marmota_monax:0.008567094531446481)Node6:0.01478548783819436,(Ictidomys_tridecemlineatus:0.03345269499561849,Urocitellus_parryii:0.01528779299558082)Node9:0.01720227099252398)Node5:0.1262734560230731,Sciurus_carolinensis:0.2073637449190328)Node4:0.1443731804421569,(((((((((Peromyscus_californicus_insignis:0.08268180089587181,Peromyscus_leucopus:0.02719309914693187)Node21:0.001718171756567836,Peromyscus_maniculatus_bairdii:0.02613918797480531)Node20:0.05258641186342597,Onychomys_torridus:0.06197185540816458)Node19:0.08511783986252625,(((((Microtus_oregoni:0.02649709894962612,Microtus_ochrogaster:0.02124532522031863)Node30:0.01437410192117902,Microtus_fortis:0.02863365974238465)Node29:0.03357658751527589,Arvicola_amphibius:0.05943168579128964)Node28:0.01404615808797435,Myodes_glareolus:0.05732806615686731)Node27:0.1117360125746311,((Mesocricetus_auratus:0.08544068374620077,Cricetulus_griseus:0.07378510244418064)Node37:0.007734744947681322,Phodopus_roborovskii:0.08551487288666162)Node36:0.04487631493059356)Node26:0.002312991495109048)Node18:0.03716965367643582,((Rattus_norvegicus:0.1360896150702362,(((((Mus_musculus:0.02676751627484338,Mus_caroli:0.02692002154922636)Node48:0.03350818000130947,Mus_pahari:0.05685192248171537)Node47:0.0441687108671853,Mastomys_coucha:0.08502358278706341)Node46:0.01002077118064453,Apodemus_sylvaticus:0.1069531883960539)Node45:0.008623677187155853,(Grammomys_surdaster:0.06660983880574324,Arvicanthis_niloticus:0.05092706828873427)Node54:0.04199329489101628)Node44:0.009692066278003274)Node42:0.07980955636658743,(Acomys_russatus:0.1475883820918667,(Psammomys_obesus:0.02320766182484496,Meriones_unguiculatus:0.04163157172985135)Node59:0.1182284724029296)Node57:0.0205290226891591)Node41:0.02423613455292018)Node17:0.1312444883364875,Nannospalax_galili:0.2353812347625996)Node16:0.06915680524274219,Jaculus_jaculus:0.2886842125900634)Node15:0.1020697697637308,(Perognathus_longimembris_pacificus:0.1843204197690864,(Dipodomys_spectabilis:0.03758114246187544,Dipodomys_ordii:0.03492617463174411)Node66:0.1848400432367912)Node64:0.3211439107233705)Node14:0.02317565515155701,((Heterocephalus_glaber:0.08002174810246522,Fukomys_damarensis:0.1031302283832858)Node70:0.03590351570882757,((Octodon_degus:0.1875466460336292,Chinchilla_lanigera:0.09497672808050031)Node74:0.01954604877751343,Cavia_porcellus:0.1768460782049214)Node73:0.02274594938995672)Node69:0.2033379870040075)Node13:0.08651958824888005)Node3:0.6551327978463091)
+
+dN tree: 
+	(Ochotona_princeps:0.01128874763090346,Ochotona_curzoniae:0.009321755888521318,((((Marmota_marmota_marmota:0.003891777396336927,Marmota_monax:0.005713043307054364)Node6:0.005092677419451303,(Ictidomys_tridecemlineatus:0.00532022572646446,Urocitellus_parryii:0.00423198654507422)Node9:0.004055281090353065)Node5:0.03364750759777789,Sciurus_carolinensis:0.04855031080478441)Node4:0.0502999338609936,(((((((((Peromyscus_californicus_insignis:0.0149343286942991,Peromyscus_leucopus:0.002762510850993026)Node21:0,Peromyscus_maniculatus_bairdii:0.001309142615289448)Node20:0.01035649128936503,Onychomys_torridus:0.01263538743992393)Node19:0.02274042848797111,(((((Microtus_oregoni:0.006955778042323438,Microtus_ochrogaster:0.00476707149788663)Node30:0.0008652416094908408,Microtus_fortis:0.007270230913800909)Node29:0.01073406729267378,Arvicola_amphibius:0.01472986209565968)Node28:0.004797826601328795,Myodes_glareolus:0.01777209697856974)Node27:0.02690170113110138,((Mesocricetus_auratus:0.02388061207976546,Cricetulus_griseus:0.04632414398850954)Node37:0.004414670170087978,Phodopus_roborovskii:0.02250640646948049)Node36:0.009761113689348426)Node26:0.004157649021444605)Node18:0.0107384521756958,((Rattus_norvegicus:0.0419252014063401,(((((Mus_musculus:0.007521370894202048,Mus_caroli:0.006394548985530747)Node48:0.01299813076754029,Mus_pahari:0.01634393819962489)Node47:0.01672387487493872,Mastomys_coucha:0.02975029755468366)Node46:0.005038421388121601,Apodemus_sylvaticus:0.02378919423376989)Node45:0.005335577605618626,(Grammomys_surdaster:0.01228165313981817,Arvicanthis_niloticus:0.01452521197670605)Node54:0.0130953972205714)Node44:0.009876641713071213)Node42:0.03986986137865578,(Acomys_russatus:0.0385448504243,(Psammomys_obesus:0.009523756306077626,Meriones_unguiculatus:0.006472603009472315)Node59:0.07524355702971947)Node57:0.01038440942725233)Node41:0.004121060766558554)Node17:0.03053820364068702,Nannospalax_galili:0.0454395591423861)Node16:0.02769213244865417,Jaculus_jaculus:0.06489400172530765)Node15:0.02639111787460986,(Perognathus_longimembris_pacificus:0.04389339638672348,(Dipodomys_spectabilis:0.005300515011662555,Dipodomys_ordii:0.008628496266136942)Node66:0.05369261630464928)Node64:0.07925503191395578)Node14:0.01789499620118584,((Heterocephalus_glaber:0.01600597597559623,Fukomys_damarensis:0.01879910570369354)Node70:0.008476931958017157,((Octodon_degus:0.03445622369696675,Chinchilla_lanigera:0.0213238985257561)Node74:0.004847162809525027,Cavia_porcellus:0.03983698111204018)Node73:0.005923954360448524)Node69:0.04236503543988105)Node13:0.01366736962854459)Node3:0.1256104693872239)
+
+Estimating pairwise dN/dS: total of 780 analyses

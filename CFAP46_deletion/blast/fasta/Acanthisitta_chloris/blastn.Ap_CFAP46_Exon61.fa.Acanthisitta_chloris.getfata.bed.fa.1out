@@ -1,0 +1,60 @@
+BLASTN 2.9.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: Acanthisitta_chloris.getfata.bed.fa
+           1 sequences; 260 total letters
+
+
+
+Query= Exon61
+
+Length=128
+                                                                      Score        E
+Sequences producing significant alignments:                          (Bits)     Value
+
+Acanthisitta_chloris::CM029190.1:37802707-37914862():59799-60059      51.8       8e-12
+
+
+
+Query_1  1    TGGATGAAGACTCTCACAGTTCTCCTACAGACAAAACAGAACAGAACTTTCACACTTCCT  60
+0        142  ....A.TG..T........C.......G...TC........G.AC...G...........  80
+                                                            \  \          
+                                                            |  |          
+                                                           GG  C
+
+Query_1  61   CAACTGCCATTCATCCATCATTTTTTAATTGTGTGTTATATGGTTTGCCCAACATAATTA  120
+0        79   ..G...GTGC..G...G.TGC....C.GC...A..C.C...............G.C...C  14
+                 \                                                        
+                 |                                                        
+              ACCCTC
+
+Query_1  121  TTCTGTA  127
+0        13   .GA....  7
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 29500
+
+
+  Database: Acanthisitta_chloris.getfata.bed.fa
+    Posted date:  Apr 26, 2023  3:04 PM
+  Number of letters in database: 260
+  Number of sequences in database:  1
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2

@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/WDR93/WDR93_mol_evo_analysis/Monotremata_Metatheria/gBGC/`) 
+
+A tree was found in the data file:
+((((Antechinus_flavipes:18.0355,Sarcophilus_harrisii:18.0355):42.73614,(Trichosurus_vulpecula:52.64,(Phascolarctos_cinereus:34.87318,Vombatus_ursinus:34.87318):17.76682):8.13164):2.22836,Dromiciops_gliroides:63):15.1868,(Monodelphis_domestica:29.14096,Gracilinanus_agilis:29.14096):49.04584,(Tachyglossus_aculeatus:46.7284,Ornithorhynchus_anatinus:46.7284):235.217)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :2352
+Synonymous  sites      :548.7527719403574
+Nonsynonymous  sites   :1709.078826009291
+
+Total tree lengths:
+	E[syn]        : 0.4904404026658584
+	E[non-syn]    : 0.607466590217289
+	dS            : 2.102068337607363
+	dN            : 0.835983337016251
+
+
+E[Syn subs/nucleotide site] tree: 
+	((((Antechinus_flavipes:0.01060505770357817,Sarcophilus_harrisii:0.007302870860991901)Node3:0.02907147190980441,(Trichosurus_vulpecula:0.01585010686927484,(Phascolarctos_cinereus:0.008686883472334808,Vombatus_ursinus:0.004173137516341299)Node8:0.009328427930645396)Node6:0.003019185869912256)Node2:0.001741069440736353,Dromiciops_gliroides:0.03059900532356014)Node1:0.001083355782917462,(Monodelphis_domestica:0.01495463727409734,Gracilinanus_agilis:0.01445096465281843)Node12:0.04454431853557009,(Tachyglossus_aculeatus:0.02662734313035612,Ornithorhynchus_anatinus:0.006634727373264995)Node15:0.2617678390196544)
+
+E[Non-syn subs/nucleotide site] tree: 
+	((((Antechinus_flavipes:0.01908456956411998,Sarcophilus_harrisii:0.02098393259323221)Node3:0.05405671135694195,(Trichosurus_vulpecula:0.02682288616539136,(Phascolarctos_cinereus:0.009646797084406564,Vombatus_ursinus:0.009930082611084882)Node8:0.02293062769344823)Node6:0.009529403875110169)Node2:0.004175720676262934,Dromiciops_gliroides:0.03034387764114651)Node1:0.0284140100205653,(Monodelphis_domestica:0.02600821945399845,Gracilinanus_agilis:0.01856872045343391)Node12:0.09275143430429776,(Tachyglossus_aculeatus:0.01063526432622699,Ornithorhynchus_anatinus:0.008882204303510994)Node15:0.2147021280941108)
+
+dS tree: 
+	((((Antechinus_flavipes:0.04545415894778727,Sarcophilus_harrisii:0.0313007116197671)Node3:0.1246027454040663,(Trichosurus_vulpecula:0.0679348757086301,(Phascolarctos_cinereus:0.03723270472910181,Vombatus_ursinus:0.01788641432047568)Node8:0.03998241761093578)Node6:0.01294048163241976)Node2:0.007462368363320046,Dromiciops_gliroides:0.131149880603857)Node1:0.004643352948199435,(Monodelphis_domestica:0.06409681858062642,Gracilinanus_agilis:0.06193803585400948)Node12:0.1909206523462406,(Tachyglossus_aculeatus:0.1141270062675955,Ornithorhynchus_anatinus:0.0284369930865977)Node15:1.121958719583732)
+
+dN tree: 
+	((((Antechinus_flavipes:0.02626380183974392,Sarcophilus_harrisii:0.0288776671433725)Node3:0.07439176191094904,(Trichosurus_vulpecula:0.03691311793283988,(Phascolarctos_cinereus:0.0132757286540749,Vombatus_ursinus:0.01366558051380638)Node8:0.03155666989387711)Node6:0.01311417447409022)Node2:0.005746543038920681,Dromiciops_gliroides:0.04175863577844631)Node1:0.03910279066789298,(Monodelphis_domestica:0.03579198994503944,Gracilinanus_agilis:0.02555390064041384)Node12:0.1276426635002512,(Tachyglossus_aculeatus:0.01463603744579414,Ornithorhynchus_anatinus:0.01222351140505224)Node15:0.2954687622316862)
+
+Estimating pairwise dN/dS: total of 45 analyses

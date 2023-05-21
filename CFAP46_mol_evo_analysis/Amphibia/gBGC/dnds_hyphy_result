@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Amphibia/gBGC/`) 
+
+A tree was found in the data file:
+((Microcaecilia_unicolor:120.11264,Geotrypetes_seraphini:120.11264):101.13848,Rhinatrema_bivittatum:221.25112,((Spea_bombifrons:191.723,((Bufo_bufo:13.2794,Bufo_gargarizans:13.2794):135.81518,Rana_temporaria:149.09458):42.62842):10.60508,Xenopus_tropicalis:202.32808):215.7668)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :8502
+Synonymous  sites      :1945.819677814774
+Nonsynonymous  sites   :6210.643542138047
+
+Total tree lengths:
+	E[syn]        : 1.049887404294987
+	E[non-syn]    : 0.7038723028556306
+	dS            : 4.587343222543805
+	dN            : 0.9635591349392495
+
+
+E[Syn subs/nucleotide site] tree: 
+	((Microcaecilia_unicolor:0.02322283294992253,Geotrypetes_seraphini:0.02982263068181717)Node1:0.03344199358764615,Rhinatrema_bivittatum:0.0429904924801719,((Spea_bombifrons:0.1705699922642847,((Bufo_bufo:0.006133791741047983,Bufo_gargarizans:0.004839809562323895)Node9:0.1124096469805693,Rana_temporaria:0.1239918800960418)Node8:0.0777825319081942)Node6:0.0202558489735693,Xenopus_tropicalis:0.1572927215951063)Node5:0.2471332314742915)
+
+E[Non-syn subs/nucleotide site] tree: 
+	((Microcaecilia_unicolor:0.03212193790931026,Geotrypetes_seraphini:0.05586481807721827)Node1:0.03695091788194395,Rhinatrema_bivittatum:0.06021710333660888,((Spea_bombifrons:0.09036612037587077,((Bufo_bufo:0.006642663557263276,Bufo_gargarizans:0.004782115198542723)Node9:0.0677764499494226,Rana_temporaria:0.06831874456451843)Node8:0.04132212946641705)Node6:0.01570992513013493,Xenopus_tropicalis:0.08546380981165547)Node5:0.138335567596724)
+
+dS tree: 
+	((Microcaecilia_unicolor:0.1014690764983804,Geotrypetes_seraphini:0.1303060139373026)Node1:0.1461203382429935,Rhinatrema_bivittatum:0.1878412327893081,((Spea_bombifrons:0.7452828701267734,((Bufo_bufo:0.02680078630973437,Bufo_gargarizans:0.02114690347108037)Node9:0.4911589853496052,Rana_temporaria:0.5417660107952182)Node8:0.3398604165757738)Node6:0.08850523506201258,Xenopus_tropicalis:0.6872696037812881)Node5:1.079815749604335)
+
+dN tree: 
+	((Microcaecilia_unicolor:0.04397301410908853,Geotrypetes_seraphini:0.07647559871533077)Node1:0.05058359921975773,Rhinatrema_bivittatum:0.08243361724018729,((Spea_bombifrons:0.1237058205358159,((Bufo_bufo:0.00909340959285038,Bufo_gargarizans:0.006546430034529668)Node9:0.09278191117560403,Rana_temporaria:0.09352428010826982)Node8:0.05656752675303818)Node6:0.02150594902930566,Xenopus_tropicalis:0.116994850225868)Node5:0.1893731281996035)
+
+Estimating pairwise dN/dS: total of 28 analyses

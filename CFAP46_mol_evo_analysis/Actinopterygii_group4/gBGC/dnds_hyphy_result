@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/CFAP46_mol_evo_analysis/Actinopterygii_group4/gBGC/`) 
+
+A tree was found in the data file:
+((Archocentrus_centrarchus:65.63838,(((((Pundamilia_nyererei:3.77636,(Maylandia_zebra:1.29319,Astatotilapia_calliptera:1.29319):2.48317):0.39654,Haplochromis_burtoni:4.1729):1.08492,Simochromis_diagramma:5.25782):7.15298,Neolamprologus_brichardi:12.4108):11.36764,(Oreochromis_aureus:14.71873,Oreochromis_niloticus:14.71873):9.05971):41.85994):26.10992,(Melanotaenia_boesemani:84.82079,(Oryzias_melastigma:84.82079,(((Fundulus_heteroclitus:50.0863,Girardinichthys_multiradiatus:50.0863):5.9256,((Poeciliopsis_prolifica:25.77762,((Xiphophorus_hellerii:4.6523,(Xiphophorus_couchianus:3.66422,Xiphophorus_maculatus:3.66422):0.98808):17.27948,Gambusia_affinis:21.93178):3.84584):2.7011,((Poecilia_mexicana:10.26812,Poecilia_latipinna:10.26812):1.65646,(Poecilia_reticulata:9.336,Poecilia_formosa:9.336):2.58858):16.55414):27.53318):18.35539,(Austrofundulus_limnaeus:55.45746,Kryptolebias_marmoratus:55.45746):18.90983):10.4535):0):6.92751,(((Salarias_fasciatus:73.93856,Gouania_willdenowi:73.93856):13.55805,(Amphiprion_ocellaris:29.34581,Acanthochromis_polyacanthus:29.34581):58.1508):3.92641,Mugil_cephalus:91.42302):1.51376)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :8637
+Synonymous  sites      :2046.425851794127
+Nonsynonymous  sites   :6274.632863064006
+
+Total tree lengths:
+	E[syn]        : 1.10956320038288
+	E[non-syn]    : 1.348994782096787
+	dS            : 4.682943852231509
+	dN            : 1.856884408577244
+
+
+E[Syn subs/nucleotide site] tree: 
+	((Archocentrus_centrarchus:0.02232865646374955,(((((Pundamilia_nyererei:0.002751282121536523,(Maylandia_zebra:0.0003924054296562157,Astatotilapia_calliptera:0.0001312289147609686)Node9:0.0002182047036737069)Node7:0.0001394543262554885,Haplochromis_burtoni:0.001550021461961058)Node6:0.000499743004352652,Simochromis_diagramma:0.001384951412196397)Node5:0.001625836216738038,Neolamprologus_brichardi:0.003027779400725747)Node4:0.003366422541053982,(Oreochromis_aureus:0.001025688061842393,Oreochromis_niloticus:0.001074328274798502)Node15:0.004539784186383928)Node3:0.02700361114333422)Node1:0.03232557050185732,(Melanotaenia_boesemani:0.05921925505937004,(Oryzias_melastigma:0.1272585004380142,(((Fundulus_heteroclitus:0.0353686822944916,Girardinichthys_multiradiatus:0.02926605774141862)Node24:5.292228002350767e-05,((Poeciliopsis_prolifica:0.01784038308308376,((Xiphophorus_hellerii:0.001348057892244958,(Xiphophorus_couchianus:0.003188643430815324,Xiphophorus_maculatus:0.001191262853725853)Node33:0.0004209598488115932)Node31:0.00542645286193982,Gambusia_affinis:0.01105382098839785)Node30:0.002748845491968419)Node28:0.003955698020461965,((Poecilia_mexicana:0.001287559112480234,Poecilia_latipinna:0.002162928418947548)Node38:0,(Poecilia_reticulata:0.0126157625709552,Poecilia_formosa:0.001260711137685236)Node41:0.0001080941158606898)Node37:0.01199481011155564)Node27:0.03125507247128139)Node23:0.05527134143166975,(Austrofundulus_limnaeus:0.08032157075994721,Kryptolebias_marmoratus:0.02926313213653356)Node44:0.06840972855003731)Node22:0.009329817529568702)Node20:0.00410033853690663)Node18:0.01968828731305097,(((Salarias_fasciatus:0.1059759558017474,Gouania_willdenowi:0.1404645923854238)Node49:0.01237691166089225,(Amphiprion_ocellaris:0.007927255924478701,Acanthochromis_polyacanthus:0.01111563239257452)Node52:0.03314712577866177)Node48:0,Mugil_cephalus:0.06701236443942858)Node47:0.002749697353548615)
+
+E[Non-syn subs/nucleotide site] tree: 
+	((Archocentrus_centrarchus:0.02586224129431637,(((((Pundamilia_nyererei:0.001799115641940385,(Maylandia_zebra:0.0006467567605641877,Astatotilapia_calliptera:0.0006493258997938009)Node9:0.0008276940602137069)Node7:0.0005827842254657218,Haplochromis_burtoni:0.001698228609113433)Node6:0.0002970097862249738,Simochromis_diagramma:0.002828787023625763)Node5:0.001361364802538762,Neolamprologus_brichardi:0.00544298844374137)Node4:0.005295396700537068,(Oreochromis_aureus:0.003021500017793557,Oreochromis_niloticus:0.001910084676222418)Node15:0.006634231044053865)Node3:0.02650474852391764)Node1:0.03496544026041427,(Melanotaenia_boesemani:0.0638989842552692,(Oryzias_melastigma:0.1476759240981629,(((Fundulus_heteroclitus:0.05102734960603836,Girardinichthys_multiradiatus:0.03689780182471974)Node24:0.007766483802659655,((Poeciliopsis_prolifica:0.03175634082919487,((Xiphophorus_hellerii:0.001710452179958657,(Xiphophorus_couchianus:0.001791849791315384,Xiphophorus_maculatus:0.0008988216079949498)Node33:0.001347852045750268)Node31:0.01456792240698819,Gambusia_affinis:0.02716160661007579)Node30:0.007997824874658152)Node28:0.003606976548283473,((Poecilia_mexicana:0.002506366382268201,Poecilia_latipinna:0.002467516736300799)Node38:0.0002268457437791595,(Poecilia_reticulata:0.01788570971246705,Poecilia_formosa:0.002152923796921796)Node41:0)Node37:0.02028676984890962)Node27:0.08436548360727952)Node23:0.04902893312391065,(Austrofundulus_limnaeus:0.1174827453095717,Kryptolebias_marmoratus:0.04682432622324655)Node44:0.05881377054840719)Node22:0.0147814984013222)Node20:0.007429554591359484)Node18:0.01943802621347676,(((Salarias_fasciatus:0.07909235792955678,Gouania_willdenowi:0.1559435745864489)Node49:0.01818567742032303,(Amphiprion_ocellaris:0.01353049731272302,Acanthochromis_polyacanthus:0.01387466892462339)Node52:0.03517737557038081)Node48:0.004813734035046049,Mugil_cephalus:0.06444702109093935)Node47:0.001805516735977939)
+
+dS tree: 
+	((Archocentrus_centrarchus:0.09423874591318744,(((((Pundamilia_nyererei:0.01161186644650613,(Maylandia_zebra:0.001656158561996946,Astatotilapia_calliptera:0.0005538554625845833)Node9:0.0009209393167006394)Node7:0.0005885710517254673,Haplochromis_burtoni:0.006541910793015367)Node6:0.002109179926949085,Simochromis_diagramma:0.005845227833030551)Node5:0.006861889177003572,Neolamprologus_brichardi:0.0127788312785149)Node4:0.01420808453020281,(Oreochromis_aureus:0.004328946383454876,Oreochromis_niloticus:0.004534233821029809)Node15:0.01916029158027983)Node3:0.1139695285028294)Node1:0.1364310132125076,(Melanotaenia_boesemani:0.2499365933534123,(Oryzias_melastigma:0.5370982131209427,(((Fundulus_heteroclitus:0.1492745552983054,Girardinichthys_multiradiatus:0.1235182503636891)Node24:0.000223360026537145,((Poeciliopsis_prolifica:0.07529585719096743,((Xiphophorus_hellerii:0.005689517655922882,(Xiphophorus_couchianus:0.013457762609775,Xiphophorus_maculatus:0.00502775962227498)Node33:0.001776673320950355)Node31:0.02290250258883518,Gambusia_affinis:0.04665297391209697)Node30:0.01160158258033954)Node28:0.01669513887970913,((Poecilia_mexicana:0.005434180791227874,Poecilia_latipinna:0.009128702482951886)Node38:0,(Poecilia_reticulata:0.05324519392178879,Poecilia_formosa:0.005320868130472978)Node41:0.0004562143690035343)Node37:0.05062444595423742)Node27:0.1319129450489442)Node23:0.233274308730418,(Austrofundulus_limnaeus:0.3389995323043129,Kryptolebias_marmoratus:0.1235059027629343)Node44:0.2887252547990745)Node22:0.03937676702639286)Node20:0.01730559839840477)Node18:0.08309499089533993,(((Salarias_fasciatus:0.4472746126898392,Gouania_willdenowi:0.5928349093954637)Node49:0.05223711668879004,(Amphiprion_ocellaris:0.03345721486058049,Acanthochromis_polyacanthus:0.04691385074641073)Node52:0.13989841122233)Node48:0,Mugil_cephalus:0.2828276388103269)Node47:0.01160517788698683)
+
+dN tree: 
+	((Archocentrus_centrarchus:0.03559924268619825,(((((Pundamilia_nyererei:0.00247647346682387,(Maylandia_zebra:0.0008902573685028536,Astatotilapia_calliptera:0.000893793775494375)Node9:0.001139316634786328)Node7:0.0008021995015800008,Haplochromis_burtoni:0.002337602982838153)Node6:0.0004088324495805535,Simochromis_diagramma:0.0038938108501738)Node5:0.001873911678361626,Neolamprologus_brichardi:0.007492245716132295)Node4:0.007289086437513867,(Oreochromis_aureus:0.004159079299651567,Oreochromis_niloticus:0.002629221774176771)Node15:0.009131985054423211)Node3:0.03648365059709494)Node1:0.0481297494403088,(Melanotaenia_boesemani:0.0879566245638889,(Oryzias_melastigma:0.2032751531876874,(((Fundulus_heteroclitus:0.07023888539227471,Girardinichthys_multiradiatus:0.05078963523683913)Node24:0.01069052517772579,((Poeciliopsis_prolifica:0.04371244050888116,((Xiphophorus_hellerii:0.002354428665502659,(Xiphophorus_couchianus:0.00246647206065116,Xiphophorus_maculatus:0.001237223340022084)Node33:0.001855311437848871)Node31:0.0200526705825009,Gambusia_affinis:0.03738781238854318)Node30:0.0110089649785009)Node28:0.004964984745308527,((Poecilia_mexicana:0.003450000488646858,Poecilia_latipinna:0.003396524149944134)Node38:0.0003122520045043494,(Poecilia_reticulata:0.0246195878161935,Poecilia_formosa:0.00296348858010051)Node41:0)Node37:0.02792463479679528)Node27:0.116128656101204)Node23:0.06748807533966734,(Austrofundulus_limnaeus:0.1617143972218444,Kryptolebias_marmoratus:0.06445344523196449)Node44:0.08095685394070062)Node22:0.02034665684485602)Node20:0.01022674384397959)Node18:0.0267563435295268,(((Salarias_fasciatus:0.1088702256125314,Gouania_willdenowi:0.2146555317414146)Node49:0.02503249182974992,(Amphiprion_ocellaris:0.01862466025349611,Acanthochromis_polyacanthus:0.01909841071457599)Node52:0.048421477309035)Node48:0.006626080245337314,Mugil_cephalus:0.08871099446137667)Node47:0.002485284539982875)
+
+Estimating pairwise dN/dS: total of 406 analyses

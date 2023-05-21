@@ -1,0 +1,424 @@
+[2J[H     /HYPHY 2.3.14.20230213beta(MP) for Linux on x86_64\     
+***************** TYPES OF STANDARD ANALYSES *****************
+
+
+	(1) Selection Analyses
+	(2) Evolutionary Hypothesis Testing
+	(3) Relative evolutionary rate inference
+	(4) Coevolutionary analysis
+	(5) Basic Analyses
+	(6) Codon Selection Analyses
+	(7) Compartmentalization
+	(8) Data File Tools
+	(9) Miscellaneous
+	(10) Model Comparison
+	(11) Kernel Analysis Tools
+	(12) Molecular Clock
+	(13) Phylogeny Reconstruction
+	(14) Positive Selection
+	(15) Recombination
+	(16) Selection/Recombination
+	(17) Relative Rate
+	(18) Relative Ratio
+	(19) Substitution Rates
+
+ Please select type of analyses you want to list (or press ENTER to process custom batch file):[2J[H***************** FILES IN 'Selection Analyses' ***************** 
+
+
+	(1) [MEME] Test for episodic site-level selection using MEME (Mixed Effects Model of Evolution).
+	(2) [FEL] Test for pervasive site-level selection using FEL (Fixed Effects Likelihood).
+	(3) [SLAC] Test for pervasive site-level selection using SLAC (Single Likelihood Ancestor Counting).
+	(4) [FUBAR] Test for pervasive site-level selection using FUBAR (Fast Unconstrained Bayesian AppRoximation for inferring selection).
+	(5) [BUSTED] Test for episodic gene-wide selection using BUSTED (Branch-site Unrestricted Statistical Test of Episodic Diversification).
+	(6) [aBSREL] Test for lineage-specific evolution using the branch-site method aBS-REL (Adaptive Branch-Site Random Effects Likelihood).
+	(7) [RELAX] Test for relaxation of selection pressure along a specified set of test branches using RELAX (a random effects test of selection relaxation).
+
+ Please select the analysis you would like to perform (or press ENTER to return to the list of analysis types):
+Analysis Description
+--------------------
+FEL (Fixed Effects Likelihood) estimates site-wise synonymous (&alpha;)
+and non-synonymous (&beta;) rates, and uses a likelihood ratio test to
+determine if beta &neq; alpha at a site. The estimates aggregate
+information over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well, in which case an additional (nuisance) parameter
+will be inferred -- the non-synonymous rate on branches NOT selected for
+testing. Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.00
+
+
+
+####Choose Genetic Code
+
+1. [**Universal**] Universal code. (Genebank transl_table=1).
+2. [**Vertebrate mtDNA**] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+3. [**Yeast mtDNA**] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+4. [**Mold/Protozoan mtDNA**] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+5. [**Invertebrate mtDNA**] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+6. [**Ciliate Nuclear**] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+7. [**Echinoderm mtDNA**] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+8. [**Euplotid Nuclear**] Euplotid Nuclear code. (Genebank transl_table=10).
+9. [**Alt. Yeast Nuclear**] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+10. [**Ascidian mtDNA**] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+11. [**Flatworm mtDNA**] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+12. [**Blepharisma Nuclear**] Blepharisma Nuclear code. (Genebank transl_table=15).
+13. [**Chlorophycean mtDNA**] Chlorophycean Mitochondrial Code (transl_table=16).
+14. [**Trematode mtDNA**] Trematode Mitochondrial Code (transl_table=21).
+15. [**Scenedesmus obliquus mtDNA**] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+16. [**Thraustochytrium mtDNA**] Thraustochytrium Mitochondrial Code (transl_table=23).
+17. [**Pterobranchia mtDNA**] Pterobranchia Mitochondrial Code (transl_table=24).
+18. [**SR1 and Gracilibacteria**] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+19. [**Pachysolen Nuclear**] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+>Please choose an option (or press q to cancel selection):
+
+>Select a coding sequence alignment file (`/usr/local/lib/hyphy/TemplateBatchFiles/SelectionAnalyses/`) 
+
+>Please select a tree file for the data: (`/usr/local/lib/hyphy/TemplateBatchFiles/SelectionAnalyses/`) 
+>Loaded a multiple sequence alignment with **31** sequences, **986** codons, and **1** partitions from `/media/morpheus/sagar/BUDDHA/WDR93_mol_evo_analysis/Actinopterygii_group3/FEL/Actinopterygii_group3.aln`
+
+
+####Choose the set of branches to test for selection
+
+1. [**All**] Include all branches in the analysis
+2. [**Internal**] Include all internal branches in the analysis
+3. [**Leaves**] Include all leaf branches in the analysis
+4. [**Unlabeled branches**] Set of 58 unlabeled branches
+5. [**fg**] Set fg with 1 branches
+
+>Please choose an option (or press q to cancel selection):
+
+####Use synonymous rate variation? Strongly recommended YES for selection inference.
+
+1. [**Yes**] [Recommended] Consider synonymous rate variation (dS varies across sites).
+2. [**No**] Ignore synonymous rate variation (dS := 1 at each site).
+
+>Please choose an option (or press q to cancel selection):Yes
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+
+### Branches to include in the FEL analysis
+Selected 1 branches to include in FEL calculations: `Archocentrus_centrarchus`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+* Log(L) = -22403.23, AIC-c = 44940.55 (67 estimated parameters)
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -30824.23, AIC-c = 61798.83 (75 estimated parameters)
+* non-synonymous/synonymous rate ratio for *background* = 10000.0000
+* non-synonymous/synonymous rate ratio for *test* =   0.0000
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -30824.23
+* non-synonymous/synonymous rate ratio for *background* = 10000.0000
+* non-synonymous/synonymous rate ratio for *test* =   0.0000
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |     alpha      |      beta      |      LRT       |Selection detected?|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|
+|      120       |       1        |     3777.393   |        0.000   |        5.192   |  Neg. p = 0.0227  |
+|      123       |       1        |    10000.000   |        0.000   |        5.192   |  Neg. p = 0.0227  |
+|      129       |       1        |     8430.733   |        0.000   |        5.335   |  Neg. p = 0.0209  |
+|      130       |       1        |     3995.315   |        0.000   |        4.608   |  Neg. p = 0.0318  |
+|      136       |       1        |    10000.000   |        0.000   |        5.130   |  Neg. p = 0.0235  |
+|      137       |       1        |     7287.368   |        0.000   |        5.651   |  Neg. p = 0.0174  |
+|      139       |       1        |    10000.000   |        0.000   |        4.571   |  Neg. p = 0.0325  |
+|      140       |       1        |    10000.000   |        0.000   |        6.348   |  Neg. p = 0.0118  |
+|      141       |       1        |     6860.776   |        0.000   |        4.544   |  Neg. p = 0.0330  |
+|      145       |       1        |     8007.605   |        0.000   |        7.649   |  Neg. p = 0.0057  |
+|      148       |       1        |     2200.983   |        0.000   |        4.589   |  Neg. p = 0.0322  |
+|      149       |       1        |     3233.632   |        0.000   |        5.756   |  Neg. p = 0.0164  |
+|      150       |       1        |    10000.000   |        0.000   |        5.612   |  Neg. p = 0.0178  |
+|      152       |       1        |    10000.000   |        0.000   |        5.507   |  Neg. p = 0.0189  |
+|      153       |       1        |    10000.000   |        0.000   |        6.475   |  Neg. p = 0.0109  |
+|      154       |       1        |     6112.410   |        0.000   |        7.142   |  Neg. p = 0.0075  |
+|      155       |       1        |     8855.254   |        0.000   |        4.561   |  Neg. p = 0.0327  |
+|      157       |       1        |    10000.000   |        0.000   |        7.142   |  Neg. p = 0.0075  |
+|      158       |       1        |     4846.886   |        0.000   |        5.450   |  Neg. p = 0.0196  |
+|      160       |       1        |    10000.000   |        0.000   |        6.544   |  Neg. p = 0.0105  |
+|      163       |       1        |    10000.000   |        0.000   |        6.463   |  Neg. p = 0.0110  |
+|      164       |       1        |    10000.000   |        0.000   |        4.648   |  Neg. p = 0.0311  |
+|      165       |       1        |     2603.299   |        0.000   |        6.808   |  Neg. p = 0.0091  |
+|      166       |       1        |     6683.456   |        0.000   |        5.122   |  Neg. p = 0.0236  |
+|      167       |       1        |     4531.272   |        0.000   |        5.649   |  Neg. p = 0.0175  |
+|      169       |       1        |     4183.856   |        0.000   |        5.240   |  Neg. p = 0.0221  |
+|      171       |       1        |     3394.221   |        0.000   |        5.649   |  Neg. p = 0.0175  |
+|      172       |       1        |     9298.363   |        0.000   |        4.648   |  Neg. p = 0.0311  |
+|      173       |       1        |     6599.781   |        0.000   |        2.980   |  Neg. p = 0.0843  |
+|      176       |       1        |    10000.000   |        0.000   |        4.609   |  Neg. p = 0.0318  |
+|      177       |       1        |    10000.000   |        0.000   |        5.518   |  Neg. p = 0.0188  |
+|      178       |       1        |    10000.000   |        0.000   |        5.524   |  Neg. p = 0.0188  |
+|      179       |       1        |     2240.865   |        0.000   |        5.374   |  Neg. p = 0.0204  |
+|      180       |       1        |    10000.000   |        0.000   |        4.502   |  Neg. p = 0.0339  |
+|      183       |       1        |    10000.000   |        0.000   |        5.336   |  Neg. p = 0.0209  |
+|      184       |       1        |    10000.000   |        0.000   |        5.518   |  Neg. p = 0.0188  |
+|      187       |       1        |     3566.626   |        0.000   |        4.627   |  Neg. p = 0.0315  |
+|      189       |       1        |    10000.000   |        0.000   |        6.398   |  Neg. p = 0.0114  |
+|      191       |       1        |     3365.226   |        0.000   |        4.623   |  Neg. p = 0.0315  |
+|      192       |       1        |    10000.000   |        0.000   |        6.319   |  Neg. p = 0.0119  |
+|      194       |       1        |    10000.000   |        0.000   |        5.412   |  Neg. p = 0.0200  |
+|      195       |       1        |    10000.000   |        0.000   |        5.394   |  Neg. p = 0.0202  |
+|      196       |       1        |    10000.000   |        0.000   |        5.809   |  Neg. p = 0.0159  |
+|      197       |       1        |     9064.643   |        0.000   |        6.586   |  Neg. p = 0.0103  |
+|      199       |       1        |     3163.724   |        0.000   |        5.409   |  Neg. p = 0.0200  |
+|      200       |       1        |     6502.578   |        0.000   |        6.982   |  Neg. p = 0.0082  |
+|      201       |       1        |    10000.000   |        0.000   |        7.871   |  Neg. p = 0.0050  |
+|      209       |       1        |     5923.633   |        0.000   |        6.609   |  Neg. p = 0.0101  |
+|      211       |       1        |    10000.000   |        0.000   |        4.648   |  Neg. p = 0.0311  |
+|      212       |       1        |    10000.000   |        0.000   |        5.649   |  Neg. p = 0.0175  |
+|      213       |       1        |     9214.059   |        0.000   |        5.412   |  Neg. p = 0.0200  |
+|      214       |       1        |    10000.000   |        0.000   |        5.278   |  Neg. p = 0.0216  |
+|      215       |       1        |    10000.000   |        0.000   |        6.544   |  Neg. p = 0.0105  |
+|      216       |       1        |    10000.000   |        0.000   |        6.544   |  Neg. p = 0.0105  |
+|      218       |       1        |     7470.280   |        0.000   |        5.653   |  Neg. p = 0.0174  |
+|      219       |       1        |     4742.578   |        0.000   |        5.407   |  Neg. p = 0.0201  |
+|      220       |       1        |     1651.808   |        0.000   |        5.518   |  Neg. p = 0.0188  |
+|      222       |       1        |     6856.255   |        0.000   |        5.240   |  Neg. p = 0.0221  |
+|      223       |       1        |    10000.000   |        0.000   |        6.829   |  Neg. p = 0.0090  |
+|      224       |       1        |    10000.000   |        0.000   |        5.565   |  Neg. p = 0.0183  |
+|      229       |       1        |    10000.000   |        0.000   |        5.327   |  Neg. p = 0.0210  |
+|      230       |       1        |     9904.490   |        0.000   |        5.920   |  Neg. p = 0.0150  |
+|      231       |       1        |    10000.000   |        0.000   |        6.721   |  Neg. p = 0.0095  |
+|      232       |       1        |     6352.685   |        0.000   |        4.649   |  Neg. p = 0.0311  |
+|      234       |       1        |    10000.000   |        0.000   |        7.035   |  Neg. p = 0.0080  |
+|      235       |       1        |    10000.000   |        0.000   |        4.451   |  Neg. p = 0.0349  |
+|      236       |       1        |    10000.000   |        0.000   |        5.153   |  Neg. p = 0.0232  |
+|      237       |       1        |    10000.000   |        0.000   |        6.533   |  Neg. p = 0.0106  |
+|      238       |       1        |     7302.608   |        0.000   |        5.567   |  Neg. p = 0.0183  |
+|      241       |       1        |    10000.000   |        0.000   |        6.233   |  Neg. p = 0.0125  |
+|      242       |       1        |    10000.000   |        0.000   |        6.487   |  Neg. p = 0.0109  |
+|      244       |       1        |    10000.000   |        0.000   |        6.533   |  Neg. p = 0.0106  |
+|      246       |       1        |     8503.981   |        0.000   |        4.956   |  Neg. p = 0.0260  |
+|      247       |       1        |    10000.000   |        0.000   |        7.125   |  Neg. p = 0.0076  |
+|      248       |       1        |     3007.037   |        0.000   |        5.891   |  Neg. p = 0.0152  |
+|      250       |       1        |    10000.000   |        0.000   |        4.465   |  Neg. p = 0.0346  |
+|      251       |       1        |    10000.000   |        0.000   |        4.761   |  Neg. p = 0.0291  |
+|      254       |       1        |    10000.000   |        0.000   |        4.584   |  Neg. p = 0.0323  |
+|      257       |       1        |    10000.000   |        0.000   |        5.177   |  Neg. p = 0.0229  |
+|      258       |       1        |    10000.000   |        0.000   |        5.649   |  Neg. p = 0.0175  |
+|      260       |       1        |    10000.000   |        0.000   |        6.460   |  Neg. p = 0.0110  |
+|      261       |       1        |     9595.315   |        0.000   |        5.649   |  Neg. p = 0.0175  |
+|      262       |       1        |    10000.000   |        0.000   |        5.518   |  Neg. p = 0.0188  |
+|      263       |       1        |     8785.973   |        0.000   |        5.518   |  Neg. p = 0.0188  |
+|      264       |       1        |     3192.275   |        0.000   |        5.463   |  Neg. p = 0.0194  |
+|      266       |       1        |      107.471   |        0.000   |        7.125   |  Neg. p = 0.0076  |
+|      267       |       1        |    10000.000   |        0.000   |        7.142   |  Neg. p = 0.0075  |
+|      295       |       1        |     7475.315   |        0.000   |        4.182   |  Neg. p = 0.0409  |
+|      296       |       1        |     9778.056   |        0.000   |        5.311   |  Neg. p = 0.0212  |
+|      299       |       1        |     7954.401   |        0.000   |        4.656   |  Neg. p = 0.0309  |
+|      302       |       1        |    10000.000   |        0.000   |        6.460   |  Neg. p = 0.0110  |
+|      304       |       1        |    10000.000   |        0.000   |        6.765   |  Neg. p = 0.0093  |
+|      305       |       1        |    10000.000   |        0.000   |        5.756   |  Neg. p = 0.0164  |
+|      306       |       1        |     3715.336   |        0.000   |        5.359   |  Neg. p = 0.0206  |
+|      307       |       1        |    10000.000   |        0.000   |        5.424   |  Neg. p = 0.0199  |
+|      308       |       1        |    10000.000   |        0.000   |        5.252   |  Neg. p = 0.0219  |
+|      310       |       1        |     3306.914   |        0.000   |        4.593   |  Neg. p = 0.0321  |
+|      312       |       1        |    10000.000   |        0.000   |        6.348   |  Neg. p = 0.0118  |
+|      313       |       1        |    10000.000   |        0.000   |        4.622   |  Neg. p = 0.0316  |
+|      315       |       1        |    10000.000   |        0.000   |        6.233   |  Neg. p = 0.0125  |
+|      324       |       1        |    10000.000   |        0.000   |        6.467   |  Neg. p = 0.0110  |
+|      326       |       1        |    10000.000   |        0.000   |        6.459   |  Neg. p = 0.0110  |
+|      327       |       1        |     1817.304   |        0.000   |        5.341   |  Neg. p = 0.0208  |
+|      328       |       1        |     8449.573   |        0.000   |        5.222   |  Neg. p = 0.0223  |
+|      335       |       1        |    10000.000   |        0.000   |        8.337   |  Neg. p = 0.0039  |
+|      336       |       1        |     2180.594   |        0.000   |        5.523   |  Neg. p = 0.0188  |
+|      337       |       1        |     8320.048   |        0.000   |        6.431   |  Neg. p = 0.0112  |
+|      338       |       1        |     7866.717   |        0.000   |        5.336   |  Neg. p = 0.0209  |
+|      339       |       1        |     9250.404   |        0.000   |        7.358   |  Neg. p = 0.0067  |
+|      340       |       1        |     3236.521   |        0.000   |        5.212   |  Neg. p = 0.0224  |
+|      344       |       1        |     4348.266   |        0.000   |        5.931   |  Neg. p = 0.0149  |
+|      346       |       1        |     3199.651   |        0.000   |        5.758   |  Neg. p = 0.0164  |
+|      347       |       1        |    10000.000   |        0.000   |        5.665   |  Neg. p = 0.0173  |
+|      349       |       1        |     7096.028   |        0.000   |        5.696   |  Neg. p = 0.0170  |
+|      355       |       1        |     7553.878   |        0.000   |        5.675   |  Neg. p = 0.0172  |
+|      356       |       1        |     5331.410   |        0.000   |        5.291   |  Neg. p = 0.0214  |
+|      358       |       1        |    10000.000   |        0.000   |        6.169   |  Neg. p = 0.0130  |
+|      363       |       1        |    10000.000   |        0.000   |        5.621   |  Neg. p = 0.0177  |
+|      364       |       1        |    10000.000   |        0.000   |        5.621   |  Neg. p = 0.0177  |
+|      365       |       1        |    10000.000   |        0.000   |        6.254   |  Neg. p = 0.0124  |
+|      366       |       1        |    10000.000   |        0.000   |        4.531   |  Neg. p = 0.0333  |
+|      369       |       1        |    10000.000   |        0.000   |        5.662   |  Neg. p = 0.0173  |
+|      373       |       1        |    10000.000   |        0.000   |        4.425   |  Neg. p = 0.0354  |
+|      374       |       1        |     5267.879   |        0.000   |        7.633   |  Neg. p = 0.0057  |
+|      379       |       1        |    10000.000   |        0.000   |        4.587   |  Neg. p = 0.0322  |
+|      380       |       1        |    10000.000   |        0.000   |        6.544   |  Neg. p = 0.0105  |
+|      382       |       1        |     4185.375   |        0.000   |        5.875   |  Neg. p = 0.0154  |
+|      383       |       1        |    10000.000   |        0.000   |        4.868   |  Neg. p = 0.0274  |
+|      385       |       1        |    10000.000   |        0.000   |        7.037   |  Neg. p = 0.0080  |
+|      386       |       1        |    10000.000   |        0.000   |        6.153   |  Neg. p = 0.0131  |
+|      389       |       1        |    10000.000   |        0.000   |        7.425   |  Neg. p = 0.0064  |
+|      392       |       1        |    10000.000   |        0.000   |        5.388   |  Neg. p = 0.0203  |
+|      398       |       1        |    10000.000   |        0.000   |        6.232   |  Neg. p = 0.0125  |
+|      399       |       1        |     8563.084   |        0.000   |        5.565   |  Neg. p = 0.0183  |
+|      404       |       1        |     8427.115   |        0.000   |        7.751   |  Neg. p = 0.0054  |
+|      415       |       1        |    10000.000   |        0.000   |        4.844   |  Neg. p = 0.0277  |
+|      417       |       1        |    10000.000   |        0.000   |        7.142   |  Neg. p = 0.0075  |
+|      418       |       1        |    10000.000   |        0.000   |        5.507   |  Neg. p = 0.0189  |
+|      420       |       1        |    10000.000   |        0.000   |        6.783   |  Neg. p = 0.0092  |
+|      421       |       1        |    10000.000   |        0.000   |        6.829   |  Neg. p = 0.0090  |
+|      422       |       1        |     6727.059   |        0.000   |        4.649   |  Neg. p = 0.0311  |
+|      424       |       1        |    10000.000   |        0.000   |        5.613   |  Neg. p = 0.0178  |
+|      425       |       1        |    10000.000   |        0.000   |        7.142   |  Neg. p = 0.0075  |
+|      430       |       1        |    10000.000   |        0.000   |        5.549   |  Neg. p = 0.0185  |
+|      434       |       1        |    10000.000   |        0.000   |        5.450   |  Neg. p = 0.0196  |
+|      440       |       1        |    10000.000   |        0.000   |        5.649   |  Neg. p = 0.0175  |
+|      441       |       1        |    10000.000   |        0.000   |        4.576   |  Neg. p = 0.0324  |
+|      442       |       1        |     7039.543   |        0.000   |        4.647   |  Neg. p = 0.0311  |
+|      443       |       1        |    10000.000   |        0.000   |        5.306   |  Neg. p = 0.0213  |
+|      444       |       1        |     7499.032   |        0.000   |        5.520   |  Neg. p = 0.0188  |
+|      445       |       1        |    10000.000   |        0.000   |        5.277   |  Neg. p = 0.0216  |
+|      446       |       1        |     4556.880   |        0.000   |        5.457   |  Neg. p = 0.0195  |
+|      447       |       1        |     2189.044   |        0.000   |        5.336   |  Neg. p = 0.0209  |
+|      451       |       1        |     5772.896   |        0.000   |        5.650   |  Neg. p = 0.0175  |
+|      454       |       1        |    10000.000   |        0.000   |        6.533   |  Neg. p = 0.0106  |
+|      455       |       1        |     6120.982   |        0.000   |        4.614   |  Neg. p = 0.0317  |
+|      456       |       1        |    10000.000   |        0.000   |        4.648   |  Neg. p = 0.0311  |
+|      457       |       1        |    10000.000   |        0.000   |        6.587   |  Neg. p = 0.0103  |
+|      458       |       1        |     6350.917   |        0.000   |        6.550   |  Neg. p = 0.0105  |
+|      459       |       1        |    10000.000   |        0.000   |        6.447   |  Neg. p = 0.0111  |
+|      460       |       1        |     5432.051   |        0.000   |        4.619   |  Neg. p = 0.0316  |
+|      462       |       1        |    10000.000   |        0.000   |        6.178   |  Neg. p = 0.0129  |
+|      463       |       1        |    10000.000   |        0.000   |        5.411   |  Neg. p = 0.0200  |
+|      562       |       1        |    10000.000   |        0.000   |        5.699   |  Neg. p = 0.0170  |
+|      564       |       1        |     7342.436   |        0.000   |        5.757   |  Neg. p = 0.0164  |
+|      567       |       1        |    10000.000   |        0.000   |        4.567   |  Neg. p = 0.0326  |
+|      569       |       1        |     6266.186   |        0.000   |        5.757   |  Neg. p = 0.0164  |
+|      570       |       1        |    10000.000   |        0.000   |        6.533   |  Neg. p = 0.0106  |
+|      571       |       1        |     4284.958   |        0.000   |        5.458   |  Neg. p = 0.0195  |
+|      574       |       1        |     4589.493   |        0.000   |        5.922   |  Neg. p = 0.0150  |
+|      575       |       1        |     5586.658   |        0.000   |        4.548   |  Neg. p = 0.0330  |
+|      577       |       1        |    10000.000   |        0.000   |        5.524   |  Neg. p = 0.0188  |
+|      578       |       1        |     8372.925   |        0.000   |        5.518   |  Neg. p = 0.0188  |
+|      579       |       1        |     6188.417   |        0.000   |        5.277   |  Neg. p = 0.0216  |
+|      580       |       1        |    10000.000   |        0.000   |        7.125   |  Neg. p = 0.0076  |
+|      583       |       1        |    10000.000   |        0.000   |        4.753   |  Neg. p = 0.0292  |
+|      584       |       1        |    10000.000   |        0.000   |        4.672   |  Neg. p = 0.0307  |
+|      586       |       1        |     6682.013   |        0.000   |        5.858   |  Neg. p = 0.0155  |
+|      587       |       1        |     2247.531   |        0.000   |        5.459   |  Neg. p = 0.0195  |
+|      588       |       1        |    10000.000   |        0.000   |        4.648   |  Neg. p = 0.0311  |
+|      589       |       1        |     4285.138   |        0.000   |        5.651   |  Neg. p = 0.0174  |
+|      590       |       1        |    10000.000   |        0.000   |        4.619   |  Neg. p = 0.0316  |
+|      592       |       1        |    10000.000   |        0.000   |        6.544   |  Neg. p = 0.0105  |
+|      593       |       1        |     2190.089   |        0.000   |        5.518   |  Neg. p = 0.0188  |
+|      594       |       1        |    10000.000   |        0.000   |        4.564   |  Neg. p = 0.0327  |
+|      595       |       1        |     2089.817   |        0.000   |        5.336   |  Neg. p = 0.0209  |
+|      600       |       1        |    10000.000   |        0.000   |        4.955   |  Neg. p = 0.0260  |
+|      601       |       1        |     6770.218   |        0.000   |        5.658   |  Neg. p = 0.0174  |
+|      602       |       1        |     7072.824   |        0.000   |        5.435   |  Neg. p = 0.0197  |
+|      603       |       1        |     3844.587   |        0.000   |        5.624   |  Neg. p = 0.0177  |
+|      604       |       1        |    10000.000   |        0.000   |        5.459   |  Neg. p = 0.0195  |
+|      605       |       1        |    10000.000   |        0.000   |        5.756   |  Neg. p = 0.0164  |
+|      606       |       1        |    10000.000   |        0.000   |        4.600   |  Neg. p = 0.0320  |
+|      607       |       1        |     7617.658   |        0.000   |        5.328   |  Neg. p = 0.0210  |
+|      609       |       1        |     4219.464   |        0.000   |        5.238   |  Neg. p = 0.0221  |
+|      610       |       1        |    10000.000   |        0.000   |        4.673   |  Neg. p = 0.0306  |
+|      611       |       1        |    10000.000   |        0.000   |        7.871   |  Neg. p = 0.0050  |
+|      612       |       1        |     5753.639   |        0.000   |        5.698   |  Neg. p = 0.0170  |
+|      613       |       1        |     5574.512   |        0.000   |        6.024   |  Neg. p = 0.0141  |
+|      616       |       1        |    10000.000   |        0.000   |        4.591   |  Neg. p = 0.0321  |
+|      617       |       1        |     8490.810   |        0.000   |        5.328   |  Neg. p = 0.0210  |
+|      619       |       1        |     5417.797   |        0.000   |        6.431   |  Neg. p = 0.0112  |
+|      628       |       1        |     9166.520   |        0.000   |        5.526   |  Neg. p = 0.0187  |
+|      633       |       1        |    10000.000   |        0.000   |        6.264   |  Neg. p = 0.0123  |
+|      634       |       1        |     9944.277   |        0.000   |        6.700   |  Neg. p = 0.0096  |
+|      638       |       1        |     4273.707   |        0.000   |        5.199   |  Neg. p = 0.0226  |
+|      642       |       1        |    10000.000   |        0.000   |        5.981   |  Neg. p = 0.0145  |
+|      645       |       1        |     8570.540   |        0.000   |        4.548   |  Neg. p = 0.0330  |
+|      648       |       1        |    10000.000   |        0.000   |        4.432   |  Neg. p = 0.0353  |
+|      650       |       1        |    10000.000   |        0.000   |        6.337   |  Neg. p = 0.0118  |
+|      653       |       1        |     7915.683   |        0.000   |        5.385   |  Neg. p = 0.0203  |
+|      655       |       1        |    10000.000   |        0.000   |        6.011   |  Neg. p = 0.0142  |
+|      656       |       1        |    10000.000   |        0.000   |        5.380   |  Neg. p = 0.0204  |
+|      658       |       1        |     8641.147   |        0.000   |        5.504   |  Neg. p = 0.0190  |
+|      659       |       1        |     9905.197   |        0.000   |        5.407   |  Neg. p = 0.0201  |
+|      660       |       1        |     5237.639   |        0.000   |        5.649   |  Neg. p = 0.0175  |
+|      661       |       1        |     5344.601   |        0.000   |        4.783   |  Neg. p = 0.0287  |
+|      662       |       1        |     4134.461   |        0.000   |        5.670   |  Neg. p = 0.0173  |
+|      663       |       1        |    10000.000   |        0.000   |        5.369   |  Neg. p = 0.0205  |
+|      669       |       1        |     9159.144   |        0.000   |        6.586   |  Neg. p = 0.0103  |
+|      670       |       1        |     7750.174   |        0.000   |        4.596   |  Neg. p = 0.0320  |
+|      671       |       1        |    10000.000   |        0.000   |        5.210   |  Neg. p = 0.0225  |
+|      679       |       1        |    10000.000   |        0.000   |        6.544   |  Neg. p = 0.0105  |
+|      681       |       1        |     8030.259   |        0.000   |        5.757   |  Neg. p = 0.0164  |
+|      682       |       1        |     7427.617   |        0.000   |        5.287   |  Neg. p = 0.0215  |
+|      685       |       1        |    10000.000   |        0.000   |        5.258   |  Neg. p = 0.0218  |
+|      686       |       1        |     5688.272   |        0.000   |        5.356   |  Neg. p = 0.0207  |
+|      687       |       1        |     7312.891   |        0.000   |        4.568   |  Neg. p = 0.0326  |
+|      689       |       1        |    10000.000   |        0.000   |        6.829   |  Neg. p = 0.0090  |
+|      690       |       1        |     6196.308   |        0.000   |        4.653   |  Neg. p = 0.0310  |
+|      691       |       1        |     9683.787   |        0.000   |        6.446   |  Neg. p = 0.0111  |
+|      692       |       1        |     7961.028   |        0.000   |        5.568   |  Neg. p = 0.0183  |
+|      694       |       1        |     6389.346   |        0.000   |        5.339   |  Neg. p = 0.0209  |
+|      695       |       1        |    10000.000   |        0.000   |        4.619   |  Neg. p = 0.0316  |
+|      696       |       1        |    10000.000   |        0.000   |        5.269   |  Neg. p = 0.0217  |
+|      697       |       1        |    10000.000   |        0.000   |        7.888   |  Neg. p = 0.0050  |
+|      698       |       1        |     4304.778   |        0.000   |        6.468   |  Neg. p = 0.0110  |
+|      699       |       1        |     3900.661   |        0.000   |        4.889   |  Neg. p = 0.0270  |
+|      701       |       1        |     5181.128   |        0.000   |        5.649   |  Neg. p = 0.0175  |
+|      705       |       1        |    10000.000   |        0.000   |        5.920   |  Neg. p = 0.0150  |
+|      708       |       1        |     1607.411   |        0.000   |        5.247   |  Neg. p = 0.0220  |
+|      713       |       1        |    10000.000   |        0.000   |        5.219   |  Neg. p = 0.0223  |
+|      715       |       1        |    10000.000   |        0.000   |        7.142   |  Neg. p = 0.0075  |
+|      716       |       1        |    10000.000   |        0.000   |        6.697   |  Neg. p = 0.0097  |
+|      717       |       1        |     4246.342   |        0.000   |        4.608   |  Neg. p = 0.0318  |
+|      718       |       1        |     4505.998   |        0.000   |        5.447   |  Neg. p = 0.0196  |
+|      720       |       1        |    10000.000   |        0.000   |        4.694   |  Neg. p = 0.0303  |
+|      721       |       1        |     3164.055   |        0.000   |        5.397   |  Neg. p = 0.0202  |
+|      725       |       1        |    10000.000   |        0.000   |        5.797   |  Neg. p = 0.0161  |
+|      726       |       1        |    10000.000   |        0.000   |        5.369   |  Neg. p = 0.0205  |
+|      727       |       1        |    10000.000   |        0.000   |        5.473   |  Neg. p = 0.0193  |
+|      728       |       1        |     1612.138   |        0.000   |        5.671   |  Neg. p = 0.0172  |
+|      729       |       1        |     5888.578   |        0.000   |        6.693   |  Neg. p = 0.0097  |
+|      731       |       1        |    10000.000   |        0.000   |        5.756   |  Neg. p = 0.0164  |
+|      732       |       1        |     7754.205   |        0.000   |        5.806   |  Neg. p = 0.0160  |
+|      733       |       1        |    10000.000   |        0.000   |        6.550   |  Neg. p = 0.0105  |
+|      734       |       1        |    10000.000   |        0.000   |        5.358   |  Neg. p = 0.0206  |
+|      735       |       1        |     8345.992   |        0.000   |        4.599   |  Neg. p = 0.0320  |
+|      741       |       1        |    10000.000   |        0.000   |        6.934   |  Neg. p = 0.0085  |
+|      742       |       1        |     7365.960   |        0.000   |        4.650   |  Neg. p = 0.0311  |
+|      743       |       1        |    10000.000   |        0.000   |        6.829   |  Neg. p = 0.0090  |
+|      744       |       1        |     2495.941   |        0.000   |        5.920   |  Neg. p = 0.0150  |
+|      795       |       1        |     4511.035   |        0.000   |        5.661   |  Neg. p = 0.0173  |
+|      818       |       1        |       52.077   |        0.000   |        4.595   |  Neg. p = 0.0321  |
+|      825       |       1        |    10000.000   |        0.000   |        5.381   |  Neg. p = 0.0204  |
+|      830       |       1        |       37.644   |        0.000   |        4.141   |  Neg. p = 0.0419  |
+|      831       |       1        |     5778.410   |        0.000   |        7.012   |  Neg. p = 0.0081  |
+|      833       |       1        |    10000.000   |        0.000   |        4.648   |  Neg. p = 0.0311  |
+|      834       |       1        |    10000.000   |        0.000   |        6.757   |  Neg. p = 0.0093  |
+|      836       |       1        |     6241.002   |        0.000   |        7.068   |  Neg. p = 0.0078  |
+|      841       |       1        |     8208.725   |        0.000   |        5.194   |  Neg. p = 0.0227  |
+|      850       |       1        |     9397.097   |        0.000   |        5.459   |  Neg. p = 0.0195  |
+|      852       |       1        |     2215.843   |        0.000   |        5.724   |  Neg. p = 0.0167  |
+|      854       |       1        |     2272.698   |        0.000   |        5.248   |  Neg. p = 0.0220  |
+|      855       |       1        |    10000.000   |        0.000   |        5.383   |  Neg. p = 0.0203  |
+|      858       |       1        |    10000.000   |        0.000   |        6.462   |  Neg. p = 0.0110  |
+|      860       |       1        |    10000.000   |        0.000   |        4.904   |  Neg. p = 0.0268  |
+|      861       |       1        |    10000.000   |        0.000   |        4.389   |  Neg. p = 0.0362  |
+|      864       |       1        |    10000.000   |        0.000   |        6.095   |  Neg. p = 0.0136  |
+|      865       |       1        |    10000.000   |        0.000   |        5.265   |  Neg. p = 0.0218  |
+|      866       |       1        |    10000.000   |        0.000   |        4.574   |  Neg. p = 0.0325  |
+|      868       |       1        |     5461.911   |        0.000   |        6.348   |  Neg. p = 0.0118  |
+|      873       |       1        |     6961.518   |        0.000   |        6.643   |  Neg. p = 0.0100  |
+|      876       |       1        |    10000.000   |        0.000   |        6.337   |  Neg. p = 0.0118  |
+|      878       |       1        |     6065.150   |        0.000   |        5.191   |  Neg. p = 0.0227  |
+|      884       |       1        |     6266.186   |        0.000   |        4.920   |  Neg. p = 0.0266  |
+|      888       |       1        |    10000.000   |        0.000   |        4.530   |  Neg. p = 0.0333  |
+|      889       |       1        |    10000.000   |        0.000   |        5.130   |  Neg. p = 0.0235  |
+|      891       |       1        |     5922.193   |        0.000   |        5.436   |  Neg. p = 0.0197  |
+|      895       |       1        |     7610.504   |        0.000   |        4.618   |  Neg. p = 0.0316  |
+|      952       |       1        |    10000.000   |        0.000   |        6.408   |  Neg. p = 0.0114  |
+
+### ** Found _0_ sites under pervasive positive diversifying and _291_ sites under negative selection at p <= 0.1**

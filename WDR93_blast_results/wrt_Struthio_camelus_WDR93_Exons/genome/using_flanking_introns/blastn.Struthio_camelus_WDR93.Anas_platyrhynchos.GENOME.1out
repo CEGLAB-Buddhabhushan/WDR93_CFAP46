@@ -1,0 +1,519 @@
+BLASTN 2.12.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: Anas_platyrhynchos.fna
+           756 sequences; 1,188,533,289 total letters
+
+
+
+Query= Exon1
+
+Length=289
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  340     1e-91
+
+
+
+Query_1  1         ATGCCAGTGTATATCCGGAAGCATCCCCTGGAGATTCCTCCACCATCTGAAAAGGACTGG  60
+10       14213893  .....C.C.CG.G...........T................G.........G........  14213834
+
+Query_1  61        TTAAAGGACGACGAGGAAAATTTCTTCCTGCAGGATCCCGATCAAATGCTTGATGTGTTG  120
+10       14213833  C.G.....T.........G.C.......A............G.G...A.GC....CT...  14213774
+
+Query_1  121       CCTCAGCCCTTCCGGATGATCAACAAACTGGTGATGCTCGTTTTTGAGAATGCTATGGAA  180
+10       14213773  ............A.....GC..................G........A............  14213714
+
+Query_1  181       ATCATTGAAAGAAGAGAGACACTCCAAGAAGCACAAAAAGTGAGGATCCAGGCCACAAAA  240
+10       14213713  ..............G.....G....G.............C...A.GC....C........  14213654
+
+Query_1  241       TGCTTTCCCACAGCTGAATTCCAGGTAAAGAGCCCCTCGCAGCAGAGA  288
+10       14213653  ........T..................C.........TA..C...G..  14213606
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 307824247731
+
+
+Query= Exon2
+
+Length=246
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  248     4e-64
+
+
+
+Query_2  8         TTTTCCTTTTCTTGGTAGGTGACAGGAAGAGCCAACTGCCTTGCAGTCTCTGGAAAATAC  67
+10       14213041  .........A-.........A..T....C......T.....GT....G..........T.  14212983
+
+Query_2  68        CTCTTTGTTGGGCTGTCTGTGGGTCTGGCTGTCTTCAAGGTGTCTGACTGTAAACAAGCC  127
+10       14212982  A..........T.....C.............C.....G.A...AC........G..G.T.  14212923
+
+Query_2  128       TGTGCTTGGGATGCAGCCAAGACAGAGGTTTGTGCCATCCATGCCTCGGACTTAGGGAAT  187
+10       14212922  ....T...........T..........A......T.....GCT..........G.....C  14212863
+
+Query_2  188       GAGCACCATGCCCTGCTTGCTGTGGATGAAATGGGTTAGTGTGATTTGGATTTC  241
+10       14212862  ..........T......CA.................AG......CG...G....  14212809
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 256718291544
+
+
+Query= Exon3
+
+Length=115
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  113     9e-24
+
+
+
+Query_3  14        TTTCGCTTCTAGGGCTTGTCTGGCTCTTCTGCTTTCACAAGGACAGCTTCTTATTCATTA  73
+10       14212203  ....TA...C...........C.................G...A......C..C......  14212144
+
+Query_3  74        AAAACTTAAATGAAATGGTAAGTAGTGAGTTAATTTCATA  113
+10       14212143  .G.T.........GG.........C...T......G....  14212104
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 102211977390
+
+
+Query= Exon4
+
+Length=129
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  153     1e-35
+
+
+
+Query_4  3         GCCAGCCATCTTTCCTTTGGCAGGAGGACATCAGCAAGCGAAGTACTTGTGTGGAGGTGG  62
+10       14211556  .......TG....TG..........A..T..T............................  14211497
+
+Query_4  63        TGCTTTCCCAGGGAGGTGATTACGCAGGAGTTCTGCTGCAAGGCAAGTGCAGGAGCATGG  122
+10       14211496  ....G...TCA...........T........C...................A..A.....  14211437
+
+Query_4  123       TG  124
+10       14211436  ..  14211435
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 118851136500
+
+
+Query= Exon5
+
+Length=178
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  207     9e-52
+
+
+
+Query_5  1         TGCTCAACACAGTTTCCCAATGCAGGCAGCACAGAAGCTTGGCTGGAGATCTACCAGTTG  60
+10       14210580  .........A....................T......T..........G......GA...  14210521
+
+Query_5  61        CCTAAGGATTCCTGGCTGAAGGAGAGAGAAAATAGCCCAGGAGCTGCAGCAGAGTTGGCT  120
+10       14210520  ..C......................C...G..G...T...............G.C.....  14210461
+
+Query_5  121       TTCAGGGAGAGGAAGTCAAGTCAGACATCTATGGTAAAAAATAGTTC  167
+10       14210460  ..........A..G......CTG.......G.....C....C.....  14210414
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 175899570132
+
+
+Query= Exon6
+
+Length=89
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  87.8    3e-16
+
+
+
+Query_6  14        GTTCTTTGGCAGAAAAGTCTGGAGCTGTATGGAGAGCGTTCTGCAGAGATGGTAACTGAC  73
+10       14209862  ...........A...............C.......CT.....A.......A.......G.  14209800
+                                   \                                           
+                                   |                                           
+                                 AAA
+
+Query_6  74        CTCAGTGAATGTCCTG  89
+10       14209799  ........GC......  14209784
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 72499239381
+
+
+Query= Exon7
+
+Length=135
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  145     2e-33
+
+
+
+Query_7  12        TTTCTCTCTTGCAGGAGTCTGTGTCTGCAAACAAAGCTGATGCAAAGCTGGCTCTCCCAG  71
+10       14209357  ...T...G................................G.........AG........  14209295
+                                       \                                       
+                                       |                                       
+                                     TTT
+
+Query_7  72        TGTTGCTGCTGAAAGTCAAGCCACCGAAACCTATTACAGGTCATGGACTGTTT  124
+10       14209294  ..C..G..........G........C.....C...........G.........  14209242
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 125982204690
+
+
+Query= Exon8
+
+Length=228
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  261     6e-68
+
+
+
+Query_8  1         TCTTTCATTTGTGTTCTCAATCCAGGAAGTATTTTTAAAAGCCCTTTGGATGCCTTGATG  60
+10       14208668  ......C...A....TG.....T.....C..A.....................G....A.  14208609
+
+Query_8  61        AAAGTGGATGATGGCGGCATATTTGGCTTGGGGTACAATCACCTGATCAAGGATTCCCAG  120
+10       14208608  ...............A....GC...........C...................C..T...  14208549
+
+Query_8  121       TGGGAGCAGCAGGAGGCAATCTTCCACAGCACTTATCAGGAGTATCTGGAGGCCGAGACT  180
+10       14208548  ........A..C.............G.....T.....G.....T.........T....G.  14208483
+                                                                        \      
+                                                                        |      
+                                                                   TGAGGG
+
+Query_8  181       GAGAGCAAGGATGAGATCCCCAGGTGAGTAGGAGCCCTAACCAGCATT  228
+10       14208482  ...............G.T...........GA...T..C.G........  14208435
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 235325100582
+
+
+Query= Exon9
+
+Length=121
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  98.7    2e-19
+
+
+
+Query_9  15        TCCCTTTTCAGACATGCTACCTTTCATTTTCTCCTGCCTAGCCGGATCCTACAGGTGGGA  74
+10       14208283  ...T.......G.G...AG.T.................C...T............G....  14208224
+
+Query_9  75        CCTGAAGTAAAACTACAGCCAGGTAATCCAAATG  108
+10       14208223  A....CA.....G.............CT...C..  14208190
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 109343045580
+
+
+Query= Exon10
+
+Length=137
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  132     4e-29
+
+
+
+Query_10  1         TTTGTTATGCCCTCCCCATTTCCAGCTGTTCCAGCTGGCATCAGTGTGCACTGGGATGGA  60
+10        14207807  ...A..G.C....T.T.CA...T..A..........A...........T.......C...  14207748
+
+Query_10  61        AGTCACAATCTCTGCTTGTATTCGCTTAACCGTCCACTCAAGGAGAAAGTGGGTAAGCAA  120
+10        14207747  ..C...........T..C....TA......................G..........G..  14207688
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 128359227420
+
+
+Query= Exon11
+
+Length=182
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  219     2e-55
+
+
+
+Query_11  8         TCCTGTCCTGCTGTTTAGATGCTGATCTGAAGCCTGATGTTGTGTGGCCTTGTGCAGCTC  67
+10        14207411  .........T.......................................A..........  14207352
+
+Query_11  68        CAATTGCGAGCTCAGCTGTCAGTTCCTGCTCCAGGTACCTGGCATTGGCGTGTGAAGATG  127
+10        14207351  .......AT....C.............------...........C....A.........T  14207298
+
+Query_11  128       CAACAATAACTATTTGGGATAAACACCTAGGTGAGCTT  165
+10        14207297  ..G...................................  14207260
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 180653612568
+
+
+Query= Exon12
+
+Length=267
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  241     7e-62
+
+
+
+Query_12  15        TGCCTCCTCAGGATACCCACTGACTGTGACCGCCCTTCTAAAGGAACATGTCATCCGTAG  74
+10        14206733  ......TC.......T......T.......T.TTA.G.C.G..A...G.CCT..A.....  14206674
+
+Query_12  75        CATGCACTTTCTGCAGAGTGCTGCAGCTGCCAGTGACCAGACACCTTACCCTGGTACAGA  134
+10        14206673  ...C.....C...............T.......CAGTG..G......G............  14206614
+
+Query_12  135       TCCTGCCTGTCCCACTGTGCAGCTTCTAGTGCTGTGTACAGATGGGTCTCTCTACTTGGT  194
+10        14206613  ....C...C...AG.....G.....T.......................T.G..T...T.  14206554
+
+Query_12  195       GGCAGCACCCAGGGCCGGGAAGTCCAGCATCACGCTCCTGGCAGACAGGTGAGGTGGACT  254
+10        14206553  .AG...GT........AA....C................................A.T..  14206494
+
+Query_12  255       CTCATAGACCTCA  267
+10        14206493  ..G.....T....  14206481
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 281677014333
+
+
+Query= Exon13
+
+Length=111
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  88.7    3e-16
+
+
+
+Query_13  1         CCATTAGCATGAGTCTCTTTAACAGGCCTGAGGATCCAAAACTCGCCATCAGCACAGTGG  60
+10        14205836  ....A.C.C.......G...C..........A.....G..T..T..TG...CTG......  14205777
+
+Query_13  61        CACCTTTCTTGGCCTTCCCCAGCGCAGTGAGTATTGCTGCC  101
+10        14205776  TG...G..C....A........T..T...............  14205736
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 97457931930
+
+
+Query= Exon14
+
+Length=207
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  222     5e-56
+
+
+
+Query_14  3         TAAGTGTCAGCTTGCTGTTTCAGGCCCTGATCTTCTCCTGGGATGGCACAGTGTCCCTGA  62
+10        14205034  .....C...A...................G.T.....T...........G......T...  14204975
+
+Query_14  63        TGGACACTGCCACATCACGCATTGTTTGCTACTTCAATACTCCACCGTCTCATGCTGTAG  122
+10        14204974  ..A.T..........TG.AA..G.......G......C.G......T.............  14204915
+
+Query_14  123       CATCCCCCTGGCAACCGGTGTTCACTGTGGATACTGCAGATCAGTGCCTGATCCTTCGAG  182
+10        14204914  .............G..A........AT.........TGA..TG.......C.T.......  14204855
+
+Query_14  183       GTGGGTAGTAAGGTGCAAAGTGGGA  207
+10        14204854  .......TC...A.........T..  14204830
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 210366377793
+
+
+Query= Exon15
+
+Length=231
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  198     7e-49
+
+
+
+Query_15  1         CACTGTTCTTGTCTCTTCTGTTCAGGAGATAAGCAACAGCAGGCAAGTGTGTTGGCACAG  60
+10        14204623  ................---..CT......CG....---....A..GA..CA.........  14204570
+
+Query_15  61        AGGAGAGCAAGTCACAGCTCAATCTTCTTTTTTAACTTCAACTCCTACCCGCTGAAGGAG  120
+10        14204569  ..C.....C.........A.C......C.C...T................A...G.....  14204510
+
+Query_15  121       GCTTTCCCAAGGGAACCGGCTTTGCCTCTTAGATCCTTGCAGGACCTGCCATGGATTGAG  180
+10        14204509  ..........A.A....A.A.......T.C.AG.....A...A.....T...T.T.....  14204450
+
+Query_15  181       AGATGTAATGTTTTCTTACGTGATTGGTAAGATTCTCCT  219
+10        14204449  ........CA.G.....G......A.......G......  14204411
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 238890632409
+
+
+Query= Exon16
+
+Length=146
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_051782.1 Anas platyrhynchos isolate Z2 breed Pekin duck chromo...  123     7e-27
+
+
+
+Query_16  1         AACCCCCTTTTCTTCCCCTTATTAGGCAGCAGAGCCTACTGGGAATCAAGGAGCAGATGC  60
+10        14203361  ...T....C..........GC.-..T......C....GG.A...C..G........T...  14203303
+
+Query_16  61        CTGAGTGCTGGAGCCGTCTACAGGCACATGCAGCTGCCATGGACAAGGAGCGAGAGGAGA  120
+10        14203302  ......A......T..G..G.......GA.....................A.---TC...  14203246
+
+Query_16  121       AAGTGAGGGAACAGCAGAAGCCATAG  146
+10        14203245  ..A.A.A..G....A...........  14203220
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 139055829705
+
+
+  Database: Anas_platyrhynchos.fna
+    Posted date:  Nov 28, 2022  4:07 PM
+  Number of letters in database: 1,188,533,289
+  Number of sequences in database:  756
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2
