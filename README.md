@@ -7,7 +7,7 @@ Computational Evolutionary Genomics Lab, Department of Biological Sciences, IISE
 Madhya Pradesh, India
 *Correspondence: nagarjun@iiserb.ac.in
 
-## Grphical abstract
+## Graphical abstract
 ![graphical_abstract](https://github.com/CEGLAB-Buddhabhushan/WDR93_CFAP46/blob/main/Main_figures/graphical_abstract.jpg)
 **Folder Structure**
 - **Assembly_verification:** Contain the bam, bed, and UCSC screenshot for long-read verification at _WDR93_ and _CFAP46_ gene locus for the Acanthisitta chloris, Anas platyrhynchos, Anser cygnoides, Calypte anna, and Gallus gallus. **(Fig. 2, Fig. S4, S27, S29-31, S34-36)**
