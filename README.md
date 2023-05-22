@@ -9,7 +9,7 @@ Madhya Pradesh, India
 
 
 ![graphical_abstract](https://github.com/CEGLAB-Buddhabhushan/WDR93_CFAP46/assets/125718041/b9fe3008-f90e-4aa1-97c1-4ae33d6543cc)
-
+![graphical_abstract](https://github.com/CEGLAB-Buddhabhushan/WDR93_CFAP46/blob/main/Main_figures/graphical_abstract.jpg)
 **Folder Structure**
 - **Assembly_verification:** Contain the bam, bed, and UCSC screenshot for long-read verification at _WDR93_ and _CFAP46_ gene locus for the Acanthisitta chloris, Anas platyrhynchos, Anser cygnoides, Calypte anna, and Gallus gallus. **(Fig. 2, Fig. S4, S27, S29-31, S34-36)**
 - **CFAP46_blast_results:** Contains the raw read blastn result for the CFAP46 gene for the species in which WDR93 loss and query sequence is used in BLASTN.
